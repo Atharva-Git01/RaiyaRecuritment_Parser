@@ -1,0 +1,4943 @@
+{
+  "timestamp": "2025-12-24T06:24:28.274315",
+  "total_resumes": 546,
+  "correct": 326,
+  "moved": [
+    {
+      "from": "Developer",
+      "to": "Designer",
+      "file": "SAGAR CV.pdf"
+    },
+    {
+      "from": "Developer",
+      "to": "Data_Scientist",
+      "file": "CVNikitaMane.pdf"
+    },
+    {
+      "from": "Developer",
+      "to": "Data_Scientist",
+      "file": "CVSNEHALKAKADE.pdf"
+    },
+    {
+      "from": "Developer",
+      "to": "Data_Scientist",
+      "file": "RaginiPharande-Resume_Aug.pdf"
+    },
+    {
+      "from": "Developer",
+      "to": "Data_Scientist",
+      "file": "ResumeAsrarAli.pdf"
+    },
+    {
+      "from": "Developer",
+      "to": "Data_Scientist",
+      "file": "ResumeGAURAVWARGHANE.pdf"
+    },
+    {
+      "from": "Developer",
+      "to": "Data_Scientist",
+      "file": "ResumePonvelMuthuganesan.pdf"
+    },
+    {
+      "from": "Developer",
+      "to": "Intern",
+      "file": "ResumeSHUBHIJAIN.pdf"
+    },
+    {
+      "from": "Developer",
+      "to": "Data_Scientist",
+      "file": "Akshata Badgujar's PHP Codeigniter Laravel Developer Resume.pdf"
+    },
+    {
+      "from": "Developer",
+      "to": "Data_Scientist",
+      "file": "Bhagyashree P_CV-2.pdf"
+    },
+    {
+      "from": "Developer",
+      "to": "Data_Scientist",
+      "file": "CVAbhishekBagad.pdf"
+    },
+    {
+      "from": "Developer",
+      "to": "Intern",
+      "file": "CVAdityaMalode.pdf"
+    },
+    {
+      "from": "Developer",
+      "to": "Data_Scientist",
+      "file": "CVAishwaryaKuthe.pdf"
+    },
+    {
+      "from": "Developer",
+      "to": "Data_Scientist",
+      "file": "CVAishwaryaShinde.pdf"
+    },
+    {
+      "from": "Developer",
+      "to": "Data_Scientist",
+      "file": "CVAmolGedam.pdf"
+    },
+    {
+      "from": "Developer",
+      "to": "Designer",
+      "file": "CVAmolKate.pdf"
+    },
+    {
+      "from": "Developer",
+      "to": "Designer",
+      "file": "CVAnkitaWanjale (1).pdf"
+    },
+    {
+      "from": "Developer",
+      "to": "Designer",
+      "file": "CVAnkitaWanjale.pdf"
+    },
+    {
+      "from": "Developer",
+      "to": "Data_Scientist",
+      "file": "CVAPUMONDAL.pdf"
+    },
+    {
+      "from": "Developer",
+      "to": "Data_Scientist",
+      "file": "CVASHISHWADBUDE.pdf"
+    },
+    {
+      "from": "Developer",
+      "to": "Data_Scientist",
+      "file": "CVAvinashGharge.pdf"
+    },
+    {
+      "from": "Developer",
+      "to": "Data_Scientist",
+      "file": "CVBhagyashreeBawane.pdf"
+    },
+    {
+      "from": "Developer",
+      "to": "Data_Scientist",
+      "file": "CVBhiseShekhar.pdf"
+    },
+    {
+      "from": "Developer",
+      "to": "Data_Scientist",
+      "file": "CVBiswaRanjanSwain.pdf"
+    },
+    {
+      "from": "Developer",
+      "to": "Data_Scientist",
+      "file": "CVDhanashreeSabale.pdf"
+    },
+    {
+      "from": "Developer",
+      "to": "Data_Scientist",
+      "file": "CVDharmarajPatil.pdf"
+    },
+    {
+      "from": "Developer",
+      "to": "Data_Scientist",
+      "file": "CVGayatriHedau.pdf"
+    },
+    {
+      "from": "Developer",
+      "to": "Data_Scientist",
+      "file": "CVHanumantNalwade.pdf"
+    },
+    {
+      "from": "Developer",
+      "to": "Data_Scientist",
+      "file": "CVHarshalBankhele.pdf"
+    },
+    {
+      "from": "Developer",
+      "to": "Data_Scientist",
+      "file": "CVHimanshuSonwane.pdf"
+    },
+    {
+      "from": "Developer",
+      "to": "Data_Scientist",
+      "file": "CVKailasJagadale (1).pdf"
+    },
+    {
+      "from": "Developer",
+      "to": "Data_Scientist",
+      "file": "CVKailasJagadale.pdf"
+    },
+    {
+      "from": "Developer",
+      "to": "Data_Scientist",
+      "file": "CVLakshmikantMuluk.pdf"
+    },
+    {
+      "from": "Developer",
+      "to": "Data_Scientist",
+      "file": "CVLatikeshLohar.pdf"
+    },
+    {
+      "from": "Developer",
+      "to": "Data_Scientist",
+      "file": "CVMAHESHKUMAR.pdf"
+    },
+    {
+      "from": "Developer",
+      "to": "Data_Scientist",
+      "file": "CVMaheshThete.pdf"
+    },
+    {
+      "from": "Developer",
+      "to": "Data_Scientist",
+      "file": "CVManojMahant.pdf"
+    },
+    {
+      "from": "Developer",
+      "to": "Designer",
+      "file": "CVMUNMUNMAHANTA.pdf"
+    },
+    {
+      "from": "Developer",
+      "to": "Intern",
+      "file": "CVNagrajPatil.pdf"
+    },
+    {
+      "from": "Developer",
+      "to": "Data_Scientist",
+      "file": "CVNileshBhalerao.pdf"
+    },
+    {
+      "from": "Developer",
+      "to": "Data_Scientist",
+      "file": "CVNishantKedare.pdf"
+    },
+    {
+      "from": "Developer",
+      "to": "Data_Scientist",
+      "file": "CVPallaviMishra.pdf"
+    },
+    {
+      "from": "Developer",
+      "to": "Data_Scientist",
+      "file": "CVPrashilBhagat.pdf"
+    },
+    {
+      "from": "Developer",
+      "to": "Data_Scientist",
+      "file": "CVPRATIKGHODEKAR.pdf"
+    },
+    {
+      "from": "Developer",
+      "to": "Data_Scientist",
+      "file": "CVPrernaWath.pdf"
+    },
+    {
+      "from": "Developer",
+      "to": "Data_Scientist",
+      "file": "CVPriyankaRaut.pdf"
+    },
+    {
+      "from": "Developer",
+      "to": "Data_Scientist",
+      "file": "CVRadhikaGour.pdf"
+    },
+    {
+      "from": "Developer",
+      "to": "Data_Scientist",
+      "file": "CVRahulTake.pdf"
+    },
+    {
+      "from": "Developer",
+      "to": "Data_Scientist",
+      "file": "CVRajeshwariAvhad.pdf"
+    },
+    {
+      "from": "Developer",
+      "to": "Data_Scientist",
+      "file": "CVRohitKumar.pdf"
+    },
+    {
+      "from": "Developer",
+      "to": "Designer",
+      "file": "CVRUSHIKESHDHONNAR.pdf"
+    },
+    {
+      "from": "Developer",
+      "to": "Data_Scientist",
+      "file": "CVRushikeshVaral.pdf"
+    },
+    {
+      "from": "Developer",
+      "to": "Data_Scientist",
+      "file": "CVSangitKachahe.pdf"
+    },
+    {
+      "from": "Developer",
+      "to": "Data_Scientist",
+      "file": "CVSANKETTODKAR.pdf"
+    },
+    {
+      "from": "Developer",
+      "to": "Data_Scientist",
+      "file": "CVSARAVANANP.pdf"
+    },
+    {
+      "from": "Developer",
+      "to": "Data_Scientist",
+      "file": "CVSarthakDalvi.pdf"
+    },
+    {
+      "from": "Developer",
+      "to": "Data_Scientist",
+      "file": "CVSAURABHJADHAV.pdf"
+    },
+    {
+      "from": "Developer",
+      "to": "Data_Scientist",
+      "file": "CVSheetalBankar.pdf"
+    },
+    {
+      "from": "Developer",
+      "to": "Intern",
+      "file": "CVShubhangiPatil.pdf"
+    },
+    {
+      "from": "Developer",
+      "to": "Data_Scientist",
+      "file": "CVSnehalGujar.pdf"
+    },
+    {
+      "from": "Developer",
+      "to": "Data_Scientist",
+      "file": "CVSnehaMisal.pdf"
+    },
+    {
+      "from": "Developer",
+      "to": "Designer",
+      "file": "CVSOURABHPATIL.pdf"
+    },
+    {
+      "from": "Developer",
+      "to": "Data_Scientist",
+      "file": "CVSURAJVISHWAKARMA.pdf"
+    },
+    {
+      "from": "Developer",
+      "to": "Data_Scientist",
+      "file": "CVTEJASGHATOL.pdf"
+    },
+    {
+      "from": "Developer",
+      "to": "Data_Scientist",
+      "file": "CVTEJASWINISABALE.pdf"
+    },
+    {
+      "from": "Developer",
+      "to": "Designer",
+      "file": "CVTUSHARCHOURASIYA (1).pdf"
+    },
+    {
+      "from": "Developer",
+      "to": "Designer",
+      "file": "CVTUSHARCHOURASIYA.pdf"
+    },
+    {
+      "from": "Developer",
+      "to": "Data_Scientist",
+      "file": "CVVaishaliMundlik-Tak.pdf"
+    },
+    {
+      "from": "Developer",
+      "to": "Data_Scientist",
+      "file": "CVVarshaW.pdf"
+    },
+    {
+      "from": "Developer",
+      "to": "Business_Analyst",
+      "file": "CVVijayKumarPare.pdf"
+    },
+    {
+      "from": "Developer",
+      "to": "Data_Scientist",
+      "file": "CVVishalNathgosavi.pdf"
+    },
+    {
+      "from": "Developer",
+      "to": "Data_Scientist",
+      "file": "CVVIVEKYADAV.pdf"
+    },
+    {
+      "from": "Developer",
+      "to": "Data_Scientist",
+      "file": "CVYOGESHBHANDARI.pdf"
+    },
+    {
+      "from": "Developer",
+      "to": "Data_Scientist",
+      "file": "Kamlesh Updated Resume.pdf"
+    },
+    {
+      "from": "Developer",
+      "to": "Data_Scientist",
+      "file": "Namrata_Jha_Resume.pdf"
+    },
+    {
+      "from": "Developer",
+      "to": "Data_Scientist",
+      "file": "Nikita\u2019s resume_240530_163703.pdf"
+    },
+    {
+      "from": "Developer",
+      "to": "Data_Scientist",
+      "file": "NILESH_GUPTA_RESUME.pdf"
+    },
+    {
+      "from": "Developer",
+      "to": "Data_Scientist",
+      "file": "Nishant_resume (3).pdf"
+    },
+    {
+      "from": "Developer",
+      "to": "Data_Scientist",
+      "file": "papiha_jadhav_salesforce.pdf"
+    },
+    {
+      "from": "Developer",
+      "to": "Data_Scientist",
+      "file": "Proposal of eCom Platform Development-Maxsell.pdf"
+    },
+    {
+      "from": "Developer",
+      "to": "Designer",
+      "file": "Resume (1).pdf"
+    },
+    {
+      "from": "Developer",
+      "to": "Data_Scientist",
+      "file": "Resume(2023)php (1).docx"
+    },
+    {
+      "from": "Developer",
+      "to": "Data_Scientist",
+      "file": "Resume(2023)php.docx"
+    },
+    {
+      "from": "Developer",
+      "to": "Designer",
+      "file": "Resume.pdf"
+    },
+    {
+      "from": "Developer",
+      "to": "Data_Scientist",
+      "file": "Resume24-G (1).pdf"
+    },
+    {
+      "from": "Developer",
+      "to": "Data_Scientist",
+      "file": "Resume24-G.pdf"
+    },
+    {
+      "from": "Developer",
+      "to": "Data_Scientist",
+      "file": "ResumeAkshayBhoite.pdf"
+    },
+    {
+      "from": "Developer",
+      "to": "Data_Scientist",
+      "file": "ResumeBHARATPATIL.pdf"
+    },
+    {
+      "from": "Developer",
+      "to": "Data_Scientist",
+      "file": "ResumeBhiseShekhar.pdf"
+    },
+    {
+      "from": "Developer",
+      "to": "Data_Scientist",
+      "file": "ResumeDharmarajPatil.pdf"
+    },
+    {
+      "from": "Developer",
+      "to": "Data_Scientist",
+      "file": "ResumeGaneshKale.pdf"
+    },
+    {
+      "from": "Developer",
+      "to": "Data_Scientist",
+      "file": "ResumeGayatriHedau.pdf"
+    },
+    {
+      "from": "Developer",
+      "to": "Data_Scientist",
+      "file": "ResumeKanchanMate.pdf"
+    },
+    {
+      "from": "Developer",
+      "to": "Intern",
+      "file": "ResumeNagrajPatil.pdf"
+    },
+    {
+      "from": "Developer",
+      "to": "Data_Scientist",
+      "file": "ResumeRavitaBawane (1).pdf"
+    },
+    {
+      "from": "Developer",
+      "to": "Data_Scientist",
+      "file": "ResumeRavitaBawane.pdf"
+    },
+    {
+      "from": "Developer",
+      "to": "Data_Scientist",
+      "file": "ResumeRupamJayaswal (1).pdf"
+    },
+    {
+      "from": "Developer",
+      "to": "Data_Scientist",
+      "file": "ResumeRupamJayaswal.pdf"
+    },
+    {
+      "from": "Developer",
+      "to": "Data_Scientist",
+      "file": "ResumeVarshaW.pdf"
+    },
+    {
+      "from": "Developer",
+      "to": "Intern",
+      "file": "Resum_ (1).pdf"
+    },
+    {
+      "from": "Developer",
+      "to": "Intern",
+      "file": "Resum_.pdf"
+    },
+    {
+      "from": "Developer",
+      "to": "Data_Scientist",
+      "file": "Sakshi_Dixit C.V.pdf"
+    },
+    {
+      "from": "Developer",
+      "to": "Data_Scientist",
+      "file": "sayaliresume.pdf"
+    },
+    {
+      "from": "Developer",
+      "to": "Data_Scientist",
+      "file": "Smruti Sakre simple.pdf"
+    },
+    {
+      "from": "Developer",
+      "to": "Data_Scientist",
+      "file": "somnath_resume_new2024 - Copy_2.pdf"
+    },
+    {
+      "from": "Developer",
+      "to": "Data_Scientist",
+      "file": "swati-antre PHP Laravel.pdf"
+    },
+    {
+      "from": "Developer",
+      "to": "Data_Scientist",
+      "file": "Vijay Shinde Senior Software Developer_240524_090042.pdf"
+    },
+    {
+      "from": "Developer",
+      "to": "Data_Scientist",
+      "file": "Vishal_Jadhav1.pdf"
+    },
+    {
+      "from": "Developer",
+      "to": "Business_Analyst",
+      "file": "ResumeHarshagandhaPatki.pdf"
+    },
+    {
+      "from": "Developer",
+      "to": "Intern",
+      "file": "ResumeIshwariBorse.pdf"
+    },
+    {
+      "from": "Developer",
+      "to": "Data_Scientist",
+      "file": "ResumeKUNDANKUMAR.pdf"
+    },
+    {
+      "from": "Developer",
+      "to": "Data_Scientist",
+      "file": "ResumeMandarVaste.pdf"
+    },
+    {
+      "from": "Developer",
+      "to": "Data_Scientist",
+      "file": "ResumePradipJadhav.pdf"
+    },
+    {
+      "from": "Developer",
+      "to": "Data_Scientist",
+      "file": "ResumeShrutiShinde.pdf"
+    },
+    {
+      "from": "Developer",
+      "to": "Data_Scientist",
+      "file": "ResumeYOGESHPAL.pdf"
+    },
+    {
+      "from": "Developer",
+      "to": "Data_Scientist",
+      "file": "ResumeLALITRANA.pdf"
+    },
+    {
+      "from": "Developer",
+      "to": "Data_Scientist",
+      "file": "ResumeRahulSharma.pdf"
+    },
+    {
+      "from": "Developer",
+      "to": "Intern",
+      "file": "Mohaideen Arsath_Resume.pdf"
+    },
+    {
+      "from": "Developer",
+      "to": "Data_Scientist",
+      "file": "praveen_resume (1).pdf"
+    },
+    {
+      "from": "Developer",
+      "to": "Data_Scientist",
+      "file": "Resume_Shubham_Sonawane.pdf"
+    },
+    {
+      "from": "Developer",
+      "to": "Intern",
+      "file": "Savula_Shiva_prasad.pdf"
+    },
+    {
+      "from": "Developer",
+      "to": "Data_Scientist",
+      "file": "sneharesume (1).pdf"
+    },
+    {
+      "from": "Developer",
+      "to": "Data_Scientist",
+      "file": "sneharesume.pdf"
+    },
+    {
+      "from": "Developer",
+      "to": "Data_Scientist",
+      "file": "Surya_Dev_Singh_Resume.pdf"
+    },
+    {
+      "from": "Developer",
+      "to": "Data_Scientist",
+      "file": "Updated Resume.pdf"
+    },
+    {
+      "from": "Developer",
+      "to": "Intern",
+      "file": "UpdatedPdf.pdf"
+    },
+    {
+      "from": "Developer",
+      "to": "Intern",
+      "file": "Vijay.resume (1).pdf"
+    },
+    {
+      "from": "DevOps",
+      "to": "Developer",
+      "file": "Gauri_Ghanekar-Chhatre_Sr.Software_Enginner-1.pdf"
+    },
+    {
+      "from": "DevOps",
+      "to": "Data_Scientist",
+      "file": "Abhinav_Tiwari_Resume (1).pdf"
+    },
+    {
+      "from": "DevOps",
+      "to": "Developer",
+      "file": "Bhagyashri_Java_Developer_Resume.pdf"
+    },
+    {
+      "from": "DevOps",
+      "to": "Data_Scientist",
+      "file": "Kumar Shanu_GenAI Resume.pdf"
+    },
+    {
+      "from": "DevOps",
+      "to": "Developer",
+      "file": "VijayRathod_7767097672_4Y.pdf"
+    },
+    {
+      "from": "DevOps",
+      "to": "Data_Scientist",
+      "file": "My Resume Jayesh 1F2 new .pdf"
+    },
+    {
+      "from": "Business_Analyst",
+      "to": "Data_Scientist",
+      "file": "ResumeSahilPandita.pdf"
+    },
+    {
+      "from": "Manager",
+      "to": "Data_Scientist",
+      "file": "ResumeSatyamTamhane.pdf"
+    },
+    {
+      "from": "Manager",
+      "to": "Data_Scientist",
+      "file": "ResumeRushikeshShivgan.pdf"
+    },
+    {
+      "from": "Manager",
+      "to": "Data_Scientist",
+      "file": "ResumeSAHILNAGARIYA.pdf"
+    },
+    {
+      "from": "Manager",
+      "to": "Data_Scientist",
+      "file": "ResumeVaradKulkarni.pdf"
+    },
+    {
+      "from": "Fresher",
+      "to": "Intern",
+      "file": "Bharath_S_CV-July_2024[1] (1).pdf"
+    },
+    {
+      "from": "Fresher",
+      "to": "Designer",
+      "file": "sambodhi tambe resume finalllll_compressed (1).pdf"
+    },
+    {
+      "from": "Fresher",
+      "to": "Designer",
+      "file": "Jui Dey CV Graphic Designer-1.pdf"
+    },
+    {
+      "from": "Fresher",
+      "to": "Other",
+      "file": "RESUME MUSKAAN.pdf"
+    },
+    {
+      "from": "Fresher",
+      "to": "Data_Scientist",
+      "file": "Untitled attachment 00007.pdf"
+    },
+    {
+      "from": "Fresher",
+      "to": "Designer",
+      "file": "Updated Resume- Priya Hirau  - Copy.pdf"
+    },
+    {
+      "from": "Fresher",
+      "to": "Designer",
+      "file": "Vishnu Dhavale Resume 2024.pdf"
+    },
+    {
+      "from": "Fresher",
+      "to": "Data_Scientist",
+      "file": "CVRohitPasalkar.pdf"
+    },
+    {
+      "from": "Fresher",
+      "to": "Designer",
+      "file": "ResumeARVINDMALI (1).pdf"
+    },
+    {
+      "from": "Fresher",
+      "to": "Designer",
+      "file": "ResumeARVINDMALI.pdf"
+    },
+    {
+      "from": "Fresher",
+      "to": "Designer",
+      "file": "ResumeJahnaviM.pdf"
+    },
+    {
+      "from": "Fresher",
+      "to": "Data_Scientist",
+      "file": "Asset Tracking and Monitoring Solutions.pdf"
+    },
+    {
+      "from": "Fresher",
+      "to": "Designer",
+      "file": "BHAVISHA_CV_2024.pdf"
+    },
+    {
+      "from": "Fresher",
+      "to": "Designer",
+      "file": "CVAmitDubale.pdf"
+    },
+    {
+      "from": "Fresher",
+      "to": "Designer",
+      "file": "CVHARSHBHARGAVA.pdf"
+    },
+    {
+      "from": "Fresher",
+      "to": "Designer",
+      "file": "CVMayurWadile.pdf"
+    },
+    {
+      "from": "Fresher",
+      "to": "Data_Scientist",
+      "file": "CVPramodwaghmare.pdf"
+    },
+    {
+      "from": "Fresher",
+      "to": "Data_Scientist",
+      "file": "CVPrashantG.Patil.pdf"
+    },
+    {
+      "from": "Fresher",
+      "to": "Designer",
+      "file": "CVRAHULMISTARI.pdf"
+    },
+    {
+      "from": "Fresher",
+      "to": "Data_Scientist",
+      "file": "CVShrikantMaid.pdf"
+    },
+    {
+      "from": "Fresher",
+      "to": "Data_Scientist",
+      "file": "CVvaibhavsolanke.pdf"
+    },
+    {
+      "from": "Fresher",
+      "to": "Data_Scientist",
+      "file": "CVVaishnaviBadabe.pdf"
+    },
+    {
+      "from": "Fresher",
+      "to": "Data_Scientist",
+      "file": "EarnWealth - Task Assessment.pdf"
+    },
+    {
+      "from": "Fresher",
+      "to": "Manager",
+      "file": "HR Notification Work Wear Policy.pdf"
+    },
+    {
+      "from": "Fresher",
+      "to": "Data_Scientist",
+      "file": "Mayuri Roy_Resume.pdf"
+    },
+    {
+      "from": "Fresher",
+      "to": "Data_Scientist",
+      "file": "ResumeAAYUSHJAIN.pdf"
+    },
+    {
+      "from": "Fresher",
+      "to": "Data_Scientist",
+      "file": "ResumeAJINKYARODE.pdf"
+    },
+    {
+      "from": "Fresher",
+      "to": "Data_Scientist",
+      "file": "ResumeANKITDONGRE.pdf"
+    },
+    {
+      "from": "Fresher",
+      "to": "Data_Scientist",
+      "file": "ResumeKhushbooBarhate.pdf"
+    },
+    {
+      "from": "Fresher",
+      "to": "Data_Scientist",
+      "file": "ResumeMayurSaikia.pdf"
+    },
+    {
+      "from": "Fresher",
+      "to": "Data_Scientist",
+      "file": "ResumeMonicaUgale.pdf"
+    },
+    {
+      "from": "Fresher",
+      "to": "Business_Analyst",
+      "file": "ResumeRahulJadhav.pdf"
+    },
+    {
+      "from": "Fresher",
+      "to": "Intern",
+      "file": "ResumeRajeshGharge.pdf"
+    },
+    {
+      "from": "Fresher",
+      "to": "Data_Scientist",
+      "file": "ResumeSachinHiranayak.pdf"
+    },
+    {
+      "from": "Fresher",
+      "to": "Data_Scientist",
+      "file": "ResumeSakshiDeotale.pdf"
+    },
+    {
+      "from": "Fresher",
+      "to": "Data_Scientist",
+      "file": "ResumeShahShamikha.pdf"
+    },
+    {
+      "from": "Fresher",
+      "to": "Data_Scientist",
+      "file": "ResumeSuhasNikrad.pdf"
+    },
+    {
+      "from": "Fresher",
+      "to": "Data_Scientist",
+      "file": "ResumeSUMITNIJSURE.pdf"
+    },
+    {
+      "from": "Fresher",
+      "to": "Data_Scientist",
+      "file": "ResumeTahirMujawar.pdf"
+    },
+    {
+      "from": "Fresher",
+      "to": "Data_Scientist",
+      "file": "ResumeUrvashiPatil.pdf"
+    },
+    {
+      "from": "Fresher",
+      "to": "Data_Scientist",
+      "file": "ResumeVaibhavMangrulkar.pdf"
+    },
+    {
+      "from": "Fresher",
+      "to": "Data_Scientist",
+      "file": "Anubhav Gang FA-1.pdf"
+    },
+    {
+      "from": "Fresher",
+      "to": "Data_Scientist",
+      "file": "Job Description for Speed Wealth.pdf"
+    },
+    {
+      "from": "Fresher",
+      "to": "Data_Scientist",
+      "file": "ResumeAdityaChhajed.pdf"
+    },
+    {
+      "from": "Fresher",
+      "to": "Data_Scientist",
+      "file": "ResumeApurvaGharal.pdf"
+    },
+    {
+      "from": "Fresher",
+      "to": "Data_Scientist",
+      "file": "ResumeDanish.Dorabjee.pdf"
+    },
+    {
+      "from": "Fresher",
+      "to": "Data_Scientist",
+      "file": "ResumeNandkishorBarange.pdf"
+    },
+    {
+      "from": "Fresher",
+      "to": "Designer",
+      "file": "ResumeOMKARSHETYE.pdf"
+    },
+    {
+      "from": "Fresher",
+      "to": "Data_Scientist",
+      "file": "ResumePoojaLambe.pdf"
+    },
+    {
+      "from": "Fresher",
+      "to": "Business_Analyst",
+      "file": "ResumeRiddhiJankar.pdf"
+    },
+    {
+      "from": "Fresher",
+      "to": "Data_Scientist",
+      "file": "ResumeRohanRam.pdf"
+    },
+    {
+      "from": "Fresher",
+      "to": "Data_Scientist",
+      "file": "ResumeSheefaliKhan.pdf"
+    },
+    {
+      "from": "Fresher",
+      "to": "Data_Scientist",
+      "file": "ResumeShubhamKhaire.pdf"
+    },
+    {
+      "from": "Fresher",
+      "to": "Data_Scientist",
+      "file": "ResumeTusharPalve.pdf"
+    },
+    {
+      "from": "Fresher",
+      "to": "Intern",
+      "file": "AyushRawat.pdf"
+    },
+    {
+      "from": "Fresher",
+      "to": "Developer",
+      "file": "RaviAdipata.pdf"
+    },
+    {
+      "from": "Fresher",
+      "to": "Data_Scientist",
+      "file": "ResumeUmaKurwade (1).docx"
+    },
+    {
+      "from": "Intern",
+      "to": "Data_Scientist",
+      "file": "Sai_Adhikari.pdf"
+    },
+    {
+      "from": "Intern",
+      "to": "Data_Scientist",
+      "file": "Akshay Shrikant Nehre Resume.docx"
+    },
+    {
+      "from": "Intern",
+      "to": "Designer",
+      "file": "CV_Graphic designer Snehal.pdf"
+    },
+    {
+      "from": "Intern",
+      "to": "Designer",
+      "file": "Mayur Lindait Resume-1.pdf"
+    },
+    {
+      "from": "Intern",
+      "to": "Designer",
+      "file": "Resume - Copy.pdf"
+    },
+    {
+      "from": "Intern",
+      "to": "Designer",
+      "file": "Arushi Soni_Resume.pdf"
+    },
+    {
+      "from": "Intern",
+      "to": "Developer",
+      "file": "CVAbhishekvishwakarma.pdf"
+    },
+    {
+      "from": "Intern",
+      "to": "Designer",
+      "file": "CVAniketDeotale.pdf"
+    },
+    {
+      "from": "Intern",
+      "to": "Data_Scientist",
+      "file": "CVTEJASHREESURYAWANSHI.pdf"
+    },
+    {
+      "from": "Intern",
+      "to": "Designer",
+      "file": "Shruti_Nigam_Designer_CV.pdf"
+    },
+    {
+      "from": "Intern",
+      "to": "Data_Scientist",
+      "file": "ResumeASHISHJOHRI.pdf"
+    },
+    {
+      "from": "Intern",
+      "to": "Data_Scientist",
+      "file": "ResumeISHANIMJE.pdf"
+    },
+    {
+      "from": "Intern",
+      "to": "Data_Scientist",
+      "file": "ResumeNilamRakh.pdf"
+    },
+    {
+      "from": "Intern",
+      "to": "Data_Scientist",
+      "file": "ResumeRadhikaSharma.pdf"
+    },
+    {
+      "from": "Intern",
+      "to": "Business_Analyst",
+      "file": "ResumeSandeepKeswani.pdf"
+    },
+    {
+      "from": "Intern",
+      "to": "Designer",
+      "file": "ResumeDakshLodha.pdf"
+    },
+    {
+      "from": "Intern",
+      "to": "Data_Scientist",
+      "file": "ResumeSACHINBANDGAR.pdf"
+    },
+    {
+      "from": "Intern",
+      "to": "Data_Scientist",
+      "file": "ResumeSumantKhadtare.pdf"
+    },
+    {
+      "from": "Intern",
+      "to": "Developer",
+      "file": "Kiran_Resume-1.pdf"
+    },
+    {
+      "from": "Other",
+      "to": "Data_Scientist",
+      "file": "ResumeBhavanaKulkarni.pdf"
+    },
+    {
+      "from": "Other",
+      "to": "Data_Scientist",
+      "file": "CVAakashKumawat.pdf"
+    },
+    {
+      "from": "Other",
+      "to": "Data_Scientist",
+      "file": "ResumeAditiSairani.pdf"
+    },
+    {
+      "from": "Other",
+      "to": "Data_Scientist",
+      "file": "ResumeAniketDhanrao.pdf"
+    },
+    {
+      "from": "Other",
+      "to": "Data_Scientist",
+      "file": "ResumeSANDESHDHAWALE.pdf"
+    },
+    {
+      "from": "Other",
+      "to": "Data_Scientist",
+      "file": "ResumeShubhangiGhugal.pdf"
+    }
+  ],
+  "errors": [],
+  "distribution": {
+    "Designer": 68,
+    "Developer": 119,
+    "Data_Scientist": 264,
+    "Intern": 50,
+    "Business_Analyst": 7,
+    "DevOps": 1,
+    "Other": 35,
+    "Fresher": 1,
+    "Manager": 1
+  },
+  "details": [
+    {
+      "file": "Developer\\Batch_1\\SAGAR CV.pdf",
+      "current": "Developer",
+      "predicted": "Designer",
+      "confidence": 0.875,
+      "correct": false
+    },
+    {
+      "file": "Developer\\Batch_1\\Yash Maheshwari Resume  - Copy.pdf",
+      "current": "Developer",
+      "predicted": "Developer",
+      "confidence": 1.556,
+      "correct": true
+    },
+    {
+      "file": "Developer\\Batch_1\\Amit Sonar (1).pdf",
+      "current": "Developer",
+      "predicted": "Developer",
+      "confidence": 3.222,
+      "correct": true
+    },
+    {
+      "file": "Developer\\Batch_1\\CVnihalsangole.pdf",
+      "current": "Developer",
+      "predicted": "Developer",
+      "confidence": 6.556,
+      "correct": true
+    },
+    {
+      "file": "Developer\\Batch_1\\CVNikitaMane.pdf",
+      "current": "Developer",
+      "predicted": "Data_Scientist",
+      "confidence": 1.0,
+      "correct": false
+    },
+    {
+      "file": "Developer\\Batch_1\\CVPrakashSingh.pdf",
+      "current": "Developer",
+      "predicted": "Developer",
+      "confidence": 3.111,
+      "correct": true
+    },
+    {
+      "file": "Developer\\Batch_1\\CVSNEHALKAKADE.pdf",
+      "current": "Developer",
+      "predicted": "Data_Scientist",
+      "confidence": 1.286,
+      "correct": false
+    },
+    {
+      "file": "Developer\\Batch_1\\Nishigandha Patil.pdf",
+      "current": "Developer",
+      "predicted": "Developer",
+      "confidence": 2.444,
+      "correct": true
+    },
+    {
+      "file": "Developer\\Batch_1\\RaginiPharande-Resume_Aug.pdf",
+      "current": "Developer",
+      "predicted": "Data_Scientist",
+      "confidence": 1.714,
+      "correct": false
+    },
+    {
+      "file": "Developer\\Batch_1\\ResumeAbhishekDiwakar.pdf",
+      "current": "Developer",
+      "predicted": "Developer",
+      "confidence": 3.0,
+      "correct": true
+    },
+    {
+      "file": "Developer\\Batch_2\\ResumeABHISHEKPAL (1).pdf",
+      "current": "Developer",
+      "predicted": "Developer",
+      "confidence": 1.556,
+      "correct": true
+    },
+    {
+      "file": "Developer\\Batch_2\\ResumeABHISHEKPAL.pdf",
+      "current": "Developer",
+      "predicted": "Developer",
+      "confidence": 1.556,
+      "correct": true
+    },
+    {
+      "file": "Developer\\Batch_2\\ResumeArjumandContractor.pdf",
+      "current": "Developer",
+      "predicted": "Developer",
+      "confidence": 3.667,
+      "correct": true
+    },
+    {
+      "file": "Developer\\Batch_2\\ResumeAsrarAli.pdf",
+      "current": "Developer",
+      "predicted": "Data_Scientist",
+      "confidence": 2.857,
+      "correct": false
+    },
+    {
+      "file": "Developer\\Batch_2\\ResumeAviGhorecha.pdf",
+      "current": "Developer",
+      "predicted": "Developer",
+      "confidence": 2.556,
+      "correct": true
+    },
+    {
+      "file": "Developer\\Batch_2\\ResumeDeepanshiArora.pdf",
+      "current": "Developer",
+      "predicted": "Developer",
+      "confidence": 2.0,
+      "correct": true
+    },
+    {
+      "file": "Developer\\Batch_2\\ResumeDikshaZodape.pdf",
+      "current": "Developer",
+      "predicted": "Developer",
+      "confidence": 2.556,
+      "correct": true
+    },
+    {
+      "file": "Developer\\Batch_2\\ResumeDiviliRamakanth.pdf",
+      "current": "Developer",
+      "predicted": "Developer",
+      "confidence": 5.0,
+      "correct": true
+    },
+    {
+      "file": "Developer\\Batch_2\\ResumeGarimaRajput.pdf",
+      "current": "Developer",
+      "predicted": "Developer",
+      "confidence": 3.778,
+      "correct": true
+    },
+    {
+      "file": "Developer\\Batch_2\\ResumeGAURAVWARGHANE.pdf",
+      "current": "Developer",
+      "predicted": "Data_Scientist",
+      "confidence": 1.571,
+      "correct": false
+    },
+    {
+      "file": "Developer\\Batch_3\\ResumeJyotiKanyal.pdf",
+      "current": "Developer",
+      "predicted": "Developer",
+      "confidence": 3.667,
+      "correct": true
+    },
+    {
+      "file": "Developer\\Batch_3\\ResumeMohit..pdf",
+      "current": "Developer",
+      "predicted": "Developer",
+      "confidence": 2.111,
+      "correct": true
+    },
+    {
+      "file": "Developer\\Batch_3\\ResumeNABARUNADHIKARY.pdf",
+      "current": "Developer",
+      "predicted": "Developer",
+      "confidence": 1.333,
+      "correct": true
+    },
+    {
+      "file": "Developer\\Batch_3\\ResumePonvelMuthuganesan.pdf",
+      "current": "Developer",
+      "predicted": "Data_Scientist",
+      "confidence": 5.0,
+      "correct": false
+    },
+    {
+      "file": "Developer\\Batch_3\\ResumeSalmanKazi.pdf",
+      "current": "Developer",
+      "predicted": "Developer",
+      "confidence": 4.667,
+      "correct": true
+    },
+    {
+      "file": "Developer\\Batch_3\\ResumeSHAILENDRABHADORIA.pdf",
+      "current": "Developer",
+      "predicted": "Developer",
+      "confidence": 4.556,
+      "correct": true
+    },
+    {
+      "file": "Developer\\Batch_3\\ResumeSHUBHIJAIN.pdf",
+      "current": "Developer",
+      "predicted": "Intern",
+      "confidence": 1.0,
+      "correct": false
+    },
+    {
+      "file": "Developer\\Batch_3\\ResumeVASANTHYT.pdf",
+      "current": "Developer",
+      "predicted": "Developer",
+      "confidence": 2.0,
+      "correct": true
+    },
+    {
+      "file": "Developer\\Batch_3\\ResumeAbhishekKumar.pdf",
+      "current": "Developer",
+      "predicted": "Developer",
+      "confidence": 3.333,
+      "correct": true
+    },
+    {
+      "file": "Developer\\Batch_3\\ResumeANKITKUMARRAVIDAS.pdf",
+      "current": "Developer",
+      "predicted": "Developer",
+      "confidence": 2.0,
+      "correct": true
+    },
+    {
+      "file": "Developer\\Batch_4\\ResumeASHTAVINAYAKSHARMA.pdf",
+      "current": "Developer",
+      "predicted": "Developer",
+      "confidence": 2.889,
+      "correct": true
+    },
+    {
+      "file": "Developer\\Batch_4\\ResumeBabluJakhar.pdf",
+      "current": "Developer",
+      "predicted": "Developer",
+      "confidence": 2.111,
+      "correct": true
+    },
+    {
+      "file": "Developer\\Batch_4\\ResumeDiviamSingh.pdf",
+      "current": "Developer",
+      "predicted": "Developer",
+      "confidence": 2.556,
+      "correct": true
+    },
+    {
+      "file": "Developer\\Batch_4\\ResumeTomiwaAdelae.pdf",
+      "current": "Developer",
+      "predicted": "Developer",
+      "confidence": 1.0,
+      "correct": true
+    },
+    {
+      "file": "Developer\\Batch_4\\ResumeUmangZala.pdf",
+      "current": "Developer",
+      "predicted": "Developer",
+      "confidence": 2.222,
+      "correct": true
+    },
+    {
+      "file": "Developer\\Batch_4\\AJIT_kumar.pdf",
+      "current": "Developer",
+      "predicted": "Developer",
+      "confidence": 5.444,
+      "correct": true
+    },
+    {
+      "file": "Developer\\Batch_4\\Akshata Badgujar's PHP Codeigniter Laravel Developer Resume.pdf",
+      "current": "Developer",
+      "predicted": "Data_Scientist",
+      "confidence": 2.0,
+      "correct": false
+    },
+    {
+      "file": "Developer\\Batch_4\\Akshay\u2019s resume_240530_181327.pdf",
+      "current": "Developer",
+      "predicted": "Developer",
+      "confidence": 1.778,
+      "correct": true
+    },
+    {
+      "file": "Developer\\Batch_4\\Ankita CV - 2024.pdf",
+      "current": "Developer",
+      "predicted": "Developer",
+      "confidence": 1.667,
+      "correct": true
+    },
+    {
+      "file": "Developer\\Batch_4\\Anup Chaudhari main CV.pdf",
+      "current": "Developer",
+      "predicted": "Developer",
+      "confidence": 1.778,
+      "correct": true
+    },
+    {
+      "file": "Developer\\Batch_5\\Ashwini\u2019s resume_240530_180551.pdf",
+      "current": "Developer",
+      "predicted": "Developer",
+      "confidence": 2.0,
+      "correct": true
+    },
+    {
+      "file": "Developer\\Batch_5\\Bhagyashree P_CV-2.pdf",
+      "current": "Developer",
+      "predicted": "Data_Scientist",
+      "confidence": 1.571,
+      "correct": false
+    },
+    {
+      "file": "Developer\\Batch_5\\CVAbdullahKhan.pdf",
+      "current": "Developer",
+      "predicted": "Developer",
+      "confidence": 2.222,
+      "correct": true
+    },
+    {
+      "file": "Developer\\Batch_5\\CVAbhishekBagad.pdf",
+      "current": "Developer",
+      "predicted": "Data_Scientist",
+      "confidence": 1.857,
+      "correct": false
+    },
+    {
+      "file": "Developer\\Batch_5\\CVAdityaMalode.pdf",
+      "current": "Developer",
+      "predicted": "Intern",
+      "confidence": 2.5,
+      "correct": false
+    },
+    {
+      "file": "Developer\\Batch_5\\CVAishawaryaKabade.pdf",
+      "current": "Developer",
+      "predicted": "Developer",
+      "confidence": 1.778,
+      "correct": true
+    },
+    {
+      "file": "Developer\\Batch_5\\CVAishwaryaKuthe.pdf",
+      "current": "Developer",
+      "predicted": "Data_Scientist",
+      "confidence": 3.857,
+      "correct": false
+    },
+    {
+      "file": "Developer\\Batch_5\\CVAishwaryaShinde.pdf",
+      "current": "Developer",
+      "predicted": "Data_Scientist",
+      "confidence": 2.143,
+      "correct": false
+    },
+    {
+      "file": "Developer\\Batch_5\\CVAmolGedam.pdf",
+      "current": "Developer",
+      "predicted": "Data_Scientist",
+      "confidence": 2.714,
+      "correct": false
+    },
+    {
+      "file": "Developer\\Batch_5\\CVAmolKate.pdf",
+      "current": "Developer",
+      "predicted": "Designer",
+      "confidence": 2.875,
+      "correct": false
+    },
+    {
+      "file": "Developer\\Batch_6\\CVANJALIGUPTA.pdf",
+      "current": "Developer",
+      "predicted": "Developer",
+      "confidence": 1.889,
+      "correct": true
+    },
+    {
+      "file": "Developer\\Batch_6\\CVAnkitaWanjale (1).pdf",
+      "current": "Developer",
+      "predicted": "Designer",
+      "confidence": 4.125,
+      "correct": false
+    },
+    {
+      "file": "Developer\\Batch_6\\CVAnkitaWanjale.pdf",
+      "current": "Developer",
+      "predicted": "Designer",
+      "confidence": 4.125,
+      "correct": false
+    },
+    {
+      "file": "Developer\\Batch_6\\CVAPUMONDAL.pdf",
+      "current": "Developer",
+      "predicted": "Data_Scientist",
+      "confidence": 2.0,
+      "correct": false
+    },
+    {
+      "file": "Developer\\Batch_6\\CVASHISHWADBUDE.pdf",
+      "current": "Developer",
+      "predicted": "Data_Scientist",
+      "confidence": 2.0,
+      "correct": false
+    },
+    {
+      "file": "Developer\\Batch_6\\CVAvinashGharge.pdf",
+      "current": "Developer",
+      "predicted": "Data_Scientist",
+      "confidence": 4.0,
+      "correct": false
+    },
+    {
+      "file": "Developer\\Batch_6\\CVAyushLaad.pdf",
+      "current": "Developer",
+      "predicted": "Developer",
+      "confidence": 2.667,
+      "correct": true
+    },
+    {
+      "file": "Developer\\Batch_6\\CVBhagyashreeBawane.pdf",
+      "current": "Developer",
+      "predicted": "Data_Scientist",
+      "confidence": 2.0,
+      "correct": false
+    },
+    {
+      "file": "Developer\\Batch_6\\CVBHAGYASHRIGHATOL.pdf",
+      "current": "Developer",
+      "predicted": "Developer",
+      "confidence": 2.333,
+      "correct": true
+    },
+    {
+      "file": "Developer\\Batch_6\\CVBhiseShekhar.pdf",
+      "current": "Developer",
+      "predicted": "Data_Scientist",
+      "confidence": 2.429,
+      "correct": false
+    },
+    {
+      "file": "Developer\\Batch_7\\CVBiswaRanjanSwain.pdf",
+      "current": "Developer",
+      "predicted": "Data_Scientist",
+      "confidence": 1.0,
+      "correct": false
+    },
+    {
+      "file": "Developer\\Batch_7\\CVChaitanyaDeshpande.pdf",
+      "current": "Developer",
+      "predicted": "Developer",
+      "confidence": 2.667,
+      "correct": true
+    },
+    {
+      "file": "Developer\\Batch_7\\CVChandrakantBhadre.pdf",
+      "current": "Developer",
+      "predicted": "Developer",
+      "confidence": 3.0,
+      "correct": true
+    },
+    {
+      "file": "Developer\\Batch_7\\CVDhanashreeSabale.pdf",
+      "current": "Developer",
+      "predicted": "Data_Scientist",
+      "confidence": 2.286,
+      "correct": false
+    },
+    {
+      "file": "Developer\\Batch_7\\CVDharmarajPatil.pdf",
+      "current": "Developer",
+      "predicted": "Data_Scientist",
+      "confidence": 3.143,
+      "correct": false
+    },
+    {
+      "file": "Developer\\Batch_7\\CVDIVYAMANE.pdf",
+      "current": "Developer",
+      "predicted": "Developer",
+      "confidence": 1.889,
+      "correct": true
+    },
+    {
+      "file": "Developer\\Batch_7\\CVDurgeshDharmadhikari (1).pdf",
+      "current": "Developer",
+      "predicted": "Developer",
+      "confidence": 3.0,
+      "correct": true
+    },
+    {
+      "file": "Developer\\Batch_7\\CVGayatriHedau.pdf",
+      "current": "Developer",
+      "predicted": "Data_Scientist",
+      "confidence": 6.143,
+      "correct": false
+    },
+    {
+      "file": "Developer\\Batch_7\\CVGokulChavan.pdf",
+      "current": "Developer",
+      "predicted": "Developer",
+      "confidence": 1.889,
+      "correct": true
+    },
+    {
+      "file": "Developer\\Batch_7\\CVHanumantNalwade.pdf",
+      "current": "Developer",
+      "predicted": "Data_Scientist",
+      "confidence": 4.571,
+      "correct": false
+    },
+    {
+      "file": "Developer\\Batch_8\\CVHarshalBankhele.pdf",
+      "current": "Developer",
+      "predicted": "Data_Scientist",
+      "confidence": 2.857,
+      "correct": false
+    },
+    {
+      "file": "Developer\\Batch_8\\CVHARSHILRACHCHH.pdf",
+      "current": "Developer",
+      "predicted": "Developer",
+      "confidence": 1.111,
+      "correct": true
+    },
+    {
+      "file": "Developer\\Batch_8\\CVHimanshuSonwane.pdf",
+      "current": "Developer",
+      "predicted": "Data_Scientist",
+      "confidence": 1.857,
+      "correct": false
+    },
+    {
+      "file": "Developer\\Batch_8\\CVKailasJagadale (1).pdf",
+      "current": "Developer",
+      "predicted": "Data_Scientist",
+      "confidence": 2.429,
+      "correct": false
+    },
+    {
+      "file": "Developer\\Batch_8\\CVKailasJagadale.pdf",
+      "current": "Developer",
+      "predicted": "Data_Scientist",
+      "confidence": 2.429,
+      "correct": false
+    },
+    {
+      "file": "Developer\\Batch_8\\CVKhushbooJaiswal.pdf",
+      "current": "Developer",
+      "predicted": "Developer",
+      "confidence": 4.556,
+      "correct": true
+    },
+    {
+      "file": "Developer\\Batch_8\\CVLakshmikantMuluk.pdf",
+      "current": "Developer",
+      "predicted": "Data_Scientist",
+      "confidence": 6.571,
+      "correct": false
+    },
+    {
+      "file": "Developer\\Batch_8\\CVLatikeshLohar.pdf",
+      "current": "Developer",
+      "predicted": "Data_Scientist",
+      "confidence": 2.571,
+      "correct": false
+    },
+    {
+      "file": "Developer\\Batch_8\\CVMAHESHKUMAR.pdf",
+      "current": "Developer",
+      "predicted": "Data_Scientist",
+      "confidence": 1.857,
+      "correct": false
+    },
+    {
+      "file": "Developer\\Batch_8\\CVMaheshThete.pdf",
+      "current": "Developer",
+      "predicted": "Data_Scientist",
+      "confidence": 2.0,
+      "correct": false
+    },
+    {
+      "file": "Developer\\Batch_9\\CVManojMahant.pdf",
+      "current": "Developer",
+      "predicted": "Data_Scientist",
+      "confidence": 3.571,
+      "correct": false
+    },
+    {
+      "file": "Developer\\Batch_9\\CVMUNMUNMAHANTA.pdf",
+      "current": "Developer",
+      "predicted": "Designer",
+      "confidence": 4.875,
+      "correct": false
+    },
+    {
+      "file": "Developer\\Batch_9\\CVNagrajPatil.pdf",
+      "current": "Developer",
+      "predicted": "Intern",
+      "confidence": 4.0,
+      "correct": false
+    },
+    {
+      "file": "Developer\\Batch_9\\CVNileshBhalerao.pdf",
+      "current": "Developer",
+      "predicted": "Data_Scientist",
+      "confidence": 0.571,
+      "correct": false
+    },
+    {
+      "file": "Developer\\Batch_9\\CVNishantKedare.pdf",
+      "current": "Developer",
+      "predicted": "Data_Scientist",
+      "confidence": 2.571,
+      "correct": false
+    },
+    {
+      "file": "Developer\\Batch_9\\CVPallaviMishra.pdf",
+      "current": "Developer",
+      "predicted": "Data_Scientist",
+      "confidence": 1.0,
+      "correct": false
+    },
+    {
+      "file": "Developer\\Batch_9\\CVPARTHBUTANI.pdf",
+      "current": "Developer",
+      "predicted": "Developer",
+      "confidence": 1.444,
+      "correct": true
+    },
+    {
+      "file": "Developer\\Batch_9\\CVPAVANBELDAR.pdf",
+      "current": "Developer",
+      "predicted": "Developer",
+      "confidence": 4.333,
+      "correct": true
+    },
+    {
+      "file": "Developer\\Batch_9\\CVPOOJAGODSE.pdf",
+      "current": "Developer",
+      "predicted": "Developer",
+      "confidence": 2.222,
+      "correct": true
+    },
+    {
+      "file": "Developer\\Batch_9\\CVPRAJYOTGAIKWAD.pdf",
+      "current": "Developer",
+      "predicted": "Developer",
+      "confidence": 3.556,
+      "correct": true
+    },
+    {
+      "file": "Developer\\Batch_10\\CVPrashilBhagat.pdf",
+      "current": "Developer",
+      "predicted": "Data_Scientist",
+      "confidence": 1.286,
+      "correct": false
+    },
+    {
+      "file": "Developer\\Batch_10\\CVPRATIKGHODEKAR.pdf",
+      "current": "Developer",
+      "predicted": "Data_Scientist",
+      "confidence": 1.571,
+      "correct": false
+    },
+    {
+      "file": "Developer\\Batch_10\\CVPrernaWath.pdf",
+      "current": "Developer",
+      "predicted": "Data_Scientist",
+      "confidence": 1.143,
+      "correct": false
+    },
+    {
+      "file": "Developer\\Batch_10\\CVPriyankaRaut.pdf",
+      "current": "Developer",
+      "predicted": "Data_Scientist",
+      "confidence": 2.286,
+      "correct": false
+    },
+    {
+      "file": "Developer\\Batch_10\\CVRadhikaGour.pdf",
+      "current": "Developer",
+      "predicted": "Data_Scientist",
+      "confidence": 2.571,
+      "correct": false
+    },
+    {
+      "file": "Developer\\Batch_10\\CVRahulTake.pdf",
+      "current": "Developer",
+      "predicted": "Data_Scientist",
+      "confidence": 1.0,
+      "correct": false
+    },
+    {
+      "file": "Developer\\Batch_10\\CVRajeshwariAvhad.pdf",
+      "current": "Developer",
+      "predicted": "Data_Scientist",
+      "confidence": 0.857,
+      "correct": false
+    },
+    {
+      "file": "Developer\\Batch_10\\CVRohitKumar.pdf",
+      "current": "Developer",
+      "predicted": "Data_Scientist",
+      "confidence": 2.143,
+      "correct": false
+    },
+    {
+      "file": "Developer\\Batch_10\\CVRUSHIKESHDHONNAR.pdf",
+      "current": "Developer",
+      "predicted": "Designer",
+      "confidence": 3.0,
+      "correct": false
+    },
+    {
+      "file": "Developer\\Batch_10\\CVRushikeshVaral.pdf",
+      "current": "Developer",
+      "predicted": "Data_Scientist",
+      "confidence": 1.429,
+      "correct": false
+    },
+    {
+      "file": "Developer\\Batch_11\\CVSachinKumar.pdf",
+      "current": "Developer",
+      "predicted": "Developer",
+      "confidence": 1.667,
+      "correct": true
+    },
+    {
+      "file": "Developer\\Batch_11\\CVSANDEEPPATIL.pdf",
+      "current": "Developer",
+      "predicted": "Developer",
+      "confidence": 0.889,
+      "correct": true
+    },
+    {
+      "file": "Developer\\Batch_11\\CVSangitKachahe.pdf",
+      "current": "Developer",
+      "predicted": "Data_Scientist",
+      "confidence": 2.0,
+      "correct": false
+    },
+    {
+      "file": "Developer\\Batch_11\\CVSANKETTODKAR.pdf",
+      "current": "Developer",
+      "predicted": "Data_Scientist",
+      "confidence": 1.714,
+      "correct": false
+    },
+    {
+      "file": "Developer\\Batch_11\\CVSapnawankhede.pdf",
+      "current": "Developer",
+      "predicted": "Developer",
+      "confidence": 1.0,
+      "correct": true
+    },
+    {
+      "file": "Developer\\Batch_11\\CVSARAVANANP.pdf",
+      "current": "Developer",
+      "predicted": "Data_Scientist",
+      "confidence": 1.0,
+      "correct": false
+    },
+    {
+      "file": "Developer\\Batch_11\\CVSarthakDalvi.pdf",
+      "current": "Developer",
+      "predicted": "Data_Scientist",
+      "confidence": 3.143,
+      "correct": false
+    },
+    {
+      "file": "Developer\\Batch_11\\CVSAURABHJADHAV.pdf",
+      "current": "Developer",
+      "predicted": "Data_Scientist",
+      "confidence": 2.0,
+      "correct": false
+    },
+    {
+      "file": "Developer\\Batch_11\\CVSharadKale.pdf",
+      "current": "Developer",
+      "predicted": "Developer",
+      "confidence": 2.0,
+      "correct": true
+    },
+    {
+      "file": "Developer\\Batch_11\\CVSheetalBankar.pdf",
+      "current": "Developer",
+      "predicted": "Data_Scientist",
+      "confidence": 2.143,
+      "correct": false
+    },
+    {
+      "file": "Developer\\Batch_12\\CVSHUBHAMCHAUDHARY.pdf",
+      "current": "Developer",
+      "predicted": "Developer",
+      "confidence": 2.0,
+      "correct": true
+    },
+    {
+      "file": "Developer\\Batch_12\\CVShubhamJawale.pdf",
+      "current": "Developer",
+      "predicted": "Developer",
+      "confidence": 1.0,
+      "correct": true
+    },
+    {
+      "file": "Developer\\Batch_12\\CVShubhangiPatil.pdf",
+      "current": "Developer",
+      "predicted": "Intern",
+      "confidence": 1.0,
+      "correct": false
+    },
+    {
+      "file": "Developer\\Batch_12\\CVSnehalGujar.pdf",
+      "current": "Developer",
+      "predicted": "Data_Scientist",
+      "confidence": 1.857,
+      "correct": false
+    },
+    {
+      "file": "Developer\\Batch_12\\CVSnehaMisal.pdf",
+      "current": "Developer",
+      "predicted": "Data_Scientist",
+      "confidence": 3.143,
+      "correct": false
+    },
+    {
+      "file": "Developer\\Batch_12\\CVSOURABHPATIL.pdf",
+      "current": "Developer",
+      "predicted": "Designer",
+      "confidence": 1.75,
+      "correct": false
+    },
+    {
+      "file": "Developer\\Batch_12\\CVSURAJVISHWAKARMA.pdf",
+      "current": "Developer",
+      "predicted": "Data_Scientist",
+      "confidence": 1.0,
+      "correct": false
+    },
+    {
+      "file": "Developer\\Batch_12\\CVSushantGangade.pdf",
+      "current": "Developer",
+      "predicted": "Developer",
+      "confidence": 1.889,
+      "correct": true
+    },
+    {
+      "file": "Developer\\Batch_12\\CVSuyashKore.pdf",
+      "current": "Developer",
+      "predicted": "Developer",
+      "confidence": 1.222,
+      "correct": true
+    },
+    {
+      "file": "Developer\\Batch_12\\CVTEJASGHATOL.pdf",
+      "current": "Developer",
+      "predicted": "Data_Scientist",
+      "confidence": 2.714,
+      "correct": false
+    },
+    {
+      "file": "Developer\\Batch_13\\CVTEJASWINISABALE.pdf",
+      "current": "Developer",
+      "predicted": "Data_Scientist",
+      "confidence": 1.571,
+      "correct": false
+    },
+    {
+      "file": "Developer\\Batch_13\\CVTUSHARCHOURASIYA (1).pdf",
+      "current": "Developer",
+      "predicted": "Designer",
+      "confidence": 1.75,
+      "correct": false
+    },
+    {
+      "file": "Developer\\Batch_13\\CVTUSHARCHOURASIYA.pdf",
+      "current": "Developer",
+      "predicted": "Designer",
+      "confidence": 1.75,
+      "correct": false
+    },
+    {
+      "file": "Developer\\Batch_13\\CVVaishaliMundlik-Tak.pdf",
+      "current": "Developer",
+      "predicted": "Data_Scientist",
+      "confidence": 1.429,
+      "correct": false
+    },
+    {
+      "file": "Developer\\Batch_13\\CVVaishaliSalunke.pdf",
+      "current": "Developer",
+      "predicted": "Developer",
+      "confidence": 2.889,
+      "correct": true
+    },
+    {
+      "file": "Developer\\Batch_13\\CVVarshaW.pdf",
+      "current": "Developer",
+      "predicted": "Data_Scientist",
+      "confidence": 1.571,
+      "correct": false
+    },
+    {
+      "file": "Developer\\Batch_13\\CVVijayKumarPare.pdf",
+      "current": "Developer",
+      "predicted": "Business_Analyst",
+      "confidence": 2.0,
+      "correct": false
+    },
+    {
+      "file": "Developer\\Batch_13\\CVVishalNathgosavi.pdf",
+      "current": "Developer",
+      "predicted": "Data_Scientist",
+      "confidence": 1.571,
+      "correct": false
+    },
+    {
+      "file": "Developer\\Batch_13\\CVVitendrakumar.pdf",
+      "current": "Developer",
+      "predicted": "Developer",
+      "confidence": 4.556,
+      "correct": true
+    },
+    {
+      "file": "Developer\\Batch_13\\CVVIVEKYADAV.pdf",
+      "current": "Developer",
+      "predicted": "Data_Scientist",
+      "confidence": 1.143,
+      "correct": false
+    },
+    {
+      "file": "Developer\\Batch_14\\CVYOGESHBHANDARI.pdf",
+      "current": "Developer",
+      "predicted": "Data_Scientist",
+      "confidence": 2.714,
+      "correct": false
+    },
+    {
+      "file": "Developer\\Batch_14\\CVYOGITAMHASKE.pdf",
+      "current": "Developer",
+      "predicted": "Developer",
+      "confidence": 1.111,
+      "correct": true
+    },
+    {
+      "file": "Developer\\Batch_14\\Deepak_Resume.pdf",
+      "current": "Developer",
+      "predicted": "Developer",
+      "confidence": 2.222,
+      "correct": true
+    },
+    {
+      "file": "Developer\\Batch_14\\Gnaesh_Resume_updated.pdf",
+      "current": "Developer",
+      "predicted": "Developer",
+      "confidence": 1.556,
+      "correct": true
+    },
+    {
+      "file": "Developer\\Batch_14\\Kamlesh Updated Resume.pdf",
+      "current": "Developer",
+      "predicted": "Data_Scientist",
+      "confidence": 1.429,
+      "correct": false
+    },
+    {
+      "file": "Developer\\Batch_14\\Krushna _Ci_Web.pdf",
+      "current": "Developer",
+      "predicted": "Developer",
+      "confidence": 1.0,
+      "correct": true
+    },
+    {
+      "file": "Developer\\Batch_14\\Mangesh_Bachhe.pdf",
+      "current": "Developer",
+      "predicted": "Developer",
+      "confidence": 1.222,
+      "correct": true
+    },
+    {
+      "file": "Developer\\Batch_14\\Manojkumar\u2019s resume_240530_165048.pdf",
+      "current": "Developer",
+      "predicted": "Developer",
+      "confidence": 1.889,
+      "correct": true
+    },
+    {
+      "file": "Developer\\Batch_14\\Namrata_Jha_Resume.pdf",
+      "current": "Developer",
+      "predicted": "Data_Scientist",
+      "confidence": 3.0,
+      "correct": false
+    },
+    {
+      "file": "Developer\\Batch_14\\NAUKRI_PRITAM_SHARAD_PANGARKAR_1719587260071_Pritam Sharad Pangarkar.pdf",
+      "current": "Developer",
+      "predicted": "Developer",
+      "confidence": 2.556,
+      "correct": true
+    },
+    {
+      "file": "Developer\\Batch_15\\Nihal-Mishra.pdf",
+      "current": "Developer",
+      "predicted": "Developer",
+      "confidence": 1.778,
+      "correct": true
+    },
+    {
+      "file": "Developer\\Batch_15\\Nikita\u2019s resume_240530_163703.pdf",
+      "current": "Developer",
+      "predicted": "Data_Scientist",
+      "confidence": 2.429,
+      "correct": false
+    },
+    {
+      "file": "Developer\\Batch_15\\NILESH_GUPTA_RESUME.pdf",
+      "current": "Developer",
+      "predicted": "Data_Scientist",
+      "confidence": 1.286,
+      "correct": false
+    },
+    {
+      "file": "Developer\\Batch_15\\Nishant_resume (3).pdf",
+      "current": "Developer",
+      "predicted": "Data_Scientist",
+      "confidence": 2.571,
+      "correct": false
+    },
+    {
+      "file": "Developer\\Batch_15\\papiha_jadhav_salesforce.pdf",
+      "current": "Developer",
+      "predicted": "Data_Scientist",
+      "confidence": 2.714,
+      "correct": false
+    },
+    {
+      "file": "Developer\\Batch_15\\Pranjali.pdf",
+      "current": "Developer",
+      "predicted": "Developer",
+      "confidence": 0.778,
+      "correct": true
+    },
+    {
+      "file": "Developer\\Batch_15\\Pratiksha\u2019s resume.docx",
+      "current": "Developer",
+      "predicted": "Developer",
+      "confidence": 1.889,
+      "correct": true
+    },
+    {
+      "file": "Developer\\Batch_15\\Priyanka'sResume(3).pdf",
+      "current": "Developer",
+      "predicted": "Developer",
+      "confidence": 1.0,
+      "correct": true
+    },
+    {
+      "file": "Developer\\Batch_15\\Proposal of eCom Platform Development-Maxsell.pdf",
+      "current": "Developer",
+      "predicted": "Data_Scientist",
+      "confidence": 7.143,
+      "correct": false
+    },
+    {
+      "file": "Developer\\Batch_15\\Rashmi Deshpande CV (1).pdf",
+      "current": "Developer",
+      "predicted": "Developer",
+      "confidence": 2.111,
+      "correct": true
+    },
+    {
+      "file": "Developer\\Batch_16\\Resume (1).pdf",
+      "current": "Developer",
+      "predicted": "Designer",
+      "confidence": 1.625,
+      "correct": false
+    },
+    {
+      "file": "Developer\\Batch_16\\Resume(2023)php (1).docx",
+      "current": "Developer",
+      "predicted": "Data_Scientist",
+      "confidence": 1.857,
+      "correct": false
+    },
+    {
+      "file": "Developer\\Batch_16\\Resume(2023)php.docx",
+      "current": "Developer",
+      "predicted": "Data_Scientist",
+      "confidence": 1.857,
+      "correct": false
+    },
+    {
+      "file": "Developer\\Batch_16\\Resume.pdf",
+      "current": "Developer",
+      "predicted": "Designer",
+      "confidence": 1.625,
+      "correct": false
+    },
+    {
+      "file": "Developer\\Batch_16\\Resume24-G (1).pdf",
+      "current": "Developer",
+      "predicted": "Data_Scientist",
+      "confidence": 1.429,
+      "correct": false
+    },
+    {
+      "file": "Developer\\Batch_16\\Resume24-G.pdf",
+      "current": "Developer",
+      "predicted": "Data_Scientist",
+      "confidence": 1.429,
+      "correct": false
+    },
+    {
+      "file": "Developer\\Batch_16\\ResumeAishawaryaKabade.pdf",
+      "current": "Developer",
+      "predicted": "Developer",
+      "confidence": 1.778,
+      "correct": true
+    },
+    {
+      "file": "Developer\\Batch_16\\ResumeAkshayBhoite.pdf",
+      "current": "Developer",
+      "predicted": "Data_Scientist",
+      "confidence": 0.286,
+      "correct": false
+    },
+    {
+      "file": "Developer\\Batch_16\\ResumeAKSHAYJONDHALE (1).pdf",
+      "current": "Developer",
+      "predicted": "Developer",
+      "confidence": 1.778,
+      "correct": true
+    },
+    {
+      "file": "Developer\\Batch_16\\ResumeBHARATPATIL.pdf",
+      "current": "Developer",
+      "predicted": "Data_Scientist",
+      "confidence": 3.143,
+      "correct": false
+    },
+    {
+      "file": "Developer\\Batch_17\\ResumeBhiseShekhar.pdf",
+      "current": "Developer",
+      "predicted": "Data_Scientist",
+      "confidence": 2.429,
+      "correct": false
+    },
+    {
+      "file": "Developer\\Batch_17\\ResumeDharmarajPatil.pdf",
+      "current": "Developer",
+      "predicted": "Data_Scientist",
+      "confidence": 3.143,
+      "correct": false
+    },
+    {
+      "file": "Developer\\Batch_17\\ResumeGaneshKale.pdf",
+      "current": "Developer",
+      "predicted": "Data_Scientist",
+      "confidence": 1.143,
+      "correct": false
+    },
+    {
+      "file": "Developer\\Batch_17\\ResumeGayatriHedau.pdf",
+      "current": "Developer",
+      "predicted": "Data_Scientist",
+      "confidence": 6.143,
+      "correct": false
+    },
+    {
+      "file": "Developer\\Batch_17\\ResumeIrfanyounusAlam.pdf",
+      "current": "Developer",
+      "predicted": "Developer",
+      "confidence": 1.444,
+      "correct": true
+    },
+    {
+      "file": "Developer\\Batch_17\\ResumeKanchanMate.pdf",
+      "current": "Developer",
+      "predicted": "Data_Scientist",
+      "confidence": 2.0,
+      "correct": false
+    },
+    {
+      "file": "Developer\\Batch_17\\ResumeKiranPatil.pdf",
+      "current": "Developer",
+      "predicted": "Developer",
+      "confidence": 4.222,
+      "correct": true
+    },
+    {
+      "file": "Developer\\Batch_17\\ResumeLabhanshSatpute.pdf",
+      "current": "Developer",
+      "predicted": "Developer",
+      "confidence": 0.444,
+      "correct": true
+    },
+    {
+      "file": "Developer\\Batch_17\\ResumeNagrajPatil.pdf",
+      "current": "Developer",
+      "predicted": "Intern",
+      "confidence": 4.0,
+      "correct": false
+    },
+    {
+      "file": "Developer\\Batch_17\\ResumePRAJYOTGAIKWAD.pdf",
+      "current": "Developer",
+      "predicted": "Developer",
+      "confidence": 3.222,
+      "correct": true
+    },
+    {
+      "file": "Developer\\Batch_18\\ResumeRavitaBawane (1).pdf",
+      "current": "Developer",
+      "predicted": "Data_Scientist",
+      "confidence": 0.286,
+      "correct": false
+    },
+    {
+      "file": "Developer\\Batch_18\\ResumeRavitaBawane.pdf",
+      "current": "Developer",
+      "predicted": "Data_Scientist",
+      "confidence": 0.286,
+      "correct": false
+    },
+    {
+      "file": "Developer\\Batch_18\\ResumeRupamJayaswal (1).pdf",
+      "current": "Developer",
+      "predicted": "Data_Scientist",
+      "confidence": 2.429,
+      "correct": false
+    },
+    {
+      "file": "Developer\\Batch_18\\ResumeRupamJayaswal.pdf",
+      "current": "Developer",
+      "predicted": "Data_Scientist",
+      "confidence": 2.429,
+      "correct": false
+    },
+    {
+      "file": "Developer\\Batch_18\\ResumeSujataPatil (1).pdf",
+      "current": "Developer",
+      "predicted": "Developer",
+      "confidence": 2.0,
+      "correct": true
+    },
+    {
+      "file": "Developer\\Batch_18\\ResumeSujataPatil.pdf",
+      "current": "Developer",
+      "predicted": "Developer",
+      "confidence": 2.0,
+      "correct": true
+    },
+    {
+      "file": "Developer\\Batch_18\\ResumeTruptiP.Bhat.pdf",
+      "current": "Developer",
+      "predicted": "Developer",
+      "confidence": 1.111,
+      "correct": true
+    },
+    {
+      "file": "Developer\\Batch_18\\ResumeVarshaW.pdf",
+      "current": "Developer",
+      "predicted": "Data_Scientist",
+      "confidence": 1.571,
+      "correct": false
+    },
+    {
+      "file": "Developer\\Batch_18\\ResumeVijayendraKumbhar.pdf",
+      "current": "Developer",
+      "predicted": "Developer",
+      "confidence": 3.444,
+      "correct": true
+    },
+    {
+      "file": "Developer\\Batch_18\\Resum_ (1).pdf",
+      "current": "Developer",
+      "predicted": "Intern",
+      "confidence": 2.5,
+      "correct": false
+    },
+    {
+      "file": "Developer\\Batch_19\\Resum_.pdf",
+      "current": "Developer",
+      "predicted": "Intern",
+      "confidence": 2.5,
+      "correct": false
+    },
+    {
+      "file": "Developer\\Batch_19\\Sakshi_Dixit C.V.pdf",
+      "current": "Developer",
+      "predicted": "Data_Scientist",
+      "confidence": 1.0,
+      "correct": false
+    },
+    {
+      "file": "Developer\\Batch_19\\sayaliresume.pdf",
+      "current": "Developer",
+      "predicted": "Data_Scientist",
+      "confidence": 0.857,
+      "correct": false
+    },
+    {
+      "file": "Developer\\Batch_19\\Smruti Sakre simple.pdf",
+      "current": "Developer",
+      "predicted": "Data_Scientist",
+      "confidence": 2.286,
+      "correct": false
+    },
+    {
+      "file": "Developer\\Batch_19\\somnath_resume_new2024 - Copy_2.pdf",
+      "current": "Developer",
+      "predicted": "Data_Scientist",
+      "confidence": 4.143,
+      "correct": false
+    },
+    {
+      "file": "Developer\\Batch_19\\Sunny_s_Resume_Software_Engineer.pdf",
+      "current": "Developer",
+      "predicted": "Developer",
+      "confidence": 2.0,
+      "correct": true
+    },
+    {
+      "file": "Developer\\Batch_19\\Suvarna_Experienced_Resume3_1717407785345_SuvarnaKeskar.pdf",
+      "current": "Developer",
+      "predicted": "Developer",
+      "confidence": 3.667,
+      "correct": true
+    },
+    {
+      "file": "Developer\\Batch_19\\swati-antre PHP Laravel.pdf",
+      "current": "Developer",
+      "predicted": "Data_Scientist",
+      "confidence": 6.429,
+      "correct": false
+    },
+    {
+      "file": "Developer\\Batch_19\\Tejaswini\u2019s resume_240530_175912.pdf",
+      "current": "Developer",
+      "predicted": "Developer",
+      "confidence": 1.889,
+      "correct": true
+    },
+    {
+      "file": "Developer\\Batch_19\\Vanita Amdapure Resume.pdf",
+      "current": "Developer",
+      "predicted": "Developer",
+      "confidence": 1.889,
+      "correct": true
+    },
+    {
+      "file": "Developer\\Batch_20\\Vijay Shinde Senior Software Developer_240524_090042.pdf",
+      "current": "Developer",
+      "predicted": "Data_Scientist",
+      "confidence": 2.714,
+      "correct": false
+    },
+    {
+      "file": "Developer\\Batch_20\\Vishal_Jadhav1.pdf",
+      "current": "Developer",
+      "predicted": "Data_Scientist",
+      "confidence": 0.857,
+      "correct": false
+    },
+    {
+      "file": "Developer\\Batch_20\\ResumeHarshagandhaPatki.pdf",
+      "current": "Developer",
+      "predicted": "Business_Analyst",
+      "confidence": 2.25,
+      "correct": false
+    },
+    {
+      "file": "Developer\\Batch_20\\ResumeIshwariBorse.pdf",
+      "current": "Developer",
+      "predicted": "Intern",
+      "confidence": 1.5,
+      "correct": false
+    },
+    {
+      "file": "Developer\\Batch_20\\ResumeKUNDANKUMAR.pdf",
+      "current": "Developer",
+      "predicted": "Data_Scientist",
+      "confidence": 1.857,
+      "correct": false
+    },
+    {
+      "file": "Developer\\Batch_20\\ResumeMandarVaste.pdf",
+      "current": "Developer",
+      "predicted": "Data_Scientist",
+      "confidence": 4.143,
+      "correct": false
+    },
+    {
+      "file": "Developer\\Batch_20\\ResumePradipJadhav.pdf",
+      "current": "Developer",
+      "predicted": "Data_Scientist",
+      "confidence": 1.286,
+      "correct": false
+    },
+    {
+      "file": "Developer\\Batch_20\\ResumeShrutiShinde.pdf",
+      "current": "Developer",
+      "predicted": "Data_Scientist",
+      "confidence": 1.286,
+      "correct": false
+    },
+    {
+      "file": "Developer\\Batch_20\\ResumeYOGESHPAL.pdf",
+      "current": "Developer",
+      "predicted": "Data_Scientist",
+      "confidence": 2.286,
+      "correct": false
+    },
+    {
+      "file": "Developer\\Batch_20\\CVPulkitSingh.pdf",
+      "current": "Developer",
+      "predicted": "Developer",
+      "confidence": 3.111,
+      "correct": true
+    },
+    {
+      "file": "Developer\\Batch_21\\ResumeAvaniPatel.pdf",
+      "current": "Developer",
+      "predicted": "Developer",
+      "confidence": 2.222,
+      "correct": true
+    },
+    {
+      "file": "Developer\\Batch_21\\ResumeDipPathak.pdf",
+      "current": "Developer",
+      "predicted": "Developer",
+      "confidence": 4.778,
+      "correct": true
+    },
+    {
+      "file": "Developer\\Batch_21\\ResumeForamShah.pdf",
+      "current": "Developer",
+      "predicted": "Developer",
+      "confidence": 2.667,
+      "correct": true
+    },
+    {
+      "file": "Developer\\Batch_21\\ResumeJayGalani.pdf",
+      "current": "Developer",
+      "predicted": "Developer",
+      "confidence": 1.222,
+      "correct": true
+    },
+    {
+      "file": "Developer\\Batch_21\\ResumeKaushikaBharathiR.pdf",
+      "current": "Developer",
+      "predicted": "Developer",
+      "confidence": 2.222,
+      "correct": true
+    },
+    {
+      "file": "Developer\\Batch_21\\ResumeKHODALSAVANI.pdf",
+      "current": "Developer",
+      "predicted": "Developer",
+      "confidence": 2.333,
+      "correct": true
+    },
+    {
+      "file": "Developer\\Batch_21\\ResumeLALITRANA.pdf",
+      "current": "Developer",
+      "predicted": "Data_Scientist",
+      "confidence": 2.714,
+      "correct": false
+    },
+    {
+      "file": "Developer\\Batch_21\\ResumePoojaPanchal.pdf",
+      "current": "Developer",
+      "predicted": "Developer",
+      "confidence": 2.778,
+      "correct": true
+    },
+    {
+      "file": "Developer\\Batch_21\\ResumePriyankaAgarwal.pdf",
+      "current": "Developer",
+      "predicted": "Developer",
+      "confidence": 2.0,
+      "correct": true
+    },
+    {
+      "file": "Developer\\Batch_21\\ResumeRahulSharma.pdf",
+      "current": "Developer",
+      "predicted": "Data_Scientist",
+      "confidence": 3.571,
+      "correct": false
+    },
+    {
+      "file": "Developer\\Batch_22\\ResumeSeetaramSahu.pdf",
+      "current": "Developer",
+      "predicted": "Developer",
+      "confidence": 4.111,
+      "correct": true
+    },
+    {
+      "file": "Developer\\Batch_22\\ResumeTaslimPathan.pdf",
+      "current": "Developer",
+      "predicted": "Developer",
+      "confidence": 1.556,
+      "correct": true
+    },
+    {
+      "file": "Developer\\Batch_22\\Achintya_updated_resume.pdf",
+      "current": "Developer",
+      "predicted": "Developer",
+      "confidence": 5.222,
+      "correct": true
+    },
+    {
+      "file": "Developer\\Batch_22\\Aditya-Goswami-Resume.pdf",
+      "current": "Developer",
+      "predicted": "Developer",
+      "confidence": 3.0,
+      "correct": true
+    },
+    {
+      "file": "Developer\\Batch_22\\AksharaGuptaResumae.pdf",
+      "current": "Developer",
+      "predicted": "Developer",
+      "confidence": 1.111,
+      "correct": true
+    },
+    {
+      "file": "Developer\\Batch_22\\Atharva_Mali_Resume.pdf",
+      "current": "Developer",
+      "predicted": "Developer",
+      "confidence": 2.778,
+      "correct": true
+    },
+    {
+      "file": "Developer\\Batch_22\\Chaitanya Pawar Resume.pdf",
+      "current": "Developer",
+      "predicted": "Developer",
+      "confidence": 4.222,
+      "correct": true
+    },
+    {
+      "file": "Developer\\Batch_22\\Dipti_Raste(CV).pdf",
+      "current": "Developer",
+      "predicted": "Developer",
+      "confidence": 2.556,
+      "correct": true
+    },
+    {
+      "file": "Developer\\Batch_22\\Mahesh_Suthar_8003068476-3.pdf",
+      "current": "Developer",
+      "predicted": "Developer",
+      "confidence": 2.111,
+      "correct": true
+    },
+    {
+      "file": "Developer\\Batch_22\\Manish-Kumar_Resume.pdf",
+      "current": "Developer",
+      "predicted": "Developer",
+      "confidence": 2.556,
+      "correct": true
+    },
+    {
+      "file": "Developer\\Batch_23\\Mohaideen Arsath_Resume.pdf",
+      "current": "Developer",
+      "predicted": "Intern",
+      "confidence": 2.5,
+      "correct": false
+    },
+    {
+      "file": "Developer\\Batch_23\\Pramendra_resume (1).pdf",
+      "current": "Developer",
+      "predicted": "Developer",
+      "confidence": 2.556,
+      "correct": true
+    },
+    {
+      "file": "Developer\\Batch_23\\PrathameshUgaleCV.pdf",
+      "current": "Developer",
+      "predicted": "Developer",
+      "confidence": 5.222,
+      "correct": true
+    },
+    {
+      "file": "Developer\\Batch_23\\praveen_resume (1).pdf",
+      "current": "Developer",
+      "predicted": "Data_Scientist",
+      "confidence": 2.714,
+      "correct": false
+    },
+    {
+      "file": "Developer\\Batch_23\\Resume_Mohd-1.pdf",
+      "current": "Developer",
+      "predicted": "Developer",
+      "confidence": 4.667,
+      "correct": true
+    },
+    {
+      "file": "Developer\\Batch_23\\Resume_Santhosh_D_Java_FullStack_Developer_BSC_2024 (1).pdf",
+      "current": "Developer",
+      "predicted": "Developer",
+      "confidence": 3.333,
+      "correct": true
+    },
+    {
+      "file": "Developer\\Batch_23\\Resume_Santhosh_D_Java_FullStack_Developer_BSC_2024.pdf",
+      "current": "Developer",
+      "predicted": "Developer",
+      "confidence": 3.333,
+      "correct": true
+    },
+    {
+      "file": "Developer\\Batch_23\\Resume_Shubham_Sonawane.pdf",
+      "current": "Developer",
+      "predicted": "Data_Scientist",
+      "confidence": 3.571,
+      "correct": false
+    },
+    {
+      "file": "Developer\\Batch_23\\Runit_Resume.pdf",
+      "current": "Developer",
+      "predicted": "Developer",
+      "confidence": 2.778,
+      "correct": true
+    },
+    {
+      "file": "Developer\\Batch_23\\Salva_Mol_K_M_Generative_AI_Engineer.pdf",
+      "current": "Developer",
+      "predicted": "Developer",
+      "confidence": 3.444,
+      "correct": true
+    },
+    {
+      "file": "Developer\\Batch_24\\Sameed_Ahmed_Resume.pdf",
+      "current": "Developer",
+      "predicted": "Developer",
+      "confidence": 2.444,
+      "correct": true
+    },
+    {
+      "file": "Developer\\Batch_24\\Savula_Shiva_prasad.pdf",
+      "current": "Developer",
+      "predicted": "Intern",
+      "confidence": 2.0,
+      "correct": false
+    },
+    {
+      "file": "Developer\\Batch_24\\Shiwanshu_CV.pdf",
+      "current": "Developer",
+      "predicted": "Developer",
+      "confidence": 2.556,
+      "correct": true
+    },
+    {
+      "file": "Developer\\Batch_24\\sneharesume (1).pdf",
+      "current": "Developer",
+      "predicted": "Data_Scientist",
+      "confidence": 2.429,
+      "correct": false
+    },
+    {
+      "file": "Developer\\Batch_24\\sneharesume.pdf",
+      "current": "Developer",
+      "predicted": "Data_Scientist",
+      "confidence": 2.429,
+      "correct": false
+    },
+    {
+      "file": "Developer\\Batch_24\\Surya_Dev_Singh_Resume.pdf",
+      "current": "Developer",
+      "predicted": "Data_Scientist",
+      "confidence": 2.286,
+      "correct": false
+    },
+    {
+      "file": "Developer\\Batch_24\\Updated Resume.pdf",
+      "current": "Developer",
+      "predicted": "Data_Scientist",
+      "confidence": 2.857,
+      "correct": false
+    },
+    {
+      "file": "Developer\\Batch_24\\UpdatedPdf.pdf",
+      "current": "Developer",
+      "predicted": "Intern",
+      "confidence": 2.5,
+      "correct": false
+    },
+    {
+      "file": "Developer\\Batch_24\\Vijay.resume (1).pdf",
+      "current": "Developer",
+      "predicted": "Intern",
+      "confidence": 2.0,
+      "correct": false
+    },
+    {
+      "file": "Developer\\Batch_24\\Vishakhakurule_resume (1).pdf",
+      "current": "Developer",
+      "predicted": "Developer",
+      "confidence": 1.889,
+      "correct": true
+    },
+    {
+      "file": "Data_Scientist\\CVNikitaMane.pdf",
+      "current": "Data_Scientist",
+      "predicted": "Data_Scientist",
+      "confidence": 1.0,
+      "correct": true
+    },
+    {
+      "file": "Data_Scientist\\CVSNEHALKAKADE.pdf",
+      "current": "Data_Scientist",
+      "predicted": "Data_Scientist",
+      "confidence": 1.286,
+      "correct": true
+    },
+    {
+      "file": "Data_Scientist\\RaginiPharande-Resume_Aug.pdf",
+      "current": "Data_Scientist",
+      "predicted": "Data_Scientist",
+      "confidence": 1.714,
+      "correct": true
+    },
+    {
+      "file": "Data_Scientist\\ResumeAsrarAli.pdf",
+      "current": "Data_Scientist",
+      "predicted": "Data_Scientist",
+      "confidence": 2.857,
+      "correct": true
+    },
+    {
+      "file": "Data_Scientist\\ResumeGAURAVWARGHANE.pdf",
+      "current": "Data_Scientist",
+      "predicted": "Data_Scientist",
+      "confidence": 1.571,
+      "correct": true
+    },
+    {
+      "file": "Data_Scientist\\ResumePonvelMuthuganesan.pdf",
+      "current": "Data_Scientist",
+      "predicted": "Data_Scientist",
+      "confidence": 5.0,
+      "correct": true
+    },
+    {
+      "file": "Data_Scientist\\Akshata Badgujar's PHP Codeigniter Laravel Developer Resume.pdf",
+      "current": "Data_Scientist",
+      "predicted": "Data_Scientist",
+      "confidence": 2.0,
+      "correct": true
+    },
+    {
+      "file": "Data_Scientist\\Bhagyashree P_CV-2.pdf",
+      "current": "Data_Scientist",
+      "predicted": "Data_Scientist",
+      "confidence": 1.571,
+      "correct": true
+    },
+    {
+      "file": "Data_Scientist\\CVAbhishekBagad.pdf",
+      "current": "Data_Scientist",
+      "predicted": "Data_Scientist",
+      "confidence": 1.857,
+      "correct": true
+    },
+    {
+      "file": "Data_Scientist\\CVAishwaryaKuthe.pdf",
+      "current": "Data_Scientist",
+      "predicted": "Data_Scientist",
+      "confidence": 3.857,
+      "correct": true
+    },
+    {
+      "file": "Data_Scientist\\CVAishwaryaShinde.pdf",
+      "current": "Data_Scientist",
+      "predicted": "Data_Scientist",
+      "confidence": 2.143,
+      "correct": true
+    },
+    {
+      "file": "Data_Scientist\\CVAmolGedam.pdf",
+      "current": "Data_Scientist",
+      "predicted": "Data_Scientist",
+      "confidence": 2.714,
+      "correct": true
+    },
+    {
+      "file": "Data_Scientist\\CVAPUMONDAL.pdf",
+      "current": "Data_Scientist",
+      "predicted": "Data_Scientist",
+      "confidence": 2.0,
+      "correct": true
+    },
+    {
+      "file": "Data_Scientist\\CVASHISHWADBUDE.pdf",
+      "current": "Data_Scientist",
+      "predicted": "Data_Scientist",
+      "confidence": 2.0,
+      "correct": true
+    },
+    {
+      "file": "Data_Scientist\\CVAvinashGharge.pdf",
+      "current": "Data_Scientist",
+      "predicted": "Data_Scientist",
+      "confidence": 4.0,
+      "correct": true
+    },
+    {
+      "file": "Data_Scientist\\CVBhagyashreeBawane.pdf",
+      "current": "Data_Scientist",
+      "predicted": "Data_Scientist",
+      "confidence": 2.0,
+      "correct": true
+    },
+    {
+      "file": "Data_Scientist\\CVBhiseShekhar.pdf",
+      "current": "Data_Scientist",
+      "predicted": "Data_Scientist",
+      "confidence": 2.429,
+      "correct": true
+    },
+    {
+      "file": "Data_Scientist\\CVBiswaRanjanSwain.pdf",
+      "current": "Data_Scientist",
+      "predicted": "Data_Scientist",
+      "confidence": 1.0,
+      "correct": true
+    },
+    {
+      "file": "Data_Scientist\\CVDhanashreeSabale.pdf",
+      "current": "Data_Scientist",
+      "predicted": "Data_Scientist",
+      "confidence": 2.286,
+      "correct": true
+    },
+    {
+      "file": "Data_Scientist\\CVDharmarajPatil.pdf",
+      "current": "Data_Scientist",
+      "predicted": "Data_Scientist",
+      "confidence": 3.143,
+      "correct": true
+    },
+    {
+      "file": "Data_Scientist\\CVGayatriHedau.pdf",
+      "current": "Data_Scientist",
+      "predicted": "Data_Scientist",
+      "confidence": 6.143,
+      "correct": true
+    },
+    {
+      "file": "Data_Scientist\\CVHanumantNalwade.pdf",
+      "current": "Data_Scientist",
+      "predicted": "Data_Scientist",
+      "confidence": 4.571,
+      "correct": true
+    },
+    {
+      "file": "Data_Scientist\\CVHarshalBankhele.pdf",
+      "current": "Data_Scientist",
+      "predicted": "Data_Scientist",
+      "confidence": 2.857,
+      "correct": true
+    },
+    {
+      "file": "Data_Scientist\\CVHimanshuSonwane.pdf",
+      "current": "Data_Scientist",
+      "predicted": "Data_Scientist",
+      "confidence": 1.857,
+      "correct": true
+    },
+    {
+      "file": "Data_Scientist\\CVKailasJagadale (1).pdf",
+      "current": "Data_Scientist",
+      "predicted": "Data_Scientist",
+      "confidence": 2.429,
+      "correct": true
+    },
+    {
+      "file": "Data_Scientist\\CVKailasJagadale.pdf",
+      "current": "Data_Scientist",
+      "predicted": "Data_Scientist",
+      "confidence": 2.429,
+      "correct": true
+    },
+    {
+      "file": "Data_Scientist\\CVLakshmikantMuluk.pdf",
+      "current": "Data_Scientist",
+      "predicted": "Data_Scientist",
+      "confidence": 6.571,
+      "correct": true
+    },
+    {
+      "file": "Data_Scientist\\CVLatikeshLohar.pdf",
+      "current": "Data_Scientist",
+      "predicted": "Data_Scientist",
+      "confidence": 2.571,
+      "correct": true
+    },
+    {
+      "file": "Data_Scientist\\CVMAHESHKUMAR.pdf",
+      "current": "Data_Scientist",
+      "predicted": "Data_Scientist",
+      "confidence": 1.857,
+      "correct": true
+    },
+    {
+      "file": "Data_Scientist\\CVMaheshThete.pdf",
+      "current": "Data_Scientist",
+      "predicted": "Data_Scientist",
+      "confidence": 2.0,
+      "correct": true
+    },
+    {
+      "file": "Data_Scientist\\CVManojMahant.pdf",
+      "current": "Data_Scientist",
+      "predicted": "Data_Scientist",
+      "confidence": 3.571,
+      "correct": true
+    },
+    {
+      "file": "Data_Scientist\\CVNileshBhalerao.pdf",
+      "current": "Data_Scientist",
+      "predicted": "Data_Scientist",
+      "confidence": 0.571,
+      "correct": true
+    },
+    {
+      "file": "Data_Scientist\\CVNishantKedare.pdf",
+      "current": "Data_Scientist",
+      "predicted": "Data_Scientist",
+      "confidence": 2.571,
+      "correct": true
+    },
+    {
+      "file": "Data_Scientist\\CVPallaviMishra.pdf",
+      "current": "Data_Scientist",
+      "predicted": "Data_Scientist",
+      "confidence": 1.0,
+      "correct": true
+    },
+    {
+      "file": "Data_Scientist\\CVPrashilBhagat.pdf",
+      "current": "Data_Scientist",
+      "predicted": "Data_Scientist",
+      "confidence": 1.286,
+      "correct": true
+    },
+    {
+      "file": "Data_Scientist\\CVPRATIKGHODEKAR.pdf",
+      "current": "Data_Scientist",
+      "predicted": "Data_Scientist",
+      "confidence": 1.571,
+      "correct": true
+    },
+    {
+      "file": "Data_Scientist\\CVPrernaWath.pdf",
+      "current": "Data_Scientist",
+      "predicted": "Data_Scientist",
+      "confidence": 1.143,
+      "correct": true
+    },
+    {
+      "file": "Data_Scientist\\CVPriyankaRaut.pdf",
+      "current": "Data_Scientist",
+      "predicted": "Data_Scientist",
+      "confidence": 2.286,
+      "correct": true
+    },
+    {
+      "file": "Data_Scientist\\CVRadhikaGour.pdf",
+      "current": "Data_Scientist",
+      "predicted": "Data_Scientist",
+      "confidence": 2.571,
+      "correct": true
+    },
+    {
+      "file": "Data_Scientist\\CVRahulTake.pdf",
+      "current": "Data_Scientist",
+      "predicted": "Data_Scientist",
+      "confidence": 1.0,
+      "correct": true
+    },
+    {
+      "file": "Data_Scientist\\CVRajeshwariAvhad.pdf",
+      "current": "Data_Scientist",
+      "predicted": "Data_Scientist",
+      "confidence": 0.857,
+      "correct": true
+    },
+    {
+      "file": "Data_Scientist\\CVRohitKumar.pdf",
+      "current": "Data_Scientist",
+      "predicted": "Data_Scientist",
+      "confidence": 2.143,
+      "correct": true
+    },
+    {
+      "file": "Data_Scientist\\CVRushikeshVaral.pdf",
+      "current": "Data_Scientist",
+      "predicted": "Data_Scientist",
+      "confidence": 1.429,
+      "correct": true
+    },
+    {
+      "file": "Data_Scientist\\CVSangitKachahe.pdf",
+      "current": "Data_Scientist",
+      "predicted": "Data_Scientist",
+      "confidence": 2.0,
+      "correct": true
+    },
+    {
+      "file": "Data_Scientist\\CVSANKETTODKAR.pdf",
+      "current": "Data_Scientist",
+      "predicted": "Data_Scientist",
+      "confidence": 1.714,
+      "correct": true
+    },
+    {
+      "file": "Data_Scientist\\CVSARAVANANP.pdf",
+      "current": "Data_Scientist",
+      "predicted": "Data_Scientist",
+      "confidence": 1.0,
+      "correct": true
+    },
+    {
+      "file": "Data_Scientist\\CVSarthakDalvi.pdf",
+      "current": "Data_Scientist",
+      "predicted": "Data_Scientist",
+      "confidence": 3.143,
+      "correct": true
+    },
+    {
+      "file": "Data_Scientist\\CVSAURABHJADHAV.pdf",
+      "current": "Data_Scientist",
+      "predicted": "Data_Scientist",
+      "confidence": 2.0,
+      "correct": true
+    },
+    {
+      "file": "Data_Scientist\\CVSheetalBankar.pdf",
+      "current": "Data_Scientist",
+      "predicted": "Data_Scientist",
+      "confidence": 2.143,
+      "correct": true
+    },
+    {
+      "file": "Data_Scientist\\CVSnehalGujar.pdf",
+      "current": "Data_Scientist",
+      "predicted": "Data_Scientist",
+      "confidence": 1.857,
+      "correct": true
+    },
+    {
+      "file": "Data_Scientist\\CVSnehaMisal.pdf",
+      "current": "Data_Scientist",
+      "predicted": "Data_Scientist",
+      "confidence": 3.143,
+      "correct": true
+    },
+    {
+      "file": "Data_Scientist\\CVSURAJVISHWAKARMA.pdf",
+      "current": "Data_Scientist",
+      "predicted": "Data_Scientist",
+      "confidence": 1.0,
+      "correct": true
+    },
+    {
+      "file": "Data_Scientist\\CVTEJASGHATOL.pdf",
+      "current": "Data_Scientist",
+      "predicted": "Data_Scientist",
+      "confidence": 2.714,
+      "correct": true
+    },
+    {
+      "file": "Data_Scientist\\CVTEJASWINISABALE.pdf",
+      "current": "Data_Scientist",
+      "predicted": "Data_Scientist",
+      "confidence": 1.571,
+      "correct": true
+    },
+    {
+      "file": "Data_Scientist\\CVVaishaliMundlik-Tak.pdf",
+      "current": "Data_Scientist",
+      "predicted": "Data_Scientist",
+      "confidence": 1.429,
+      "correct": true
+    },
+    {
+      "file": "Data_Scientist\\CVVarshaW.pdf",
+      "current": "Data_Scientist",
+      "predicted": "Data_Scientist",
+      "confidence": 1.571,
+      "correct": true
+    },
+    {
+      "file": "Data_Scientist\\CVVishalNathgosavi.pdf",
+      "current": "Data_Scientist",
+      "predicted": "Data_Scientist",
+      "confidence": 1.571,
+      "correct": true
+    },
+    {
+      "file": "Data_Scientist\\CVVIVEKYADAV.pdf",
+      "current": "Data_Scientist",
+      "predicted": "Data_Scientist",
+      "confidence": 1.143,
+      "correct": true
+    },
+    {
+      "file": "Data_Scientist\\CVYOGESHBHANDARI.pdf",
+      "current": "Data_Scientist",
+      "predicted": "Data_Scientist",
+      "confidence": 2.714,
+      "correct": true
+    },
+    {
+      "file": "Data_Scientist\\Kamlesh Updated Resume.pdf",
+      "current": "Data_Scientist",
+      "predicted": "Data_Scientist",
+      "confidence": 1.429,
+      "correct": true
+    },
+    {
+      "file": "Data_Scientist\\Namrata_Jha_Resume.pdf",
+      "current": "Data_Scientist",
+      "predicted": "Data_Scientist",
+      "confidence": 3.0,
+      "correct": true
+    },
+    {
+      "file": "Data_Scientist\\Nikita\u2019s resume_240530_163703.pdf",
+      "current": "Data_Scientist",
+      "predicted": "Data_Scientist",
+      "confidence": 2.429,
+      "correct": true
+    },
+    {
+      "file": "Data_Scientist\\NILESH_GUPTA_RESUME.pdf",
+      "current": "Data_Scientist",
+      "predicted": "Data_Scientist",
+      "confidence": 1.286,
+      "correct": true
+    },
+    {
+      "file": "Data_Scientist\\Nishant_resume (3).pdf",
+      "current": "Data_Scientist",
+      "predicted": "Data_Scientist",
+      "confidence": 2.571,
+      "correct": true
+    },
+    {
+      "file": "Data_Scientist\\papiha_jadhav_salesforce.pdf",
+      "current": "Data_Scientist",
+      "predicted": "Data_Scientist",
+      "confidence": 2.714,
+      "correct": true
+    },
+    {
+      "file": "Data_Scientist\\Proposal of eCom Platform Development-Maxsell.pdf",
+      "current": "Data_Scientist",
+      "predicted": "Data_Scientist",
+      "confidence": 7.143,
+      "correct": true
+    },
+    {
+      "file": "Data_Scientist\\Resume(2023)php (1).docx",
+      "current": "Data_Scientist",
+      "predicted": "Data_Scientist",
+      "confidence": 1.857,
+      "correct": true
+    },
+    {
+      "file": "Data_Scientist\\Resume(2023)php.docx",
+      "current": "Data_Scientist",
+      "predicted": "Data_Scientist",
+      "confidence": 1.857,
+      "correct": true
+    },
+    {
+      "file": "Data_Scientist\\Resume24-G (1).pdf",
+      "current": "Data_Scientist",
+      "predicted": "Data_Scientist",
+      "confidence": 1.429,
+      "correct": true
+    },
+    {
+      "file": "Data_Scientist\\Resume24-G.pdf",
+      "current": "Data_Scientist",
+      "predicted": "Data_Scientist",
+      "confidence": 1.429,
+      "correct": true
+    },
+    {
+      "file": "Data_Scientist\\ResumeAkshayBhoite.pdf",
+      "current": "Data_Scientist",
+      "predicted": "Data_Scientist",
+      "confidence": 0.286,
+      "correct": true
+    },
+    {
+      "file": "Data_Scientist\\ResumeBHARATPATIL.pdf",
+      "current": "Data_Scientist",
+      "predicted": "Data_Scientist",
+      "confidence": 3.143,
+      "correct": true
+    },
+    {
+      "file": "Data_Scientist\\ResumeBhiseShekhar.pdf",
+      "current": "Data_Scientist",
+      "predicted": "Data_Scientist",
+      "confidence": 2.429,
+      "correct": true
+    },
+    {
+      "file": "Data_Scientist\\ResumeDharmarajPatil.pdf",
+      "current": "Data_Scientist",
+      "predicted": "Data_Scientist",
+      "confidence": 3.143,
+      "correct": true
+    },
+    {
+      "file": "Data_Scientist\\ResumeGaneshKale.pdf",
+      "current": "Data_Scientist",
+      "predicted": "Data_Scientist",
+      "confidence": 1.143,
+      "correct": true
+    },
+    {
+      "file": "Data_Scientist\\ResumeGayatriHedau.pdf",
+      "current": "Data_Scientist",
+      "predicted": "Data_Scientist",
+      "confidence": 6.143,
+      "correct": true
+    },
+    {
+      "file": "Data_Scientist\\ResumeKanchanMate.pdf",
+      "current": "Data_Scientist",
+      "predicted": "Data_Scientist",
+      "confidence": 2.0,
+      "correct": true
+    },
+    {
+      "file": "Data_Scientist\\ResumeRavitaBawane (1).pdf",
+      "current": "Data_Scientist",
+      "predicted": "Data_Scientist",
+      "confidence": 0.286,
+      "correct": true
+    },
+    {
+      "file": "Data_Scientist\\ResumeRavitaBawane.pdf",
+      "current": "Data_Scientist",
+      "predicted": "Data_Scientist",
+      "confidence": 0.286,
+      "correct": true
+    },
+    {
+      "file": "Data_Scientist\\ResumeRupamJayaswal (1).pdf",
+      "current": "Data_Scientist",
+      "predicted": "Data_Scientist",
+      "confidence": 2.429,
+      "correct": true
+    },
+    {
+      "file": "Data_Scientist\\ResumeRupamJayaswal.pdf",
+      "current": "Data_Scientist",
+      "predicted": "Data_Scientist",
+      "confidence": 2.429,
+      "correct": true
+    },
+    {
+      "file": "Data_Scientist\\ResumeVarshaW.pdf",
+      "current": "Data_Scientist",
+      "predicted": "Data_Scientist",
+      "confidence": 1.571,
+      "correct": true
+    },
+    {
+      "file": "Data_Scientist\\Sakshi_Dixit C.V.pdf",
+      "current": "Data_Scientist",
+      "predicted": "Data_Scientist",
+      "confidence": 1.0,
+      "correct": true
+    },
+    {
+      "file": "Data_Scientist\\sayaliresume.pdf",
+      "current": "Data_Scientist",
+      "predicted": "Data_Scientist",
+      "confidence": 0.857,
+      "correct": true
+    },
+    {
+      "file": "Data_Scientist\\Smruti Sakre simple.pdf",
+      "current": "Data_Scientist",
+      "predicted": "Data_Scientist",
+      "confidence": 2.286,
+      "correct": true
+    },
+    {
+      "file": "Data_Scientist\\somnath_resume_new2024 - Copy_2.pdf",
+      "current": "Data_Scientist",
+      "predicted": "Data_Scientist",
+      "confidence": 4.143,
+      "correct": true
+    },
+    {
+      "file": "Data_Scientist\\swati-antre PHP Laravel.pdf",
+      "current": "Data_Scientist",
+      "predicted": "Data_Scientist",
+      "confidence": 6.429,
+      "correct": true
+    },
+    {
+      "file": "Data_Scientist\\Vijay Shinde Senior Software Developer_240524_090042.pdf",
+      "current": "Data_Scientist",
+      "predicted": "Data_Scientist",
+      "confidence": 2.714,
+      "correct": true
+    },
+    {
+      "file": "Data_Scientist\\Vishal_Jadhav1.pdf",
+      "current": "Data_Scientist",
+      "predicted": "Data_Scientist",
+      "confidence": 0.857,
+      "correct": true
+    },
+    {
+      "file": "Data_Scientist\\ResumeKUNDANKUMAR.pdf",
+      "current": "Data_Scientist",
+      "predicted": "Data_Scientist",
+      "confidence": 1.857,
+      "correct": true
+    },
+    {
+      "file": "Data_Scientist\\ResumeMandarVaste.pdf",
+      "current": "Data_Scientist",
+      "predicted": "Data_Scientist",
+      "confidence": 4.143,
+      "correct": true
+    },
+    {
+      "file": "Data_Scientist\\ResumePradipJadhav.pdf",
+      "current": "Data_Scientist",
+      "predicted": "Data_Scientist",
+      "confidence": 1.286,
+      "correct": true
+    },
+    {
+      "file": "Data_Scientist\\ResumeShrutiShinde.pdf",
+      "current": "Data_Scientist",
+      "predicted": "Data_Scientist",
+      "confidence": 1.286,
+      "correct": true
+    },
+    {
+      "file": "Data_Scientist\\ResumeYOGESHPAL.pdf",
+      "current": "Data_Scientist",
+      "predicted": "Data_Scientist",
+      "confidence": 2.286,
+      "correct": true
+    },
+    {
+      "file": "Data_Scientist\\ResumeLALITRANA.pdf",
+      "current": "Data_Scientist",
+      "predicted": "Data_Scientist",
+      "confidence": 2.714,
+      "correct": true
+    },
+    {
+      "file": "Data_Scientist\\ResumeRahulSharma.pdf",
+      "current": "Data_Scientist",
+      "predicted": "Data_Scientist",
+      "confidence": 3.571,
+      "correct": true
+    },
+    {
+      "file": "Data_Scientist\\praveen_resume (1).pdf",
+      "current": "Data_Scientist",
+      "predicted": "Data_Scientist",
+      "confidence": 2.714,
+      "correct": true
+    },
+    {
+      "file": "Data_Scientist\\Resume_Shubham_Sonawane.pdf",
+      "current": "Data_Scientist",
+      "predicted": "Data_Scientist",
+      "confidence": 3.571,
+      "correct": true
+    },
+    {
+      "file": "Data_Scientist\\sneharesume (1).pdf",
+      "current": "Data_Scientist",
+      "predicted": "Data_Scientist",
+      "confidence": 2.429,
+      "correct": true
+    },
+    {
+      "file": "Data_Scientist\\sneharesume.pdf",
+      "current": "Data_Scientist",
+      "predicted": "Data_Scientist",
+      "confidence": 2.429,
+      "correct": true
+    },
+    {
+      "file": "Data_Scientist\\Surya_Dev_Singh_Resume.pdf",
+      "current": "Data_Scientist",
+      "predicted": "Data_Scientist",
+      "confidence": 2.286,
+      "correct": true
+    },
+    {
+      "file": "Data_Scientist\\Updated Resume.pdf",
+      "current": "Data_Scientist",
+      "predicted": "Data_Scientist",
+      "confidence": 2.857,
+      "correct": true
+    },
+    {
+      "file": "Data_Scientist\\Batch_1\\Resume_FINAL 2.pdf",
+      "current": "Data_Scientist",
+      "predicted": "Data_Scientist",
+      "confidence": 4.0,
+      "correct": true
+    },
+    {
+      "file": "Designer\\SAGAR CV.pdf",
+      "current": "Designer",
+      "predicted": "Designer",
+      "confidence": 0.875,
+      "correct": true
+    },
+    {
+      "file": "Designer\\SAGAR CV_1766557468.pdf",
+      "current": "Designer",
+      "predicted": "Designer",
+      "confidence": 0.875,
+      "correct": true
+    },
+    {
+      "file": "Designer\\CVAmolKate.pdf",
+      "current": "Designer",
+      "predicted": "Designer",
+      "confidence": 2.875,
+      "correct": true
+    },
+    {
+      "file": "Designer\\CVAnkitaWanjale (1).pdf",
+      "current": "Designer",
+      "predicted": "Designer",
+      "confidence": 4.125,
+      "correct": true
+    },
+    {
+      "file": "Designer\\CVAnkitaWanjale.pdf",
+      "current": "Designer",
+      "predicted": "Designer",
+      "confidence": 4.125,
+      "correct": true
+    },
+    {
+      "file": "Designer\\CVMUNMUNMAHANTA.pdf",
+      "current": "Designer",
+      "predicted": "Designer",
+      "confidence": 4.875,
+      "correct": true
+    },
+    {
+      "file": "Designer\\CVRUSHIKESHDHONNAR.pdf",
+      "current": "Designer",
+      "predicted": "Designer",
+      "confidence": 3.0,
+      "correct": true
+    },
+    {
+      "file": "Designer\\CVSOURABHPATIL.pdf",
+      "current": "Designer",
+      "predicted": "Designer",
+      "confidence": 1.75,
+      "correct": true
+    },
+    {
+      "file": "Designer\\CVTUSHARCHOURASIYA (1).pdf",
+      "current": "Designer",
+      "predicted": "Designer",
+      "confidence": 1.75,
+      "correct": true
+    },
+    {
+      "file": "Designer\\CVTUSHARCHOURASIYA.pdf",
+      "current": "Designer",
+      "predicted": "Designer",
+      "confidence": 1.75,
+      "correct": true
+    },
+    {
+      "file": "Designer\\Resume (1).pdf",
+      "current": "Designer",
+      "predicted": "Designer",
+      "confidence": 1.625,
+      "correct": true
+    },
+    {
+      "file": "Designer\\Resume.pdf",
+      "current": "Designer",
+      "predicted": "Designer",
+      "confidence": 1.625,
+      "correct": true
+    },
+    {
+      "file": "Designer\\Batch_1\\CV.pdf",
+      "current": "Designer",
+      "predicted": "Designer",
+      "confidence": 3.125,
+      "correct": true
+    },
+    {
+      "file": "Designer\\Batch_1\\Jagan Kakvipurre CV 3 (1).pdf",
+      "current": "Designer",
+      "predicted": "Designer",
+      "confidence": 2.25,
+      "correct": true
+    },
+    {
+      "file": "Designer\\Batch_1\\Neha_Borase_Resume.pdf",
+      "current": "Designer",
+      "predicted": "Designer",
+      "confidence": 2.0,
+      "correct": true
+    },
+    {
+      "file": "Designer\\Batch_1\\Pratul Bhatnagar Resume.pdf",
+      "current": "Designer",
+      "predicted": "Designer",
+      "confidence": 2.375,
+      "correct": true
+    },
+    {
+      "file": "Designer\\Batch_1\\Rajashri_Resume_Updated.pdf",
+      "current": "Designer",
+      "predicted": "Designer",
+      "confidence": 0.75,
+      "correct": true
+    },
+    {
+      "file": "Designer\\Batch_1\\Resume Rohit B GD.pdf",
+      "current": "Designer",
+      "predicted": "Designer",
+      "confidence": 3.5,
+      "correct": true
+    },
+    {
+      "file": "Designer\\Batch_1\\Resume_Rachna_Graphic_Designer.pdf",
+      "current": "Designer",
+      "predicted": "Designer",
+      "confidence": 3.375,
+      "correct": true
+    },
+    {
+      "file": "Designer\\Batch_1\\Sejal Agarwal Graphic Designer Resume `.pdf",
+      "current": "Designer",
+      "predicted": "Designer",
+      "confidence": 3.625,
+      "correct": true
+    },
+    {
+      "file": "Designer\\Batch_2\\SHILPA KAPOOR CV.pdf",
+      "current": "Designer",
+      "predicted": "Designer",
+      "confidence": 1.0,
+      "correct": true
+    },
+    {
+      "file": "Designer\\Batch_2\\siddhesh jori cv.pdf.pdf",
+      "current": "Designer",
+      "predicted": "Designer",
+      "confidence": 3.0,
+      "correct": true
+    },
+    {
+      "file": "Designer\\Batch_2\\Vishakha_G_Resume - Copy.pdf",
+      "current": "Designer",
+      "predicted": "Designer",
+      "confidence": 1.625,
+      "correct": true
+    },
+    {
+      "file": "Designer\\Batch_2\\Vivek's Resume (1)-1 - Copy.pdf",
+      "current": "Designer",
+      "predicted": "Designer",
+      "confidence": 3.75,
+      "correct": true
+    },
+    {
+      "file": "Designer\\Batch_2\\_Resume (5) (2) (1) - Copy.pdf",
+      "current": "Designer",
+      "predicted": "Designer",
+      "confidence": 1.25,
+      "correct": true
+    },
+    {
+      "file": "Designer\\Batch_2\\CVAJAYKUMARBIND.pdf",
+      "current": "Designer",
+      "predicted": "Designer",
+      "confidence": 1.5,
+      "correct": true
+    },
+    {
+      "file": "Designer\\Batch_2\\CVBhavinRathod.pdf",
+      "current": "Designer",
+      "predicted": "Designer",
+      "confidence": 2.375,
+      "correct": true
+    },
+    {
+      "file": "Designer\\Batch_2\\CVCHAITANYAPAWAR.pdf",
+      "current": "Designer",
+      "predicted": "Designer",
+      "confidence": 1.5,
+      "correct": true
+    },
+    {
+      "file": "Designer\\Batch_2\\CVParthHajare.pdf",
+      "current": "Designer",
+      "predicted": "Designer",
+      "confidence": 2.125,
+      "correct": true
+    },
+    {
+      "file": "Designer\\Batch_2\\CVRohanBorge.pdf",
+      "current": "Designer",
+      "predicted": "Designer",
+      "confidence": 3.375,
+      "correct": true
+    },
+    {
+      "file": "Designer\\Batch_3\\CVSandipMhetre.pdf",
+      "current": "Designer",
+      "predicted": "Designer",
+      "confidence": 5.125,
+      "correct": true
+    },
+    {
+      "file": "Designer\\Batch_3\\CVVAISHNAVIDAKE.pdf",
+      "current": "Designer",
+      "predicted": "Designer",
+      "confidence": 2.875,
+      "correct": true
+    },
+    {
+      "file": "Designer\\Batch_3\\CVvivekanandJadhav.pdf",
+      "current": "Designer",
+      "predicted": "Designer",
+      "confidence": 2.5,
+      "correct": true
+    },
+    {
+      "file": "Designer\\Batch_3\\Divya Jadhav_UI-UX Designer (1).pdf",
+      "current": "Designer",
+      "predicted": "Designer",
+      "confidence": 2.25,
+      "correct": true
+    },
+    {
+      "file": "Designer\\Batch_3\\Sai Teja - Resume.pdf",
+      "current": "Designer",
+      "predicted": "Designer",
+      "confidence": 3.5,
+      "correct": true
+    },
+    {
+      "file": "Designer\\Batch_3\\Sunny CV.pdf",
+      "current": "Designer",
+      "predicted": "Designer",
+      "confidence": 2.5,
+      "correct": true
+    },
+    {
+      "file": "Designer\\Batch_3\\Vinay Resume_compressed (1).pdf",
+      "current": "Designer",
+      "predicted": "Designer",
+      "confidence": 3.125,
+      "correct": true
+    },
+    {
+      "file": "DevOps\\Batch_1\\Gauri_Ghanekar-Chhatre_Sr.Software_Enginner-1.pdf",
+      "current": "DevOps",
+      "predicted": "Developer",
+      "confidence": 1.444,
+      "correct": false
+    },
+    {
+      "file": "DevOps\\Batch_1\\Abhinav_Tiwari_Resume (1).pdf",
+      "current": "DevOps",
+      "predicted": "Data_Scientist",
+      "confidence": 2.571,
+      "correct": false
+    },
+    {
+      "file": "DevOps\\Batch_1\\Bhagyashri_Java_Developer_Resume.pdf",
+      "current": "DevOps",
+      "predicted": "Developer",
+      "confidence": 2.444,
+      "correct": false
+    },
+    {
+      "file": "DevOps\\Batch_1\\Kumar Shanu_GenAI Resume.pdf",
+      "current": "DevOps",
+      "predicted": "Data_Scientist",
+      "confidence": 10.857,
+      "correct": false
+    },
+    {
+      "file": "DevOps\\Batch_1\\Resume_Megha_Tamrakar_.pdf",
+      "current": "DevOps",
+      "predicted": "DevOps",
+      "confidence": 2.5,
+      "correct": true
+    },
+    {
+      "file": "DevOps\\Batch_1\\VijayRathod_7767097672_4Y.pdf",
+      "current": "DevOps",
+      "predicted": "Developer",
+      "confidence": 1.778,
+      "correct": false
+    },
+    {
+      "file": "DevOps\\Batch_1\\My Resume Jayesh 1F2 new .pdf",
+      "current": "DevOps",
+      "predicted": "Data_Scientist",
+      "confidence": 2.714,
+      "correct": false
+    },
+    {
+      "file": "Business_Analyst\\ResumeSahilPandita.pdf",
+      "current": "Business_Analyst",
+      "predicted": "Data_Scientist",
+      "confidence": 2.429,
+      "correct": false
+    },
+    {
+      "file": "Business_Analyst\\CVVijayKumarPare.pdf",
+      "current": "Business_Analyst",
+      "predicted": "Business_Analyst",
+      "confidence": 2.0,
+      "correct": true
+    },
+    {
+      "file": "Business_Analyst\\ResumeHarshagandhaPatki.pdf",
+      "current": "Business_Analyst",
+      "predicted": "Business_Analyst",
+      "confidence": 2.25,
+      "correct": true
+    },
+    {
+      "file": "Manager\\Batch_1\\ResumeSatyamTamhane.pdf",
+      "current": "Manager",
+      "predicted": "Data_Scientist",
+      "confidence": 0.143,
+      "correct": false
+    },
+    {
+      "file": "Manager\\Batch_1\\ResumeRushikeshShivgan.pdf",
+      "current": "Manager",
+      "predicted": "Data_Scientist",
+      "confidence": 1.571,
+      "correct": false
+    },
+    {
+      "file": "Manager\\Batch_1\\ResumeSAHILNAGARIYA.pdf",
+      "current": "Manager",
+      "predicted": "Data_Scientist",
+      "confidence": 1.0,
+      "correct": false
+    },
+    {
+      "file": "Manager\\Batch_1\\ResumeVaradKulkarni.pdf",
+      "current": "Manager",
+      "predicted": "Data_Scientist",
+      "confidence": 1.714,
+      "correct": false
+    },
+    {
+      "file": "Fresher\\Bharath_S_CV-July_2024[1] (1).pdf",
+      "current": "Fresher",
+      "predicted": "Intern",
+      "confidence": 3.0,
+      "correct": false
+    },
+    {
+      "file": "Fresher\\sambodhi tambe resume finalllll_compressed (1).pdf",
+      "current": "Fresher",
+      "predicted": "Designer",
+      "confidence": 0.875,
+      "correct": false
+    },
+    {
+      "file": "Fresher\\Batch_1\\Jui Dey CV Graphic Designer-1.pdf",
+      "current": "Fresher",
+      "predicted": "Designer",
+      "confidence": 2.375,
+      "correct": false
+    },
+    {
+      "file": "Fresher\\Batch_1\\RESUME MUSKAAN.pdf",
+      "current": "Fresher",
+      "predicted": "Other",
+      "confidence": 0,
+      "correct": false
+    },
+    {
+      "file": "Fresher\\Batch_1\\Untitled attachment 00007.pdf",
+      "current": "Fresher",
+      "predicted": "Data_Scientist",
+      "confidence": 1.143,
+      "correct": false
+    },
+    {
+      "file": "Fresher\\Batch_1\\Updated Resume- Priya Hirau  - Copy.pdf",
+      "current": "Fresher",
+      "predicted": "Designer",
+      "confidence": 1.75,
+      "correct": false
+    },
+    {
+      "file": "Fresher\\Batch_1\\Vishnu Dhavale Resume 2024.pdf",
+      "current": "Fresher",
+      "predicted": "Designer",
+      "confidence": 2.25,
+      "correct": false
+    },
+    {
+      "file": "Fresher\\Batch_1\\CVRohitPasalkar.pdf",
+      "current": "Fresher",
+      "predicted": "Data_Scientist",
+      "confidence": 2.571,
+      "correct": false
+    },
+    {
+      "file": "Fresher\\Batch_1\\ResumeARVINDMALI (1).pdf",
+      "current": "Fresher",
+      "predicted": "Designer",
+      "confidence": 1.125,
+      "correct": false
+    },
+    {
+      "file": "Fresher\\Batch_1\\ResumeARVINDMALI.pdf",
+      "current": "Fresher",
+      "predicted": "Designer",
+      "confidence": 1.125,
+      "correct": false
+    },
+    {
+      "file": "Fresher\\Batch_1\\ResumeJahnaviM.pdf",
+      "current": "Fresher",
+      "predicted": "Designer",
+      "confidence": 3.75,
+      "correct": false
+    },
+    {
+      "file": "Fresher\\Batch_2\\Asset Tracking and Monitoring Solutions.pdf",
+      "current": "Fresher",
+      "predicted": "Data_Scientist",
+      "confidence": 1.0,
+      "correct": false
+    },
+    {
+      "file": "Fresher\\Batch_2\\BHAVISHA_CV_2024.pdf",
+      "current": "Fresher",
+      "predicted": "Designer",
+      "confidence": 2.0,
+      "correct": false
+    },
+    {
+      "file": "Fresher\\Batch_2\\CVAmitDubale.pdf",
+      "current": "Fresher",
+      "predicted": "Designer",
+      "confidence": 3.25,
+      "correct": false
+    },
+    {
+      "file": "Fresher\\Batch_2\\CVHARSHBHARGAVA.pdf",
+      "current": "Fresher",
+      "predicted": "Designer",
+      "confidence": 2.0,
+      "correct": false
+    },
+    {
+      "file": "Fresher\\Batch_2\\CVMayurWadile.pdf",
+      "current": "Fresher",
+      "predicted": "Designer",
+      "confidence": 4.0,
+      "correct": false
+    },
+    {
+      "file": "Fresher\\Batch_2\\CVNarayanAwchar.pdf",
+      "current": "Fresher",
+      "predicted": "Fresher",
+      "confidence": 0.5,
+      "correct": true
+    },
+    {
+      "file": "Fresher\\Batch_2\\CVPramodwaghmare.pdf",
+      "current": "Fresher",
+      "predicted": "Data_Scientist",
+      "confidence": 0.857,
+      "correct": false
+    },
+    {
+      "file": "Fresher\\Batch_2\\CVPrashantG.Patil.pdf",
+      "current": "Fresher",
+      "predicted": "Data_Scientist",
+      "confidence": 1.429,
+      "correct": false
+    },
+    {
+      "file": "Fresher\\Batch_2\\CVRAHULMISTARI.pdf",
+      "current": "Fresher",
+      "predicted": "Designer",
+      "confidence": 1.5,
+      "correct": false
+    },
+    {
+      "file": "Fresher\\Batch_2\\CVShrikantMaid.pdf",
+      "current": "Fresher",
+      "predicted": "Data_Scientist",
+      "confidence": 3.429,
+      "correct": false
+    },
+    {
+      "file": "Fresher\\Batch_3\\CVvaibhavsolanke.pdf",
+      "current": "Fresher",
+      "predicted": "Data_Scientist",
+      "confidence": 3.0,
+      "correct": false
+    },
+    {
+      "file": "Fresher\\Batch_3\\CVVaishnaviBadabe.pdf",
+      "current": "Fresher",
+      "predicted": "Data_Scientist",
+      "confidence": 0.143,
+      "correct": false
+    },
+    {
+      "file": "Fresher\\Batch_3\\EarnWealth - Task Assessment.pdf",
+      "current": "Fresher",
+      "predicted": "Data_Scientist",
+      "confidence": 0.714,
+      "correct": false
+    },
+    {
+      "file": "Fresher\\Batch_3\\HR Notification Work Wear Policy.pdf",
+      "current": "Fresher",
+      "predicted": "Manager",
+      "confidence": 0.25,
+      "correct": false
+    },
+    {
+      "file": "Fresher\\Batch_3\\Mayuri Roy_Resume.pdf",
+      "current": "Fresher",
+      "predicted": "Data_Scientist",
+      "confidence": 1.0,
+      "correct": false
+    },
+    {
+      "file": "Fresher\\Batch_3\\ResumeAAYUSHJAIN.pdf",
+      "current": "Fresher",
+      "predicted": "Data_Scientist",
+      "confidence": 2.429,
+      "correct": false
+    },
+    {
+      "file": "Fresher\\Batch_3\\ResumeAJINKYARODE.pdf",
+      "current": "Fresher",
+      "predicted": "Data_Scientist",
+      "confidence": 1.286,
+      "correct": false
+    },
+    {
+      "file": "Fresher\\Batch_3\\ResumeANKITDONGRE.pdf",
+      "current": "Fresher",
+      "predicted": "Data_Scientist",
+      "confidence": 1.0,
+      "correct": false
+    },
+    {
+      "file": "Fresher\\Batch_3\\ResumeKhushbooBarhate.pdf",
+      "current": "Fresher",
+      "predicted": "Data_Scientist",
+      "confidence": 0.429,
+      "correct": false
+    },
+    {
+      "file": "Fresher\\Batch_3\\ResumeMayurSaikia.pdf",
+      "current": "Fresher",
+      "predicted": "Data_Scientist",
+      "confidence": 0.857,
+      "correct": false
+    },
+    {
+      "file": "Fresher\\Batch_4\\ResumeMonicaUgale.pdf",
+      "current": "Fresher",
+      "predicted": "Data_Scientist",
+      "confidence": 1.0,
+      "correct": false
+    },
+    {
+      "file": "Fresher\\Batch_4\\ResumeRahulJadhav.pdf",
+      "current": "Fresher",
+      "predicted": "Business_Analyst",
+      "confidence": 2.75,
+      "correct": false
+    },
+    {
+      "file": "Fresher\\Batch_4\\ResumeRajeshGharge.pdf",
+      "current": "Fresher",
+      "predicted": "Intern",
+      "confidence": 0.5,
+      "correct": false
+    },
+    {
+      "file": "Fresher\\Batch_4\\ResumeSachinHiranayak.pdf",
+      "current": "Fresher",
+      "predicted": "Data_Scientist",
+      "confidence": 2.0,
+      "correct": false
+    },
+    {
+      "file": "Fresher\\Batch_4\\ResumeSakshiDeotale.pdf",
+      "current": "Fresher",
+      "predicted": "Data_Scientist",
+      "confidence": 1.429,
+      "correct": false
+    },
+    {
+      "file": "Fresher\\Batch_4\\ResumeShahShamikha.pdf",
+      "current": "Fresher",
+      "predicted": "Data_Scientist",
+      "confidence": 0.286,
+      "correct": false
+    },
+    {
+      "file": "Fresher\\Batch_4\\ResumeSuhasNikrad.pdf",
+      "current": "Fresher",
+      "predicted": "Data_Scientist",
+      "confidence": 1.143,
+      "correct": false
+    },
+    {
+      "file": "Fresher\\Batch_4\\ResumeSUMITNIJSURE.pdf",
+      "current": "Fresher",
+      "predicted": "Data_Scientist",
+      "confidence": 4.429,
+      "correct": false
+    },
+    {
+      "file": "Fresher\\Batch_4\\ResumeTahirMujawar.pdf",
+      "current": "Fresher",
+      "predicted": "Data_Scientist",
+      "confidence": 0.714,
+      "correct": false
+    },
+    {
+      "file": "Fresher\\Batch_4\\ResumeUrvashiPatil.pdf",
+      "current": "Fresher",
+      "predicted": "Data_Scientist",
+      "confidence": 0.286,
+      "correct": false
+    },
+    {
+      "file": "Fresher\\Batch_5\\ResumeVaibhavMangrulkar.pdf",
+      "current": "Fresher",
+      "predicted": "Data_Scientist",
+      "confidence": 0.571,
+      "correct": false
+    },
+    {
+      "file": "Fresher\\Batch_5\\Anubhav Gang FA-1.pdf",
+      "current": "Fresher",
+      "predicted": "Data_Scientist",
+      "confidence": 1.714,
+      "correct": false
+    },
+    {
+      "file": "Fresher\\Batch_5\\Job Description for Speed Wealth.pdf",
+      "current": "Fresher",
+      "predicted": "Data_Scientist",
+      "confidence": 0.571,
+      "correct": false
+    },
+    {
+      "file": "Fresher\\Batch_5\\ResumeAdityaChhajed.pdf",
+      "current": "Fresher",
+      "predicted": "Data_Scientist",
+      "confidence": 0.571,
+      "correct": false
+    },
+    {
+      "file": "Fresher\\Batch_5\\ResumeApurvaGharal.pdf",
+      "current": "Fresher",
+      "predicted": "Data_Scientist",
+      "confidence": 1.143,
+      "correct": false
+    },
+    {
+      "file": "Fresher\\Batch_5\\ResumeDanish.Dorabjee.pdf",
+      "current": "Fresher",
+      "predicted": "Data_Scientist",
+      "confidence": 0.857,
+      "correct": false
+    },
+    {
+      "file": "Fresher\\Batch_5\\ResumeNandkishorBarange.pdf",
+      "current": "Fresher",
+      "predicted": "Data_Scientist",
+      "confidence": 0.286,
+      "correct": false
+    },
+    {
+      "file": "Fresher\\Batch_5\\ResumeOMKARSHETYE.pdf",
+      "current": "Fresher",
+      "predicted": "Designer",
+      "confidence": 0.5,
+      "correct": false
+    },
+    {
+      "file": "Fresher\\Batch_5\\ResumePoojaLambe.pdf",
+      "current": "Fresher",
+      "predicted": "Data_Scientist",
+      "confidence": 0.571,
+      "correct": false
+    },
+    {
+      "file": "Fresher\\Batch_5\\ResumeRiddhiJankar.pdf",
+      "current": "Fresher",
+      "predicted": "Business_Analyst",
+      "confidence": 0.5,
+      "correct": false
+    },
+    {
+      "file": "Fresher\\Batch_6\\ResumeRohanRam.pdf",
+      "current": "Fresher",
+      "predicted": "Data_Scientist",
+      "confidence": 0.286,
+      "correct": false
+    },
+    {
+      "file": "Fresher\\Batch_6\\ResumeSheefaliKhan.pdf",
+      "current": "Fresher",
+      "predicted": "Data_Scientist",
+      "confidence": 3.143,
+      "correct": false
+    },
+    {
+      "file": "Fresher\\Batch_6\\ResumeShubhamKhaire.pdf",
+      "current": "Fresher",
+      "predicted": "Data_Scientist",
+      "confidence": 0.857,
+      "correct": false
+    },
+    {
+      "file": "Fresher\\Batch_6\\ResumeTusharPalve.pdf",
+      "current": "Fresher",
+      "predicted": "Data_Scientist",
+      "confidence": 0.429,
+      "correct": false
+    },
+    {
+      "file": "Fresher\\Batch_6\\AyushRawat.pdf",
+      "current": "Fresher",
+      "predicted": "Intern",
+      "confidence": 1.5,
+      "correct": false
+    },
+    {
+      "file": "Fresher\\Batch_6\\RaviAdipata.pdf",
+      "current": "Fresher",
+      "predicted": "Developer",
+      "confidence": 1.0,
+      "correct": false
+    },
+    {
+      "file": "Fresher\\Batch_6\\ResumeUmaKurwade (1).docx",
+      "current": "Fresher",
+      "predicted": "Data_Scientist",
+      "confidence": 0.714,
+      "correct": false
+    },
+    {
+      "file": "Intern\\Sai_Adhikari.pdf",
+      "current": "Intern",
+      "predicted": "Data_Scientist",
+      "confidence": 0.857,
+      "correct": false
+    },
+    {
+      "file": "Intern\\ResumeSHUBHIJAIN.pdf",
+      "current": "Intern",
+      "predicted": "Intern",
+      "confidence": 1.0,
+      "correct": true
+    },
+    {
+      "file": "Intern\\CVAdityaMalode.pdf",
+      "current": "Intern",
+      "predicted": "Intern",
+      "confidence": 2.5,
+      "correct": true
+    },
+    {
+      "file": "Intern\\CVNagrajPatil.pdf",
+      "current": "Intern",
+      "predicted": "Intern",
+      "confidence": 4.0,
+      "correct": true
+    },
+    {
+      "file": "Intern\\CVShubhangiPatil.pdf",
+      "current": "Intern",
+      "predicted": "Intern",
+      "confidence": 1.0,
+      "correct": true
+    },
+    {
+      "file": "Intern\\ResumeNagrajPatil.pdf",
+      "current": "Intern",
+      "predicted": "Intern",
+      "confidence": 4.0,
+      "correct": true
+    },
+    {
+      "file": "Intern\\Resum_ (1).pdf",
+      "current": "Intern",
+      "predicted": "Intern",
+      "confidence": 2.5,
+      "correct": true
+    },
+    {
+      "file": "Intern\\Resum_.pdf",
+      "current": "Intern",
+      "predicted": "Intern",
+      "confidence": 2.5,
+      "correct": true
+    },
+    {
+      "file": "Intern\\ResumeIshwariBorse.pdf",
+      "current": "Intern",
+      "predicted": "Intern",
+      "confidence": 1.5,
+      "correct": true
+    },
+    {
+      "file": "Intern\\Mohaideen Arsath_Resume.pdf",
+      "current": "Intern",
+      "predicted": "Intern",
+      "confidence": 2.5,
+      "correct": true
+    },
+    {
+      "file": "Intern\\Savula_Shiva_prasad.pdf",
+      "current": "Intern",
+      "predicted": "Intern",
+      "confidence": 2.0,
+      "correct": true
+    },
+    {
+      "file": "Intern\\UpdatedPdf.pdf",
+      "current": "Intern",
+      "predicted": "Intern",
+      "confidence": 2.5,
+      "correct": true
+    },
+    {
+      "file": "Intern\\Vijay.resume (1).pdf",
+      "current": "Intern",
+      "predicted": "Intern",
+      "confidence": 2.0,
+      "correct": true
+    },
+    {
+      "file": "Intern\\Bharath_S_CV-July_2024[1] (1).pdf",
+      "current": "Intern",
+      "predicted": "Intern",
+      "confidence": 3.0,
+      "correct": true
+    },
+    {
+      "file": "Intern\\ResumeRajeshGharge.pdf",
+      "current": "Intern",
+      "predicted": "Intern",
+      "confidence": 0.5,
+      "correct": true
+    },
+    {
+      "file": "Intern\\AyushRawat.pdf",
+      "current": "Intern",
+      "predicted": "Intern",
+      "confidence": 1.5,
+      "correct": true
+    },
+    {
+      "file": "Intern\\Batch_1\\Akshay Shrikant Nehre Resume.docx",
+      "current": "Intern",
+      "predicted": "Data_Scientist",
+      "confidence": 1.0,
+      "correct": false
+    },
+    {
+      "file": "Intern\\Batch_1\\CV_Graphic designer Snehal.pdf",
+      "current": "Intern",
+      "predicted": "Designer",
+      "confidence": 3.625,
+      "correct": false
+    },
+    {
+      "file": "Intern\\Batch_1\\Mayur Lindait Resume-1.pdf",
+      "current": "Intern",
+      "predicted": "Designer",
+      "confidence": 4.625,
+      "correct": false
+    },
+    {
+      "file": "Intern\\Batch_1\\Resume - Copy.pdf",
+      "current": "Intern",
+      "predicted": "Designer",
+      "confidence": 2.5,
+      "correct": false
+    },
+    {
+      "file": "Intern\\Batch_1\\Revati B. DM 2024.pdf",
+      "current": "Intern",
+      "predicted": "Intern",
+      "confidence": 2.0,
+      "correct": true
+    },
+    {
+      "file": "Intern\\Batch_1\\Arushi Soni_Resume.pdf",
+      "current": "Intern",
+      "predicted": "Designer",
+      "confidence": 2.0,
+      "correct": false
+    },
+    {
+      "file": "Intern\\Batch_1\\CVAbhishekvishwakarma.pdf",
+      "current": "Intern",
+      "predicted": "Developer",
+      "confidence": 1.444,
+      "correct": false
+    },
+    {
+      "file": "Intern\\Batch_1\\CVAniketDeotale.pdf",
+      "current": "Intern",
+      "predicted": "Designer",
+      "confidence": 3.25,
+      "correct": false
+    },
+    {
+      "file": "Intern\\Batch_1\\CVSWATIDEVI.pdf",
+      "current": "Intern",
+      "predicted": "Intern",
+      "confidence": 1.0,
+      "correct": true
+    },
+    {
+      "file": "Intern\\Batch_1\\CVTEJASHREESURYAWANSHI.pdf",
+      "current": "Intern",
+      "predicted": "Data_Scientist",
+      "confidence": 1.429,
+      "correct": false
+    },
+    {
+      "file": "Intern\\Batch_2\\Shruti_Nigam_Designer_CV.pdf",
+      "current": "Intern",
+      "predicted": "Designer",
+      "confidence": 2.25,
+      "correct": false
+    },
+    {
+      "file": "Intern\\Batch_2\\vishal ghadage 0-1.pdf",
+      "current": "Intern",
+      "predicted": "Intern",
+      "confidence": 2.5,
+      "correct": true
+    },
+    {
+      "file": "Intern\\Batch_2\\ResumeANUBHAVPATWA.pdf",
+      "current": "Intern",
+      "predicted": "Intern",
+      "confidence": 1.0,
+      "correct": true
+    },
+    {
+      "file": "Intern\\Batch_2\\ResumeASHISHJOHRI.pdf",
+      "current": "Intern",
+      "predicted": "Data_Scientist",
+      "confidence": 4.143,
+      "correct": false
+    },
+    {
+      "file": "Intern\\Batch_2\\ResumeAshishMalviya.pdf",
+      "current": "Intern",
+      "predicted": "Intern",
+      "confidence": 3.5,
+      "correct": true
+    },
+    {
+      "file": "Intern\\Batch_2\\ResumeGayatriGontla.pdf",
+      "current": "Intern",
+      "predicted": "Intern",
+      "confidence": 1.0,
+      "correct": true
+    },
+    {
+      "file": "Intern\\Batch_2\\ResumeISHANIMJE.pdf",
+      "current": "Intern",
+      "predicted": "Data_Scientist",
+      "confidence": 0.571,
+      "correct": false
+    },
+    {
+      "file": "Intern\\Batch_2\\ResumeNilamRakh.pdf",
+      "current": "Intern",
+      "predicted": "Data_Scientist",
+      "confidence": 1.143,
+      "correct": false
+    },
+    {
+      "file": "Intern\\Batch_2\\ResumePallavPathak.pdf",
+      "current": "Intern",
+      "predicted": "Intern",
+      "confidence": 2.5,
+      "correct": true
+    },
+    {
+      "file": "Intern\\Batch_2\\ResumePiyushGawali.pdf",
+      "current": "Intern",
+      "predicted": "Intern",
+      "confidence": 2.0,
+      "correct": true
+    },
+    {
+      "file": "Intern\\Batch_3\\ResumePRIYAADVANI.pdf",
+      "current": "Intern",
+      "predicted": "Intern",
+      "confidence": 1.0,
+      "correct": true
+    },
+    {
+      "file": "Intern\\Batch_3\\ResumeRadhikaSharma.pdf",
+      "current": "Intern",
+      "predicted": "Data_Scientist",
+      "confidence": 2.143,
+      "correct": false
+    },
+    {
+      "file": "Intern\\Batch_3\\ResumeRahulJagtap.pdf",
+      "current": "Intern",
+      "predicted": "Intern",
+      "confidence": 1.0,
+      "correct": true
+    },
+    {
+      "file": "Intern\\Batch_3\\ResumeReshmaDivase.pdf",
+      "current": "Intern",
+      "predicted": "Intern",
+      "confidence": 1.0,
+      "correct": true
+    },
+    {
+      "file": "Intern\\Batch_3\\ResumeSandeepKeswani.pdf",
+      "current": "Intern",
+      "predicted": "Business_Analyst",
+      "confidence": 1.0,
+      "correct": false
+    },
+    {
+      "file": "Intern\\Batch_3\\ResumeSUJAUDDINBISWAS.pdf",
+      "current": "Intern",
+      "predicted": "Intern",
+      "confidence": 2.0,
+      "correct": true
+    },
+    {
+      "file": "Intern\\Batch_3\\ResumeVINAYAKNAIR.pdf",
+      "current": "Intern",
+      "predicted": "Intern",
+      "confidence": 1.5,
+      "correct": true
+    },
+    {
+      "file": "Intern\\Batch_3\\ResumeAJINKYAPRAMOD.pdf",
+      "current": "Intern",
+      "predicted": "Intern",
+      "confidence": 1.5,
+      "correct": true
+    },
+    {
+      "file": "Intern\\Batch_3\\ResumeAniketJadhav.pdf",
+      "current": "Intern",
+      "predicted": "Intern",
+      "confidence": 1.5,
+      "correct": true
+    },
+    {
+      "file": "Intern\\Batch_3\\ResumeASHISHTURANKAR.pdf",
+      "current": "Intern",
+      "predicted": "Intern",
+      "confidence": 2.0,
+      "correct": true
+    },
+    {
+      "file": "Intern\\Batch_4\\ResumeAshwiniRaj.pdf",
+      "current": "Intern",
+      "predicted": "Intern",
+      "confidence": 1.0,
+      "correct": true
+    },
+    {
+      "file": "Intern\\Batch_4\\ResumeDakshLodha.pdf",
+      "current": "Intern",
+      "predicted": "Designer",
+      "confidence": 0.875,
+      "correct": false
+    },
+    {
+      "file": "Intern\\Batch_4\\ResumePrakalpPatil.pdf",
+      "current": "Intern",
+      "predicted": "Intern",
+      "confidence": 2.0,
+      "correct": true
+    },
+    {
+      "file": "Intern\\Batch_4\\ResumeSACHINBANDGAR.pdf",
+      "current": "Intern",
+      "predicted": "Data_Scientist",
+      "confidence": 0.571,
+      "correct": false
+    },
+    {
+      "file": "Intern\\Batch_4\\ResumeShrutiJadhav.pdf",
+      "current": "Intern",
+      "predicted": "Intern",
+      "confidence": 2.5,
+      "correct": true
+    },
+    {
+      "file": "Intern\\Batch_4\\ResumeSumantKhadtare.pdf",
+      "current": "Intern",
+      "predicted": "Data_Scientist",
+      "confidence": 1.143,
+      "correct": false
+    },
+    {
+      "file": "Intern\\Batch_4\\ResumeVishalSinghSengar.pdf",
+      "current": "Intern",
+      "predicted": "Intern",
+      "confidence": 2.0,
+      "correct": true
+    },
+    {
+      "file": "Intern\\Batch_4\\Kiran_Resume-1.pdf",
+      "current": "Intern",
+      "predicted": "Developer",
+      "confidence": 1.778,
+      "correct": false
+    },
+    {
+      "file": "Other\\ResumeBhavanaKulkarni.pdf",
+      "current": "Other",
+      "predicted": "Data_Scientist",
+      "confidence": 0.143,
+      "correct": false
+    },
+    {
+      "file": "Other\\RESUME MUSKAAN.pdf",
+      "current": "Other",
+      "predicted": "Other",
+      "confidence": 0,
+      "correct": true
+    },
+    {
+      "file": "Other\\Batch_1\\Ankita Portfolio.pdf",
+      "current": "Other",
+      "predicted": "Other",
+      "confidence": 0,
+      "correct": true
+    },
+    {
+      "file": "Other\\Batch_1\\Ankita sagar resume -2.pdf",
+      "current": "Other",
+      "predicted": "Other",
+      "confidence": 0,
+      "correct": true
+    },
+    {
+      "file": "Other\\Batch_1\\chidannd CV-compressed.pdf",
+      "current": "Other",
+      "predicted": "Other",
+      "confidence": 0,
+      "correct": true
+    },
+    {
+      "file": "Other\\Batch_1\\Resume (1) - Copy.pdf",
+      "current": "Other",
+      "predicted": "Other",
+      "confidence": 0,
+      "correct": true
+    },
+    {
+      "file": "Other\\Batch_1\\Sakshi's Resume (1)-compressed - converted (3).pdf",
+      "current": "Other",
+      "predicted": "Other",
+      "confidence": 0,
+      "correct": true
+    },
+    {
+      "file": "Other\\Batch_1\\SwapnilBhoir_Resume_2024.pdf",
+      "current": "Other",
+      "predicted": "Other",
+      "confidence": 0,
+      "correct": true
+    },
+    {
+      "file": "Other\\Batch_1\\Vaishnavi_CV_pdf.pdf",
+      "current": "Other",
+      "predicted": "Other",
+      "confidence": 0,
+      "correct": true
+    },
+    {
+      "file": "Other\\Batch_1\\3681_26082024060336.pdf",
+      "current": "Other",
+      "predicted": "Other",
+      "confidence": 0,
+      "correct": true
+    },
+    {
+      "file": "Other\\Batch_1\\CVAakashKumawat.pdf",
+      "current": "Other",
+      "predicted": "Data_Scientist",
+      "confidence": 0.429,
+      "correct": false
+    },
+    {
+      "file": "Other\\Batch_1\\CVAbhijitElbhar.pdf",
+      "current": "Other",
+      "predicted": "Other",
+      "confidence": 0,
+      "correct": true
+    },
+    {
+      "file": "Other\\Batch_2\\CVNARENDRAKUMARYADAV.pdf",
+      "current": "Other",
+      "predicted": "Other",
+      "confidence": 0,
+      "correct": true
+    },
+    {
+      "file": "Other\\Batch_2\\CVNileshYadav.pdf",
+      "current": "Other",
+      "predicted": "Other",
+      "confidence": 0,
+      "correct": true
+    },
+    {
+      "file": "Other\\Batch_2\\CVRAVINDRASAWANT.pdf",
+      "current": "Other",
+      "predicted": "Other",
+      "confidence": 0,
+      "correct": true
+    },
+    {
+      "file": "Other\\Batch_2\\CVShraddhaWarudkar.pdf",
+      "current": "Other",
+      "predicted": "Other",
+      "confidence": 0,
+      "correct": true
+    },
+    {
+      "file": "Other\\Batch_2\\CVSudhirSherkar.pdf",
+      "current": "Other",
+      "predicted": "Other",
+      "confidence": 0,
+      "correct": true
+    },
+    {
+      "file": "Other\\Batch_2\\CVSUNILSAINI.pdf",
+      "current": "Other",
+      "predicted": "Other",
+      "confidence": 0,
+      "correct": true
+    },
+    {
+      "file": "Other\\Batch_2\\DivyaMalve07.pdf",
+      "current": "Other",
+      "predicted": "Other",
+      "confidence": 0,
+      "correct": true
+    },
+    {
+      "file": "Other\\Batch_2\\DOC-20240213-WA0010..pdf",
+      "current": "Other",
+      "predicted": "Other",
+      "confidence": 0,
+      "correct": true
+    },
+    {
+      "file": "Other\\Batch_2\\Rohit rathod  ( UIUX Designer ) Resume.pdf",
+      "current": "Other",
+      "predicted": "Other",
+      "confidence": 0,
+      "correct": true
+    },
+    {
+      "file": "Other\\Batch_2\\Sunita (sonali)\u2019s resume-1.doc",
+      "current": "Other",
+      "predicted": "Other",
+      "confidence": 0,
+      "correct": true
+    },
+    {
+      "file": "Other\\Batch_3\\ResumeAditiSairani.pdf",
+      "current": "Other",
+      "predicted": "Data_Scientist",
+      "confidence": 1.429,
+      "correct": false
+    },
+    {
+      "file": "Other\\Batch_3\\ResumeAKSHAYSANGLE.pdf",
+      "current": "Other",
+      "predicted": "Other",
+      "confidence": 0,
+      "correct": true
+    },
+    {
+      "file": "Other\\Batch_3\\ResumeAniketDhanrao.pdf",
+      "current": "Other",
+      "predicted": "Data_Scientist",
+      "confidence": 0.286,
+      "correct": false
+    },
+    {
+      "file": "Other\\Batch_3\\ResumeMayureshwariAtkare.pdf",
+      "current": "Other",
+      "predicted": "Other",
+      "confidence": 0,
+      "correct": true
+    },
+    {
+      "file": "Other\\Batch_3\\ResumeSANDESHDHAWALE.pdf",
+      "current": "Other",
+      "predicted": "Data_Scientist",
+      "confidence": 1.429,
+      "correct": false
+    },
+    {
+      "file": "Other\\Batch_3\\ResumeShubhamGaikawad.pdf",
+      "current": "Other",
+      "predicted": "Other",
+      "confidence": 0,
+      "correct": true
+    },
+    {
+      "file": "Other\\Batch_3\\ResumeShubhangiGhugal.pdf",
+      "current": "Other",
+      "predicted": "Data_Scientist",
+      "confidence": 0.143,
+      "correct": false
+    },
+    {
+      "file": "Other\\Batch_3\\ResumeSnehaBansod.pdf",
+      "current": "Other",
+      "predicted": "Other",
+      "confidence": 0,
+      "correct": true
+    },
+    {
+      "file": "Other\\Batch_3\\ResumeUmaKurwade.pdf",
+      "current": "Other",
+      "predicted": "Other",
+      "confidence": 0,
+      "correct": true
+    },
+    {
+      "file": "Other\\Batch_3\\ResumeAyushTharwani.pdf",
+      "current": "Other",
+      "predicted": "Other",
+      "confidence": 0,
+      "correct": true
+    },
+    {
+      "file": "Other\\Batch_4\\ResumeRupaliKarpe.pdf",
+      "current": "Other",
+      "predicted": "Other",
+      "confidence": 0,
+      "correct": true
+    },
+    {
+      "file": "Other\\Batch_4\\ResumeSHREYASADLAPUR.pdf",
+      "current": "Other",
+      "predicted": "Other",
+      "confidence": 0,
+      "correct": true
+    },
+    {
+      "file": "Other\\Batch_4\\ResumeSourabhKhatri.pdf",
+      "current": "Other",
+      "predicted": "Other",
+      "confidence": 0,
+      "correct": true
+    },
+    {
+      "file": "Other\\Batch_4\\ResumeGeeteshSahu.pdf",
+      "current": "Other",
+      "predicted": "Other",
+      "confidence": 0,
+      "correct": true
+    },
+    {
+      "file": "Other\\Batch_4\\Wasique.pdf",
+      "current": "Other",
+      "predicted": "Other",
+      "confidence": 0,
+      "correct": true
+    },
+    {
+      "file": "Other\\Batch_4\\WIN_20251010_15_13_01_Pro.pdf",
+      "current": "Other",
+      "predicted": "Other",
+      "confidence": 0,
+      "correct": true
+    },
+    {
+      "file": "Other\\Batch_4\\ResumeAKSHAYSANGLE.docx",
+      "current": "Other",
+      "predicted": "Other",
+      "confidence": 0,
+      "correct": true
+    },
+    {
+      "file": "Other\\Batch_4\\ResumeUmaKurwade.docx",
+      "current": "Other",
+      "predicted": "Other",
+      "confidence": 0,
+      "correct": true
+    }
+  ]
+}

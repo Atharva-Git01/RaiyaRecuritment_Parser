@@ -1,0 +1,514 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <title>Database Monitor - Raiya Solutions</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      darkMode: 'class',
+    }
+  </script>
+  <script>
+    if (localStorage.getItem('theme') === 'dark' || (!('theme' in localStorage) && window.matchMedia('(prefers-color-scheme: dark)').matches)) {
+      document.documentElement.classList.add('dark')
+    } else {
+      document.documentElement.classList.remove('dark')
+    }
+  </script>
+  <style>
+    /* Same styles as recruiter-platform.html */
+    @keyframes slideIn {
+      from {
+        transform: translateX(-100%);
+        opacity: 0;
+      }
+
+      to {
+        transform: translateX(0);
+        opacity: 1;
+      }
+    }
+
+    .sidebar-animate {
+      animation: slideIn 0.3s ease-out;
+    }
+
+    .scrollbar-thin::-webkit-scrollbar {
+      width: 6px;
+    }
+
+    .scrollbar-thin::-webkit-scrollbar-track {
+      background: transparent;
+    }
+
+    .scrollbar-thin::-webkit-scrollbar-thumb {
+      background: #cbd5e1;
+      border-radius: 10px;
+    }
+
+    .scrollbar-thin:hover::-webkit-scrollbar-thumb {
+      background: #94a3b8;
+    }
+
+    .scrollbar-thin::-webkit-scrollbar-thumb:hover {
+      background: #64748b;
+    }
+
+    .table-container {
+      overflow-x: auto;
+    }
+
+    table {
+      width: 100%;
+      border-collapse: collapse;
+    }
+
+    th,
+    td {
+      padding: 0.75rem 1rem;
+      text-align: left;
+      font-size: 0.875rem;
+    }
+
+    tr {
+      border-bottom: 1px solid #e2e8f0;
+    }
+
+    .dark tr {
+      border-bottom: 1px solid #334155;
+    }
+
+    /* Tabs */
+    .tab-active {
+      border-bottom: 2px solid #3b82f6;
+      color: #3b82f6;
+    }
+
+    .dark .tab-active {
+      border-bottom: 2px solid #60a5fa;
+      color: #60a5fa;
+    }
+  </style>
+</head>
+
+<body
+  class="bg-gradient-to-br from-slate-50 to-slate-100 dark:from-slate-900 dark:to-slate-800 text-slate-900 dark:text-white transition-colors duration-300">
+  <div id="sidebarOverlay" class="hidden fixed inset-0 bg-black/30 backdrop-blur-sm z-40"></div>
+
+  <div class="flex min-h-screen">
+    <!-- Sidebar -->
+    <aside id="sidebar"
+      class="fixed md:sticky top-0 left-0 h-screen w-72 bg-[#0f2140] text-white z-50 transform -translate-x-full md:translate-x-0 transition-transform duration-300 ease-out overflow-y-auto scrollbar-thin sidebar-animate">
+      <div class="p-6">
+        <button id="closeSidebar" class="md:hidden absolute top-4 right-4 p-2 hover:bg-slate-100 rounded-lg">
+          <svg class="w-5 h-5 text-slate-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"></path>
+          </svg>
+        </button>
+
+        <div class="mb-8 pb-6 border-b border-white/10">
+          <div class="flex items-center gap-3 mb-3">
+            <div id="sidebar-initials"
+              class="h-12 w-12 rounded-full bg-gradient-to-br from-blue-500 to-purple-600 flex items-center justify-center text-white font-semibold text-lg shadow-lg">
+              RA</div>
+            <div>
+              <p id="sidebar-name" class="font-semibold text-white">Recruiter Admin</p>
+              <p id="sidebar-role" class="text-xs text-white/70">admin@raiyasolutions.com</p>
+            </div>
+          </div>
+          <div class="flex items-center gap-2 px-3 py-2 rounded-lg bg-white/5 border border-white/6">
+            <div class="h-2 w-2 rounded-full bg-emerald-400 animate-pulse" id="sessionDot"></div>
+            <span class="text-xs font-medium text-white/80" id="sessionText">Monitoring DB...</span>
+          </div>
+        </div>
+
+        <nav class="space-y-2">
+          <div class="text-xs font-bold text-white/60 uppercase tracking-wider mb-4 px-3">Platform</div>
+          <a href="recruiter-platform.html"
+            class="flex items-center gap-3 px-3 py-3 text-sm text-white/90 hover:bg-white/5 rounded-xl group transition-colors">
+            <svg class="w-5 h-5 text-white/60 group-hover:text-white transition-colors" fill="none"
+              stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                d="M7 16a4 4 0 01-.88-7.903A5 5 0 1115.9 6L16 6a5 5 0 011 9.9M15 13l-3-3m0 0l-3 3m3-3v12"></path>
+            </svg>
+            <span class="font-medium">Bulk Screening</span>
+          </a>
+          <a href="bulk-processing.html"
+            class="flex items-center gap-3 px-3 py-3 text-sm text-white/90 hover:bg-white/5 rounded-xl group transition-colors">
+            <svg class="w-5 h-5 text-white/60 group-hover:text-white transition-colors" fill="none"
+              stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 10V3L4 14h7v7l9-11h-7z">
+              </path>
+            </svg>
+            <span class="font-medium">Processing Queue</span>
+          </a>
+          <a href="recruiter-results.html"
+            class="flex items-center gap-3 px-3 py-3 text-sm text-white/90 hover:bg-white/5 rounded-xl group transition-colors">
+            <svg class="w-5 h-5 text-white/60 group-hover:text-white transition-colors" fill="none"
+              stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                d="M9 19v-6a2 2 0 00-2-2H5a2 2 0 00-2 2v6a2 2 0 002 2h2a2 2 0 002-2z"></path>
+            </svg>
+            <span class="font-medium">Results Dashboard</span>
+          </a>
+
+          <div class="text-xs font-bold text-white/60 uppercase tracking-wider mt-8 mb-4 px-3">Admin Tools</div>
+
+          <!-- NEW DATABASE MONITOR LINK -->
+          <a href="database-monitor.html"
+            class="flex items-center gap-3 px-3 py-3 text-sm bg-gradient-to-r from-blue-50 to-indigo-50 text-blue-700 rounded-xl border border-blue-100 shadow-sm">
+            <svg class="w-5 h-5 text-blue-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                d="M4 7v10c0 2.21 3.582 4 8 4s8-1.79 8-4V7M4 7c0 2.21 3.582 4 8 4s8-1.79 8-4M4 7c0-2.21 3.582-4 8-4s8 1.79 8 4m0 5c0 2.21-3.582 4-8 4s-8-1.79-8-4">
+              </path>
+            </svg>
+            <span class="font-semibold">Database Monitor</span>
+          </a>
+
+          <a href="history.html"
+            class="flex items-center gap-3 px-3 py-3 text-sm text-white/90 hover:bg-white/5 rounded-xl group transition-colors">
+            <svg class="w-5 h-5 text-white/60 group-hover:text-white" fill="none" stroke="currentColor"
+              viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z"></path>
+            </svg>
+            <span class="font-medium">History</span>
+          </a>
+          <a href="settings.html"
+            class="flex items-center gap-3 px-3 py-3 text-sm text-white/90 hover:bg-white/5 rounded-xl group transition-colors">
+            <svg class="w-5 h-5 text-white/60 group-hover:text-white" fill="none" stroke="currentColor"
+              viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                d="M10.325 4.317c.426-1.756 2.924-1.756 3.35 0a1.724 1.724 0 002.573 1.066c1.543-.94 3.31.826 2.37 2.37a1.724 1.724 0 001.065 2.572c1.756.426 1.756 2.924 0 3.35a1.724 1.724 0 00-1.066 2.573c.94 1.543-.826 3.31-2.37 2.37a1.724 1.724 0 00-2.572 1.065c-.426 1.756-2.924 1.756-3.35 0a1.724 1.724 0 00-2.573-1.066c-1.543.94-3.31-.826-2.37-2.37a1.724 1.724 0 00-1.065-2.572c-1.756-.426-1.756-2.924 0-3.35a1.724 1.724 0 001.066-2.573c-.94-1.543.826-3.31 2.37-2.37.996.608 2.296.07 2.572-1.065z">
+              </path>
+            </svg>
+            <span class="font-medium">Settings</span>
+          </a>
+        </nav>
+      </div>
+    </aside>
+
+    <!-- Main Content -->
+    <main class="flex-1 flex flex-col w-full h-screen overflow-hidden">
+      <!-- Header -->
+      <header
+        class="border-b bg-white/80 backdrop-blur-lg sticky top-0 z-30 shadow-sm dark:bg-slate-900/80 dark:border-slate-700 transition-colors duration-300">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-4 flex items-center justify-between">
+          <div class="flex items-center gap-3">
+            <button id="mobileMenuBtn"
+              class="md:hidden p-2 hover:bg-slate-100 dark:hover:bg-slate-800 rounded-lg transition-colors">
+              <svg class="w-6 h-6 text-slate-600 dark:text-slate-300" fill="none" stroke="currentColor"
+                viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16">
+                </path>
+              </svg>
+            </button>
+            <div>
+              <p class="text-lg font-bold text-slate-900 dark:text-white">Database Monitor</p>
+              <p class="text-xs text-slate-500 dark:text-slate-400">Real-time Data Observation</p>
+            </div>
+          </div>
+          <div class="flex items-center gap-4">
+            <div
+              class="flex items-center gap-2 px-3 py-1 bg-blue-50 border border-blue-200 rounded-full dark:bg-blue-900/30 dark:border-blue-800">
+              <span class="text-xs font-medium text-blue-700 dark:text-blue-400" id="lastUpdated">Last updated:
+                Never</span>
+            </div>
+            <div id="filterBadge"
+              class="hidden flex items-center gap-2 px-3 py-1 bg-indigo-50 border border-indigo-200 rounded-full dark:bg-indigo-900/30 dark:border-indigo-800">
+              <span class="text-xs font-medium text-indigo-700 dark:text-indigo-400" id="filterText"></span>
+              <button onclick="window.location.href='database-monitor.html'"
+                class="text-indigo-500 hover:text-indigo-700">✕</button>
+            </div>
+          </div>
+        </div>
+      </header>
+
+      <!-- Page Content -->
+      <div class="flex-1 p-6 overflow-hidden flex flex-col">
+
+        <!-- Tabs -->
+        <div class="flex border-b border-gray-200 dark:border-gray-700 mb-6 space-x-6">
+          <button onclick="switchTab('jobs')" id="tab-jobs"
+            class="pb-3 text-sm font-medium text-gray-500 hover:text-gray-700 dark:text-gray-400 dark:hover:text-gray-300 transition-colors tab-active">
+            jobs Table</button>
+
+          <button onclick="switchTab('jds')" id="tab-jds"
+            class="pb-3 text-sm font-medium text-gray-500 hover:text-gray-700 dark:text-gray-400 dark:hover:text-gray-300 transition-colors">job_descriptions
+            Model</button>
+
+        </div>
+
+        <!-- Content Area -->
+        <div
+          class="flex-1 overflow-auto bg-white dark:bg-slate-800 rounded-xl border border-slate-200 dark:border-slate-700 shadow-sm relative">
+          <div class="absolute inset-x-0 top-0 h-1 bg-gray-100 dark:bg-gray-700 overflow-hidden hidden" id="loadingBar">
+            <div class="h-full bg-blue-500 w-1/3 animate-[loading_1s_ease-in-out_infinite]"></div>
+          </div>
+
+          <!-- Tables Container -->
+          <div class="p-0">
+
+            <div id="view-jobs" class="block">
+              <!-- Jobs Table -->
+              <table class="w-full text-left table-fixed">
+                <thead class="bg-gray-50 dark:bg-slate-700 sticky top-0 z-10">
+                  <tr>
+                    <th class="font-semibold text-gray-600 dark:text-gray-200">Job ID</th>
+                    <th class="font-semibold text-gray-600 dark:text-gray-200">Batch ID</th>
+                    <th class="font-semibold text-gray-600 dark:text-gray-200">JD ID</th>
+                    <th class="font-semibold text-gray-600 dark:text-gray-200">Status</th>
+                    <th class="font-semibold text-gray-600 dark:text-gray-200">Created At</th>
+                    <th class="font-semibold text-gray-600 dark:text-gray-200">Scores</th>
+                  </tr>
+                </thead>
+                <tbody id="tbody-jobs" class="divide-y divide-gray-100 dark:divide-gray-700">
+                  <tr>
+                    <td colspan="6" class="text-center py-8 text-gray-500">Loading data...</td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+
+
+
+            <div id="view-jds" class="hidden">
+              <table class="w-full text-left table-fixed">
+                <thead class="bg-gray-50 dark:bg-slate-700 sticky top-0 z-10">
+                  <tr>
+                    <th class="font-semibold text-gray-600 dark:text-gray-200">JD ID</th>
+                    <th class="font-semibold text-gray-600 dark:text-gray-200">BU ID</th>
+                    <th class="font-semibold text-gray-600 dark:text-gray-200">Title</th>
+                    <th class="font-semibold text-gray-600 dark:text-gray-200">Created At</th>
+                  </tr>
+                </thead>
+                <tbody id="tbody-jds" class="divide-y divide-gray-100 dark:divide-gray-700"></tbody>
+              </table>
+            </div>
+
+
+
+          </div>
+        </div>
+      </div>
+    </main>
+  </div>
+
+  <style>
+    @keyframes loading {
+      0% {
+        transform: translateX(-100%);
+      }
+
+      100% {
+        transform: translateX(300%);
+      }
+    }
+  </style>
+
+  <script>
+    // --- UI Logic ---
+    const mobileMenuBtn = document.getElementById('mobileMenuBtn');
+    const sidebar = document.getElementById('sidebar');
+    const sidebarOverlay = document.getElementById('sidebarOverlay');
+    const closeSidebar = document.getElementById('closeSidebar');
+
+    mobileMenuBtn?.addEventListener('click', () => {
+      sidebar.classList.remove('-translate-x-full');
+      sidebarOverlay.classList.remove('hidden');
+    });
+
+    closeSidebar?.addEventListener('click', () => {
+      sidebar.classList.add('-translate-x-full');
+      sidebarOverlay.classList.add('hidden');
+    });
+
+    sidebarOverlay?.addEventListener('click', () => {
+      sidebar.classList.add('-translate-x-full');
+      sidebarOverlay.classList.add('hidden');
+    });
+
+    // --- Tab Switching ---
+    const TABS = ['jobs', 'jds'];
+    let currentTab = 'jobs';
+
+    function switchTab(tabName) {
+      currentTab = tabName;
+      // Update Buttons
+      TABS.forEach(t => {
+        const btn = document.getElementById(`tab-${t}`);
+        const view = document.getElementById(`view-${t}`);
+        if (t === tabName) {
+          btn.classList.add('tab-active');
+          view.classList.remove('hidden');
+        } else {
+          btn.classList.remove('tab-active');
+          view.classList.add('hidden');
+        }
+      });
+      renderCurrentTab();
+    }
+
+    // --- Data Fetching & Rendering ---
+    let dbData = null;
+
+    async function fetchData() {
+      const loadingBar = document.getElementById('loadingBar');
+      loadingBar.classList.remove('hidden');
+
+      try {
+        const res = await fetch('/api/database-monitor');
+        if (res.ok) {
+          dbData = await res.json();
+          renderCurrentTab();
+
+          // Update timestamp
+          const now = new Date();
+          document.getElementById('lastUpdated').textContent = `Last updated: ${now.toLocaleTimeString()}`;
+
+          // Show filter badge if needed
+          const urlParams = new URLSearchParams(window.location.search);
+          const batchIdFilter = urlParams.get('batch_id');
+          if (batchIdFilter) {
+            document.getElementById('filterBadge').classList.remove('hidden');
+            document.getElementById('filterText').textContent = `Filtering Batch: ${batchIdFilter}`;
+          }
+        }
+      } catch (e) {
+        console.error("Fetch error", e);
+      } finally {
+        loadingBar.classList.add('hidden');
+      }
+    }
+
+    function renderCurrentTab() {
+      if (!dbData) return;
+
+      const tbody = document.getElementById(`tbody-${currentTab}`);
+      const data = dbData[currentTab === 'jds' ? 'job_descriptions' : currentTab];
+
+      if (!data || data.length === 0) {
+        tbody.innerHTML = `<tr><td colspan="6" class="text-center py-8 text-gray-500">No data found in ${currentTab}</td></tr>`;
+        return;
+      }
+
+      // Filter by Batch ID from URL if present
+      const urlParams = new URLSearchParams(window.location.search);
+      const batchIdFilter = urlParams.get('batch_id');
+
+      let filteredData = data;
+      if (batchIdFilter) {
+        const bid = parseInt(batchIdFilter);
+        if (currentTab === 'jobs') {
+          filteredData = data.filter(r => r.batch_id === bid);
+        } else if (currentTab === 'jds' && dbData.batches) {
+          const batch = dbData.batches.find(b => b.batch_id === bid);
+          if (batch) filteredData = data.filter(r => r.bu_id === batch.bu_id);
+        }
+      }
+
+      if (filteredData.length === 0) {
+        tbody.innerHTML = `<tr><td colspan="6" class="text-center py-8 text-gray-500">No data found for this batch in ${currentTab}</td></tr>`;
+        return;
+      }
+
+      tbody.innerHTML = filteredData.map(row => {
+        if (currentTab === 'jobs') {
+          return `
+                    <tr class="hover:bg-slate-50 dark:hover:bg-slate-700/50 transition-colors">
+                        <td class="font-mono text-xs">${row.job_id}</td>
+                        <td class="font-mono text-xs text-gray-500">${row.batch_id}</td>
+                        <td class="font-mono text-xs text-gray-500">${row.jd_id}</td>
+                        <td><span class="px-2 py-0.5 rounded text-xs font-semibold ${getStatusClass(row.status)}">${row.status}</span></td>
+                        <td class="text-gray-500">${formatDate(row.created_at)}</td>
+                        <td class="text-sm font-medium">${formatJobScore(row)}</td>
+                    </tr>
+                `;
+
+        } else if (currentTab === 'jds') {
+          return `
+                    <tr class="hover:bg-slate-50 dark:hover:bg-slate-700/50 transition-colors">
+                        <td class="font-mono text-xs">${row.jd_id}</td>
+                        <td class="font-mono text-xs text-gray-500">${row.bu_id}</td>
+                        <td class="font-medium">${row.jd_title}</td>
+                        <td class="text-gray-500">${formatDate(row.created_at)}</td>
+                    </tr>
+                `;
+        }
+      }).join('');
+    }
+
+    function formatDate(dateStr) {
+      if (!dateStr) return '-';
+      return new Date(dateStr).toLocaleString();
+    }
+
+    function getStatusClass(status) {
+      switch ((status || '').toLowerCase()) {
+        case 'completed': return 'bg-emerald-100 text-emerald-800 dark:bg-emerald-900/50 dark:text-emerald-200';
+        case 'failed': return 'bg-red-100 text-red-800 dark:bg-red-900/50 dark:text-red-200';
+        case 'processing':
+        case 'running':
+        case 'in progress': return 'bg-blue-100 text-blue-800 dark:bg-blue-900/50 dark:text-blue-200 animate-pulse';
+        case 'queued':
+        case 'pending': return 'bg-amber-100 text-amber-800 dark:bg-amber-900/50 dark:text-amber-200';
+        default: return 'bg-gray-100 text-gray-800 dark:bg-gray-700 dark:text-gray-200';
+      }
+    }
+
+    function formatJobScore(row) {
+      // If failed, show Error
+      if (row.status && row.status.toLowerCase() === 'failed') {
+        return '<span class="text-red-500 font-bold">Error</span>';
+      }
+
+      if (!row.scores) return '<span class="text-gray-400">-</span>';
+
+      // Extract score: AI score preferred, fallback to final_score
+      // Structure: scores -> { ai_score: { ai_score: { final_score: X } }, final_score: Y }
+      let score = null;
+
+      if (row.scores.ai_score && row.scores.ai_score.ai_score && typeof row.scores.ai_score.ai_score.final_score === 'number') {
+        score = row.scores.ai_score.ai_score.final_score;
+      } else if (typeof row.scores.final_score === 'number') {
+        score = row.scores.final_score;
+      }
+
+      if (score !== null && score !== undefined) {
+        let colorClass = 'text-slate-700 dark:text-slate-200';
+        if (score >= 80) colorClass = 'text-emerald-600 dark:text-emerald-400 font-bold';
+        else if (score >= 60) colorClass = 'text-blue-600 dark:text-blue-400';
+        else if (score >= 40) colorClass = 'text-amber-600 dark:text-amber-400';
+        else colorClass = 'text-red-600 dark:text-red-400';
+
+        return `<span class="${colorClass}">${score}</span>`;
+      }
+
+      return '<span class="text-gray-400">-</span>';
+    }
+
+    // Auto-refresh every 2 seconds
+    setInterval(fetchData, 2000);
+    fetchData(); // Initial load
+
+    // Profile Sync (Standard across pages)
+    (function syncSidebar() {
+      const name = localStorage.getItem('profileName');
+      const email = localStorage.getItem('profileEmail');
+      if (name) {
+        const nameEl = document.getElementById('sidebar-name');
+        const initialsEl = document.getElementById('sidebar-initials');
+        if (nameEl) nameEl.textContent = name;
+        if (initialsEl) initialsEl.textContent = name.split(' ').map(n => n[0]).join('').substring(0, 2).toUpperCase();
+      }
+      if (email && document.getElementById('sidebar-role')) {
+        document.getElementById('sidebar-role').textContent = email;
+      }
+    })();
+  </script>
+</body>
+
+</html>

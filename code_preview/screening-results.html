@@ -1,0 +1,569 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Resume Screening Results - Raiya Solutions</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+</head>
+
+<body class="bg-gradient-to-br from-slate-50 to-blue-50 min-h-screen">
+  <div class="flex h-screen overflow-hidden">
+    <!-- Sidebar -->
+    <aside class="w-72 bg-[#0f2140] text-white flex-shrink-0 hidden md:flex flex-col overflow-y-auto">
+      <div class="p-6">
+        <div class="mb-8 pb-6 border-b border-white/10">
+          <div class="flex items-center gap-3 mb-3">
+            <div
+              class="h-12 w-12 rounded-full bg-gradient-to-br from-blue-500 to-purple-600 flex items-center justify-center text-white font-semibold text-lg shadow-lg">
+              R</div>
+            <div>
+              <p class="font-semibold text-white">Profile</p>
+              <p class="text-xs text-white/70">Talent Acquisition</p>
+            </div>
+          </div>
+          <div class="flex items-center gap-2 px-3 py-2 rounded-lg bg-white/5 border border-white/6">
+            <div class="h-2 w-2 rounded-full bg-emerald-400 animate-pulse"></div>
+            <span class="text-xs font-medium text-white/80">Active Session</span>
+          </div>
+        </div>
+
+        <nav class="space-y-2">
+          <div class="text-xs font-bold text-white/60 uppercase tracking-wider mb-4 px-3">Platform</div>
+          <a href="recruiter-platform.html"
+            class="flex items-center gap-3 px-3 py-3 text-sm text-white/90 hover:bg-white/5 rounded-xl group transition-colors">
+            <svg class="w-5 h-5 text-white/60 group-hover:text-white transition-colors" fill="none"
+              stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                d="M7 16a4 4 0 01-.88-7.903A5 5 0 1115.9 6L16 6a5 5 0 011 9.9M15 13l-3-3m0 0l-3 3m3-3v12"></path>
+            </svg>
+            <span class="font-medium">Bulk Screening</span>
+          </a>
+          <a href="recruiter-results.html"
+            class="flex items-center gap-3 px-3 py-3 text-sm bg-gradient-to-r from-blue-50 to-indigo-50 text-blue-700 rounded-xl border border-blue-100 shadow-sm">
+            <svg class="w-5 h-5 text-blue-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                d="M9 19v-6a2 2 0 00-2-2H5a2 2 0 00-2 2v6a2 2 0 002 2h2a2 2 0 002-2z"></path>
+            </svg>
+            <span class="font-semibold">Results Dashboard</span>
+          </a>
+          <a href="#"
+            class="flex items-center gap-3 px-3 py-3 text-sm text-white/90 hover:bg-white/5 rounded-xl group transition-colors">
+            <svg class="w-5 h-5 text-white/60 group-hover:text-white transition-colors" fill="none"
+              stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 10V3L4 14h7v7l9-11h-7z">
+              </path>
+            </svg>
+            <span class="font-medium">Processing Queue</span>
+          </a>
+
+          <div class="text-xs font-bold text-white/60 uppercase tracking-wider mt-8 mb-4 px-3">Tools</div>
+          <a href="#"
+            class="flex items-center gap-3 px-3 py-3 text-sm text-white/90 hover:bg-white/5 rounded-xl group transition-colors">
+            <svg class="w-5 h-5 text-white/60 group-hover:text-white" fill="none" stroke="currentColor"
+              viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z"></path>
+            </svg>
+            <span class="font-medium">History</span>
+          </a>
+          <a href="#"
+            class="flex items-center gap-3 px-3 py-3 text-sm text-white/90 hover:bg-white/5 rounded-xl group transition-colors">
+            <svg class="w-5 h-5 text-white/60 group-hover:text-white" fill="none" stroke="currentColor"
+              viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                d="M10.325 4.317c.426-1.756 2.924-1.756 3.35 0a1.724 1.724 0 002.573 1.066c1.543-.94 3.31.826 2.37 2.37a1.724 1.724 0 001.065 2.572c1.756.426 1.756 2.924 0 3.35a1.724 1.724 0 00-1.066 2.573c.94 1.543-.826 3.31-2.37 2.37a1.724 1.724 0 00-2.572 1.065c-.426 1.756-2.924 1.756-3.35 0a1.724 1.724 0 00-2.573-1.066c-1.543.94-3.31-.826-2.37-2.37a1.724 1.724 0 00-1.065-2.572c-1.756-.426-1.756-2.924 0-3.35a1.724 1.724 0 001.066-2.573c-.94-1.543.826-3.31 2.37-2.37.996.608 2.296.07 2.572-1.065z">
+              </path>
+            </svg>
+            <span class="font-medium">Settings</span>
+          </a>
+        </nav>
+
+        <div class="mt-8 p-4 rounded-xl bg-gradient-to-br from-blue-600 to-indigo-700 text-white">
+          <div class="flex items-center justify-between mb-3">
+            <span class="text-xs font-semibold text-blue-100">This Month</span>
+            <svg class="w-4 h-4 text-blue-200" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                d="M13 7a4 4 0 11-8 0 4 4 0 018 0zM9 14a6 6 0 00-6 6v1h12v-1a6 6 0 00-6-6zM21 12a1 1 0 100-2 1 1 0 000 2z">
+              </path>
+            </svg>
+          </div>
+          <p class="text-3xl font-bold mb-1" id="finalScore">--</p>
+          <p class="text-xs text-blue-100">Final Fit Score</p>
+        </div>
+      </div>
+    </aside>
+
+    <!-- Main Content -->
+    <main class="flex-1 flex flex-col w-full">
+      <!-- Header -->
+      <header class="border-b bg-white/80 backdrop-blur-lg sticky top-0 z-30 shadow-sm">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-4 flex items-center justify-between">
+          <div class="flex items-center gap-3">
+            <button id="mobileMenuBtn" class="md:hidden p-2 hover:bg-slate-100 rounded-lg transition-colors">
+              <svg class="w-6 h-6 text-slate-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16">
+                </path>
+              </svg>
+            </button>
+            <div>
+              <p class="text-lg font-bold text-slate-900">Resume Screening Results</p>
+              <p class="text-xs text-slate-500">Loading...</p>
+            </div>
+          </div>
+          <div class="flex items-center gap-4">
+            <button
+              class="px-4 py-2 bg-gradient-to-r from-blue-600 to-blue-700 text-white rounded-lg font-semibold text-sm hover:shadow-lg transition-all">
+              📄 Download PDF
+            </button>
+            <div
+              class="hidden sm:flex items-center gap-2 px-3 py-1 bg-emerald-50 border border-emerald-200 rounded-full">
+              <div class="w-2 h-2 bg-emerald-500 rounded-full animate-pulse"></div>
+              <span class="text-xs font-medium text-emerald-700">AI Scoring Active</span>
+            </div>
+          </div>
+        </div>
+      </header>
+
+      <!-- Page Content -->
+      <div class="flex-1 px-4 sm:px-6 py-8 overflow-x-hidden">
+        <!-- High-level Summary -->
+        <div class="mb-8">
+          <div class="grid grid-cols-1 lg:grid-cols-3 gap-6">
+            <!-- Final Score Card -->
+            <div class="bg-white rounded-2xl border border-slate-200 shadow-lg p-6">
+              <div class="flex items-center justify-between mb-4">
+                <h3 class="text-lg font-bold text-slate-900">Final Fit Score</h3>
+                <span class="px-3 py-1 bg-green-100 text-green-800 text-xs font-semibold rounded-full">✓
+                  Excellent</span>
+              </div>
+              <div class="text-center">
+                <div class="text-4xl font-bold text-blue-600 mb-2" id="mainScore">--</div>
+                <div class="text-sm text-slate-600">out of 100</div>
+              </div>
+            </div>
+
+            <!-- Recruiter Summary -->
+            <div class="bg-white rounded-2xl border border-slate-200 shadow-lg p-6">
+              <h3 class="text-lg font-bold text-slate-900 mb-3">Recruiter Summary</h3>
+              <p class="text-sm text-slate-600">Loading summary...</p>
+            </div>
+
+            <!-- One-line Summary -->
+            <div class="bg-white rounded-2xl border border-slate-200 shadow-lg p-6">
+              <h3 class="text-lg font-bold text-slate-900 mb-3">Quick Summary</h3>
+              <p class="text-sm text-slate-600 font-medium">Loading summary...</p>
+            </div>
+          </div>
+        </div>
+
+        <!-- Visualizations Row -->
+        <div class="mb-8">
+          <div class="grid grid-cols-1 lg:grid-cols-2 gap-6">
+            <!-- Radar Chart -->
+            <div class="bg-white rounded-2xl border border-slate-200 shadow-lg p-6">
+              <h3 class="text-lg font-bold text-slate-900 mb-4">Skills Radar Chart</h3>
+              <div class="h-64 flex items-center justify-center">
+                <canvas id="radarChart"></canvas>
+              </div>
+            </div>
+
+            <!-- Coverage Bars -->
+            <div class="bg-white rounded-2xl border border-slate-200 shadow-lg p-6">
+              <h3 class="text-lg font-bold text-slate-900 mb-4">Coverage Analysis</h3>
+              <div class="space-y-4">
+                <div>
+                  <div class="flex justify-between text-sm mb-1">
+                    <span>Experience</span>
+                    <span>85%</span>
+                  </div>
+                  <div class="w-full bg-slate-200 rounded-full h-2">
+                    <div class="bg-blue-600 h-2 rounded-full" style="width: 85%"></div>
+                  </div>
+                </div>
+                <div>
+                  <div class="flex justify-between text-sm mb-1">
+                    <span>Skills</span>
+                    <span>92%</span>
+                  </div>
+                  <div class="w-full bg-slate-200 rounded-full h-2">
+                    <div class="bg-green-600 h-2 rounded-full" style="width: 92%"></div>
+                  </div>
+                </div>
+                <div>
+                  <div class="flex justify-between text-sm mb-1">
+                    <span>Technologies</span>
+                    <span>78%</span>
+                  </div>
+                  <div class="w-full bg-slate-200 rounded-full h-2">
+                    <div class="bg-yellow-600 h-2 rounded-full" style="width: 78%"></div>
+                  </div>
+                </div>
+                <div>
+                  <div class="flex justify-between text-sm mb-1">
+                    <span>Tools</span>
+                    <span>88%</span>
+                  </div>
+                  <div class="w-full bg-slate-200 rounded-full h-2">
+                    <div class="bg-indigo-600 h-2 rounded-full" style="width: 88%"></div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Matched Items Section -->
+        <div class="mb-8">
+          <h3 class="text-2xl font-bold text-slate-900 mb-6">Matched Items Analysis</h3>
+          <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+            <!-- Skills -->
+            <div class="bg-white rounded-2xl border border-slate-200 shadow-lg p-6">
+              <h4 class="text-lg font-bold text-slate-900 mb-4">Skills</h4>
+              <div class="mb-4">
+                <h5 class="text-sm font-semibold text-green-700 mb-2">✓ Matched (8)</h5>
+                <div class="flex flex-wrap gap-2">
+                  <span class="px-2 py-1 bg-green-100 text-green-800 text-xs rounded-full">JavaScript</span>
+                  <span class="px-2 py-1 bg-green-100 text-green-800 text-xs rounded-full">React</span>
+                  <span class="px-2 py-1 bg-green-100 text-green-800 text-xs rounded-full">Node.js</span>
+                  <span class="px-2 py-1 bg-green-100 text-green-800 text-xs rounded-full">Python</span>
+                </div>
+              </div>
+              <div>
+                <h5 class="text-sm font-semibold text-red-700 mb-2">✗ Missing (2)</h5>
+                <div class="flex flex-wrap gap-2">
+                  <span class="px-2 py-1 bg-red-100 text-red-800 text-xs rounded-full">GraphQL</span>
+                  <span class="px-2 py-1 bg-red-100 text-red-800 text-xs rounded-full">Docker</span>
+                </div>
+              </div>
+            </div>
+
+            <!-- Technologies -->
+            <div class="bg-white rounded-2xl border border-slate-200 shadow-lg p-6">
+              <h4 class="text-lg font-bold text-slate-900 mb-4">Technologies</h4>
+              <div class="mb-4">
+                <h5 class="text-sm font-semibold text-green-700 mb-2">✓ Matched (6)</h5>
+                <div class="flex flex-wrap gap-2">
+                  <span class="px-2 py-1 bg-green-100 text-green-800 text-xs rounded-full">AWS</span>
+                  <span class="px-2 py-1 bg-green-100 text-green-800 text-xs rounded-full">MongoDB</span>
+                  <span class="px-2 py-1 bg-green-100 text-green-800 text-xs rounded-full">Redis</span>
+                </div>
+              </div>
+              <div>
+                <h5 class="text-sm font-semibold text-red-700 mb-2">✗ Missing (1)</h5>
+                <div class="flex flex-wrap gap-2">
+                  <span class="px-2 py-1 bg-red-100 text-red-800 text-xs rounded-full">Kubernetes</span>
+                </div>
+              </div>
+            </div>
+
+            <!-- Salary Match -->
+            <div class="bg-white rounded-2xl border border-slate-200 shadow-lg p-6">
+              <h4 class="text-lg font-bold text-slate-900 mb-4">Salary Match</h4>
+              <div class="space-y-3">
+                <div>
+                  <span class="text-sm text-slate-600">Candidate Salary:</span>
+                  <div class="text-lg font-semibold text-slate-900">$95,000</div>
+                </div>
+                <div>
+                  <span class="text-sm text-slate-600">Matched Band:</span>
+                  <div class="text-lg font-semibold text-green-600">$90,000 - $110,000</div>
+                </div>
+                <span class="px-3 py-1 bg-green-100 text-green-800 text-xs font-semibold rounded-full">✓ Within
+                  Range</span>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Score Breakdown -->
+        <div class="mb-8">
+          <h3 class="text-2xl font-bold text-slate-900 mb-6">Score Breakdown</h3>
+          <div class="bg-white rounded-2xl border border-slate-200 shadow-lg overflow-hidden">
+            <div class="overflow-x-auto">
+              <table class="w-full">
+                <thead class="bg-slate-50">
+                  <tr>
+                    <th class="px-6 py-3 text-left text-xs font-medium text-slate-500 uppercase tracking-wider">Category
+                    </th>
+                    <th class="px-6 py-3 text-left text-xs font-medium text-slate-500 uppercase tracking-wider">Score
+                    </th>
+                    <th class="px-6 py-3 text-left text-xs font-medium text-slate-500 uppercase tracking-wider">Status
+                    </th>
+                  </tr>
+                </thead>
+                <tbody class="divide-y divide-slate-200">
+                  <tr>
+                    <td class="px-6 py-4 text-sm font-medium text-slate-900">Skills</td>
+                    <td class="px-6 py-4 text-sm text-slate-600">92</td>
+                    <td class="px-6 py-4"><span
+                        class="px-2 py-1 bg-green-100 text-green-800 text-xs rounded-full">Excellent</span></td>
+                  </tr>
+                  <tr>
+                    <td class="px-6 py-4 text-sm font-medium text-slate-900">Experience</td>
+                    <td class="px-6 py-4 text-sm text-slate-600">85</td>
+                    <td class="px-6 py-4"><span
+                        class="px-2 py-1 bg-green-100 text-green-800 text-xs rounded-full">Good</span></td>
+                  </tr>
+                  <tr>
+                    <td class="px-6 py-4 text-sm font-medium text-slate-900">Technologies</td>
+                    <td class="px-6 py-4 text-sm text-slate-600">78</td>
+                    <td class="px-6 py-4"><span
+                        class="px-2 py-1 bg-yellow-100 text-yellow-800 text-xs rounded-full">Average</span></td>
+                  </tr>
+                  <tr>
+                    <td class="px-6 py-4 text-sm font-medium text-slate-900">Projects</td>
+                    <td class="px-6 py-4 text-sm text-slate-600">88</td>
+                    <td class="px-6 py-4"><span
+                        class="px-2 py-1 bg-green-100 text-green-800 text-xs rounded-full">Good</span></td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+          </div>
+        </div>
+
+        <!-- Detailed Explanation -->
+        <div class="mb-8">
+          <h3 class="text-2xl font-bold text-slate-900 mb-6">Detailed Analysis</h3>
+          <div class="grid grid-cols-1 lg:grid-cols-3 gap-6">
+            <!-- Strengths -->
+            <div class="bg-white rounded-2xl border border-slate-200 shadow-lg p-6">
+              <h4 class="text-lg font-bold text-green-700 mb-4">✓ Strengths</h4>
+              <ul class="space-y-2 text-sm text-slate-600">
+                <li>• Strong JavaScript and React expertise</li>
+                <li>• 5+ years of relevant experience</li>
+                <li>• Proven track record in full-stack development</li>
+                <li>• Experience with cloud platforms (AWS)</li>
+              </ul>
+            </div>
+
+            <!-- Areas of Improvement -->
+            <div class="bg-white rounded-2xl border border-slate-200 shadow-lg p-6">
+              <h4 class="text-lg font-bold text-yellow-700 mb-4">⚠ Areas of Improvement</h4>
+              <ul class="space-y-2 text-sm text-slate-600">
+                <li>• Limited experience with GraphQL</li>
+                <li>• No Docker containerization experience</li>
+                <li>• Could benefit from Kubernetes knowledge</li>
+              </ul>
+            </div>
+
+            <!-- Gaps -->
+            <div class="bg-white rounded-2xl border border-slate-200 shadow-lg p-6">
+              <h4 class="text-lg font-bold text-red-700 mb-4">✗ Critical Gaps</h4>
+              <ul class="space-y-2 text-sm text-slate-600">
+                <li>• Missing DevOps skills</li>
+                <li>• No microservices architecture experience</li>
+                <li>• Limited testing framework knowledge</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+
+        <!-- Experience & Salary Gauges -->
+        <div class="mb-8">
+          <div class="grid grid-cols-1 lg:grid-cols-2 gap-6">
+            <!-- Experience Fit -->
+            <div class="bg-white rounded-2xl border border-slate-200 shadow-lg p-6">
+              <h3 class="text-lg font-bold text-slate-900 mb-4">Experience Fit</h3>
+              <div class="space-y-4">
+                <div class="flex justify-between">
+                  <span class="text-sm text-slate-600">Candidate Experience:</span>
+                  <span class="font-semibold">5.5 years</span>
+                </div>
+                <div class="flex justify-between">
+                  <span class="text-sm text-slate-600">Required Range:</span>
+                  <span class="font-semibold">3-7 years</span>
+                </div>
+                <div class="w-full bg-slate-200 rounded-full h-3">
+                  <div class="bg-green-600 h-3 rounded-full" style="width: 85%"></div>
+                </div>
+                <div class="text-center text-sm font-semibold text-green-600">85% Fit</div>
+              </div>
+            </div>
+
+            <!-- Salary Gauge -->
+            <div class="bg-white rounded-2xl border border-slate-200 shadow-lg p-6">
+              <h3 class="text-lg font-bold text-slate-900 mb-4">Salary Analysis</h3>
+              <div class="space-y-4">
+                <div class="flex justify-between">
+                  <span class="text-sm text-slate-600">Candidate Expectation:</span>
+                  <span class="font-semibold">$95,000</span>
+                </div>
+                <div class="flex justify-between">
+                  <span class="text-sm text-slate-600">Budget Range:</span>
+                  <span class="font-semibold">$90,000 - $110,000</span>
+                </div>
+                <div class="w-full bg-slate-200 rounded-full h-3">
+                  <div class="bg-blue-600 h-3 rounded-full" style="width: 75%"></div>
+                </div>
+                <div class="text-center text-sm font-semibold text-blue-600">Within Budget</div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Candidate Feedback -->
+        <div class="mb-8">
+          <div class="bg-white rounded-2xl border border-slate-200 shadow-lg p-6">
+            <h3 class="text-lg font-bold text-slate-900 mb-4">Candidate Actionable Feedback</h3>
+            <div class="prose prose-sm max-w-none text-slate-600">
+              <p>To strengthen your profile for this role, consider:</p>
+              <ul>
+                <li>Gaining hands-on experience with GraphQL for modern API development</li>
+                <li>Learning Docker containerization to improve deployment skills</li>
+                <li>Exploring Kubernetes for container orchestration</li>
+                <li>Building projects that demonstrate microservices architecture</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+
+        <!-- AI vs Local Score Comparison -->
+        <div class="mb-8">
+          <div class="bg-white rounded-2xl border border-slate-200 shadow-lg p-6">
+            <h3 class="text-lg font-bold text-slate-900 mb-4">Scoring Method Comparison</h3>
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+              <div class="text-center">
+                <div class="text-2xl font-bold text-blue-600 mb-2">85</div>
+                <div class="text-sm text-slate-600">AI Score</div>
+                <span
+                  class="px-3 py-1 bg-blue-100 text-blue-800 text-xs font-semibold rounded-full mt-2 inline-block">Primary</span>
+              </div>
+              <div class="text-center">
+                <div class="text-2xl font-bold text-slate-600 mb-2">82</div>
+                <div class="text-sm text-slate-600">Local Score</div>
+                <span
+                  class="px-3 py-1 bg-slate-100 text-slate-800 text-xs font-semibold rounded-full mt-2 inline-block">Backup</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </main>
+  </div>
+
+  <script src="app.js"></script>
+  <script>
+    // Mobile menu
+    const mobileMenuBtn = document.getElementById('mobileMenuBtn');
+    const sidebar = document.getElementById('sidebar');
+    const sidebarOverlay = document.getElementById('sidebarOverlay');
+    const closeSidebar = document.getElementById('closeSidebar');
+
+    mobileMenuBtn?.addEventListener('click', () => {
+      sidebar.classList.remove('-translate-x-full');
+      sidebarOverlay.classList.remove('hidden');
+    });
+
+    closeSidebar?.addEventListener('click', () => {
+      sidebar.classList.add('-translate-x-full');
+      sidebarOverlay.classList.add('hidden');
+    });
+
+    sidebarOverlay?.addEventListener('click', () => {
+      sidebar.classList.add('-translate-x-full');
+      sidebarOverlay.classList.add('hidden');
+    });
+
+    // Parse Query Params
+    const urlParams = new URLSearchParams(window.location.search);
+    const jobId = urlParams.get('job_id');
+
+    async function loadCandidateDetails() {
+      if (!jobId) {
+        // If no job ID, maybe show a default or redirect?
+        // For now, just log warning
+        console.warn("No job ID provided.");
+        return;
+      }
+
+      try {
+        // Fetch all results to find the specific one (prototype approach)
+        const allResults = await API.getResults();
+        const result = allResults.find(r => r.job_id == jobId);
+
+        if (!result || !result.score_data) {
+          console.warn("Result data not found yet.");
+          return;
+        }
+
+        const data = result.score_data;
+        const aiScore = data.ai_score || 0;
+        const localScore = data.local_score || 0;
+
+        // Update UI Elements
+        const finalScoreEl = document.getElementById('finalScore');
+        if (finalScoreEl) finalScoreEl.textContent = aiScore;
+
+        const mainScoreEl = document.getElementById('mainScore');
+        if (mainScoreEl) mainScoreEl.textContent = aiScore;
+
+        // Update Header
+        const candidateName = result.resume_filename.replace(/^resume_.*?_/, '');
+        const headerTitle = document.querySelector('header p.text-xs');
+        if (headerTitle) headerTitle.textContent = `${candidateName}`;
+
+        // Update Radar Chart
+        updateRadarChart(data);
+
+        // Update Breakdown Table (simplified)
+        // ... (We would update the table rows here based on data keys)
+
+      } catch (error) {
+        console.error("Error loading details:", error);
+      }
+    }
+
+    function updateRadarChart(data) {
+      const canvas = document.getElementById('radarChart');
+      if (!canvas) return;
+
+      const ctx = canvas.getContext('2d');
+
+      // Destroy existing chart if any (not stored globally here, but assuming fresh load)
+
+      new Chart(ctx, {
+        type: 'radar',
+        data: {
+          labels: ['Experience', 'Skills', 'Technologies', 'Tools', 'Projects', 'Certificates', 'Responsibilities', 'Relevant Exp'],
+          datasets: [{
+            label: 'Candidate Score',
+            data: [
+              data.experience_score || 0,
+              data.skills_score || 0,
+              data.technologies_score || 0,
+              data.tools_score || 0,
+              data.projects_score || 0,
+              data.certificates_score || 0,
+              data.responsibilities_score || 0,
+              data.relevant_experience_score || 0
+            ],
+            backgroundColor: 'rgba(59, 130, 246, 0.2)',
+            borderColor: 'rgb(59, 130, 246)',
+            pointBackgroundColor: 'rgb(59, 130, 246)',
+            pointBorderColor: '#fff',
+            pointHoverBackgroundColor: '#fff',
+            pointHoverBorderColor: 'rgb(59, 130, 246)'
+          }]
+        },
+        options: {
+          responsive: true,
+          maintainAspectRatio: false,
+          scales: {
+            r: {
+              beginAtZero: true,
+              max: 100
+            }
+          }
+        }
+      });
+    }
+
+    document.addEventListener('DOMContentLoaded', loadCandidateDetails);
+  </script>
+</body>
+
+</html>

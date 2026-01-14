@@ -1,0 +1,772 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <title>Raiya Solutions</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      darkMode: 'class',
+    }
+  </script>
+  <script>
+    if (localStorage.getItem('theme') === 'dark' || (!('theme' in localStorage) && window.matchMedia('(prefers-color-scheme: dark)').matches)) {
+      document.documentElement.classList.add('dark')
+    } else {
+      document.documentElement.classList.remove('dark')
+    }
+  </script>
+  <style>
+    @keyframes slideIn {
+      from {
+        transform: translateX(-100%);
+        opacity: 0;
+      }
+
+      to {
+        transform: translateX(0);
+        opacity: 1;
+      }
+    }
+
+    .sidebar-animate {
+      animation: slideIn 0.3s ease-out;
+    }
+
+    @keyframes pulse-ring {
+      0% {
+        box-shadow: 0 0 0 0 rgba(59, 130, 246, 0.7);
+      }
+
+      70% {
+        box-shadow: 0 0 0 10px rgba(59, 130, 246, 0);
+      }
+
+      100% {
+        box-shadow: 0 0 0 0 rgba(59, 130, 246, 0);
+      }
+    }
+
+    .pulse-ring {
+      animation: pulse-ring 2s infinite;
+    }
+
+    .scrollbar-thin::-webkit-scrollbar {
+      width: 6px;
+    }
+
+    .scrollbar-thin::-webkit-scrollbar-track {
+      background: transparent;
+    }
+
+    .scrollbar-thin::-webkit-scrollbar-thumb {
+      background: #cbd5e1;
+      border-radius: 10px;
+    }
+
+    .scrollbar-thin:hover::-webkit-scrollbar-thumb {
+      background: #94a3b8;
+    }
+
+    .scrollbar-thin::-webkit-scrollbar-thumb:hover {
+      background: #64748b;
+    }
+
+    .drag-active {
+      border-color: #3b82f6 !important;
+      background-color: #eff6ff !important;
+    }
+
+    /* Visual helpers */
+    .drop-zone {
+      transition: background-color .12s, border-color .12s;
+    }
+  </style>
+</head>
+
+<body
+  class="bg-gradient-to-br from-slate-50 to-slate-100 dark:from-slate-900 dark:to-slate-800 text-slate-900 dark:text-white transition-colors duration-300">
+  <div id="sidebarOverlay" class="hidden fixed inset-0 bg-black/30 backdrop-blur-sm z-40"></div>
+
+  <div class="flex min-h-screen">
+    <!-- Sidebar -->
+    <aside id="sidebar"
+      class="fixed md:sticky top-0 left-0 h-screen w-72 bg-[#0f2140] text-white z-50 transform -translate-x-full md:translate-x-0 transition-transform duration-300 ease-out overflow-y-auto scrollbar-thin sidebar-animate">
+      <div class="p-6">
+        <button id="closeSidebar" class="md:hidden absolute top-4 right-4 p-2 hover:bg-slate-100 rounded-lg">
+          <svg class="w-5 h-5 text-slate-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"></path>
+          </svg>
+        </button>
+
+        <div class="mb-8 pb-6 border-b border-white/10">
+          <div class="flex items-center gap-3 mb-3">
+            <div id="sidebar-initials"
+              class="h-12 w-12 rounded-full bg-gradient-to-br from-blue-500 to-purple-600 flex items-center justify-center text-white font-semibold text-lg shadow-lg">
+              RA</div>
+            <div>
+              <p id="sidebar-name" class="font-semibold text-white">Recruiter Admin</p>
+              <p id="sidebar-role" class="text-xs text-white/70">admin@raiyasolutions.com</p>
+            </div>
+          </div>
+          <div class="flex items-center gap-2 px-3 py-2 rounded-lg bg-white/5 border border-white/6"
+            id="sessionIndicatorContainer">
+            <div class="h-2 w-2 rounded-full bg-emerald-400 animate-pulse" id="sessionDot"></div>
+            <span class="text-xs font-medium text-white/80" id="sessionText">Checking...</span>
+          </div>
+        </div>
+
+        <nav class="space-y-2">
+          <div class="text-xs font-bold text-white/60 uppercase tracking-wider mb-4 px-3">Platform</div>
+          <a href="recruiter-platform.html"
+            class="flex items-center gap-3 px-3 py-3 text-sm bg-gradient-to-r from-blue-50 to-indigo-50 text-blue-700 rounded-xl border border-blue-100 shadow-sm">
+            <svg class="w-5 h-5 text-blue-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                d="M7 16a4 4 0 01-.88-7.903A5 5 0 1115.9 6L16 6a5 5 0 011 9.9M15 13l-3-3m0 0l-3 3m3-3v12"></path>
+            </svg>
+            <span class="font-semibold">Bulk Screening</span>
+          </a>
+          <a href="bulk-processing.html"
+            class="flex items-center gap-3 px-3 py-3 text-sm text-white/90 hover:bg-white/5 rounded-xl group transition-colors">
+            <svg class="w-5 h-5 text-white/60 group-hover:text-white transition-colors" fill="none"
+              stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 10V3L4 14h7v7l9-11h-7z">
+              </path>
+            </svg>
+            <span class="font-medium">Processing Queue</span>
+          </a>
+          <a href="recruiter-results.html"
+            class="flex items-center gap-3 px-3 py-3 text-sm text-white/90 hover:bg-white/5 rounded-xl group transition-colors">
+            <svg class="w-5 h-5 text-white/60 group-hover:text-white transition-colors" fill="none"
+              stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                d="M9 19v-6a2 2 0 00-2-2H5a2 2 0 00-2 2v6a2 2 0 002 2h2a2 2 0 002-2z"></path>
+            </svg>
+            <span class="font-medium">Results Dashboard</span>
+          </a>
+
+          <div class="text-xs font-bold text-white/60 uppercase tracking-wider mt-8 mb-4 px-3">Tools</div>
+          <a href="history.html"
+            class="flex items-center gap-3 px-3 py-3 text-sm text-white/90 hover:bg-white/5 rounded-xl group transition-colors">
+            <svg class="w-5 h-5 text-white/60 group-hover:text-white" fill="none" stroke="currentColor"
+              viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z"></path>
+            </svg>
+            <span class="font-medium">History</span>
+          </a>
+          <a href="settings.html"
+            class="flex items-center gap-3 px-3 py-3 text-sm text-white/90 hover:bg-white/5 rounded-xl group transition-colors">
+            <svg class="w-5 h-5 text-white/60 group-hover:text-white" fill="none" stroke="currentColor"
+              viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                d="M10.325 4.317c.426-1.756 2.924-1.756 3.35 0a1.724 1.724 0 002.573 1.066c1.543-.94 3.31.826 2.37 2.37a1.724 1.724 0 001.065 2.572c1.756.426 1.756 2.924 0 3.35a1.724 1.724 0 00-1.066 2.573c.94 1.543-.826 3.31-2.37 2.37a1.724 1.724 0 00-2.572 1.065c-.426 1.756-2.924 1.756-3.35 0a1.724 1.724 0 00-2.573-1.066c-1.543.94-3.31-.826-2.37-2.37a1.724 1.724 0 00-1.065-2.572c-1.756-.426-1.756-2.924 0-3.35a1.724 1.724 0 001.066-2.573c-.94-1.543.826-3.31 2.37-2.37.996.608 2.296.07 2.572-1.065z">
+              </path>
+            </svg>
+            <span class="font-medium">Settings</span>
+          </a>
+        </nav>
+
+        <div class="mt-8 p-4 rounded-xl bg-gradient-to-br from-blue-600 to-indigo-700 text-white">
+          <div class="flex items-center justify-between mb-3">
+            <span class="text-xs font-semibold text-blue-100">This Month</span>
+            <svg class="w-4 h-4 text-blue-200" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                d="M13 7a4 4 0 11-8 0 4 4 0 018 0zM9 14a6 6 0 00-6 6v1h12v-1a6 6 0 00-6-6zM21 12a1 1 0 100-2 1 1 0 000 2z">
+              </path>
+            </svg>
+          </div>
+          <p class="text-3xl font-bold mb-1" id="resumesProcessed">1,247</p>
+          <p class="text-xs text-blue-100">Candidates Screened</p>
+        </div>
+      </div>
+    </aside>
+
+    <!-- Main Content -->
+    <main class="flex-1 flex flex-col w-full">
+      <!-- Header -->
+      <header
+        class="border-b bg-white/80 backdrop-blur-lg sticky top-0 z-30 shadow-sm dark:bg-slate-900/80 dark:border-slate-700 transition-colors duration-300">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-4 flex items-center justify-between">
+          <div class="flex items-center gap-3">
+            <button id="mobileMenuBtn"
+              class="md:hidden p-2 hover:bg-slate-100 dark:hover:bg-slate-800 rounded-lg transition-colors">
+              <svg class="w-6 h-6 text-slate-600 dark:text-slate-300" fill="none" stroke="currentColor"
+                viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16">
+                </path>
+              </svg>
+            </button>
+            <div>
+              <p class="text-lg font-bold text-slate-900 dark:text-white">Raiya Solutions</p>
+              <p class="text-xs text-slate-500 dark:text-slate-400">AI-Powered Bulk Resume Screening</p>
+            </div>
+          </div>
+          <div class="flex items-center gap-4">
+            <div
+              class="hidden sm:flex items-center gap-2 px-3 py-1 bg-emerald-50 border border-emerald-200 rounded-full dark:bg-emerald-900/30 dark:border-emerald-800">
+              <div class="w-2 h-2 bg-emerald-500 rounded-full animate-pulse"></div>
+              <span class="text-xs font-medium text-emerald-700 dark:text-emerald-400">System Online</span>
+            </div>
+          </div>
+        </div>
+      </header>
+
+      <!-- Page Content -->
+      <div class="flex-1 px-4 sm:px-6 py-8 overflow-x-hidden">
+        <!-- Hero / chips -->
+        <div class="mb-8 flex items-center justify-between pr-8">
+          <div class="flex items-center gap-2">
+            <span
+              class="px-3 py-1 bg-blue-100 text-blue-800 text-xs font-semibold rounded-full dark:bg-blue-900/50 dark:text-blue-200">✨
+              AI-Powered</span>
+            <span
+              class="px-3 py-1 bg-emerald-100 text-emerald-800 text-xs font-semibold rounded-full dark:bg-emerald-900/50 dark:text-emerald-200">🚀
+              Bulk
+              Processing</span>
+          </div>
+          <button id="startProcessing"
+            class="px-6 py-2 bg-gradient-to-r from-blue-600 to-blue-700 text-white rounded-lg font-semibold text-sm hover:shadow-lg transition-all transform hover:scale-105 disabled:cursor-not-allowed"
+            disabled>
+            🚀 Start Screening
+          </button>
+        </div>
+
+        <!-- Main Workflow -->
+        <div class="max-w-6xl mx-auto w-full">
+          <div class="grid grid-cols-1 md:grid-cols-2 gap-8 mb-8">
+
+            <!-- Step 1: Job Descriptions -->
+            <div
+              class="bg-white rounded-2xl border border-slate-200 shadow-lg overflow-hidden flex flex-col dark:bg-slate-800 dark:border-slate-700 transition-colors duration-300">
+              <div
+                class="bg-gradient-to-r from-blue-50 to-indigo-50 p-6 border-b border-slate-200 dark:from-slate-700 dark:to-slate-800 dark:border-slate-600">
+                <div class="flex items-center justify-between">
+                  <div class="flex items-center gap-3">
+                    <div class="w-10 h-10 bg-blue-600 rounded-xl flex items-center justify-center text-white font-bold">
+                      1</div>
+                    <div>
+                      <h2 class="text-xl font-bold text-slate-900 dark:text-white">Job Descriptions (<span
+                          id="jdCount">0</span>/5)</h2>
+                      <p class="text-sm text-slate-600 dark:text-slate-300">Upload up to 5 job descriptions</p>
+                    </div>
+                  </div>
+                  <div class="flex-shrink-0">
+                    <button id="browseJDsHeader" type="button" onclick="jdInput.click()"
+                      class="px-4 py-2 bg-gradient-to-r from-blue-600 to-blue-700 text-white rounded-lg font-semibold text-sm hover:shadow-lg transition-all">Browse
+                      JD Files</button>
+                  </div>
+                </div>
+              </div>
+
+              <!-- Card body with drop area and visible jdList -->
+              <div class="p-6 flex-1 min-h-[120px] relative drop-zone" id="jdCardBody">
+                <div id="jdDropFiles" class="text-sm text-slate-500 text-center py-8 dark:text-slate-400">
+                  Click "Browse JD Files" or drop files anywhere on this card.
+                </div>
+
+                <!-- where uploaded JD files will appear -->
+                <div id="jdList" class="space-y-2 max-h-48 overflow-y-auto"></div>
+
+                <div id="jdDropZone" class="absolute inset-0 z-0 pointer-events-auto"></div>
+                <input id="jdInput" type="file" class="hidden" accept=".pdf,.doc,.docx" multiple />
+              </div>
+
+
+            </div>
+
+            <!-- Step 2: Resume Upload -->
+            <div
+              class="bg-white rounded-2xl border border-slate-200 shadow-lg overflow-hidden flex flex-col dark:bg-slate-800 dark:border-slate-700 transition-colors duration-300">
+              <div
+                class="bg-gradient-to-r from-emerald-50 to-green-50 p-6 border-b border-slate-200 dark:from-slate-700 dark:to-slate-800 dark:border-slate-600">
+                <div class="flex items-center justify-between">
+                  <div class="flex items-center gap-3">
+                    <div
+                      class="w-10 h-10 bg-emerald-600 rounded-xl flex items-center justify-center text-white font-bold">
+                      2</div>
+                    <div>
+                      <h2 class="text-xl font-bold text-slate-900 dark:text-white">Candidate Resumes (<span
+                          id="resumeCount">0</span>)
+                      </h2>
+                      <p class="text-sm text-slate-600 dark:text-slate-300">Bulk upload unlimited resumes</p>
+                    </div>
+                  </div>
+                  <div class="flex-shrink-0">
+                    <button id="browseResumesHeader" type="button" onclick="resumeInput.click()"
+                      class="px-4 py-2 bg-gradient-to-r from-emerald-600 to-emerald-700 text-white rounded-lg font-semibold text-sm hover:shadow-lg transition-all">Browse
+                      Resume Files</button>
+                  </div>
+                </div>
+              </div>
+
+              <!-- Card body with drop area and visible resumeList -->
+              <div class="p-6 flex-1 min-h-[120px] relative drop-zone" id="resumeCardBody">
+                <div id="resumeDropFiles" class="text-sm text-slate-500 text-center py-8 dark:text-slate-400">
+                  Click "Browse Resume Files" or drop files anywhere on this card.
+                </div>
+
+                <!-- where uploaded resumes will appear -->
+                <div id="resumeList" class="space-y-2 max-h-48 overflow-y-auto"></div>
+
+                <div id="resumeDropZone" class="absolute inset-0 z-0 pointer-events-auto"></div>
+                <input id="resumeInput" type="file" class="hidden" accept=".pdf,.doc,.docx" multiple />
+              </div>
+
+
+            </div>
+
+          </div>
+        </div>
+
+        <!-- Recent Updates / Activity Feed -->
+        <div class="mb-8">
+          <h3 class="text-2xl font-bold text-slate-900 mb-6 dark:text-white">Recent Activity</h3>
+          <div class="space-y-3" id="activityFeed">
+            <!-- Activity items will be added here dynamically -->
+            <div id="defaultActivity"
+              class="bg-white border border-slate-200 rounded-2xl p-4 flex items-start gap-4 hover:shadow-md transition-shadow opacity-50 dark:bg-slate-800 dark:border-slate-700">
+              <div class="p-2 bg-slate-100 rounded-lg flex-shrink-0 dark:bg-slate-700">
+                <svg class="w-5 h-5 text-slate-600 dark:text-slate-400" fill="none" stroke="currentColor"
+                  viewBox="0 0 24 24">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 6v6m0 0v6m0-6h6m0 0h6">
+                  </path>
+                </svg>
+              </div>
+              <div class="flex-1 min-w-0">
+                <p class="text-sm font-medium text-slate-900 dark:text-white">Ready to get started</p>
+                <p class="text-xs text-slate-500 dark:text-slate-400">Upload Job Descriptions and Resumes to begin
+                  screening</p>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Hidden overview containers (script expects these IDs) -->
+        <div id="jdOverviewList" class="hidden"></div>
+        <div id="resumeOverviewList" class="hidden"></div>
+
+      </div>
+    </main>
+  </div>
+
+  <style>
+    #resumeList {
+      position: relative;
+      z-index: 10;
+    }
+
+    #jdList {
+      position: relative;
+      z-index: 10;
+    }
+  </style>
+
+  <script>
+    // Mobile menu functionality
+    const mobileMenuBtn = document.getElementById('mobileMenuBtn');
+    const sidebar = document.getElementById('sidebar');
+    const sidebarOverlay = document.getElementById('sidebarOverlay');
+    const closeSidebar = document.getElementById('closeSidebar');
+
+    mobileMenuBtn?.addEventListener('click', () => {
+      sidebar.classList.remove('-translate-x-full');
+      sidebarOverlay.classList.remove('hidden');
+    });
+
+    closeSidebar?.addEventListener('click', () => {
+      sidebar.classList.add('-translate-x-full');
+      sidebarOverlay.classList.add('hidden');
+    });
+
+    sidebarOverlay?.addEventListener('click', () => {
+      sidebar.classList.add('-translate-x-full');
+      sidebarOverlay.classList.add('hidden');
+    });
+
+    // File handling variables
+    let jdFiles = [];
+    let resumeFiles = [];
+    const MAX_JDS = 5;
+
+    // DOM elements
+    const jdDropZone = document.getElementById('jdDropZone');
+    const jdInput = document.getElementById('jdInput');
+    const jdQueue = document.getElementById('jdQueue');
+    const jdList = document.getElementById('jdList');
+    const jdCount = document.getElementById('jdCount');
+    const clearJDs = document.getElementById('clearJDs');
+    const jdDropFiles = document.getElementById('jdDropFiles');
+
+    const resumeDropZone = document.getElementById('resumeDropZone');
+    const resumeInput = document.getElementById('resumeInput');
+    const resumeQueue = document.getElementById('resumeQueue');
+    const resumeList = document.getElementById('resumeList');
+    const resumeCount = document.getElementById('resumeCount');
+    const clearResumes = document.getElementById('clearResumes');
+    const resumeDropFiles = document.getElementById('resumeDropFiles');
+
+    const totalJDs = document.getElementById('totalJDs');
+    const totalResumes = document.getElementById('totalResumes');
+    const startProcessing = document.getElementById('startProcessing');
+    const activityFeed = document.getElementById('activityFeed');
+    const jdOverviewList = document.getElementById('jdOverviewList');
+    const resumeOverviewList = document.getElementById('resumeOverviewList');
+
+    // Activity logging function
+    function addActivity(message, type = 'default') {
+      const defaultActivity = document.getElementById('defaultActivity');
+      if (defaultActivity) defaultActivity.style.display = 'none';
+
+      const timestamp = new Date().toLocaleTimeString('en-US', { hour: '2-digit', minute: '2-digit' });
+
+      let bgColor = 'bg-slate-50 dark:bg-slate-800';
+      let borderColor = 'border-slate-200 dark:border-slate-700';
+      let iconBg = 'bg-slate-100 dark:bg-slate-700';
+      let iconColor = 'text-slate-600 dark:text-slate-400';
+      let icon = 'M12 6v6m0 0v6m0-6h6m0 0h6';
+
+      if (type === 'jd') {
+        bgColor = 'bg-blue-50 dark:bg-slate-800';
+        borderColor = 'border-blue-200 dark:border-slate-700';
+        iconBg = 'bg-blue-100 dark:bg-blue-900';
+        iconColor = 'text-blue-600 dark:text-blue-200';
+        icon = 'M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z';
+      } else if (type === 'resume') {
+        bgColor = 'bg-emerald-50 dark:bg-slate-800';
+        borderColor = 'border-emerald-200 dark:border-slate-700';
+        iconBg = 'bg-emerald-100 dark:bg-emerald-900';
+        iconColor = 'text-emerald-600 dark:text-emerald-200';
+        icon = 'M17 20h5v-2a3 3 0 00-5.356-1.857M17 20H7m10 0v-2c0-.656-.126-1.283-.356-1.857M7 20H2v-2a3 3 0 015.356-1.857M7 20v-2c0-.656.126-1.283.356-1.857m0 0a5.002 5.002 0 019.288 0M15 7a3 3 0 11-6 0 3 3 0 016 0zm6 3a2 2 0 11-4 0 2 2 0 014 0zM7 10a2 2 0 11-4 0 2 2 0 014 0z';
+      } else if (type === 'success') {
+        bgColor = 'bg-emerald-50 dark:bg-slate-800';
+        borderColor = 'border-emerald-200 dark:border-slate-700';
+        iconBg = 'bg-emerald-100 dark:bg-emerald-900';
+        iconColor = 'text-emerald-600 dark:text-emerald-200';
+        icon = 'M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z';
+      }
+
+      const activity = document.createElement('div');
+      activity.className = `${bgColor} border ${borderColor} rounded-2xl p-4 flex items-start gap-4 hover:shadow-md transition-shadow`;
+      activity.innerHTML = `
+        <div class="p-2 ${iconBg} rounded-lg flex-shrink-0">
+          <svg class="w-5 h-5 ${iconColor}" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="${icon}"></path>
+          </svg>
+        </div>
+        <div class="flex-1 min-w-0">
+          <p class="text-sm font-medium text-slate-900 dark:text-white">${message}</p>
+          <p class="text-xs text-slate-500 dark:text-slate-400">${timestamp}</p>
+        </div>
+      `;
+
+      activityFeed.insertBefore(activity, activityFeed.firstChild);
+
+      // Keep only last 5 activities
+      while (activityFeed.children.length > 5) {
+        activityFeed.removeChild(activityFeed.lastChild);
+      }
+    }
+
+    // Update overview lists (hidden containers - script expects them)
+    function updateOverviewLists() {
+      if (jdOverviewList) {
+        if (jdFiles.length === 0) {
+          jdOverviewList.innerHTML = '';
+        } else {
+          jdOverviewList.innerHTML = jdFiles.map((f) => `<div>${f.name}</div>`).join('');
+        }
+      }
+
+      if (resumeOverviewList) {
+        if (resumeFiles.length === 0) {
+          resumeOverviewList.innerHTML = '';
+        } else {
+          resumeOverviewList.innerHTML = resumeFiles.map((f) => `<div>${f.name}</div>`).join('');
+        }
+      }
+    }
+
+    // JD Upload Handling
+    jdDropZone.addEventListener('click', () => jdInput.click());
+    jdDropZone.addEventListener('dragover', (e) => {
+      e.preventDefault();
+      const body = document.getElementById('jdCardBody');
+      if (body) body.classList.add('drag-active');
+    });
+    jdDropZone.addEventListener('dragleave', () => {
+      const body = document.getElementById('jdCardBody');
+      if (body) body.classList.remove('drag-active');
+    });
+    jdDropZone.addEventListener('drop', (e) => {
+      e.preventDefault();
+      const body = document.getElementById('jdCardBody');
+      if (body) body.classList.remove('drag-active');
+      handleJDFiles(e.dataTransfer.files);
+    });
+    jdInput.addEventListener('change', (e) => handleJDFiles(e.target.files));
+
+    // Resume Upload Handling
+    resumeDropZone.addEventListener('click', () => resumeInput.click());
+    resumeDropZone.addEventListener('dragover', (e) => {
+      e.preventDefault();
+      const body = document.getElementById('resumeCardBody');
+      if (body) body.classList.add('drag-active');
+    });
+    resumeDropZone.addEventListener('dragleave', () => {
+      const body = document.getElementById('resumeCardBody');
+      if (body) body.classList.remove('drag-active');
+    });
+    resumeDropZone.addEventListener('drop', (e) => {
+      e.preventDefault();
+      const body = document.getElementById('resumeCardBody');
+      if (body) body.classList.remove('drag-active');
+      handleResumeFiles(e.dataTransfer.files);
+    });
+    resumeInput.addEventListener('change', (e) => handleResumeFiles(e.target.files));
+
+    function handleJDFiles(files) {
+      const validFiles = Array.from(files).filter(f => {
+        const ext = f.name.split('.').pop().toLowerCase();
+        return ['pdf', 'doc', 'docx'].includes(ext) && f.size <= 10 * 1024 * 1024;
+      });
+
+      const availableSlots = MAX_JDS - jdFiles.length;
+      const filesToAdd = validFiles.slice(0, availableSlots);
+
+      if (validFiles.length > availableSlots) {
+        alert(`Only ${availableSlots} more JD files can be added (maximum ${MAX_JDS})`);
+      }
+
+      jdFiles.push(...filesToAdd);
+      if (filesToAdd.length > 0) {
+        addActivity(`Added ${filesToAdd.length} job description${filesToAdd.length > 1 ? 's' : ''}: ${filesToAdd.map(f => f.name).join(', ')}`, 'jd');
+      }
+      updateJDDisplay();
+    }
+
+    function handleResumeFiles(files) {
+      const validFiles = Array.from(files).filter(f => {
+        const ext = f.name.split('.').pop().toLowerCase();
+        return ['pdf', 'doc', 'docx'].includes(ext) && f.size <= 10 * 1024 * 1024;
+      });
+
+      resumeFiles.push(...validFiles);
+      if (validFiles.length > 0) {
+        addActivity(`Added ${validFiles.length} resume${validFiles.length > 1 ? 's' : ''}: ${validFiles.map(f => f.name).join(', ')}`, 'resume');
+      }
+      updateResumeDisplay();
+    }
+
+    function updateJDDisplay() {
+      if (jdCount) jdCount.textContent = jdFiles.length;
+      if (totalJDs) totalJDs.textContent = jdFiles.length;
+
+      if (jdList) {
+        if (jdFiles.length === 0) {
+          jdList.innerHTML = '';
+          jdDropFiles.classList.remove("hidden");  // <— SHOW placeholder when empty
+        } else {
+          jdDropFiles.classList.add("hidden");     // <— HIDE placeholder once items added
+          jdList.innerHTML = jdFiles.map((f, i) => `
+              <div class="flex items-center gap-3 p-3 bg-blue-50 rounded-lg border border-blue-200 dark:bg-blue-900/20 dark:border-blue-800">
+                <svg class="w-5 h-5 text-blue-600 dark:text-blue-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z"></path>
+                </svg>
+                <div class="flex-1 min-w-0">
+                  <p class="font-medium text-slate-900 truncate dark:text-white">${f.name}</p>
+                  <p class="text-xs text-slate-500 dark:text-slate-400">${(f.size / 1024).toFixed(1)} KB</p>
+                </div>
+                <button type="button" onclick="removeJD(${i})" class="p-1 hover:bg-blue-100 rounded transition-colors dark:hover:bg-blue-800">
+                  <svg class="w-4 h-4 text-slate-600 dark:text-slate-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"></path>
+                  </svg>
+                </button>
+              </div>
+            `).join('');
+        }
+      }
+
+      updateOverviewLists();
+      updateProcessButton();
+    }
+
+    function updateResumeDisplay() {
+      if (resumeCount) resumeCount.textContent = resumeFiles.length;
+      if (totalResumes) totalResumes.textContent = resumeFiles.length;
+
+      if (resumeList) {
+        if (resumeFiles.length === 0) {
+          resumeList.innerHTML = '';
+          resumeDropFiles.classList.remove("hidden");  // <— SHOW placeholder when empty
+        } else {
+          resumeDropFiles.classList.add("hidden");     // <— HIDE placeholder once items added
+          resumeList.innerHTML = resumeFiles.map((f, i) => `
+              <div class="flex items-center gap-3 p-3 bg-emerald-50 rounded-lg border border-emerald-200 dark:bg-emerald-900/20 dark:border-emerald-800">
+                <svg class="w-5 h-5 text-emerald-600 dark:text-emerald-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M7 21h10a2 2 0 002-2V9.414a1 1 0 00-.293-.707l-5.414-5.414A1 1 0 0012.586 3H7a2 2 0 00-2 2v14a2 2 0 002 2z"></path>
+                </svg>
+                <div class="flex-1 min-w-0">
+                  <p class="font-medium text-slate-900 truncate dark:text-white">${f.name}</p>
+                  <p class="text-xs text-slate-500 dark:text-slate-400">${(f.size / 1024).toFixed(1)} KB</p>
+                </div>
+                <button type="button" onclick="removeResume(${i})" class="p-1 hover:bg-emerald-100 rounded transition-colors dark:hover:bg-emerald-800">
+                  <svg class="w-4 h-4 text-slate-600 dark:text-slate-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"></path>
+                  </svg>
+                </button>
+              </div>
+            `).join('');
+        }
+      }
+
+      if (resumeQueue) resumeQueue.classList.toggle('hidden', resumeFiles.length === 0);
+
+      updateOverviewLists();
+      updateProcessButton();
+    }
+
+    function updateProcessButton() {
+      const canProcess = jdFiles.length > 0 && resumeFiles.length > 0;
+      if (startProcessing) startProcessing.disabled = !canProcess;
+    }
+
+    function removeJD(index) {
+      jdFiles.splice(index, 1);
+      updateJDDisplay();
+      addActivity(`Removed a job description`, 'jd');
+    }
+
+    function removeResume(index) {
+      resumeFiles.splice(index, 1);
+      updateResumeDisplay();
+      addActivity(`Removed a resume`, 'resume');
+    }
+
+    // Clear buttons (removed since queue sections are gone)
+
+    // Start processing
+    if (startProcessing) startProcessing.addEventListener('click', async () => {
+      if (jdFiles.length === 0 || resumeFiles.length === 0) {
+        alert('Please upload both job descriptions and resumes before starting.');
+        return;
+      }
+
+      const totalCombinations = jdFiles.length * resumeFiles.length;
+      const confirmed = confirm(`Ready to process ${resumeFiles.length} resumes against ${jdFiles.length} job descriptions (${totalCombinations} total comparisons)?`);
+
+      if (confirmed) {
+        startProcessing.disabled = true;
+        startProcessing.textContent = "⏳ Processing...";
+        addActivity(`Screening process started: ${jdFiles.length} JD × ${resumeFiles.length} resumes...`, 'success');
+
+        try {
+          // 1. Upload JDs
+          const jdFormData = new FormData();
+          jdFiles.forEach(file => jdFormData.append('files', file));
+
+          addActivity('Uploading Job Descriptions...', 'jd');
+          const jdUploadRes = await fetch('/api/upload?type=jd', {
+            method: 'POST',
+            body: jdFormData
+          });
+
+          if (!jdUploadRes.ok) throw new Error('Failed to upload JDs');
+          addActivity('Job Descriptions uploaded successfully', 'success');
+
+          // 2. Upload Resumes
+          const resumeFormData = new FormData();
+          resumeFiles.forEach(file => resumeFormData.append('files', file));
+
+          addActivity('Uploading Resumes...', 'resume');
+          const resumeUploadRes = await fetch('/api/upload?type=resume', {
+            method: 'POST',
+            body: resumeFormData
+          });
+
+          if (!resumeUploadRes.ok) throw new Error('Failed to upload Resumes');
+          addActivity('Resumes uploaded successfully', 'success');
+
+          // 3. Trigger Processing
+          addActivity('Running AI Analysis...', 'default');
+          const processRes = await fetch('/api/process', {
+            method: 'POST'
+          });
+
+          if (!processRes.ok) {
+            const errData = await processRes.json();
+            throw new Error(errData.detail || 'Processing failed');
+          }
+
+          const processData = await processRes.json();
+          console.log('Results:', processData);
+          addActivity('Processing Started! Redirecting to queue...', 'success');
+
+          // Redirect to bulk processing page
+          window.location.href = 'bulk-processing.html';
+
+        } catch (error) {
+          console.error('Error:', error);
+          alert(`Error: ${error.message}`);
+          addActivity(`Error: ${error.message}`, 'default'); // Should be error type
+        } finally {
+          startProcessing.disabled = false;
+          startProcessing.innerHTML = "🚀 Start Screening";
+        }
+      }
+    });
+
+    // initial safety: ensure drop zones present
+    if (!jdDropZone || !resumeDropZone) {
+      console.warn('Drop zones missing — check element IDs.');
+    }
+
+    // Active Session Polling
+    async function updateActiveSession() {
+      try {
+        const response = await fetch('/api/jobs');
+        if (!response.ok) return;
+        const jobs = await response.json();
+
+        const inProgress = jobs.filter(j => j.status === 'In Progress').length;
+        const queued = jobs.filter(j => j.status === 'Queued').length;
+        const isProcessing = (inProgress > 0 || queued > 0);
+
+        const sessionDot = document.getElementById('sessionDot');
+        const sessionText = document.getElementById('sessionText');
+
+        if (sessionDot && sessionText) {
+          if (isProcessing) {
+            sessionDot.className = 'h-2 w-2 rounded-full bg-emerald-400 animate-pulse';
+            sessionText.textContent = 'Active Session';
+          } else {
+            sessionDot.className = 'h-2 w-2 rounded-full bg-red-500';
+            sessionText.textContent = 'Idle';
+          }
+        }
+      } catch (e) { console.error(e); }
+    }
+    setInterval(updateActiveSession, 2000);
+    updateActiveSession();
+  </script>
+  <script>
+    // Profile Sync
+    (function syncSidebar() {
+      const name = localStorage.getItem('profileName');
+      const email = localStorage.getItem('profileEmail');
+      if (name) {
+        const nameEl = document.getElementById('sidebar-name');
+        const initialsEl = document.getElementById('sidebar-initials');
+        if (nameEl) nameEl.textContent = name;
+        if (initialsEl) initialsEl.textContent = name.split(' ').map(n => n[0]).join('').substring(0, 2).toUpperCase();
+      }
+      if (email && document.getElementById('sidebar-role')) {
+        document.getElementById('sidebar-role').textContent = email;
+      }
+    })();
+  </script>
+</body>
+
+</html>

@@ -1,0 +1,113 @@
+{
+  "skills_score": 22,
+  "experience_score": 67,
+  "relevant_experience_score": 17,
+  "projects_score": 0,
+  "certificates_score": 0,
+  "tools_score": 56,
+  "technologies_score": 43,
+  "qualification_score": 0,
+  "responsibilities_score": 17,
+  "salary_score": 100,
+  "final_score": 33,
+  "notes": "Hybrid Score: Skills 22%; Tech 43%. (Semantic Enabled)",
+  "details": {
+    "jd_skill_count": 18,
+    "skills_matched": 4,
+    "jd_tech_count": 35,
+    "tech_matched": 15,
+    "tools_matched": 5,
+    "projects_matched": 0,
+    "candidate_total_experience_years": 2.0,
+    "candidate_relevant_years_per_skill_avg": 0.28
+  },
+  "matched_items": {
+    "skills": {
+      "matched": [
+        "Project Management",
+        "Bachelor's Degree in Engineering",
+        "Database Management",
+        "Testing & Debugging"
+      ],
+      "missing": [
+        "Problem Solving",
+        "Data Structures",
+        "Algorithms",
+        "OOP",
+        "Networking",
+        "Cloud Computing",
+        "DevOps",
+        "Machine Learning",
+        "Deep Learning",
+        "AI",
+        "Version Control",
+        "API Development",
+        "Teamwork",
+        "Leadership"
+      ]
+    },
+    "technologies": {
+      "matched": [
+        "Java",
+        "JavaScript",
+        "HTML5",
+        "CSS3",
+        "MySQL",
+        "MongoDB",
+        "ReactJS",
+        "Angular",
+        "Bootstrap",
+        "C++",
+        "TypeScript",
+        "PostgreSQL",
+        "GraphQL",
+        "Linux",
+        "Webpack"
+      ],
+      "missing": [
+        "C",
+        "Python",
+        "Django",
+        "Flask",
+        "Spring",
+        "Laravel",
+        "API Development",
+        "Firebase",
+        "AWS",
+        "Azure",
+        "GCP",
+        "Docker",
+        "Kubernetes",
+        "TensorFlow",
+        "PyTorch",
+        "Keras",
+        "OpenCV",
+        "Pandas",
+        "NumPy",
+        "Scikit-Learn"
+      ]
+    },
+    "tools": {
+      "matched": [
+        "Jira",
+        "GitHub",
+        "Bitbucket",
+        "IntelliJ IDEA",
+        "Eclipse"
+      ],
+      "missing": [
+        "Vs Code",
+        "PyCharm",
+        "Slack",
+        "Postman"
+      ]
+    },
+    "projects": {
+      "matched_keywords": []
+    }
+  },
+  "experience_range": {
+    "min": 3.0,
+    "max": 8.0
+  }
+}

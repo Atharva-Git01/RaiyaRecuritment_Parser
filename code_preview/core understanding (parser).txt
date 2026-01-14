@@ -1,0 +1,226 @@
+📄 1. Combined Executive Summary (Transcript 1 + Transcript 2)
+Purpose of the Meetings
+
+Across the two discussions, the team aimed to:
+
+Diagnose technical issues in the resume-screening system.
+
+Define the final product direction, expectations, and user-facing outcome.
+
+Align engineering decisions with business goals and recruiter workflows.
+
+Summary of Transcript 1 (Technical Deep Dive)
+
+The first meeting focused heavily on understanding why the current resume-screening engine is producing inconsistent results and what architectural issues must be addressed. Key areas examined included:
+
+Technical Problems Identified
+
+Experience scoring not mapping correctly to resume data.
+
+Inaccurate “relevant experience” representation.
+
+Scoring weights behaving unpredictably.
+
+Large risk of LLM hallucination during resume parsing.
+
+Inconsistent salary extraction and scoring logic.
+
+Need for larger dataset for calibration and accuracy testing.
+
+Insights & Deliberations
+
+The matching logic must connect experience → skills → JD expectations more strongly.
+
+Scoring needs to be transparent, auditable, and recruiter-friendly.
+
+Excessively complex LLM parsing needs guardrails and validation layers.
+
+The current system works but lacks stability, reliability, and consistency at scale.
+
+Outcome of Transcript 1
+
+The team reached an understanding that the engine needs structural adjustments and stronger validation to produce predictable, trustworthy results. The conversation framed technical foundations that must be fixed before any UX improvements.
+
+Summary of Transcript 2 (Business/Product Direction)
+
+The second meeting shifted focus from engineering to product expectations and leadership directives. Your manager clarified how the final output should look and function and corrected earlier interpretations.
+
+Business Priorities Stated
+
+The interface must be recruiter-centric, not developer-centric.
+
+Output must be clean, visual, simple, and aligned with practical hiring workflows.
+
+Technical explanations must not leak into UI.
+
+The results must be clear, structured, and easy to interpret.
+
+Clarifications & Corrections from Leadership
+
+The prior direction was too technical and not aligned with recruiter needs.
+
+Visual output should be standardized and predictable.
+
+System should enable recruiters to make quick, informed shortlisting decisions, not understand backend logic.
+
+Your boss expects higher clarity, understanding, and ownership from you on product expectations.
+
+Outcome of Transcript 2
+
+The leadership defined the final product vision and set explicit expectations about how the system must behave, appear, and deliver value to recruiters.
+
+Overall Combined Understanding
+
+Together, the two transcripts reveal:
+
+Transcript 1 establishes the technical issues that must be fixed.
+
+Transcript 2 establishes the product-level expectations the system must satisfy.
+
+The combination provides a full blueprint:
+
+What must be fixed internally (technical engine).
+
+What must be delivered externally (recruiter-focused UX and output).
+
+📘 2. Requirements Specification Based on Transcript 2
+
+This is a structured, professional requirements document derived strictly from Transcript 2.
+
+Product Requirements Specification (PRS)
+Based on Transcript 2 — Recruiter-Focused Resume Screening Platform
+1. Product Overview
+
+The system is a resume-screening and job-matching platform designed to help recruiters evaluate multiple resumes against one or more job descriptions (JDs). The platform must be intuitive, visual, and allow recruiters to quickly interpret candidate fit without exposure to backend complexity.
+
+2. Core Functional Requirements
+2.1 Multi-JD Support
+
+The system must allow the user to upload, manage, and select multiple job descriptions.
+
+Recruiters must be able to:
+
+Assign resumes to a specific JD.
+
+Switch between JDs effortlessly in the UI.
+
+2.2 Resume Processing
+
+Recruiters should be able to upload multiple resumes at once.
+
+Drag-and-drop functionality must be supported.
+
+The system must highlight uploaded resumes in a clean card-style layout.
+
+Resumes must be parsed silently in the backend with no technical jargon displayed to the user.
+
+2.3 Candidate Evaluation Output
+
+The output must follow a clear, standardized format, enabling immediate recruiter decision-making. Each candidate’s result should include:
+
+Overall Match Score (0–100)
+
+Breakdown by Key Categories, such as:
+
+Skills Fit
+
+Experience Fit
+
+Education Match
+
+Domain Relevance
+
+Additional Criteria (Certifications, Projects, etc.)
+
+Visual Representation, such as:
+
+Bar graphs
+
+Score cards
+
+Clear color coding
+
+Short Summary Section:
+
+Key strengths
+
+Missing or insufficient criteria
+
+Whether the candidate meets minimum thresholds
+
+The output must remain consistent and predictable for every JD.
+
+3. User Experience Requirements
+3.1 UI Simplicity
+
+The interface must be clean, minimalistic, and recruiter-friendly.
+
+No complex tables, raw backend JSON, or technical logs should appear.
+
+All explanations must be written in everyday professional language.
+
+3.2 Workflow Clarity
+
+The recruiter workflow should be:
+
+Upload JD(s)
+
+Upload Resumes
+
+Run Screening
+
+View results in a structured dashboard
+
+Download or share results
+
+No additional steps should confuse the user.
+
+3.3 Dashboard Requirements
+
+A clear list of all evaluated candidates.
+
+Filter and sort by match score, name, experience, or skills.
+
+Ability to open a candidate card for detailed insights.
+
+Ability to download PDF reports or export to CSV.
+
+4. Reporting Requirements
+
+The system must generate:
+
+Clean, recruiter-presentable reports
+
+Visual score breakdowns
+
+Simple explanations of why a candidate scored the way they did
+
+A final recommendation (Shortlist / Review / Not Recommended)
+
+5. Prohibited Elements
+
+The UI must not include:
+
+Backend logs
+
+Technical scoring formulas
+
+LLM debug messages
+
+JSON structures
+
+Error dumps
+
+Developer-oriented metrics
+
+The product must appear polished, professional, and stable.
+
+6. Quality Expectations (as communicated by leadership)
+
+Output must be consistent across all JDs.
+
+Visual formatting must be clean and aligned with recruiter workflows.
+
+You must demonstrate full understanding of the product vision, not only the technical engine.
+
+Deliverables must reflect business priorities, not personal interpretation.

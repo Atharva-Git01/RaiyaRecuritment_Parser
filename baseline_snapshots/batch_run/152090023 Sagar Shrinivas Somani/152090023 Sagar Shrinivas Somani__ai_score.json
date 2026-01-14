@@ -1,0 +1,17 @@
+{
+  "ai_ok": true,
+  "ai_score": {
+    "final_score": 36,
+    "skills_score": 40,
+    "experience_score": 50,
+    "relevant_experience_score": 50,
+    "projects_score": 0,
+    "certificates_score": 0,
+    "tools_score": 0,
+    "technologies_score": 40,
+    "qualification_score": 80,
+    "responsibilities_score": 0,
+    "salary_score": 0,
+    "notes": "Candidate has relevant experience in C/C++, Java, Python. Lacks experience in many required technologies and tools."
+  }
+}

@@ -1,0 +1,509 @@
+{
+  "parsed": {
+    "name": "SAGAR SHRINIVAS SOMANI",
+    "email": "sagarss 20.mba@coep.ac.in",
+    "phone": "8668488633",
+    "location": "",
+    "skills": [
+      "C/C++ STL",
+      "Python",
+      "Finance/Banking",
+      "Java"
+    ],
+    "education": [
+      {
+        "degree": "MBA, Master of Business Administration",
+        "institution": "MGM's Jawaharlal Nehru",
+        "year": "2022"
+      },
+      {
+        "degree": "UG",
+        "institution": "Dr. Babasaheb Ambedkar Marathwada University",
+        "year": "2019"
+      },
+      {
+        "degree": "Class XII",
+        "institution": "Podar International School",
+        "year": "2012"
+      }
+    ],
+    "experience": [
+      {
+        "company": "Accenture",
+        "role": "Associate Software Engineer",
+        "start_date": "Dec 2019",
+        "end_date": "Jan 2021",
+        "description": []
+      },
+      {
+        "company": "",
+        "role": "Fund Raising Intern - Finance",
+        "start_date": "Aug 2021",
+        "end_date": "Present",
+        "description": []
+      },
+      {
+        "company": "",
+        "role": "Market Research Analyst - MBA - Market Research",
+        "start_date": "Apr 2021",
+        "end_date": "May 2021",
+        "description": []
+      }
+    ],
+    "projects": [],
+    "summary": "",
+    "certificates": [
+      {
+        "name": "The Finance and Banking Fundamental Program",
+        "issuer": "FLIP",
+        "year": ""
+      }
+    ],
+    "courses": [],
+    "raw_text": "SAGAR SHRINIVAS SOMANI\nCourse :MBA, Master of Business Administration, 2022\nEmail :sagarss 20.mba@coep.ac.in\nMobile :8668488633\nCGPA :7.58\nACADEMIC DETAILS\nCOURSE SPECIALIZATION INSTITUTE/COLLEGE BOARD/UNIVERSITY SCORE YEAR\nInformation MGM's Jawaharlal Nehru\nUG Dr. Babasaheb Ambedkar Marathwada University 70 % 2019\nTechnology Engineering College, Aurangabad\nCLASS Maharashtra State Board of Secondary and Higher 61.38\nElectronics Deogiri College, Aurangabad 2014\nXII Secondary \n\n## Education\n (MSBSHSE) %\nCLASS X Podar International School ICSE 81.4 % 2012\nSubjects / Electives\nTechnical Proficiency C/C++ STL,Python,Finance/Banking,Java\nSUMMER INTERNSHIP / WORK \n\n## Experience\n\nAssociate Software Engineer, Accenture Dec 2019 - Jan 2021\n\n## Projects\n\nFund Raising Intern - Finance Aug 2021 - Present\nMarket Research Analyst - MBA - Market Research Apr 2021 - May 2021\nPOSITION OF RESPONSIBILITY\nHead Co-ordinator - Swayambhu Mar 2018 - May 2018\nTreasurer - JITSA Jul 2017 - Jul 2018\nEXTRA CURRICULAR ACTIVITIES\nFounder ar Buzzworld.in\nFounder of Buzzworld where write about business problems which an organisation faced and what methods and ways did they apply to\novercome them.\nhttps://buzzworld.in/author/sagar-somani/\nAWARDS AND RECOGNITIONS\n\n## Certifications\n\nCERTIFICATION CERTIFYING AUTHORITY DESCRIPTION\nThe Finance and Banking Fundamental Program FLIP\nCOMPETITIONS\nCONFERENCES AND WORKSHOPS\nTEST SCORES\nTEST NAME DATE OF EXAM SCORE\nPATENTS\nPUBLICATIONS\nSCHOLARSHIPS\nVOLUNTEER \n\n## Experience\n\nLANGUAGES KNOWN\nMarwari,Marathi,Hindi,English",
+    "salary": {
+      "current_ctc_lpa": null,
+      "expected_ctc_lpa": null
+    }
+  },
+  "validated": {
+    "name": "Sagar Shrinivas Somani",
+    "email": "sagarss 20.mba@coep.ac.in",
+    "phone": "8668488633",
+    "location": "",
+    "skills": [
+      "C/C++ STL",
+      "Python",
+      "Finance/Banking",
+      "Java"
+    ],
+    "education": [
+      {
+        "degree": "MBA, Master of Business Administration",
+        "institution": "MGM's Jawaharlal Nehru",
+        "year_start": "2022-01",
+        "year_end": ""
+      },
+      {
+        "degree": "UG",
+        "institution": "Dr. Babasaheb Ambedkar Marathwada University",
+        "year_start": "2019-01",
+        "year_end": ""
+      },
+      {
+        "degree": "Class XII",
+        "institution": "Podar International School",
+        "year_start": "2012-01",
+        "year_end": ""
+      }
+    ],
+    "experience": [
+      {
+        "company": "Accenture",
+        "role": "Associate Software Engineer",
+        "start_date": "2019-12",
+        "end_date": "2021-01",
+        "description": []
+      },
+      {
+        "company": "",
+        "role": "Fund Raising Intern - Finance",
+        "start_date": "2021-08",
+        "end_date": "2026-01",
+        "description": []
+      },
+      {
+        "company": "",
+        "role": "Market Research Analyst - Mba - Market Research",
+        "start_date": "2021-04",
+        "end_date": "2021-05",
+        "description": []
+      }
+    ],
+    "projects": [
+      {
+        "name": "Fund Raising Intern",
+        "description": "Finance Aug 2021 - Present"
+      },
+      {
+        "name": "Market Research Analyst",
+        "description": "MBA - Market Research Apr 2021 - May 2021"
+      }
+    ],
+    "summary": "",
+    "certificates": [
+      "The Finance and Banking Fundamental Program"
+    ],
+    "courses": [
+      "MBA",
+      "Master of Business Administration",
+      "2022",
+      "Mobile :8668488633"
+    ],
+    "raw_text": "SAGAR SHRINIVAS SOMANI\nCourse :MBA, Master of Business Administration, 2022\nEmail :sagarss 20.mba@coep.ac.in\nMobile :8668488633\nCGPA :7.58\nACADEMIC DETAILS\nCOURSE SPECIALIZATION INSTITUTE/COLLEGE BOARD/UNIVERSITY SCORE YEAR\nInformation MGM's Jawaharlal Nehru\nUG Dr. Babasaheb Ambedkar Marathwada University 70 % 2019\nTechnology Engineering College, Aurangabad\nCLASS Maharashtra State Board of Secondary and Higher 61.38\nElectronics Deogiri College, Aurangabad 2014\nXII Secondary \n\n## Education\n (MSBSHSE) %\nCLASS X Podar International School ICSE 81.4 % 2012\nSubjects / Electives\nTechnical Proficiency C/C++ STL,Python,Finance/Banking,Java\nSUMMER INTERNSHIP / WORK \n\n## Experience\n\nAssociate Software Engineer, Accenture Dec 2019 - Jan 2021\n\n## Projects\n\nFund Raising Intern - Finance Aug 2021 - Present\nMarket Research Analyst - MBA - Market Research Apr 2021 - May 2021\nPOSITION OF RESPONSIBILITY\nHead Co-ordinator - Swayambhu Mar 2018 - May 2018\nTreasurer - JITSA Jul 2017 - Jul 2018\nEXTRA CURRICULAR ACTIVITIES\nFounder ar Buzzworld.in\nFounder of Buzzworld where write about business problems which an organisation faced and what methods and ways did they apply to\novercome them.\nhttps://buzzworld.in/author/sagar-somani/\nAWARDS AND RECOGNITIONS\n\n## Certifications\n\nCERTIFICATION CERTIFYING AUTHORITY DESCRIPTION\nThe Finance and Banking Fundamental Program FLIP\nCOMPETITIONS\nCONFERENCES AND WORKSHOPS\nTEST SCORES\nTEST NAME DATE OF EXAM SCORE\nPATENTS\nPUBLICATIONS\nSCHOLARSHIPS\nVOLUNTEER \n\n## Experience\n\nLANGUAGES KNOWN\nMarwari,Marathi,Hindi,English",
+    "salary": {
+      "current_ctc_lpa": null,
+      "expected_ctc_lpa": 86684.89
+    },
+    "relevant_experience_map": {
+      "AI": 4.42
+    },
+    "total_experience_years": 5.58
+  },
+  "local_score": {
+    "skills_score": 6,
+    "experience_score": 100,
+    "relevant_experience_score": 17,
+    "projects_score": 0,
+    "certificates_score": 0,
+    "tools_score": 33,
+    "technologies_score": 26,
+    "qualification_score": 0,
+    "responsibilities_score": 0,
+    "salary_score": 33,
+    "final_score": 32,
+    "notes": "Hybrid Score: Skills 6%; Tech 26%. (Semantic Enabled)",
+    "details": {
+      "jd_skill_count": 18,
+      "skills_matched": 1,
+      "jd_tech_count": 35,
+      "tech_matched": 9,
+      "tools_matched": 3,
+      "projects_matched": 0,
+      "candidate_total_experience_years": 7.0,
+      "candidate_relevant_years_per_skill_avg": 0.28
+    },
+    "matched_items": {
+      "skills": {
+        "matched": [
+          "Bachelor's Degree in Engineering"
+        ],
+        "missing": [
+          "Problem Solving",
+          "Data Structures",
+          "Algorithms",
+          "OOP",
+          "Networking",
+          "Cloud Computing",
+          "DevOps",
+          "Machine Learning",
+          "Deep Learning",
+          "AI",
+          "Database Management",
+          "Version Control",
+          "API Development",
+          "Teamwork",
+          "Leadership",
+          "Project Management",
+          "Testing & Debugging"
+        ]
+      },
+      "technologies": {
+        "matched": [
+          "C",
+          "C++",
+          "Java",
+          "Python",
+          "Django",
+          "Flask",
+          "Pandas",
+          "NumPy",
+          "Scikit-Learn"
+        ],
+        "missing": [
+          "JavaScript",
+          "TypeScript",
+          "HTML5",
+          "CSS3",
+          "MySQL",
+          "PostgreSQL",
+          "MongoDB",
+          "Spring",
+          "Laravel",
+          "ReactJS",
+          "Angular",
+          "Bootstrap",
+          "API Development",
+          "GraphQL",
+          "Firebase",
+          "AWS",
+          "Azure",
+          "GCP",
+          "Linux",
+          "Docker",
+          "Kubernetes",
+          "Webpack",
+          "TensorFlow",
+          "PyTorch",
+          "Keras",
+          "OpenCV"
+        ]
+      },
+      "tools": {
+        "matched": [
+          "PyCharm",
+          "IntelliJ IDEA",
+          "Eclipse"
+        ],
+        "missing": [
+          "Vs Code",
+          "Jira",
+          "Slack",
+          "GitHub",
+          "Bitbucket",
+          "Postman"
+        ]
+      },
+      "projects": {
+        "matched_keywords": []
+      }
+    },
+    "experience_range": {
+      "min": 3.0,
+      "max": 8.0
+    }
+  },
+  "ai_score": {
+    "ai_ok": true,
+    "ai_score": {
+      "final_score": 36,
+      "skills_score": 40,
+      "experience_score": 50,
+      "relevant_experience_score": 50,
+      "projects_score": 0,
+      "certificates_score": 0,
+      "tools_score": 0,
+      "technologies_score": 40,
+      "qualification_score": 80,
+      "responsibilities_score": 0,
+      "salary_score": 0,
+      "notes": "Candidate has relevant experience in C/C++, Java, Python. Lacks experience in many required technologies and tools."
+    }
+  },
+  "explanation": {
+    "recruiter_text_summary": "Skills: no JD skills provided. Experience score: 0%. Projects: 0% match; Technologies: 0% match. Salary expectation: not provided. Overall fit score: 0.",
+    "candidate_feedback": "Good alignment \u2014 your resume already matches the JD well. Consider adding more detail on measurable outcomes (metrics, scale, impact).",
+    "structured_explanation": {
+      "summary": {
+        "short": "Skills: no JD skills provided. Experience score: 0%. Projects: 0% match; Technologies: 0% match. Salary expectation: not provided. Overall fit score: 0.",
+        "one_line": "Matched 0/0 skills; overall fit 0%.",
+        "experience_years": 0
+      },
+      "strengths": [],
+      "improvements": [],
+      "skill_gaps": [],
+      "tech_gaps": [],
+      "tool_gaps": [],
+      "responsibility_gaps": [],
+      "project_keyword_match": {
+        "matched": [],
+        "missing": [],
+        "matched_pct": 0.0,
+        "total_keywords": 0
+      },
+      "scores": {
+        "skills_score": 0,
+        "experience_score": 0,
+        "relevant_experience_score": 0,
+        "projects_score": 0,
+        "certificates_score": 0,
+        "tools_score": 0,
+        "technologies_score": 0,
+        "qualification_score": 0,
+        "responsibilities_score": 0,
+        "salary_score": 0,
+        "final_score": 0
+      },
+      "matched_items": {}
+    },
+    "visual_payload": {
+      "radar": {
+        "labels": [
+          "Experience",
+          "Skills",
+          "Technologies",
+          "Tools",
+          "Projects",
+          "Certificates",
+          "Responsibilities",
+          "Relevant Exp"
+        ],
+        "values": [
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0
+        ]
+      },
+      "project_keyword_heatmap": {
+        "matched": [],
+        "missing": [],
+        "matched_pct": 0.0,
+        "total": 0
+      },
+      "coverage_bars": [
+        {
+          "category": "Experience",
+          "matched": 0,
+          "total": 1
+        },
+        {
+          "category": "Skills",
+          "matched": 0,
+          "total": 1
+        },
+        {
+          "category": "Technologies",
+          "matched": 0,
+          "total": 1
+        },
+        {
+          "category": "Tools",
+          "matched": 0,
+          "total": 1
+        },
+        {
+          "category": "Projects",
+          "matched": 0,
+          "total": 1
+        },
+        {
+          "category": "Certificates",
+          "matched": 0,
+          "total": 1
+        },
+        {
+          "category": "Responsibilities",
+          "matched": 0,
+          "total": 1
+        },
+        {
+          "category": "Relevant Exp",
+          "matched": 0,
+          "total": 100
+        }
+      ],
+      "experience_fit": {
+        "candidate_years": 0,
+        "jd_min": null,
+        "jd_max": null,
+        "fit_pct_vs_min": null
+      },
+      "salary_gauge": {
+        "score": 0,
+        "candidate_salary": null,
+        "matched_band": null
+      },
+      "summary_scores": {
+        "skills_score": 0,
+        "experience_score": 0,
+        "relevant_experience_score": 0,
+        "projects_score": 0,
+        "certificates_score": 0,
+        "tools_score": 0,
+        "technologies_score": 0,
+        "qualification_score": 0,
+        "responsibilities_score": 0,
+        "salary_score": 0
+      }
+    },
+    "ui_components": {
+      "sections": [
+        {
+          "id": "summary",
+          "label": "Profile Summary",
+          "icon": "mdi-account"
+        },
+        {
+          "id": "skills",
+          "label": "Skills Match",
+          "icon": "mdi-star"
+        },
+        {
+          "id": "technologies",
+          "label": "Technologies",
+          "icon": "mdi-chip"
+        },
+        {
+          "id": "tools",
+          "label": "Tools",
+          "icon": "mdi-hammer-wrench"
+        },
+        {
+          "id": "projects",
+          "label": "Projects",
+          "icon": "mdi-folder"
+        },
+        {
+          "id": "responsibilities",
+          "label": "Responsibilities",
+          "icon": "mdi-clipboard-check"
+        },
+        {
+          "id": "certificates",
+          "label": "Certificates",
+          "icon": "mdi-certificate"
+        },
+        {
+          "id": "experience",
+          "label": "Experience",
+          "icon": "mdi-briefcase"
+        },
+        {
+          "id": "salary",
+          "label": "Salary",
+          "icon": "mdi-currency-inr"
+        }
+      ],
+      "score_tags": {
+        "skills": "bad",
+        "technologies": "bad",
+        "tools": "bad",
+        "projects": "bad",
+        "responsibilities": "bad",
+        "experience": "bad",
+        "certificates": "bad",
+        "salary": "bad"
+      },
+      "filters": {
+        "strengths": 0,
+        "gaps": {
+          "skills": [],
+          "projects": [],
+          "tools": [],
+          "technologies": [],
+          "responsibilities": []
+        }
+      },
+      "chart_types": {
+        "radar": "radar",
+        "project_heatmap": "heatmap",
+        "coverage": "bar",
+        "experience": "bar",
+        "salary": "gauge"
+      }
+    },
+    "matched_items": {},
+    "details": {},
+    "summary_scores": {
+      "skills_score": 0,
+      "experience_score": 0,
+      "relevant_experience_score": 0,
+      "projects_score": 0,
+      "technologies_score": 0,
+      "tools_score": 0,
+      "certificates_score": 0,
+      "qualification_score": 0,
+      "responsibilities_score": 0,
+      "salary_score": 0,
+      "final_score": 0
+    },
+    "experience_range": {},
+    "final_score": 0
+  },
+  "pdf_report": "C:\\Users\\asr26\\OneDrive\\Desktop\\Reaper\\Work_101\\RaiyaRecuritment_Parser\\phi 4\\storage\\reports\\152090023 Sagar Shrinivas Somani__report_20260113_183501.pdf"
+}

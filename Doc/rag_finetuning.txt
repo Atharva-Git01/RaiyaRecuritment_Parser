@@ -1,0 +1,142 @@
+Project Report: RAG-Driven AI Resume Scoring System with Continuous Learning
+1. Project Overview (Current State)
+1.1 Objective of the Project
+The project aims to build a fair, explainable, and scalable AI-powered resume scoring platform for recruiters.
+The system evaluates candidate resumes against job descriptions (JDs) and produces:
+Section-wise scores (skills, experience, salary, etc.)
+A final consolidated score
+Recruiter-friendly explanations
+Downloadable PDF reports
+Batch-level processing with full auditability
+The core focus of the project is accuracy without hallucination, business-aligned scoring, and trustworthy explanations.
+
+1.2 Current Pipeline Functionality
+At present, the system follows a hybrid deterministic + LLM architecture:
+Resume Ingestion & Parsing
+PDF resumes are extracted into raw text.
+Text is normalized and parsed using the Phi-4 LLM.
+Output is converted into structured JSON.
+Strict Validation Layer
+Parsed data is validated to prevent hallucinations.
+Experience is calculated strictly from job durations.
+Skills are counted only if explicitly used in roles or projects.
+Salary, education, and dates follow hard rules.
+Scoring Logic
+A deterministic scoring module (matcher.py) evaluates resume–JD alignment.
+Phi-4 is used as an AI scorer to reason over the same inputs.
+Scores are combined, validated, and normalized.
+Explanation & Reporting
+A detailed explanation is generated for recruiters.
+PDF reports are produced.
+Results are stored in a multi-tenant SaaS database.
+Operational Features
+Batch processing
+History tracking
+Recruiter dashboards
+Database monitoring
+Key Strength of Current System:
+The system already prioritizes correctness, explainability, and safety over raw AI creativity.
+
+2. Identified Limitations in the Current Architecture
+Despite being robust, the current design has structural limitations:
+Stateless AI Reasoning
+Phi-4 reasons from scratch for every resume.
+Past decisions and mistakes are not remembered.
+Matcher Dependency
+matcher.py acts as the primary deterministic anchor.
+This limits adaptability and makes learning indirect.
+No True Learning Loop
+Although results are stored, they are not actively reused
+to improve future decisions.
+Fine-tuning without filtering would risk encoding mistakes.
+Manual Pattern Correction
+Edge cases (e.g., missing salary, unused skills) are corrected by rules,
+but the AI itself does not learn these patterns.
+
+3. Target Vision (Proposed System)
+The proposed system evolves the project into a RAG-supervised, evidence-driven learning platform, where:
+The AI scoring model is guided by past validated decisions
+The system creates evidence only once, deduplicates it, and reuses it
+Learning happens safely through controlled dataset generation
+Fine-tuning is intentional, minimal, and auditable
+The deterministic matcher is fully removed and replaced with supervision
+In short, the system moves from:
+“Rule-first with AI assistance”
+to
+“AI-first with rule enforcement and memory.”
+
+4. Roadmap to Achieve the Target System
+Phase 1: RAG Foundation (Memory Without Learning)
+Goal: Introduce institutional memory without changing model weights.
+Key Deliverables:
+Evidence schema (decision patterns, flaws, corrections)
+Content-based evidence hashing for deduplication
+Vector store for evidence retrieval
+RAG query builder based on JD + resume + score context
+Outcome:
+Phi-4 can reference past validated decisions at runtime.
+No duplicate evidence is stored.
+Scoring becomes more consistent across similar resumes.
+
+Phase 2: RAG-Supervised AI Scoring (Matcher Removal)
+Goal: Safely eliminate matcher.py.
+Key Changes:
+Phi-4 becomes the primary scorer.
+RAG provides historical precedent during scoring.
+A self-verification pass checks Phi-4’s own output against evidence.
+Guardrails and validator enforce hard constraints.
+Outcome:
+No deterministic matcher required.
+Decisions remain explainable and auditable.
+Errors are caught by verification, not heuristics.
+
+Phase 3: Evidence Governance & Confidence Scoring
+Goal: Prevent noisy or duplicate learning signals.
+Key Deliverables:
+Evidence deduplication logic
+Evidence reuse tracking
+Confidence scoring based on:
+Validation success
+Reuse frequency
+Absence of overrides
+Outcome:
+Only stable, high-quality behavior is remembered.
+The system avoids reinforcing rare or incorrect edge cases.
+
+Phase 4: Fine-Tuning Dataset Generation (Learning Without Risk)
+Goal: Convert RAG memory into a clean training dataset.
+Key Deliverables:
+Dataset eligibility filters
+Versioned dataset builder
+Evidence-linked training samples
+Full lineage tracking (why a sample exists)
+Outcome:
+Fine-tuning data is:
+Clean
+Justified
+Business-aligned
+Model improvements are explainable and reversible.
+
+Phase 5: Controlled Fine-Tuning of Phi-4
+Goal: Improve reasoning efficiency, not logic correctness.
+Scope of Fine-Tuning:
+Weight balancing
+Explanation clarity
+Reduction of self-correction cycles
+Explicitly Excluded:
+Raw resumes
+Tenant-specific preferences
+Unvalidated decisions
+Outcome:
+Phi-4 becomes faster and more consistent.
+Core rules remain external and enforceable.
+
+5. Expected Impact
+
+6. Final Summary
+This roadmap transforms the project into a production-grade AI evaluation system that:
+Learns without drifting
+Improves without retraining blindly
+Remains explainable at every step
+Scales across recruiters and job roles
+The design intentionally prioritizes correctness, trust, and auditability over short-term model performance gains — aligning strongly with real-world recruiter expectations and enterprise AI standards.

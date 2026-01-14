@@ -1,0 +1,972 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Resume Screening Results - Raiya Solutions</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      darkMode: 'class',
+    }
+  </script>
+  <script>
+    if (localStorage.getItem('theme') === 'dark' || (!('theme' in localStorage) && window.matchMedia('(prefers-color-scheme: dark)').matches)) {
+      document.documentElement.classList.add('dark')
+    } else {
+      document.documentElement.classList.remove('dark')
+    }
+  </script>
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+  <style>
+    @keyframes slideIn {
+      from {
+        transform: translateX(-100%);
+        opacity: 0;
+      }
+
+      to {
+        transform: translateX(0);
+        opacity: 1;
+      }
+    }
+
+    .sidebar-animate {
+      animation: slideIn 0.3s ease-out;
+    }
+
+    .scrollbar-thin::-webkit-scrollbar {
+      width: 6px;
+    }
+
+    .scrollbar-thin::-webkit-scrollbar-track {
+      background: transparent;
+    }
+
+    .scrollbar-thin::-webkit-scrollbar-thumb {
+      background: #cbd5e1;
+      border-radius: 10px;
+    }
+
+    .scrollbar-thin:hover::-webkit-scrollbar-thumb {
+      background: #94a3b8;
+    }
+
+    .scrollbar-thin::-webkit-scrollbar-thumb:hover {
+      background: #64748b;
+    }
+  </style>
+</head>
+
+<body
+  class="bg-gradient-to-br from-slate-50 to-blue-50 min-h-screen dark:from-slate-900 dark:to-slate-800 dark:text-white transition-colors duration-300">
+  <div id="sidebarOverlay" class="hidden fixed inset-0 bg-black/30 backdrop-blur-sm z-40"></div>
+
+  <div class="flex h-screen overflow-hidden">
+    <!-- Sidebar -->
+    <aside id="sidebar"
+      class="fixed md:sticky top-0 left-0 h-screen w-72 bg-[#0f2140] text-white z-50 transform -translate-x-full md:translate-x-0 transition-transform duration-300 ease-out overflow-y-auto scrollbar-thin sidebar-animate">
+      <div class="p-6">
+        <button id="closeSidebar" class="md:hidden absolute top-4 right-4 p-2 hover:bg-slate-100 rounded-lg">
+          <svg class="w-5 h-5 text-slate-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"></path>
+          </svg>
+        </button>
+        <div class="mb-8 pb-6 border-b border-white/10">
+          <div class="flex items-center gap-3 mb-3">
+            <div id="sidebar-initials"
+              class="h-12 w-12 rounded-full bg-gradient-to-br from-blue-500 to-purple-600 flex items-center justify-center text-white font-semibold text-lg shadow-lg">
+              RA</div>
+            <div>
+              <p id="sidebar-name" class="font-semibold text-white">Recruiter Admin</p>
+              <p id="sidebar-role" class="text-xs text-white/70">admin@raiyasolutions.com</p>
+            </div>
+          </div>
+          <div class="flex items-center gap-2 px-3 py-2 rounded-lg bg-white/5 border border-white/6"
+            id="sessionIndicatorContainer">
+            <div class="h-2 w-2 rounded-full bg-emerald-400 animate-pulse" id="sessionDot"></div>
+            <span class="text-xs font-medium text-white/80" id="sessionText">Checking...</span>
+          </div>
+        </div>
+
+        <nav class="space-y-2">
+          <div class="text-xs font-bold text-white/60 uppercase tracking-wider mb-4 px-3">Platform</div>
+          <a href="recruiter-platform.html"
+            class="flex items-center gap-3 px-3 py-3 text-sm text-white/90 hover:bg-white/5 rounded-xl group transition-colors">
+            <svg class="w-5 h-5 text-white/60 group-hover:text-white transition-colors" fill="none"
+              stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                d="M7 16a4 4 0 01-.88-7.903A5 5 0 1115.9 6L16 6a5 5 0 011 9.9M15 13l-3-3m0 0l-3 3m3-3v12"></path>
+            </svg>
+            <span class="font-medium">Bulk Screening</span>
+          </a>
+          <a href="bulk-processing.html"
+            class="flex items-center gap-3 px-3 py-3 text-sm text-white/90 hover:bg-white/5 rounded-xl group transition-colors">
+            <svg class="w-5 h-5 text-white/60 group-hover:text-white transition-colors" fill="none"
+              stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 10V3L4 14h7v7l9-11h-7z">
+              </path>
+            </svg>
+            <span class="font-medium">Processing Queue</span>
+          </a>
+          <a href="recruiter-results.html"
+            class="flex items-center gap-3 px-3 py-3 text-sm bg-gradient-to-r from-blue-50 to-indigo-50 text-blue-700 rounded-xl border border-blue-100 shadow-sm">
+            <svg class="w-5 h-5 text-blue-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                d="M9 19v-6a2 2 0 00-2-2H5a2 2 0 00-2 2v6a2 2 0 002 2h2a2 2 0 002-2z"></path>
+            </svg>
+            <span class="font-semibold">Results Dashboard</span>
+          </a>
+
+          <div class="text-xs font-bold text-white/60 uppercase tracking-wider mt-8 mb-4 px-3">Tools</div>
+          <a href="history.html"
+            class="flex items-center gap-3 px-3 py-3 text-sm text-white/90 hover:bg-white/5 rounded-xl group transition-colors">
+            <svg class="w-5 h-5 text-white/60 group-hover:text-white" fill="none" stroke="currentColor"
+              viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z"></path>
+            </svg>
+            <span class="font-medium">History</span>
+          </a>
+          <a href="settings.html"
+            class="flex items-center gap-3 px-3 py-3 text-sm text-white/90 hover:bg-white/5 rounded-xl group transition-colors">
+            <svg class="w-5 h-5 text-white/60 group-hover:text-white" fill="none" stroke="currentColor"
+              viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                d="M10.325 4.317c.426-1.756 2.924-1.756 3.35 0a1.724 1.724 0 002.573 1.066c1.543-.94 3.31.826 2.37 2.37a1.724 1.724 0 001.065 2.572c1.756.426 1.756 2.924 0 3.35a1.724 1.724 0 00-1.066 2.573c.94 1.543-.826 3.31-2.37 2.37a1.724 1.724 0 00-2.572 1.065c-.426 1.756-2.924 1.756-3.35 0a1.724 1.724 0 00-2.573-1.066c-1.543.94-3.31-.826-2.37-2.37a1.724 1.724 0 00-1.065-2.572c-1.756-.426-1.756-2.924 0-3.35a1.724 1.724 0 001.066-2.573c-.94-1.543.826-3.31 2.37-2.37.996.608 2.296.07 2.572-1.065z">
+              </path>
+            </svg>
+            <span class="font-medium">Settings</span>
+          </a>
+        </nav>
+
+        <div class="mt-8 p-4 rounded-xl bg-gradient-to-br from-blue-600 to-indigo-700 text-white">
+          <div class="flex items-center justify-between mb-3">
+            <span class="text-xs font-semibold text-blue-100">This Month</span>
+            <svg class="w-4 h-4 text-blue-200" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                d="M13 7a4 4 0 11-8 0 4 4 0 018 0zM9 14a6 6 0 00-6 6v1h12v-1a6 6 0 00-6-6zM21 12a1 1 0 100-2 1 1 0 000 2z">
+              </path>
+            </svg>
+          </div>
+          <p class="text-3xl font-bold mb-1" id="finalScore">85</p>
+          <p class="text-xs text-blue-100">Final Fit Score</p>
+        </div>
+      </div>
+    </aside>
+
+    <!-- Main Content -->
+    <main class="flex-1 flex flex-col w-full">
+      <!-- Header -->
+      <header
+        class="border-b bg-white/80 backdrop-blur-lg sticky top-0 z-30 shadow-sm dark:bg-slate-900/80 dark:border-slate-700 transition-colors duration-300">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-4 flex items-center justify-between">
+          <div class="flex items-center gap-3">
+            <button id="mobileMenuBtn" class="md:hidden p-2 hover:bg-slate-100 rounded-lg transition-colors">
+              <svg class="w-6 h-6 text-slate-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16">
+                </path>
+              </svg>
+            </button>
+            <div>
+              <p class="text-lg font-bold text-slate-900 dark:text-white">Resume Screening Results</p>
+              <p class="text-xs text-slate-500 dark:text-slate-400">John Doe - Software Engineer Position</p>
+            </div>
+          </div>
+          <div class="flex items-center gap-4">
+            <button
+              class="px-4 py-2 bg-gradient-to-r from-blue-600 to-blue-700 text-white rounded-lg font-semibold text-sm hover:shadow-lg transition-all">
+              📄 Download PDF
+            </button>
+            <div
+              class="hidden sm:flex items-center gap-2 px-3 py-1 bg-emerald-50 border border-emerald-200 rounded-full">
+              <div class="w-2 h-2 bg-emerald-500 rounded-full animate-pulse"></div>
+              <span class="text-xs font-medium text-emerald-700">AI Scoring Active</span>
+            </div>
+          </div>
+        </div>
+      </header>
+
+      <!-- Page Content -->
+      <div class="flex-1 px-4 sm:px-6 py-8 overflow-x-hidden">
+
+        <!-- Toggle Switch Row -->
+        <div class="flex justify-between items-center mb-6">
+          <h2 class="text-xl font-bold text-slate-800 dark:text-white">Analysis Dashboard</h2>
+        </div>
+
+        <!-- High-level Summary -->
+        <div class="mb-8">
+          <div class="grid grid-cols-1 lg:grid-cols-3 gap-6">
+            <!-- Final Score Card -->
+            <div
+              class="bg-white rounded-2xl border border-slate-200 shadow-lg p-6 dark:bg-slate-800 dark:border-slate-700 transition-colors duration-300">
+              <div class="flex items-center justify-between mb-4">
+                <h3 class="text-lg font-bold text-slate-900 dark:text-white">Final Fit Score</h3>
+                <span class="px-3 py-1 bg-green-100 text-green-800 text-xs font-semibold rounded-full">✓
+                  Excellent</span>
+              </div>
+              <div class="text-center">
+                <div class="text-4xl font-bold text-blue-600 mb-2">85</div>
+                <div class="text-sm text-slate-600 dark:text-slate-400">out of 100</div>
+              </div>
+            </div>
+
+            <!-- Recruiter Summary -->
+            <div
+              class="bg-white rounded-2xl border border-slate-200 shadow-lg p-6 dark:bg-slate-800 dark:border-slate-700 transition-colors duration-300">
+              <h3 class="text-lg font-bold text-slate-900 mb-3 dark:text-white">Recruiter Summary</h3>
+              <p class="text-sm text-slate-600 dark:text-slate-300">Strong technical background with 5+ years experience
+                in full-stack
+                development. Excellent match for senior developer role with proven track record in React and Node.js.
+              </p>
+            </div>
+
+            <!-- One-line Summary -->
+            <div
+              class="bg-white rounded-2xl border border-slate-200 shadow-lg p-6 dark:bg-slate-800 dark:border-slate-700 transition-colors duration-300">
+              <h3 class="text-lg font-bold text-slate-900 mb-3 dark:text-white">Quick Summary</h3>
+              <p class="text-sm text-slate-600 font-medium dark:text-slate-300">Highly qualified candidate with strong
+                technical skills and
+                relevant experience.</p>
+            </div>
+          </div>
+        </div>
+
+        <!-- Visualizations Row -->
+        <div class="mb-8">
+          <div class="grid grid-cols-1 lg:grid-cols-2 gap-6">
+            <!-- Radar Chart -->
+            <div
+              class="bg-white rounded-2xl border border-slate-200 shadow-lg p-6 dark:bg-slate-800 dark:border-slate-700 transition-colors duration-300">
+              <h3 class="text-lg font-bold text-slate-900 mb-4 dark:text-white">Skills Radar Chart</h3>
+              <div class="h-64 flex items-center justify-center">
+                <canvas id="radarChart"></canvas>
+              </div>
+            </div>
+
+            <!-- Coverage Bars -->
+            <div
+              class="bg-white rounded-2xl border border-slate-200 shadow-lg p-6 dark:bg-slate-800 dark:border-slate-700 transition-colors duration-300">
+              <h3 class="text-lg font-bold text-slate-900 mb-4 dark:text-white">Coverage Analysis</h3>
+              <div class="space-y-4" id="coverageContainer">
+                <div>
+                  <div class="flex justify-between text-sm mb-1">
+                    <span>Experience</span>
+                    <span>85%</span>
+                  </div>
+                  <div class="w-full bg-slate-200 rounded-full h-2">
+                    <div class="bg-blue-600 h-2 rounded-full" style="width: 85%"></div>
+                  </div>
+                </div>
+                <div>
+                  <div class="flex justify-between text-sm mb-1">
+                    <span>Skills</span>
+                    <span>92%</span>
+                  </div>
+                  <div class="w-full bg-slate-200 rounded-full h-2">
+                    <div class="bg-green-600 h-2 rounded-full" style="width: 92%"></div>
+                  </div>
+                </div>
+                <div>
+                  <div class="flex justify-between text-sm mb-1">
+                    <span>Technologies</span>
+                    <span>78%</span>
+                  </div>
+                  <div class="w-full bg-slate-200 rounded-full h-2">
+                    <div class="bg-yellow-600 h-2 rounded-full" style="width: 78%"></div>
+                  </div>
+                </div>
+                <div>
+                  <div class="flex justify-between text-sm mb-1">
+                    <span>Tools</span>
+                    <span>88%</span>
+                  </div>
+                  <div class="w-full bg-slate-200 rounded-full h-2">
+                    <div class="bg-indigo-600 h-2 rounded-full" style="width: 88%"></div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Matched Items Section -->
+        <div class="mb-8">
+          <h3 class="text-2xl font-bold text-slate-900 mb-6 dark:text-white">Matched Items Analysis</h3>
+          <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+            <!-- Skills -->
+            <div
+              class="bg-white rounded-2xl border border-slate-200 shadow-lg p-6 dark:bg-slate-800 dark:border-slate-700 transition-colors duration-300"
+              id="matchedSkillsCard">
+              <h4 class="text-lg font-bold text-slate-900 mb-4 dark:text-white">Skills</h4>
+              <div class="mb-4">
+                <h5 class="text-sm font-semibold text-green-700 dark:text-green-400 mb-2">✓ Matched (8)</h5>
+                <div class="flex flex-wrap gap-2">
+                  <span class="px-2 py-1 bg-green-100 text-green-800 text-xs rounded-full">JavaScript</span>
+                  <span class="px-2 py-1 bg-green-100 text-green-800 text-xs rounded-full">React</span>
+                  <span class="px-2 py-1 bg-green-100 text-green-800 text-xs rounded-full">Node.js</span>
+                  <span class="px-2 py-1 bg-green-100 text-green-800 text-xs rounded-full">Python</span>
+                </div>
+              </div>
+              <div>
+                <h5 class="text-sm font-semibold text-red-700 dark:text-red-400 mb-2">✗ Missing (2)</h5>
+                <div class="flex flex-wrap gap-2">
+                  <span class="px-2 py-1 bg-red-100 text-red-800 text-xs rounded-full">GraphQL</span>
+                  <span class="px-2 py-1 bg-red-100 text-red-800 text-xs rounded-full">Docker</span>
+                </div>
+              </div>
+            </div>
+
+            <!-- Technologies -->
+            <div
+              class="bg-white rounded-2xl border border-slate-200 shadow-lg p-6 dark:bg-slate-800 dark:border-slate-700 transition-colors duration-300"
+              id="matchedTechCard">
+              <h4 class="text-lg font-bold text-slate-900 mb-4 dark:text-white">Technologies</h4>
+              <div class="mb-4">
+                <h5 class="text-sm font-semibold text-green-700 dark:text-green-400 mb-2">✓ Matched (6)</h5>
+                <div class="flex flex-wrap gap-2">
+                  <span class="px-2 py-1 bg-green-100 text-green-800 text-xs rounded-full">AWS</span>
+                  <span class="px-2 py-1 bg-green-100 text-green-800 text-xs rounded-full">MongoDB</span>
+                  <span class="px-2 py-1 bg-green-100 text-green-800 text-xs rounded-full">Redis</span>
+                </div>
+              </div>
+              <div>
+                <h5 class="text-sm font-semibold text-red-700 mb-2">✗ Missing (1)</h5>
+                <div class="flex flex-wrap gap-2">
+                  <span class="px-2 py-1 bg-red-100 text-red-800 text-xs rounded-full">Kubernetes</span>
+                </div>
+              </div>
+            </div>
+
+            <!-- Tools (Replaces Salary Match) -->
+            <div
+              class="bg-white rounded-2xl border border-slate-200 shadow-lg p-6 dark:bg-slate-800 dark:border-slate-700 transition-colors duration-300"
+              id="matchedToolsCard">
+              <h4 class="text-lg font-bold text-slate-900 mb-4 dark:text-white">Tools</h4>
+              <div class="mb-4">
+                <h5 class="text-sm font-semibold text-green-700 dark:text-green-400 mb-2">✓ Matched (0)</h5>
+                <div class="flex flex-wrap gap-2">
+                  <!-- Dynamic matched tools -->
+                </div>
+              </div>
+              <div>
+                <h5 class="text-sm font-semibold text-red-700 dark:text-red-400 mb-2">✗ Missing (0)</h5>
+                <div class="flex flex-wrap gap-2">
+                  <!-- Dynamic missing tools -->
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Score Breakdown -->
+        <div class="mb-8">
+          <h3 class="text-2xl font-bold text-slate-900 mb-6 dark:text-white">Score Breakdown</h3>
+          <div
+            class="bg-white rounded-2xl border border-slate-200 shadow-lg overflow-hidden dark:bg-slate-800 dark:border-slate-700 transition-colors duration-300">
+            <div class="overflow-x-auto">
+              <table class="w-full">
+                <thead class="bg-slate-50 dark:bg-slate-700">
+                  <tr>
+                    <th
+                      class="px-6 py-3 text-left text-xs font-medium text-slate-500 uppercase tracking-wider dark:text-slate-300">
+                      Category
+                    </th>
+                    <th
+                      class="px-6 py-3 text-left text-xs font-medium text-slate-500 uppercase tracking-wider dark:text-slate-300">
+                      Score
+                    </th>
+                    <th
+                      class="px-6 py-3 text-left text-xs font-medium text-slate-500 uppercase tracking-wider dark:text-slate-300">
+                      Status
+                    </th>
+                  </tr>
+                </thead>
+                <tbody class="divide-y divide-slate-200 dark:divide-slate-700" id="scoreBreakdownBody">
+                  <tr>
+                    <td class="px-6 py-4 text-sm font-medium text-slate-900 dark:text-white">Skills</td>
+                    <td class="px-6 py-4 text-sm text-slate-600 dark:text-slate-300">92</td>
+                    <td class="px-6 py-4"><span
+                        class="px-2 py-1 bg-green-100 text-green-800 text-xs rounded-full dark:bg-green-900 dark:text-green-300">Excellent</span>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td class="px-6 py-4 text-sm font-medium text-slate-900 dark:text-white">Experience</td>
+                    <td class="px-6 py-4 text-sm text-slate-600 dark:text-slate-300">85</td>
+                    <td class="px-6 py-4"><span
+                        class="px-2 py-1 bg-green-100 text-green-800 text-xs rounded-full dark:bg-green-900 dark:text-green-300">Good</span>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td class="px-6 py-4 text-sm font-medium text-slate-900 dark:text-white">Technologies</td>
+                    <td class="px-6 py-4 text-sm text-slate-600 dark:text-slate-300">78</td>
+                    <td class="px-6 py-4"><span
+                        class="px-2 py-1 bg-yellow-100 text-yellow-800 text-xs rounded-full dark:bg-yellow-900 dark:text-yellow-300">Average</span>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td class="px-6 py-4 text-sm font-medium text-slate-900 dark:text-white">Projects</td>
+                    <td class="px-6 py-4 text-sm text-slate-600 dark:text-slate-300">88</td>
+                    <td class="px-6 py-4"><span
+                        class="px-2 py-1 bg-green-100 text-green-800 text-xs rounded-full">Good</span></td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+          </div>
+        </div>
+
+        <!-- Detailed Explanation -->
+        <div class="mb-8">
+          <h3 class="text-2xl font-bold text-slate-900 mb-6 dark:text-white">Detailed Analysis</h3>
+          <div class="grid grid-cols-1 lg:grid-cols-3 gap-6">
+            <!-- Strengths -->
+            <div
+              class="bg-white rounded-2xl border border-slate-200 shadow-lg p-6 dark:bg-slate-800 dark:border-slate-700 transition-colors duration-300">
+              <h4 class="text-lg font-bold text-green-700 mb-4">✓ Strengths</h4>
+              <ul class="space-y-2 text-sm text-slate-600 dark:text-slate-300" id="strengthsList">
+                <li>• Strong JavaScript and React expertise</li>
+                <li>• 5+ years of relevant experience</li>
+                <li>• Proven track record in full-stack development</li>
+                <li>• Experience with cloud platforms (AWS)</li>
+              </ul>
+            </div>
+
+            <!-- Areas of Improvement -->
+            <div
+              class="bg-white rounded-2xl border border-slate-200 shadow-lg p-6 dark:bg-slate-800 dark:border-slate-700 transition-colors duration-300">
+              <h4 class="text-lg font-bold text-yellow-700 mb-4">⚠ Areas of Improvement</h4>
+              <ul class="space-y-2 text-sm text-slate-600 dark:text-slate-300" id="improvementsList">
+                <li>• Limited experience with GraphQL</li>
+                <li>• No Docker containerization experience</li>
+                <li>• Could benefit from Kubernetes knowledge</li>
+              </ul>
+            </div>
+
+            <!-- Gaps -->
+            <div
+              class="bg-white rounded-2xl border border-slate-200 shadow-lg p-6 dark:bg-slate-800 dark:border-slate-700 transition-colors duration-300">
+              <h4 class="text-lg font-bold text-red-700 mb-4">✗ Critical Gaps</h4>
+              <ul class="space-y-2 text-sm text-slate-600 dark:text-slate-300" id="gapsList">
+                <li>• Missing DevOps skills</li>
+                <li>• No microservices architecture experience</li>
+                <li>• Limited testing framework knowledge</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+
+        <!-- Experience & Salary Gauges -->
+        <div class="mb-8">
+          <div class="grid grid-cols-1 lg:grid-cols-2 gap-6">
+            <!-- Experience Fit -->
+            <div
+              class="bg-white rounded-2xl border border-slate-200 shadow-lg p-6 dark:bg-slate-800 dark:border-slate-700 transition-colors duration-300">
+              <h3 class="text-lg font-bold text-slate-900 mb-4 dark:text-white">Experience Fit</h3>
+              <div class="space-y-4" id="experienceFitContainer">
+                <div class="flex justify-between">
+                  <span class="text-sm text-slate-600 dark:text-slate-400">Candidate Experience:</span>
+                  <span class="font-semibold dark:text-white">5.5 years</span>
+                </div>
+                <div class="flex justify-between">
+                  <span class="text-sm text-slate-600 dark:text-slate-400">Required Range:</span>
+                  <span class="font-semibold dark:text-white">3-7 years</span>
+                </div>
+                <div class="w-full bg-slate-200 rounded-full h-3 dark:bg-slate-700">
+                  <div class="bg-green-600 h-3 rounded-full" style="width: 85%"></div>
+                </div>
+                <div class="text-center text-sm font-semibold text-green-600">85% Fit</div>
+              </div>
+            </div>
+
+            <!-- Salary Gauge -->
+            <div
+              class="bg-white rounded-2xl border border-slate-200 shadow-lg p-6 dark:bg-slate-800 dark:border-slate-700 transition-colors duration-300">
+              <h3 class="text-lg font-bold text-slate-900 mb-4 dark:text-white">Salary Analysis</h3>
+              <div class="space-y-4" id="salaryAnalysisContainer">
+                <div class="flex justify-between">
+                  <span class="text-sm text-slate-600 dark:text-slate-400">Candidate Expectation:</span>
+                  <span class="font-semibold dark:text-white">$95,000</span>
+                </div>
+                <div class="flex justify-between">
+                  <span class="text-sm text-slate-600 dark:text-slate-400">Budget Range:</span>
+                  <span class="font-semibold dark:text-white">$90,000 - $110,000</span>
+                </div>
+                <div class="w-full bg-slate-200 rounded-full h-3 dark:bg-slate-700">
+                  <div class="bg-blue-600 h-3 rounded-full" style="width: 75%"></div>
+                </div>
+                <div class="text-center text-sm font-semibold text-blue-600">Within Budget</div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Candidate Feedback -->
+        <div class="mb-8">
+          <div
+            class="bg-white rounded-2xl border border-slate-200 shadow-lg p-6 dark:bg-slate-800 dark:border-slate-700 transition-colors duration-300">
+            <h3 class="text-lg font-bold text-slate-900 mb-4 dark:text-white">Candidate Actionable Feedback</h3>
+            <div class="prose prose-sm max-w-none text-slate-600 dark:text-slate-300" id="feedbackContainer">
+              <p>To strengthen your profile for this role, consider:</p>
+              <ul>
+                <li>Gaining hands-on experience with GraphQL for modern API development</li>
+                <li>Learning Docker containerization to improve deployment skills</li>
+                <li>Exploring Kubernetes for container orchestration</li>
+                <li>Building projects that demonstrate microservices architecture</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+
+        <!-- AI vs Local Score Comparison -->
+        <div class="mb-8">
+          <div
+            class="bg-white rounded-2xl border border-slate-200 shadow-lg p-6 dark:bg-slate-800 dark:border-slate-700 transition-colors duration-300">
+            <h3 class="text-lg font-bold text-slate-900 mb-4 dark:text-white">Scoring Method Comparison</h3>
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+              <div class="text-center">
+                <div id="aiScoreDisplay" class="text-2xl font-bold text-blue-600 mb-2">0</div>
+                <div class="text-sm text-slate-600">AI Score</div>
+                <span
+                  class="px-3 py-1 bg-blue-100 text-blue-800 text-xs font-semibold rounded-full mt-2 inline-block">Primary</span>
+              </div>
+              <div class="text-center">
+                <div id="localScoreDisplay" class="text-2xl font-bold text-slate-600 mb-2 dark:text-slate-300">0</div>
+                <div class="text-sm text-slate-600 dark:text-slate-400">Local Score</div>
+                <span
+                  class="px-3 py-1 bg-slate-100 text-slate-800 text-xs font-semibold rounded-full mt-2 inline-block">Backup</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </main>
+  </div>
+
+  <script>
+    // Mobile menu
+    const mobileMenuBtn = document.getElementById('mobileMenuBtn');
+    const sidebar = document.getElementById('sidebar');
+    const sidebarOverlay = document.getElementById('sidebarOverlay');
+    const closeSidebar = document.getElementById('closeSidebar');
+
+    mobileMenuBtn?.addEventListener('click', () => {
+      sidebar.classList.remove('-translate-x-full');
+      sidebarOverlay.classList.remove('hidden');
+    });
+
+    closeSidebar?.addEventListener('click', () => {
+      sidebar.classList.add('-translate-x-full');
+      sidebarOverlay.classList.add('hidden');
+    });
+
+    sidebarOverlay?.addEventListener('click', () => {
+      sidebar.classList.add('-translate-x-full');
+      sidebarOverlay.classList.add('hidden');
+    });
+
+    // Radar Chart
+    const ctx = document.getElementById('radarChart').getContext('2d');
+    const isDark = document.documentElement.classList.contains('dark');
+    const textColor = isDark ? '#cbd5e1' : '#475569'; // slate-300 : slate-600
+    const gridColor = isDark ? '#334155' : '#e2e8f0'; // slate-700 : slate-200
+
+    new Chart(ctx, {
+      type: 'radar',
+      data: {
+        labels: ['Experience', 'Skills', 'Technologies', 'Tools', 'Projects', 'Certificates', 'Responsibilities', 'Relevant Exp'],
+        datasets: [{
+          label: 'Candidate Score',
+          data: [85, 92, 78, 88, 85, 70, 82, 90],
+          backgroundColor: 'rgba(59, 130, 246, 0.2)',
+          borderColor: 'rgb(59, 130, 246)',
+          pointBackgroundColor: 'rgb(59, 130, 246)',
+          pointBorderColor: '#fff',
+          pointHoverBackgroundColor: '#fff',
+          pointHoverBorderColor: 'rgb(59, 130, 246)'
+        }]
+      },
+
+      options: {
+        responsive: true,
+        maintainAspectRatio: false,
+        scales: {
+          r: {
+            beginAtZero: true,
+            max: 100,
+            grid: {
+              color: gridColor
+            },
+            pointLabels: {
+              color: textColor,
+              font: {
+                size: 12
+              }
+            },
+            ticks: {
+              color: textColor,
+              backdropColor: 'transparent' // Hide the white box behind numbers
+            }
+          }
+        },
+        plugins: {
+          legend: {
+            labels: {
+              color: textColor
+            }
+          }
+        }
+      }
+    });
+
+    document.addEventListener('DOMContentLoaded', async () => {
+      const urlParams = new URLSearchParams(window.location.search);
+      const filename = urlParams.get('filename');
+
+      if (!filename) {
+        console.warn("No filename provided in query params.");
+        return;
+      }
+
+      // State
+      let fullData = null;
+
+
+
+
+
+      function renderCandidateResult(candidate) {
+        // -----------------------
+        // Populate UI
+        // -----------------------
+
+        // Header & Summary
+        const name = candidate.candidate_name || "Unknown Candidate";
+        document.querySelector('.text-xs.text-slate-500').textContent = `${name}`;
+
+        const finalScore = Math.round(candidate.final_score || 0);
+        document.getElementById('finalScore').textContent = finalScore;
+        const mainScoreEl = document.querySelector('.text-4xl.font-bold.text-blue-600');
+        if (mainScoreEl) mainScoreEl.textContent = finalScore;
+
+        // Recruiter Summary
+        const summary = candidate.recruiter_text_summary || "No summary available.";
+        // Locate summary card by title matching "Recruiter Summary"
+        const cards = document.querySelectorAll('.bg-white.rounded-2xl.border.p-6');
+        const findCard = (title) => Array.from(cards).find(c => c.querySelector('h3')?.textContent.trim() === title);
+
+        const summaryCard = findCard("Recruiter Summary");
+        if (summaryCard) summaryCard.querySelector('p').textContent = summary;
+
+        const quickCard = findCard("Quick Summary");
+        if (quickCard) quickCard.querySelector('p').textContent = candidate.structured_explanation?.summary?.one_line || summary;
+
+        // --- Coverage Bars ---
+        const scores = candidate.summary_scores || {};
+        const scoreMap = {
+          "Experience": "experience_score",
+          "Skills": "skills_score",
+          "Technologies": "technologies_score",
+          "Tools": "tools_score"
+        };
+        const coverageContainer = document.getElementById('coverageContainer');
+        if (coverageContainer) {
+          let html = '';
+          for (const [label, key] of Object.entries(scoreMap)) {
+            const score = scores[key] || 0;
+            let color = 'bg-blue-600';
+            if (label === 'Skills') color = 'bg-green-600';
+            if (label === 'Technologies') color = 'bg-yellow-600';
+            if (label === 'Tools') color = 'bg-indigo-600';
+
+            html += `
+                 <div>
+                     <div class="flex justify-between text-sm mb-1">
+                       <span class="text-slate-700 dark:text-slate-300">${label}</span>
+                       <span class="text-slate-700 dark:text-slate-300">${score}%</span>
+                     </div>
+                     <div class="w-full bg-slate-200 dark:bg-slate-700 rounded-full h-2">
+                       <div class="${color} h-2 rounded-full" style="width: ${score}%"></div>
+                     </div>
+                  </div>`;
+          }
+          coverageContainer.innerHTML = html;
+        }
+
+        // --- Matched Items Helper ---
+        const renderTags = (items, colorClass) => {
+          if (!items || !items.length) return `<span class="text-xs text-slate-400">None</span>`;
+          return items.map(i => `<span class="px-2 py-1 ${colorClass} text-xs rounded-full m-0.5">${i}</span>`).join('');
+        };
+
+        // Skills
+        const skillsCard = document.getElementById('matchedSkillsCard');
+        if (skillsCard) {
+          const matched = candidate.matched_items?.skills?.matched || [];
+          const missing = candidate.matched_items?.skills?.missing || [];
+          skillsCard.querySelector('.text-green-700').textContent = `✓ Matched (${matched.length})`;
+          skillsCard.querySelectorAll('.flex.flex-wrap')[0].innerHTML = renderTags(matched, 'bg-green-100 text-green-800 dark:bg-green-900 dark:text-green-300');
+          skillsCard.querySelector('.text-red-700').textContent = `✗ Missing (${missing.length})`;
+          skillsCard.querySelectorAll('.flex.flex-wrap')[1].innerHTML = renderTags(missing, 'bg-red-100 text-red-800 dark:bg-red-900 dark:text-red-300');
+        }
+
+        // Technologies
+        const techCard = document.getElementById('matchedTechCard');
+        if (techCard) {
+          const matched = candidate.matched_items?.technologies?.matched || [];
+          const missing = candidate.matched_items?.technologies?.missing || [];
+          techCard.querySelector('.text-green-700').textContent = `✓ Matched (${matched.length})`;
+          techCard.querySelectorAll('.flex.flex-wrap')[0].innerHTML = renderTags(matched, 'bg-green-100 text-green-800 dark:bg-green-900 dark:text-green-300');
+          techCard.querySelector('.text-red-700').textContent = `✗ Missing (${missing.length})`;
+          techCard.querySelectorAll('.flex.flex-wrap')[1].innerHTML = renderTags(missing, 'bg-red-100 text-red-800 dark:bg-red-900 dark:text-red-300');
+        }
+
+        // Tools Matched Card (Replaces Salary Match)
+        const toolsCard = document.getElementById('matchedToolsCard');
+        if (toolsCard) {
+          const matched = candidate.matched_items?.tools?.matched || [];
+          const missing = candidate.matched_items?.tools?.missing || [];
+          toolsCard.querySelector('.text-green-700').textContent = `✓ Matched (${matched.length})`;
+          toolsCard.querySelectorAll('.flex.flex-wrap')[0].innerHTML = renderTags(matched, 'bg-green-100 text-green-800 dark:bg-green-900 dark:text-green-300');
+          toolsCard.querySelector('.text-red-700').textContent = `✗ Missing (${missing.length})`;
+          toolsCard.querySelectorAll('.flex.flex-wrap')[1].innerHTML = renderTags(missing, 'bg-red-100 text-red-800 dark:bg-red-900 dark:text-red-300');
+        }
+
+        // --- Score Breakdown Table ---
+        const breakdownBody = document.getElementById('scoreBreakdownBody');
+        if (breakdownBody) {
+          const categories = [
+            { label: 'Skills', key: 'skills_score' },
+            { label: 'Experience', key: 'experience_score' },
+            { label: 'Technologies', key: 'technologies_score' },
+            { label: 'Projects', key: 'projects_score' },
+            { label: 'Tools', key: 'tools_score' },
+            { label: 'Certificates', key: 'certificates_score' },
+            { label: 'Responsibilities', key: 'responsibilities_score' },
+            { label: 'Relevant Exp', key: 'relevant_experience_score' },
+            { label: 'Qualification', key: 'qualification_score' },
+            { label: 'Salary', key: 'salary_score' },
+          ];
+
+          let rows = '';
+          categories.forEach(cat => {
+            const val = scores[cat.key] || 0;
+            let status = 'Poor';
+            let badgeColor = 'bg-red-100 text-red-800 dark:bg-red-900 dark:text-red-300';
+            if (val >= 80) { status = 'Excellent'; badgeColor = 'bg-green-100 text-green-800 dark:bg-green-900 dark:text-green-300'; }
+            else if (val >= 50) { status = 'Good'; badgeColor = 'bg-blue-100 text-blue-800 dark:bg-blue-900 dark:text-blue-300'; }
+            else if (val >= 30) { status = 'Average'; badgeColor = 'bg-yellow-100 text-yellow-800 dark:bg-yellow-900 dark:text-yellow-300'; }
+
+            rows += `
+                   <tr>
+                     <td class="px-6 py-4 text-sm font-medium text-slate-900 dark:text-white">${cat.label}</td>
+                     <td class="px-6 py-4 text-sm text-slate-600 dark:text-slate-300">${val}</td>
+                     <td class="px-6 py-4"><span class="px-2 py-1 ${badgeColor} text-xs rounded-full">${status}</span></td>
+                   </tr>
+                 `;
+          });
+          breakdownBody.innerHTML = rows;
+        }
+
+        // --- Detailed Analysis ---
+        const struct = candidate.structured_explanation || {};
+
+        // Strengths
+        const strengthsList = document.getElementById('strengthsList');
+        if (strengthsList) {
+          const list = struct.strengths || [];
+          strengthsList.innerHTML = list.length
+            ? list.map(s => `<li>• ${s}</li>`).join('')
+            : `<li class="text-slate-400 italic">No specific strengths listed</li>`;
+        }
+
+        // Improvements
+        const improvementsList = document.getElementById('improvementsList');
+        if (improvementsList) {
+          const list = struct.improvements || [];
+          improvementsList.innerHTML = list.length
+            ? list.map(item => `<li>• <strong>${item.type}:</strong> ${item.why}</li>`).join('')
+            : `<li class="text-slate-400 italic">None listed</li>`;
+        }
+
+        // Gaps
+        const gapsList = document.getElementById('gapsList');
+        if (gapsList) {
+          const skillGaps = struct.skill_gaps || [];
+          const techGaps = struct.tech_gaps || [];
+          const allGaps = [...skillGaps, ...techGaps].slice(0, 8);
+
+          gapsList.innerHTML = allGaps.length
+            ? allGaps.map(g => `<li>• Missing: ${g}</li>`).join('')
+            : `<li class="text-slate-400 italic">No critical gaps detected</li>`;
+        }
+
+        // --- Experience Fit & Salary Gauge (Bottom Section) ---
+        const expFitContainer = document.getElementById('experienceFitContainer');
+        if (expFitContainer) {
+          const candExp = candidate.details?.candidate_total_experience_years || 0;
+          const minExp = candidate.experience_range?.min || 0;
+          const maxExp = candidate.experience_range?.max || 0;
+          const fitScore = scores.experience_score || 0;
+
+          expFitContainer.innerHTML = `
+                <div class="flex justify-between">
+                   <span class="text-sm text-slate-600 dark:text-slate-400">Candidate Experience:</span>
+                   <span class="font-semibold dark:text-white">${candExp} years</span>
+                </div>
+                <div class="flex justify-between">
+                   <span class="text-sm text-slate-600 dark:text-slate-400">Required Range:</span>
+                   <span class="font-semibold dark:text-white">${minExp}-${maxExp} years</span>
+                </div>
+                <div class="w-full bg-slate-200 rounded-full h-3 dark:bg-slate-700">
+                   <div class="bg-green-600 h-3 rounded-full" style="width: ${fitScore}%"></div>
+                </div>
+                <div class="text-center text-sm font-semibold text-green-600">${fitScore}% Fit</div>
+             `;
+        }
+
+        const salaryAnalysisContainer = document.getElementById('salaryAnalysisContainer');
+        if (salaryAnalysisContainer) {
+          const salScore = scores.salary_score || 0;
+          const candSal = candidate.matched_items?.salary?.candidate_salary;
+          let candText = candSal ? `$${candSal} LPA` : 'Not specified';
+          const band = candidate.matched_items?.salary?.matched_band || "N/A";
+
+          salaryAnalysisContainer.innerHTML = `
+                <div class="flex justify-between">
+                   <span class="text-sm text-slate-600 dark:text-slate-400">Candidate Expectation:</span>
+                   <span class="font-semibold dark:text-white">${candText}</span>
+                </div>
+                <div class="flex justify-between">
+                   <span class="text-sm text-slate-600 dark:text-slate-400">Budget Range:</span>
+                   <span class="font-semibold dark:text-white">${band}</span>
+                </div>
+                <div class="w-full bg-slate-200 rounded-full h-3 dark:bg-slate-700">
+                   <div class="bg-blue-600 h-3 rounded-full" style="width: ${salScore}%"></div>
+                </div>
+                <div class="text-center text-sm font-semibold text-blue-600">${salScore > 50 ? 'Within Budget' : 'Check Budget'}</div>
+             `;
+        }
+
+        // --- Candidate Feedback ---
+        const feedbackContainer = document.getElementById('feedbackContainer');
+        if (feedbackContainer) {
+          const fbText = candidate.candidate_feedback || "No specific feedback generated.";
+          // Simple newline to break conversion
+          const items = fbText.split('. ').filter(x => x.length > 5).map(x => `<li>${x.replace('.', '')}</li>`).join('');
+          feedbackContainer.innerHTML = items ? `<ul class="list-disc pl-5 space-y-1">${items}</ul>` : `<p>${fbText}</p>`;
+        }
+
+        // --- Comparison (Static) ---
+        // Always try to use the global fullData for comparison if available, 
+        // fallback to candidate if currently rendering AI (which approximates fullData structure)
+        const refData = fullData || candidate;
+
+        const aiDisplay = document.getElementById('aiScoreDisplay');
+        if (aiDisplay) {
+          // AI Score is top level final_score in explanation
+          const val = refData.final_score ?? refData.scores?.final_score ?? 0;
+          aiDisplay.textContent = Math.round(val);
+        }
+
+        const localDisplay = document.getElementById('localScoreDisplay');
+        if (localDisplay) {
+          // Local score is explicitly in local_data or local_score
+          // In fullData it's under local_data.
+          // In normalized candidate (local mode), it's candidate.final_score.
+          // But we want to show BOTH numbers statically.
+
+          let val = "N/A";
+          if (fullData && fullData.local_data) {
+            val = fullData.local_data.final_score;
+          } else if (fullData && fullData.local_score) {
+            val = fullData.local_score.final_score;
+          }
+
+          localDisplay.textContent = (typeof val === 'number') ? Math.round(val) : val;
+        }
+
+        // --- Radar Chart ---
+        const radarLabels = ['Experience', 'Skills', 'Technologies', 'Tools', 'Projects', 'Certificates', 'Responsibilities', 'Relevant Exp'];
+        const radarData = [
+          scores['experience_score'] || 0,
+          scores['skills_score'] || 0,
+          scores['technologies_score'] || 0,
+          scores['tools_score'] || 0,
+          scores['projects_score'] || 0,
+          scores['certificates_score'] || 0,
+          scores['responsibilities_score'] || 0,
+          scores['relevant_experience_score'] || 0
+        ];
+
+        const chart = Chart.getChart("radarChart");
+        if (chart) {
+          chart.data.datasets[0].data = radarData;
+          chart.update();
+        }
+      }
+
+      try {
+        const response = await fetch(`/api/results/${encodeURIComponent(filename)}`);
+        if (!response.ok) throw new Error("Failed to fetch candidate results");
+        fullData = await response.json();
+
+        // Initial Render (AI mode default)
+        renderCandidateResult(fullData);
+
+      } catch (error) {
+        console.error("Error loading candidate data:", error);
+        // alert("Error loading data: " + error.message);
+      }
+    });
+
+    // Active Session Polling
+    async function updateActiveSession() {
+      try {
+        const response = await fetch('/api/jobs');
+        if (!response.ok) return;
+        const jobs = await response.json();
+
+        const inProgress = jobs.filter(j => j.status === 'In Progress').length;
+        const queued = jobs.filter(j => j.status === 'Queued').length;
+        const isProcessing = (inProgress > 0 || queued > 0);
+
+        const sessionDot = document.getElementById('sessionDot');
+        const sessionText = document.getElementById('sessionText');
+
+        if (sessionDot && sessionText) {
+          if (isProcessing) {
+            sessionDot.className = 'h-2 w-2 rounded-full bg-emerald-400 animate-pulse';
+            sessionText.textContent = 'Active Session';
+          } else {
+            sessionDot.className = 'h-2 w-2 rounded-full bg-red-500';
+            sessionText.textContent = 'Idle';
+          }
+        }
+      } catch (e) { console.error(e); }
+    }
+    setInterval(updateActiveSession, 2000);
+    updateActiveSession();
+
+  </script>
+  <script>
+    // Profile Sync
+    (function syncSidebar() {
+      const name = localStorage.getItem('profileName');
+      const email = localStorage.getItem('profileEmail');
+      if (name) {
+        const nameEl = document.getElementById('sidebar-name');
+        const initialsEl = document.getElementById('sidebar-initials');
+        if (nameEl) nameEl.textContent = name;
+        if (initialsEl) initialsEl.textContent = name.split(' ').map(n => n[0]).join('').substring(0, 2).toUpperCase();
+      }
+      if (email && document.getElementById('sidebar-role')) {
+        document.getElementById('sidebar-role').textContent = email;
+      }
+    })();
+  </script>
+</body>
+
+</html>

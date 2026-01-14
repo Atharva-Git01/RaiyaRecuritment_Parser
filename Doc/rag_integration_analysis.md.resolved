@@ -1,0 +1,166 @@
+# RAG Integration – Production Readiness (Final)
+
+This document consolidates the original pipeline analysis with the approved production fixes, database schemas, and guardrails. It represents the **final, production-ready design** for integrating RAG into the resume evaluation pipeline.
+
+---
+
+## 1. Original Assessment Summary
+
+The base pipeline architecture was sound, with correct separation between:
+
+* deterministic parsing and scoring
+* semantic enrichment
+* generative explanation
+
+Identified gaps were limited to:
+
+* performance inefficiencies due to repeated embedding computation
+* memory pressure from co-located models and workers
+
+---
+
+## 2. Performance Fix — Deterministic Caching (RESOLVED)
+
+### What Is Cached (Authoritative)
+
+* Job Description chunks (one-time)
+* Job Description embeddings (one-time per JD)
+* Resume chunks (one-time per resume)
+* Resume embeddings (one-time per resume)
+* Prompt prefix / system rules (global cache)
+
+### Database Tables
+
+#### jd_embeddings
+
+* jd_id
+* chunk_id
+* chunk_text
+* embedding_vector
+* embedding_model
+* created_at
+
+#### resume_embeddings
+
+* job_id
+* chunk_id
+* chunk_type (experience | project | skill | summary)
+* chunk_text
+* embedding_vector
+* created_at
+
+#### rag_retrieval_logs (Audit-Critical)
+
+* job_id
+* jd_id
+* retrieved_chunk_ids
+* similarity_scores
+* top_k
+* used_for (explanation | recruiter_summary)
+* created_at
+
+### Outcome
+
+* JD embedding cost reduced to O(1) per JD
+* Resume embedding cost reduced to O(1) per resume
+* RAG latency bounded and predictable
+* Batch throughput linear with workers
+
+**Status: FIXED**
+
+---
+
+## 3. Memory Isolation — Worker Separation (RESOLVED)
+
+### Enforced Worker Topology
+
+* ingest-worker
+
+  * PDF → text
+  * normalization
+
+* embedding-worker
+
+  * chunking
+  * embedding generation
+  * vector persistence
+
+* scoring-worker
+
+  * validation
+  * matcher
+  * deterministic scoring
+
+* explanation-worker
+
+  * RAG retrieval
+  * LLM explanation
+
+### Hard Constraints
+
+* Embedding models never loaded in scoring or ingest workers
+* LLM calls only allowed in explanation-worker
+* Scoring-worker cannot call vector DB or LLM
+
+### Outcome
+
+* Memory spikes isolated
+* LLM latency cannot block scoring
+* Safe horizontal scaling
+
+**Status: FIXED**
+
+---
+
+## 4. RAG Guardrails (MANDATORY, ENFORCED)
+
+### Guardrail 1 — Read-Only RAG
+
+RAG context cannot modify:
+
+* skills
+* experience
+* projects
+* certificates
+
+### Guardrail 2 — Bounded Retrieval
+
+* Max chunks: 5
+* Max tokens: 1200
+
+### Guardrail 3 — Score Immutability
+
+LLM output cannot overwrite numeric scores.
+
+### Guardrail 4 — Fallback Safety
+
+If RAG or LLM fails → deterministic explanation is returned.
+
+### Guardrail 5 — Evidence Binding
+
+Every explanation statement must reference source chunk IDs.
+No evidence → statement rejected.
+
+**Status: FIXED**
+
+---
+
+## 5. Final Production Readiness Checklist
+
+| Area                    | Status |
+| ----------------------- | ------ |
+| Architecture separation | PASS   |
+| Performance caching     | PASS   |
+| Memory isolation        | PASS   |
+| RAG safety              | PASS   |
+| Auditability            | PASS   |
+| Hallucination control   | PASS   |
+| Batch scalability       | PASS   |
+
+---
+
+## FINAL VERDICT
+
+All previously identified production risks have been addressed with concrete architectural controls, database persistence, and enforceable guardrails.
+
+**The pipeline is now production-ready.**

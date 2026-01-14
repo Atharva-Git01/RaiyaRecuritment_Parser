@@ -1,0 +1,17 @@
+{
+  "ai_ok": true,
+  "ai_score": {
+    "final_score": 21,
+    "skills_score": 0,
+    "experience_score": 48,
+    "relevant_experience_score": 50,
+    "projects_score": 0,
+    "certificates_score": 0,
+    "tools_score": 0,
+    "technologies_score": 0,
+    "qualification_score": 80,
+    "responsibilities_score": 0,
+    "salary_score": 0,
+    "notes": "Candidate has relevant education but lacks specific skills and technologies required. Experience is relevant but not quantified. [Guardrail: rule_short_tenure] experience_score adjusted (multiply 0.8)."
+  }
+}

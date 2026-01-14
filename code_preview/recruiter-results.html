@@ -1,0 +1,414 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <title>Candidate Results - Raiya Solutions</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <script src="https://cdn.tailwindcss.com"></script>
+  <style>
+    @keyframes slideIn {
+      from {
+        transform: translateX(-100%);
+        opacity: 0;
+      }
+
+      to {
+        transform: translateX(0);
+        opacity: 1;
+      }
+    }
+
+    .sidebar-animate {
+      animation: slideIn 0.3s ease-out;
+    }
+
+    .scrollbar-thin::-webkit-scrollbar {
+      width: 6px;
+    }
+
+    .scrollbar-thin::-webkit-scrollbar-track {
+      background: transparent;
+    }
+
+    .scrollbar-thin::-webkit-scrollbar-thumb {
+      background: #cbd5e1;
+      border-radius: 10px;
+    }
+
+    .scrollbar-thin:hover::-webkit-scrollbar-thumb {
+      background: #94a3b8;
+    }
+
+    .scrollbar-thin::-webkit-scrollbar-thumb:hover {
+      background: #64748b;
+    }
+  </style>
+</head>
+
+<body class="bg-gradient-to-br from-slate-50 to-slate-100 text-slate-900">
+  <div id="sidebarOverlay" class="hidden fixed inset-0 bg-black/30 backdrop-blur-sm z-40"></div>
+
+  <div class="flex min-h-screen">
+    <!-- Sidebar -->
+    <aside id="sidebar"
+      class="fixed md:sticky top-0 left-0 h-screen w-72 bg-[#0f2140] text-white z-50 transform -translate-x-full md:translate-x-0 transition-transform duration-300 ease-out overflow-y-auto scrollbar-thin sidebar-animate">
+      <div class="p-6">
+        <button id="closeSidebar" class="md:hidden absolute top-4 right-4 p-2 hover:bg-slate-100 rounded-lg">
+          <svg class="w-5 h-5 text-slate-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"></path>
+          </svg>
+        </button>
+
+        <div class="mb-8 pb-6 border-b border-white/10">
+          <div class="flex items-center gap-3 mb-3">
+            <div
+              class="h-12 w-12 rounded-full bg-gradient-to-br from-blue-500 to-purple-600 flex items-center justify-center text-white font-semibold text-lg shadow-lg">
+              R</div>
+            <div>
+              <p class="font-semibold text-white">Profile</p>
+              <p class="text-xs text-white/70">Talent Acquisition</p>
+            </div>
+          </div>
+          <div class="flex items-center gap-2 px-3 py-2 rounded-lg bg-white/5 border border-white/6">
+            <div class="h-2 w-2 rounded-full bg-emerald-400 animate-pulse"></div>
+            <span class="text-xs font-medium text-white/80">Active Session</span>
+          </div>
+        </div>
+
+        <nav class="space-y-2">
+          <div class="text-xs font-bold text-white/60 uppercase tracking-wider mb-4 px-3">Platform</div>
+          <a href="recruiter-platform.html"
+            class="flex items-center gap-3 px-3 py-3 text-sm text-white/90 hover:bg-white/5 rounded-xl group transition-colors">
+            <svg class="w-5 h-5 text-white/60 group-hover:text-white transition-colors" fill="none"
+              stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                d="M7 16a4 4 0 01-.88-7.903A5 5 0 1115.9 6L16 6a5 5 0 011 9.9M15 13l-3-3m0 0l-3 3m3-3v12"></path>
+            </svg>
+            <span class="font-medium">Bulk Screening</span>
+          </a>
+          <a href="recruiter-results.html"
+            class="flex items-center gap-3 px-3 py-3 text-sm bg-gradient-to-r from-blue-50 to-indigo-50 text-blue-700 rounded-xl border border-blue-100 shadow-sm">
+            <svg class="w-5 h-5 text-blue-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                d="M9 19v-6a2 2 0 00-2-2H5a2 2 0 00-2 2v6a2 2 0 002 2h2a2 2 0 002-2z"></path>
+            </svg>
+            <span class="font-semibold">Results Dashboard</span>
+          </a>
+          <a href="#"
+            class="flex items-center gap-3 px-3 py-3 text-sm text-white/90 hover:bg-white/5 rounded-xl group transition-colors">
+            <svg class="w-5 h-5 text-white/60 group-hover:text-white transition-colors" fill="none"
+              stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 10V3L4 14h7v7l9-11h-7z">
+              </path>
+            </svg>
+            <span class="font-medium">Processing Queue</span>
+          </a>
+
+          <div class="text-xs font-bold text-white/60 uppercase tracking-wider mt-8 mb-4 px-3">Tools</div>
+          <a href="#"
+            class="flex items-center gap-3 px-3 py-3 text-sm text-white/90 hover:bg-white/5 rounded-xl group transition-colors">
+            <svg class="w-5 h-5 text-white/60 group-hover:text-white" fill="none" stroke="currentColor"
+              viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z"></path>
+            </svg>
+            <span class="font-medium">History</span>
+          </a>
+          <a href="#"
+            class="flex items-center gap-3 px-3 py-3 text-sm text-white/90 hover:bg-white/5 rounded-xl group transition-colors">
+            <svg class="w-5 h-5 text-white/60 group-hover:text-white" fill="none" stroke="currentColor"
+              viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                d="M10.325 4.317c.426-1.756 2.924-1.756 3.35 0a1.724 1.724 0 002.573 1.066c1.543-.94 3.31.826 2.37 2.37a1.724 1.724 0 001.065 2.572c1.756.426 1.756 2.924 0 3.35a1.724 1.724 0 00-1.066 2.573c.94 1.543-.826 3.31-2.37 2.37a1.724 1.724 0 00-2.572 1.065c-.426 1.756-2.924 1.756-3.35 0a1.724 1.724 0 00-2.573-1.066c-1.543.94-3.31-.826-2.37-2.37a1.724 1.724 0 00-1.065-2.572c-1.756-.426-1.756-2.924 0-3.35a1.724 1.724 0 001.066-2.573c-.94-1.543.826-3.31 2.37-2.37.996.608 2.296.07 2.572-1.065z">
+              </path>
+            </svg>
+            <span class="font-medium">Settings</span>
+          </a>
+        </nav>
+
+        <div class="mt-8 p-4 rounded-xl bg-gradient-to-br from-blue-600 to-indigo-700 text-white">
+          <div class="flex items-center justify-between mb-3">
+            <span class="text-xs font-semibold text-blue-100">This Month</span>
+            <svg class="w-4 h-4 text-blue-200" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                d="M13 7a4 4 0 11-8 0 4 4 0 018 0zM9 14a6 6 0 00-6 6v1h12v-1a6 6 0 00-6-6zM21 12a1 1 0 100-2 1 1 0 000 2z">
+              </path>
+            </svg>
+          </div>
+          <p class="text-3xl font-bold mb-1">1,247</p>
+          <p class="text-xs text-blue-100">Candidates Screened</p>
+        </div>
+      </div>
+    </aside>
+
+    <!-- Main Content -->
+    <main class="flex-1 flex flex-col w-full">
+      <!-- Header -->
+      <header class="border-b bg-white/80 backdrop-blur-lg sticky top-0 z-30 shadow-sm">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-4 flex items-center justify-between">
+          <div class="flex items-center gap-3">
+            <button id="mobileMenuBtn" class="md:hidden p-2 hover:bg-slate-100 rounded-lg transition-colors">
+              <svg class="w-6 h-6 text-slate-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16">
+                </path>
+              </svg>
+            </button>
+            <div>
+              <p class="text-lg font-bold text-slate-900">Screening Results</p>
+              <p class="text-xs text-slate-500">Senior Full Stack Engineer • 12 candidates</p>
+            </div>
+          </div>
+          <div class="flex items-center gap-3">
+            <button
+              class="px-4 py-2 text-slate-700 border border-slate-300 rounded-lg font-semibold text-sm hover:bg-slate-50 transition-colors">
+              📥 Export CSV
+            </button>
+            <a href="recruiter-platform.html"
+              class="px-4 py-2 bg-gradient-to-r from-blue-600 to-blue-700 text-white rounded-lg font-semibold text-sm hover:shadow-lg transition-all">
+              🔄 New Screening
+            </a>
+          </div>
+        </div>
+      </header>
+
+      <!-- Content -->
+      <div class="flex-1 px-4 sm:px-6 lg:px-8 py-8 max-w-7xl mx-auto w-full">
+        <!-- Quick Stats -->
+        <div class="grid md:grid-cols-5 gap-4 mb-8">
+          <div class="bg-white rounded-xl border border-slate-200 p-4 shadow-sm">
+            <p class="text-xs text-slate-600 font-semibold mb-1">Top Match</p>
+            <p class="text-2xl font-bold text-green-600">94%</p>
+            <p class="text-xs text-slate-500 mt-1">Best candidate</p>
+          </div>
+          <div class="bg-white rounded-xl border border-slate-200 p-4 shadow-sm">
+            <p class="text-xs text-slate-600 font-semibold mb-1">Avg. Score</p>
+            <p class="text-2xl font-bold text-blue-600">72%</p>
+            <p class="text-xs text-slate-500 mt-1">All candidates</p>
+          </div>
+          <div class="bg-white rounded-xl border border-slate-200 p-4 shadow-sm">
+            <p class="text-xs text-slate-600 font-semibold mb-1">Excellent Match</p>
+            <p class="text-2xl font-bold text-emerald-600">3</p>
+            <p class="text-xs text-slate-500 mt-1">(80%+)</p>
+          </div>
+          <div class="bg-white rounded-xl border border-slate-200 p-4 shadow-sm">
+            <p class="text-xs text-slate-600 font-semibold mb-1">Good Match</p>
+            <p class="text-2xl font-bold text-amber-600">5</p>
+            <p class="text-xs text-slate-500 mt-1">(60-79%)</p>
+          </div>
+          <div class="bg-white rounded-xl border border-slate-200 p-4 shadow-sm">
+            <p class="text-xs text-slate-600 font-semibold mb-1">Avg. Process Time</p>
+            <p class="text-2xl font-bold text-slate-600">8.4s</p>
+            <p class="text-xs text-slate-500 mt-1">Per candidate</p>
+          </div>
+        </div>
+
+        <!-- Candidate Rankings Table -->
+        <div class="bg-white rounded-2xl border border-slate-200 shadow-lg overflow-hidden">
+          <div class="p-6 border-b border-slate-200">
+            <h2 class="text-xl font-bold text-slate-900">Ranked Candidates</h2>
+            <p class="text-sm text-slate-600 mt-1">Sorted by AI fit score (highest to lowest)</p>
+          </div>
+
+          <div class="overflow-x-auto">
+            <table class="w-full">
+              <thead>
+                <tr class="border-b border-slate-200 bg-slate-50">
+                  <th class="px-6 py-4 text-left text-xs font-bold text-slate-900 uppercase">Rank</th>
+                  <th class="px-6 py-4 text-left text-xs font-bold text-slate-900 uppercase">Candidate</th>
+                  <th class="px-6 py-4 text-left text-xs font-bold text-slate-900 uppercase">AI Score</th>
+                  <th class="px-6 py-4 text-left text-xs font-bold text-slate-900 uppercase">Local Score</th>
+                  <th class="px-6 py-4 text-left text-xs font-bold text-slate-900 uppercase">Skills Match</th>
+                  <th class="px-6 py-4 text-left text-xs font-bold text-slate-900 uppercase">Exp. Match</th>
+                  <th class="px-6 py-4 text-left text-xs font-bold text-slate-900 uppercase">Action</th>
+                </tr>
+              </thead>
+              <tbody id="resultsTableBody">
+                <tr class="border-b border-slate-200">
+                  <td colspan="7" class="px-6 py-8 text-center text-slate-500">
+                    <div class="flex justify-center items-center gap-2">
+                      <svg class="animate-spin h-5 w-5 text-blue-600" xmlns="http://www.w3.org/2000/svg" fill="none"
+                        viewBox="0 0 24 24">
+                        <circle class="opacity-25" cx="12" cy="12" r="10" stroke="currentColor" stroke-width="4">
+                        </circle>
+                        <path class="opacity-75" fill="currentColor"
+                          d="M4 12a8 8 0 018-8V0C5.373 0 0 5.373 0 12h4zm2 5.291A7.962 7.962 0 014 12H0c0 3.042 1.135 5.824 3 7.938l3-2.647z">
+                        </path>
+                      </svg>
+                      Loading results...
+                    </div>
+                  </td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+
+          <div class="px-6 py-4 bg-slate-50 border-t border-slate-200 text-center text-sm text-slate-600">
+            Showing top 5 of 12 candidates • <a href="#" class="text-blue-600 font-semibold hover:underline">View all
+              →</a>
+          </div>
+        </div>
+
+        <!-- Bottom CTAs -->
+        <div class="grid md:grid-cols-2 gap-6 mt-8">
+          <div class="bg-gradient-to-br from-emerald-50 to-emerald-100 border border-emerald-200 rounded-xl p-6">
+            <div class="flex items-center gap-4">
+              <div class="p-4 bg-emerald-200 rounded-xl">
+                <svg class="w-8 h-8 text-emerald-700" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                    d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"></path>
+                </svg>
+              </div>
+              <div>
+                <p class="font-bold text-emerald-900">Next Steps</p>
+                <p class="text-sm text-emerald-800 mt-1">Contact top 3 candidates for interviews</p>
+              </div>
+            </div>
+          </div>
+
+          <div class="bg-gradient-to-br from-blue-50 to-blue-100 border border-blue-200 rounded-xl p-6">
+            <div class="flex items-center gap-4">
+              <div class="p-4 bg-blue-200 rounded-xl">
+                <svg class="w-8 h-8 text-blue-700" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                    d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z"></path>
+                </svg>
+              </div>
+              <div>
+                <p class="font-bold text-blue-900">Time Saved</p>
+                <p class="text-sm text-blue-800 mt-1">Eliminated ~16 hours of manual screening</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </main>
+  </div>
+
+  <script src="app.js"></script>
+  <script>
+    // Mobile menu
+    const mobileMenuBtn = document.getElementById('mobileMenuBtn');
+    const sidebar = document.getElementById('sidebar');
+    const sidebarOverlay = document.getElementById('sidebarOverlay');
+    const closeSidebar = document.getElementById('closeSidebar');
+
+    mobileMenuBtn?.addEventListener('click', () => {
+      sidebar.classList.remove('-translate-x-full');
+      sidebarOverlay.classList.remove('hidden');
+    });
+
+    closeSidebar?.addEventListener('click', () => {
+      sidebar.classList.add('-translate-x-full');
+      sidebarOverlay.classList.add('hidden');
+    });
+
+    sidebarOverlay?.addEventListener('click', () => {
+      sidebar.classList.add('-translate-x-full');
+      sidebarOverlay.classList.add('hidden');
+    });
+
+    // Fetch and Render Results
+    async function loadResults() {
+      try {
+        const results = await API.getResults();
+        const tbody = document.getElementById('resultsTableBody');
+        if (!tbody) return;
+
+        tbody.innerHTML = '';
+
+        if (results.length === 0) {
+          tbody.innerHTML = `
+                    <tr class="border-b border-slate-200">
+                        <td colspan="7" class="px-6 py-8 text-center text-slate-500">
+                            No results found. Start a new screening.
+                        </td>
+                    </tr>`;
+          return;
+        }
+
+        results.forEach((job, index) => {
+          const scoreData = job.score_data || {};
+          const aiScore = scoreData.ai_score || 0;
+          const localScore = scoreData.local_score || 0;
+
+          // Determine rank medal
+          let rankDisplay = `<span class="text-slate-500 font-semibold">${index + 1}</span>`;
+          if (index === 0) rankDisplay = `<span class="inline-flex items-center justify-center w-8 h-8 rounded-full bg-gradient-to-br from-yellow-400 to-yellow-600 text-white font-bold text-sm">🥇</span>`;
+          if (index === 1) rankDisplay = `<span class="inline-flex items-center justify-center w-8 h-8 rounded-full bg-gradient-to-br from-gray-400 to-gray-600 text-white font-bold text-sm">🥈</span>`;
+          if (index === 2) rankDisplay = `<span class="inline-flex items-center justify-center w-8 h-8 rounded-full bg-gradient-to-br from-orange-400 to-orange-600 text-white font-bold text-sm">🥉</span>`;
+
+          // Status badges
+          const getBadge = (score) => {
+            if (score >= 80) return `<span class="inline-block px-3 py-1 bg-green-100 text-green-800 rounded-full text-xs font-semibold">Excellent</span>`;
+            if (score >= 60) return `<span class="inline-block px-3 py-1 bg-yellow-100 text-yellow-800 rounded-full text-xs font-semibold">Good</span>`;
+            return `<span class="inline-block px-3 py-1 bg-orange-100 text-orange-800 rounded-full text-xs font-semibold">Fair</span>`;
+          };
+
+          const tr = document.createElement('tr');
+          tr.className = "border-b border-slate-200 hover:bg-blue-50/50 transition-colors cursor-pointer";
+          tr.onclick = () => window.location.href = `screening-results.html?job_id=${job.job_id}`;
+
+          tr.innerHTML = `
+                  <td class="px-6 py-4">${rankDisplay}</td>
+                  <td class="px-6 py-4">
+                    <div>
+                      <p class="font-semibold text-slate-900">${job.resume_filename.replace(/^resume_.*?_/, '')}</p>
+                      <p class="text-xs text-slate-600">${job.status === 'completed' ? 'Processed' : 'Processing...'}</p>
+                    </div>
+                  </td>
+                  <td class="px-6 py-4">
+                    <div class="flex items-center gap-2">
+                      <div class="w-16 h-8 rounded-full bg-gradient-to-r from-green-400 to-emerald-600 flex items-center justify-center text-white text-sm font-bold">${aiScore}%</div>
+                    </div>
+                  </td>
+                  <td class="px-6 py-4">
+                    <span class="text-sm font-semibold text-emerald-700">${localScore}%</span>
+                  </td>
+                  <td class="px-6 py-4">
+                    ${getBadge(scoreData.skills_score || 0)}
+                  </td>
+                  <td class="px-6 py-4">
+                    ${getBadge(scoreData.experience_score || 0)}
+                  </td>
+                  <td class="px-6 py-4">
+                    <button class="px-3 py-1 bg-blue-100 text-blue-700 rounded-lg font-semibold text-xs hover:bg-blue-200 transition-colors">View</button>
+                  </td>
+                `;
+          tbody.appendChild(tr);
+        });
+
+        const countEl = document.getElementById('resultsCount');
+        if (countEl) countEl.textContent = `Showing ${results.length} candidates`;
+
+        // Update stats
+        updateStats(results);
+
+      } catch (error) {
+        console.error("Failed to load results:", error);
+      }
+    }
+
+    function updateStats(results) {
+      // Simple stats update logic
+      if (results.length === 0) return;
+
+      const scores = results.map(r => r.score_data?.ai_score || 0);
+      const maxScore = Math.max(...scores);
+      const avgScore = Math.round(scores.reduce((a, b) => a + b, 0) / scores.length);
+      const excellentCount = scores.filter(s => s >= 80).length;
+      const goodCount = scores.filter(s => s >= 60 && s < 80).length;
+
+      // Update DOM elements if they exist (need to add IDs to HTML first, but for now just logging)
+      // In a real implementation, we'd add IDs to the stat cards and update them here.
+    }
+
+    // Load results on page load
+    document.addEventListener('DOMContentLoaded', loadResults);
+
+    // Poll for updates every 5 seconds
+    setInterval(loadResults, 5000);
+  </script>
+</body>
+
+</html>

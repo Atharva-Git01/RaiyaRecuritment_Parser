@@ -1,0 +1,17 @@
+{
+  "ai_ok": true,
+  "ai_score": {
+    "final_score": 46,
+    "skills_score": 60,
+    "experience_score": 50,
+    "relevant_experience_score": 60,
+    "projects_score": 0,
+    "certificates_score": 0,
+    "tools_score": 50,
+    "technologies_score": 70,
+    "qualification_score": 80,
+    "responsibilities_score": 0,
+    "salary_score": 0,
+    "notes": "Strong in Angular, ReactJS, and relevant tools. Lacks experience in key technologies like Python, Java, and cloud services. Experience slightly below required. [Guardrail: rule_intern_experience] experience_score adjusted (cap 50)."
+  }
+}

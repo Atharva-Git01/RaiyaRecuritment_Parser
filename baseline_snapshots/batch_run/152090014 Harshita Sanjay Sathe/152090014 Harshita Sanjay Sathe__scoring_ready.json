@@ -1,0 +1,98 @@
+{
+  "name": "",
+  "email": "sathehs 20.mba@coep.ac.in",
+  "phone": "7588821779",
+  "location": "",
+  "skills": [],
+  "education": [
+    {
+      "degree": "Master's Degree in Engineering",
+      "institution": "Electrical Fr. Conceicao Rodrigues Institute",
+      "year_start": "2022-01",
+      "year_end": ""
+    },
+    {
+      "degree": "Electrical Engineering Technology",
+      "institution": "University of Mumbai",
+      "year_start": "2016-01",
+      "year_end": ""
+    },
+    {
+      "degree": "Computer Science",
+      "institution": "Computer Rashtriya Vidyalaya Junior College",
+      "year_start": "2012-01",
+      "year_end": ""
+    },
+    {
+      "degree": "Science",
+      "institution": "Chalisgaon Higher Secondary",
+      "year_start": "2012-01",
+      "year_end": ""
+    },
+    {
+      "degree": "Class X",
+      "institution": "Dr. Kakasaheb Purnapatre Madhyamik Maharashtra State Board of Secondary and Vidyalaya",
+      "year_start": "2010-01",
+      "year_end": ""
+    }
+  ],
+  "experience": [
+    {
+      "company": "Sbi",
+      "role": "",
+      "start_date": "",
+      "end_date": "",
+      "description": [
+        "SBI was using China Systems for Trade Finance, so my task was to enhance the system as per customer requirements and so its performance improvement.",
+        "Worked on Mckinsey s proposed framework for an understanding of the system.",
+        "After finalizing, approached SBI s business team with an effort plan along with included services, and negotiated for the same.",
+        "Planned for all development-related activities including staffing, testing, and production schedule.",
+        "Successful delivery of 2 enhanced modules followed by support of 2 months each",
+        "Consulted regularly with the customer on application development status, new project proposals, and other related technical issues."
+      ]
+    },
+    {
+      "company": "Sbi",
+      "role": "",
+      "start_date": "",
+      "end_date": "",
+      "description": [
+        "Visited some of SBI branches, LCPC for data collection regarding account opening procedures",
+        "Co-ordinated with Central KYC Registry, CERSAI for their requirements with SBI CKYC System and their rules and services",
+        "After gathering sufficient data, worked with a design team for the finalization of their proposed application layout",
+        "Worked as an application developer and document repository designer",
+        "Conducted pilot runs at some of SBI branches in Navi Mumbai and Mumbai region LCPC",
+        "Worked on pilot observations and modified the system, followed by the successful delivery of an application",
+        "Lead support team of 10 for few months to support the application",
+        "Discussed project progress with customers, collected feedback on different stages, and addressed their concerns",
+        "Optimized data collection procedures and generated reports on a weekly, monthly, and quarterly basis for continuous tracking for customer",
+        "Preparation of 3 year financial projection Report",
+        "Preparation of Operational Expense Forecast for next 3 years"
+      ]
+    }
+  ],
+  "projects": [
+    {
+      "name": "Client: SBI",
+      "description": ""
+    }
+  ],
+  "summary": "",
+  "certificates": [],
+  "courses": [
+    "Master of Business Administration",
+    "2022",
+    "Mobile : 7588821779"
+  ],
+  "raw_text": "Course : , Master of Business Administration, 2022\nEmail : sathehs 20.mba@coep.ac.in\nMobile : 7588821779\nCGPA : 8.33\nElectrical Fr. Conceicao Rodrigues Institute of 8.63\nUG University of Mumbai 2016\nEngineering Technology, Vashi, Navi Mumbai CGPA\nCLASS Computer Rashtriya Vidyalaya Junior College, Maharashtra State Board of Secondary and 71.83\n2012\nXII Science Chalisgaon Higher Secondary \n\n## Education\n (MSBSHSE) %\nDr. Kakasaheb Purnapatre Madhyamik Maharashtra State Board of Secondary and 96.18\nCLASS X 2010\nVidyalaya, Chalisgaon Higher Secondary \n\n## Education\n (MSBSHSE) %\nOperations Management - NPTEL\nInsurance, Trade Finance, Wealth Analysis\nProject: Trade Finance\nClient: SBI\nResponsibilities:\nSBI was using China Systems for Trade Finance, so my task was to enhance the system as per customer requirements and so its\nperformance improvement.\nWorked on Mckinsey s proposed framework for an understanding of the system.\nAfter finalizing, approached SBI s business team with an effort plan along with included services, and negotiated for the same.\nPlanned for all development-related activities including staffing, testing, and production schedule.\nSuccessful delivery of 2 enhanced modules followed by support of 2 months each\nConsulted regularly with the customer on application development status, new project proposals, and other related technical issues.\nProject: pre-CKYC, CKYC\nClient: SBI\nResponsibilities:\nVisited some of SBI branches, LCPC for data collection regarding account opening procedures\nCo-ordinated with Central KYC Registry, CERSAI for their requirements with SBI CKYC System and their rules and services\nAfter gathering sufficient data, worked with a design team for the finalization of their proposed application layout\nWorked as an application developer and document repository designer\nConducted pilot runs at some of SBI branches in Navi Mumbai and Mumbai region LCPC\nWorked on pilot observations and modified the system, followed by the successful delivery of an application\nLead support team of 10 for few months to support the application\nDiscussed project progress with customers, collected feedback on different stages, and addressed their concerns\nOptimized data collection procedures and generated reports on a weekly, monthly, and quarterly basis for continuous tracking for customer\nPreparation of 3 year financial projection Report\nPreparation of Operational Expense Forecast for next 3 years\nAwarded with 'Star of the Month Award' for my contribution towards successful delivery of one of the modules of Trade Finance.\nAwarded with 'Star of the Month Award' for my contribution towards Trade Finance success.\nAwarded with 'Star of the Month Award' for my contribution towards successful delivery of one of the modules of Trade Finance.\nAwarded with 'Technical Excellence Award' for my contribution towards CKYC success.\nOrganized by:\nAttended a workshop on Cricket Analytics using Python organized by Mad About Sports.\nSecured 27 th rank at district level in High School Scholarship Examination for Std. VII conducted in February 2007.",
+  "salary": {
+    "current_ctc_lpa": null,
+    "expected_ctc_lpa": 75888.22
+  },
+  "relevant_experience_map": {
+    "Testing & Debugging": 0.0,
+    "Teamwork": 0.0,
+    "AI": 0.0
+  },
+  "total_experience_years": 0.0
+}

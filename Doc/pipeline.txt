@@ -1,0 +1,375 @@
+Resume Screening Pipeline — Complete Architectural Map
+System Name: Raiya Recruitment Parser (Phi-4 Powered)
+Version: 1.0
+Date: December 30, 2025
+Document Type: System Architecture Reference
+
+Executive Summary
+This document provides a complete architectural map of the Resume Screening Pipeline—a production-grade, AI-powered recruitment automation system. The system processes bulk resume uploads, extracts structured data using Azure OpenAI (Phi-4), scores candidates against job descriptions using hybrid matching, and generates explainable reports for recruiters.
+Key Characteristics:
+9-Stage Pipeline: Extract → Normalize → Parse → Validate → Pre-Score → Match → AI Score → Explain → Report
+3-Layer Architecture: Frontend (HTML/JS) → Backend (FastAPI) → Database (MySQL)
+Zero Hallucination: Deterministic validation overrides AI outputs
+Multi-Tenant SaaS: Isolated data per tenant/business unit
+Real-Time Processing: Background workers with live status updates
+
+1. System Architecture Overview
+1.1 High-Level Architecture Diagram
+External ServicesData LayerProcessing Pipeline - 9 StagesBackend Layer - FastAPI ServerFrontend LayerAI CallSemantic MatchAI CallQueryReadBulk Upload PlatformProcessing Queue MonitorResults DashboardHistory ViewerSettings Panelserver.py - REST APIBackground Workersmain.py - Pipeline Orchestrator1. Extract PDF Text2. Normalize Text3. Parse with AI4. Validate Data5. Pre-Score Normalize6. Local Matcher7. AI Scorer8. Explanation Engine9. PDF ReportMySQL DatabaseFile StorageAzure OpenAI - Phi-4SentenceTransformers
+1.2 Technology Stack
+
+2. Data Flow Architecture
+2.1 End-to-End Data Flow Diagram
+Raw TextClean TextStructured JSONEnriched JSONScoring-Ready JSONLocal ScoresAI ScoresExplanation JSONYesNoAzure APIAzure APISemanticUser Uploads Resumes + JDUpload to /uploads/POST /api/processCreate Batch + Jobs in DBDispatch Background WorkersFor Each ResumeStage 1: Extract Textextractor.pyStage 2: Normalizenormalizer.pyStage 3: AI Parseparser.pyStage 4: Validatevalidator.pyStage 5: Pre-Score Normalizenormalizer_pre_score.pyStage 6: Local Matchermatcher.pyStage 7: AI Scorerai_scorer.pyStage 8: Explanation Engineexplanation_engine.pyStage 9: PDF Reportpdf_report.pySave to Databasesaas_db.pyUpdate Job StatusAll Jobs Done?Update Batch Status: CompletedResults AvailableAzure OpenAIPhi-4 ModelSentenceTransformersall-MiniLM-L6-v2
+Legend:
+🔵 Blue: Text Processing (Deterministic)
+🟡 Yellow: AI-Powered (LLM)
+🟢 Green: Scoring & Analysis (Hybrid)
+🟣 Purple: Database Operations
+2.2 Data Transformation Flow
+
+3. Component Architecture
+3.1 Module Dependency Map
+External ResourcesSupport ModulesPipeline ModulesEntry Pointsmain.pyserver.pyextractor.pynormalizer.pyparser.pyvalidator.pynormalizer_pre_score.pymatcher.pyai_scorer.pyexplanation_engine.pypdf_report.pysaas_db.pyjd_validator.pyjd_normalizer.pyguardrails.pyschemas.pyprompts/v1/config/MySQL DB
+3.2 Module Responsibilities Matrix
+
+4. Database Architecture
+4.1 Entity-Relationship Diagram
+containshascreatescontainsevaluatesproducesTENANTSinttenant_idPKstringtenant_namestringstatusdatetimecreated_atBUSINESS_UNITSintbu_idPKinttenant_idFKstringbu_namedatetimecreated_atJOB_DESCRIPTIONSintjd_idPKintbu_idFKstringjd_titletextjd_data_jsondatetimecreated_atBATCHESintbatch_idPKintbu_idFKintuploader_user_idstringstatusstringbatch_guiddatetimecreated_atJOBSintjob_idPKintbatch_idFKintjd_idFKintrequester_user_idstringstatusdatetimecreated_atRESUME_RESULTSintresult_idPKintjob_idFKtextparsed_resume_jsontextscores_jsonstringreport_urldatetimeprocessed_at
+4.2 Database Schema Details
+Multi-Tenant Hierarchy
+Tenant (Organization)
+  └── Business Unit (Department/Team)
+       ├── Job Descriptions (Roles)
+       └── Batches (Processing Sessions)
+            └── Jobs (Individual Resumes)
+                 └── Resume Results (Parsed Data + Scores)
+Key Relationships
+1 Tenant → N Business Units (e.g., "Acme Corp" → "Engineering", "Sales")
+1 Business Unit → N Job Descriptions (e.g., "Engineering" → "Senior SWE", "ML Engineer")
+1 Business Unit → N Batches (e.g., "Engineering" → "Batch #1", "Batch #2")
+1 Batch → N Jobs (e.g., "Batch #1" → 50 resume processing jobs)
+1 Job Description → N Jobs (e.g., "Senior SWE JD" → evaluated against 50 resumes)
+1 Job → 1 Resume Result (1:1 relationship)
+Status Flow
+Batch Status:
+pending → processing → completed/failed
+Job Status:
+queued → running → completed/failed
+4.3 Data Persistence Strategy
+
+5. Pipeline Deep Dive
+5.1 Detailed Pipeline Flow
+File StorageMySQL DatabaseAzure OpenAIPipeline Modulesmain.pyBackground Workerserver.pyFrontendUserFile StorageMySQL DatabaseAzure OpenAIPipeline Modulesmain.pyBackground Workerserver.pyFrontendUserloop[For each resume]loop[For each resume]loop[Every 2 seconds]Upload Resumes + JDPOST /api/uploadSave files to uploads/Upload confirmedClick "Start Processing"POST /api/processCreate Batch recordCreate JD recordCreate Job record (status: queued)Dispatch background tasksProcessing startedrun_full_pipeline(resume, jd, job_id)Update job status: running1. Extract (extractor.py)Save extracted text2. Normalize (normalizer.py)Save normalized text3. Parse (parser.py)Send text for parsingReturn structured JSONSave parsed JSON4. Validate (validator.py)Save validated JSON5. Pre-Score (normalizer_pre_score.py)Save scoring-ready JSON6. Match (matcher.py)Save local scores7. AI Score (ai_scorer.py)Send resume + JD for scoringReturn AI scoresSave AI scores8. Explain (explanation_engine.py)Save explanation JSON9. Report (pdf_report.py)Save PDF reportSave resume_result recordUpdate job status: completedCheck batch completionJob completedUpdate batch status: completedAll jobs doneGET /api/jobs (polling)Job statusesView ResultsGET /api/resultsQuery resume_resultsRead explanation filesResults data
+5.2 Stage-by-Stage Breakdown
+Stage 1: Text Extraction
+Input:  PDF file (binary)
+Tool:   PyMuPDF (primary), pdfplumber (fallback)
+Logic:  
+  1. Try PyMuPDF.open() → extract text
+  2. If fails, try pdfplumber.open() → extract text
+  3. Handle encoding issues (UTF-8 normalization)
+Output: Raw text string
+File:   storage/tmp/{name}__extracted.txt
+Stage 2: Text Normalization
+Input:  Raw text
+Logic:  
+  1. Remove headers/footers (regex patterns)
+  2. Remove page numbers, watermarks
+  3. Standardize bullet points (•, -, *, →)
+  4. Fix encoding (smart quotes, em-dashes)
+  5. Normalize whitespace (multiple spaces → single)
+  6. Convert to markdown structure
+Output: Clean markdown text
+File:   storage/tmp/{name}__normalized.md
+Stage 3: AI Parsing (Azure Phi-4)
+Input:  Normalized text
+Prompt: "Extract ONLY what is explicitly present. Do NOT infer or add synonyms."
+Model:  Azure OpenAI Phi-4
+Logic:  
+  1. Send text to Azure API with strict prompt
+  2. Parse JSON response
+  3. Retry with higher max_tokens if parsing fails
+  4. Validate JSON schema
+Output: Structured JSON (name, email, skills, experience, etc.)
+File:   storage/tmp/{name}__parsed.json
+Stage 4: Validation
+Input:  Parsed JSON
+Logic:  
+  1. Normalize dates to YYYY-MM format
+  2. Calculate total experience from timeline (override LLM)
+  3. Extract salary via regex (fallback if LLM missed)
+  4. Extract projects from raw text (fallback)
+  5. Extract courses from raw text
+  6. Normalize experience descriptions to list format
+  7. Validate email, phone formats
+Output: Validated + enriched JSON
+File:   storage/tmp/{name}__validated.json
+Stage 5: Pre-Score Normalization
+Input:  Validated JSON
+Logic:  
+  1. Map skill aliases: "react" → "ReactJS", "ml" → "Machine Learning"
+  2. Map tech aliases: "postgres" → "PostgreSQL"
+  3. Map education aliases: "btech" → "Bachelor's Degree"
+  4. Separate skill/tech aliases from education aliases
+Output: Scoring-ready JSON
+File:   storage/tmp/{name}__scoring_ready.json
+Stage 6: Local Matcher
+Input:  Scoring-ready JSON + JD JSON
+Logic:  
+  1. Skills: Exact match (word boundaries) + Semantic (threshold 0.45)
+  2. Technologies: Same hybrid approach
+  3. Tools: Same hybrid approach
+  4. Experience: Timeline calculation + semantic role filtering
+  5. Relevant Experience: Skill-specific years mapping
+  6. Projects: Keyword extraction + matching
+  7. Certificates: Exact + semantic match
+  8. Qualification: Substring match
+  9. Responsibilities: Semantic match
+  10. Salary: Band mapping
+  11. Compute weighted final score
+Output: Local score JSON (10 component scores + final)
+File:   storage/results/{name}__local_score.json
+Stage 7: AI Scorer
+Input:  Scoring-ready JSON + JD JSON
+Prompt: "Experience MUST be from timelines. IGNORE irrelevant roles. Skills MUST appear in descriptions."
+Model:  Azure OpenAI Phi-4
+Logic:  
+  1. Send resume + JD to Azure API
+  2. Validate AI output schema
+  3. Recompute final_score if inconsistent
+  4. Hybrid fallback: merge local data if AI returns 0
+Output: AI score JSON (same schema as local)
+File:   storage/results/{name}__ai_score.json
+Stage 8: Explanation Generation
+Input:  Merged score object (local + AI)
+Logic:  
+  1. Generate recruiter summary (1-3 sentences)
+  2. Generate candidate feedback (actionable tips)
+  3. Build structured explanation (strengths, gaps)
+  4. Create visual payload (chart data)
+  5. Generate UI components metadata
+Output: Explanation JSON
+File:   storage/results/{name}__explanation.json
+Stage 9: PDF Report
+Input:  Explanation JSON
+Logic:  
+  1. Create PDF with ReportLab
+  2. Add candidate summary section
+  3. Add score breakdown table
+  4. Add matched/missing items
+  5. Add visual charts (radar, bar, gauge)
+Output: PDF file
+File:   storage/reports/{name}__report_{timestamp}.pdf
+
+6. Frontend Architecture
+6.1 Frontend Component Map
+⚠️ Failed to render Mermaid diagram: Lexical error on line 19. Unrecognized text.
+... API1[/api/upload] API2[/api/
+-----------------------^
+graph TD
+    subgraph "Frontend Pages"
+        PLATFORM[recruiter-platform.html<br/>Main Dashboard]
+        BULK[bulk-processing.html<br/>Queue Monitor]
+        RESULTS[recruiter-results.html<br/>Results List]
+        DETAIL[screening-results.html<br/>Candidate Detail]
+        HISTORY[history.html<br/>Batch History]
+        SETTINGS[settings.html<br/>User Settings]
+        DBMON[database-monitor.html<br/>DB Monitor]
+    end
+    
+    subgraph "Shared Assets"
+        APPJS[app.js<br/>Shared Logic]
+        STYLES[TailwindCSS<br/>Styling]
+        CHARTS[Chart.js<br/>Visualizations]
+    end
+    
+    subgraph "API Endpoints"
+        API1[/api/upload]
+        API2[/api/process]
+        API3[/api/jobs]
+        API4[/api/results]
+        API5[/api/batch-history]
+        API6[/api/settings]
+        API7[/api/database-monitor]
+    end
+    
+    PLATFORM --> API1
+    PLATFORM --> API2
+    BULK --> API3
+    RESULTS --> API4
+    DETAIL --> API4
+    HISTORY --> API5
+    SETTINGS --> API6
+    DBMON --> API7
+    
+    PLATFORM --> APPJS
+    BULK --> APPJS
+    RESULTS --> APPJS
+    DETAIL --> APPJS
+    
+    BULK --> CHARTS
+    RESULTS --> CHARTS
+    DETAIL --> CHARTS
+    
+    style PLATFORM fill:#4CAF50
+    style BULK fill:#2196F3
+    style RESULTS fill:#FF9800
+    style DETAIL fill:#9C27B0
+6.2 User Journey Map
+RecruiterUpload PhaseNavigate to PlatformUpload Resumes (PDF)Upload Job DescriptionReview Upload SummaryProcessing PhaseClick "Start Processing"Monitor Queue StatusView Progress BarsWait for CompletionReview PhaseView Results DashboardSort by ScoreFilter CandidatesView Candidate DetailsReview Matched SkillsCheck Experience FitDecision PhaseDownload PDF ReportsExport to CSVShortlist CandidatesRecruiter User Journey
+6.3 API Integration Matrix
+
+7. Integration Points
+7.1 External Service Integration
+MySQL ServerHugging FaceAzure OpenAIResume PipelineREST APIREST APIModel DownloadInferencePersistPersistparser.pyai_scorer.pymatcher.pyAPI EndpointPhi-4 ModelModel Huball-MiniLM-L6-v2MySQL 8.0saas_db Database
+7.2 Configuration Management
+7.3 Prompt Versioning System
+prompts/
+├── v1/
+│   ├── ai_scorer/
+│   │   └── system.txt          # AI scorer system prompt
+│   ├── explainer/
+│   │   └── system.txt          # Explanation engine prompt
+│   └── parser/
+│       └── system.txt          # Resume parser prompt
+└── active_version.txt          # Points to active version (e.g., "v1")
+Version Control Strategy:
+Each prompt version is immutable (v1, v2, v3...)
+active_version.txt determines which version to load
+Allows A/B testing and rollback
+Managed via scripts/set_version.py
+
+8. Scoring Architecture
+8.1 Hybrid Scoring Model
+AI Scorer ComponentsLocal Matcher ComponentsScoring PipelineScoring-Ready JSON + JDLocal Matchermatcher.pyAI Scorerai_scorer.pyScore MergerExplanation EngineExact MatchWord BoundariesSemantic MatchSentenceTransformersTimeline CalculationDate ParsingAnti-Hallucination PromptSchema ValidationHybrid Fallback
+8.2 Scoring Weights Configuration
+8.3 Matching Algorithm Flow
+YesNoResume Skills + JD SkillsPhase 1: Exact MatchWord Boundary RegexPattern: \bskill\bMatched ListMissing ListPhase 2: Semantic MatchGenerate EmbeddingsSentenceTransformersCosine SimilaritySimilarity >= 0.45?Add to MatchedKeep in MissingCombine ResultsCalculate Scorematched/total * 100Return:matched_listmissing_listskills_score
+
+9. Safety & Guardrails
+9.1 Anti-Hallucination Architecture
+Scoring StageValidation StageAI Parsing StageAI Scoring StageAnti-Hallucination Prompt:'Experience from timeline ONLY'Azure Phi-4 ScoreSchema ValidationRecompute Final ScoreUsing weightsHybrid FallbackMerge local if AI=0Strict Prompt:'Extract ONLY explicit data'Azure Phi-4 ParseSchema ValidationTimeline OverrideReplace LLM experienceRegex Salary ExtractFallback if LLM missedRaw Text Project ExtractFallback if LLM missedSemantic Role FilterIgnore irrelevant jobsWord Boundary MatchPrevent false positives
+9.2 Validation Rules
+
+10. Performance & Scalability
+10.1 Processing Metrics
+10.2 Bottleneck Analysis
+Processing StagesExtract: 2-5sNormalize: 1-2sParse: 10-20sValidate: 2-3sPre-Score: 1sMatch: 5-10sAI Score: 10-20sExplain: 2-3sReport: 3-5s
+Bottlenecks:
+Azure API Calls (Parse + AI Score): 20-40s total
+Semantic Matching (Matcher): 5-10s (model inference)
+PDF Report Generation: 3-5s (ReportLab rendering)
+Optimization Strategies:
+Cache SentenceTransformers model (done)
+Batch Azure API calls (not implemented)
+Async pipeline (not implemented)
+Redis caching for repeated resumes (not implemented)
+
+11. Deployment Architecture
+11.1 Current Deployment Model
+Local Development Environment
+├── Python 3.x Runtime
+├── MySQL 8.0 Server (localhost:3306)
+├── FastAPI Server (localhost:8000)
+├── File Storage (local filesystem)
+└── Azure OpenAI (cloud service)
+11.2 Recommended Production Architecture
+External ServicesData TierWorker TierApplication TierLoad BalancerAPIAPIAPINginx / AWS ALBFastAPI Instance 1FastAPI Instance 2FastAPI Instance NWorker Pool 1Worker Pool 2Worker Pool NMySQL RDSS3 / Blob StorageRedis CacheAzure OpenAI
+
+12. Quick Reference
+12.1 File Structure Map
+phi 4/
+├── main.py                      # Pipeline orchestrator
+├── server.py                    # FastAPI server
+├── app/                         # Core modules
+│   ├── extractor.py             # PDF → Text
+│   ├── normalizer.py            # Text cleaning
+│   ├── parser.py                # AI parsing
+│   ├── validator.py             # Data validation
+│   ├── normalizer_pre_score.py  # Alias normalization
+│   ├── matcher.py               # Local scoring
+│   ├── ai_scorer.py             # AI scoring
+│   ├── explanation_engine.py    # Explanation generation
+│   ├── pdf_report.py            # PDF creation
+│   ├── saas_db.py               # Database layer
+│   ├── jd_validator.py          # JD validation
+│   ├── jd_normalizer.py         # JD normalization
+│   └── guardrails.py            # Safety checks
+├── frontend/                    # UI pages
+│   ├── recruiter-platform.html  # Main dashboard
+│   ├── bulk-processing.html     # Queue monitor
+│   ├── recruiter-results.html   # Results list
+│   ├── screening-results.html   # Candidate detail
+│   ├── history.html             # Batch history
+│   ├── settings.html            # User settings
+│   └── database-monitor.html    # DB monitor
+├── prompts/v1/                  # LLM prompts
+│   ├── ai_scorer/
+│   ├── explainer/
+│   └── parser/
+├── database/                    # SQL schemas
+├── uploads/                     # Input files
+├── storage/
+│   ├── tmp/                     # Intermediate files
+│   ├── results/                 # Score files
+│   └── reports/                 # PDF reports
+└── .env                         # Configuration
+12.2 Key Environment Variables
+# Azure OpenAI
+AZURE_OPENAI_ENDPOINT=https://your-resource.openai.azure.com
+AZURE_OPENAI_DEPLOYMENT=phi-4
+AZURE_OPENAI_API_KEY=your-api-key
+# MySQL Database
+DB_HOST=localhost
+DB_PORT=3306
+DB_USER=root
+DB_PASSWORD=your-password
+DB_NAME=saas_db
+12.3 API Endpoint Reference
+
+13. System Boundaries & Limitations
+13.1 What the System Does
+✅ Supported:
+PDF resume parsing (text-based PDFs)
+English language resumes
+Single JD per batch processing
+Hybrid scoring (deterministic + AI)
+Multi-tenant data isolation
+Real-time progress monitoring
+Explainable scoring with matched/missing items
+PDF report generation
+Batch history tracking
+13.2 What the System Does NOT Do
+❌ Not Supported:
+DOCX, images, or scanned PDFs (no OCR)
+Multi-language resumes (non-English)
+Multi-JD comparison in single batch
+Resume deduplication
+Candidate ranking beyond scoring
+Interview scheduling
+Email notifications
+Advanced analytics/reporting
+Offline mode (requires Azure OpenAI)
+13.3 Critical Constraints
+
+Conclusion
+This architectural map provides a complete reference for understanding, maintaining, and extending the Resume Screening Pipeline. The system is designed with three core principles:
+Zero Hallucination: Deterministic validation overrides AI outputs
+Explainability: Every score is backed by clear reasoning
+Recruiter Trust: Transparent, reproducible, and actionable results
+For Developers:
+Follow the 9-stage pipeline flow strictly
+Never modify weights without approval
+Always test changes against existing batches
+Respect anti-hallucination guardrails
+For Stakeholders:
+Understand the hybrid scoring model (local + AI)
+Trust the deterministic components (experience, salary)
+Review AI outputs with validation fallbacks
+Monitor batch processing via real-time dashboard
+
+Document Version: 1.0
+Last Updated: December 30, 2025
+Maintained By: System Architecture Team
+Next Review: Quarterly or on major system changes

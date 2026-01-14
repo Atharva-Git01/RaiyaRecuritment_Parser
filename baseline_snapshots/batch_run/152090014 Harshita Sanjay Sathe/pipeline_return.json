@@ -1,0 +1,531 @@
+{
+  "parsed": {
+    "name": "",
+    "email": "sathehs 20.mba@coep.ac.in",
+    "phone": "7588821779",
+    "location": "",
+    "skills": [],
+    "education": [
+      {
+        "degree": "Master of Business Administration",
+        "institution": "Electrical Fr. Conceicao Rodrigues Institute",
+        "year": "2022"
+      },
+      {
+        "degree": "Electrical Engineering Technology",
+        "institution": "University of Mumbai",
+        "year": "2016"
+      },
+      {
+        "degree": "Computer Science",
+        "institution": "Computer Rashtriya Vidyalaya Junior College",
+        "year": "2012"
+      },
+      {
+        "degree": "Science",
+        "institution": "Chalisgaon Higher Secondary",
+        "year": "2012"
+      },
+      {
+        "degree": "CLASS X",
+        "institution": "Dr. Kakasaheb Purnapatre Madhyamik Maharashtra State Board of Secondary and Vidyalaya",
+        "year": "2010"
+      }
+    ],
+    "experience": [
+      {
+        "company": "SBI",
+        "role": "",
+        "start_date": "",
+        "end_date": "",
+        "description": [
+          "SBI was using China Systems for Trade Finance, so my task was to enhance the system as per customer requirements and so its performance improvement.",
+          "Worked on Mckinsey s proposed framework for an understanding of the system.",
+          "After finalizing, approached SBI s business team with an effort plan along with included services, and negotiated for the same.",
+          "Planned for all development-related activities including staffing, testing, and production schedule.",
+          "Successful delivery of 2 enhanced modules followed by support of 2 months each",
+          "Consulted regularly with the customer on application development status, new project proposals, and other related technical issues."
+        ]
+      },
+      {
+        "company": "SBI",
+        "role": "",
+        "start_date": "",
+        "end_date": "",
+        "description": [
+          "Visited some of SBI branches, LCPC for data collection regarding account opening procedures",
+          "Co-ordinated with Central KYC Registry, CERSAI for their requirements with SBI CKYC System and their rules and services",
+          "After gathering sufficient data, worked with a design team for the finalization of their proposed application layout",
+          "Worked as an application developer and document repository designer",
+          "Conducted pilot runs at some of SBI branches in Navi Mumbai and Mumbai region LCPC",
+          "Worked on pilot observations and modified the system, followed by the successful delivery of an application",
+          "Lead support team of 10 for few months to support the application",
+          "Discussed project progress with customers, collected feedback on different stages, and addressed their concerns",
+          "Optimized data collection procedures and generated reports on a weekly, monthly, and quarterly basis for continuous tracking for customer",
+          "Preparation of 3 year financial projection Report",
+          "Preparation of Operational Expense Forecast for next 3 years"
+        ]
+      }
+    ],
+    "projects": [],
+    "summary": "",
+    "certificates": [],
+    "courses": [],
+    "raw_text": "Course : , Master of Business Administration, 2022\nEmail : sathehs 20.mba@coep.ac.in\nMobile : 7588821779\nCGPA : 8.33\nElectrical Fr. Conceicao Rodrigues Institute of 8.63\nUG University of Mumbai 2016\nEngineering Technology, Vashi, Navi Mumbai CGPA\nCLASS Computer Rashtriya Vidyalaya Junior College, Maharashtra State Board of Secondary and 71.83\n2012\nXII Science Chalisgaon Higher Secondary \n\n## Education\n (MSBSHSE) %\nDr. Kakasaheb Purnapatre Madhyamik Maharashtra State Board of Secondary and 96.18\nCLASS X 2010\nVidyalaya, Chalisgaon Higher Secondary \n\n## Education\n (MSBSHSE) %\nOperations Management - NPTEL\nInsurance, Trade Finance, Wealth Analysis\nProject: Trade Finance\nClient: SBI\nResponsibilities:\nSBI was using China Systems for Trade Finance, so my task was to enhance the system as per customer requirements and so its\nperformance improvement.\nWorked on Mckinsey s proposed framework for an understanding of the system.\nAfter finalizing, approached SBI s business team with an effort plan along with included services, and negotiated for the same.\nPlanned for all development-related activities including staffing, testing, and production schedule.\nSuccessful delivery of 2 enhanced modules followed by support of 2 months each\nConsulted regularly with the customer on application development status, new project proposals, and other related technical issues.\nProject: pre-CKYC, CKYC\nClient: SBI\nResponsibilities:\nVisited some of SBI branches, LCPC for data collection regarding account opening procedures\nCo-ordinated with Central KYC Registry, CERSAI for their requirements with SBI CKYC System and their rules and services\nAfter gathering sufficient data, worked with a design team for the finalization of their proposed application layout\nWorked as an application developer and document repository designer\nConducted pilot runs at some of SBI branches in Navi Mumbai and Mumbai region LCPC\nWorked on pilot observations and modified the system, followed by the successful delivery of an application\nLead support team of 10 for few months to support the application\nDiscussed project progress with customers, collected feedback on different stages, and addressed their concerns\nOptimized data collection procedures and generated reports on a weekly, monthly, and quarterly basis for continuous tracking for customer\nPreparation of 3 year financial projection Report\nPreparation of Operational Expense Forecast for next 3 years\nAwarded with 'Star of the Month Award' for my contribution towards successful delivery of one of the modules of Trade Finance.\nAwarded with 'Star of the Month Award' for my contribution towards Trade Finance success.\nAwarded with 'Star of the Month Award' for my contribution towards successful delivery of one of the modules of Trade Finance.\nAwarded with 'Technical Excellence Award' for my contribution towards CKYC success.\nOrganized by:\nAttended a workshop on Cricket Analytics using Python organized by Mad About Sports.\nSecured 27 th rank at district level in High School Scholarship Examination for Std. VII conducted in February 2007.",
+    "salary": {
+      "current_ctc_lpa": null,
+      "expected_ctc_lpa": null
+    }
+  },
+  "validated": {
+    "name": "",
+    "email": "sathehs 20.mba@coep.ac.in",
+    "phone": "7588821779",
+    "location": "",
+    "skills": [],
+    "education": [
+      {
+        "degree": "Master of Business Administration",
+        "institution": "Electrical Fr. Conceicao Rodrigues Institute",
+        "year_start": "2022-01",
+        "year_end": ""
+      },
+      {
+        "degree": "Electrical Engineering Technology",
+        "institution": "University of Mumbai",
+        "year_start": "2016-01",
+        "year_end": ""
+      },
+      {
+        "degree": "Computer Science",
+        "institution": "Computer Rashtriya Vidyalaya Junior College",
+        "year_start": "2012-01",
+        "year_end": ""
+      },
+      {
+        "degree": "Science",
+        "institution": "Chalisgaon Higher Secondary",
+        "year_start": "2012-01",
+        "year_end": ""
+      },
+      {
+        "degree": "CLASS X",
+        "institution": "Dr. Kakasaheb Purnapatre Madhyamik Maharashtra State Board of Secondary and Vidyalaya",
+        "year_start": "2010-01",
+        "year_end": ""
+      }
+    ],
+    "experience": [
+      {
+        "company": "Sbi",
+        "role": "",
+        "start_date": "",
+        "end_date": "",
+        "description": [
+          "SBI was using China Systems for Trade Finance, so my task was to enhance the system as per customer requirements and so its performance improvement.",
+          "Worked on Mckinsey s proposed framework for an understanding of the system.",
+          "After finalizing, approached SBI s business team with an effort plan along with included services, and negotiated for the same.",
+          "Planned for all development-related activities including staffing, testing, and production schedule.",
+          "Successful delivery of 2 enhanced modules followed by support of 2 months each",
+          "Consulted regularly with the customer on application development status, new project proposals, and other related technical issues."
+        ]
+      },
+      {
+        "company": "Sbi",
+        "role": "",
+        "start_date": "",
+        "end_date": "",
+        "description": [
+          "Visited some of SBI branches, LCPC for data collection regarding account opening procedures",
+          "Co-ordinated with Central KYC Registry, CERSAI for their requirements with SBI CKYC System and their rules and services",
+          "After gathering sufficient data, worked with a design team for the finalization of their proposed application layout",
+          "Worked as an application developer and document repository designer",
+          "Conducted pilot runs at some of SBI branches in Navi Mumbai and Mumbai region LCPC",
+          "Worked on pilot observations and modified the system, followed by the successful delivery of an application",
+          "Lead support team of 10 for few months to support the application",
+          "Discussed project progress with customers, collected feedback on different stages, and addressed their concerns",
+          "Optimized data collection procedures and generated reports on a weekly, monthly, and quarterly basis for continuous tracking for customer",
+          "Preparation of 3 year financial projection Report",
+          "Preparation of Operational Expense Forecast for next 3 years"
+        ]
+      }
+    ],
+    "projects": [
+      {
+        "name": "Client: SBI",
+        "description": ""
+      }
+    ],
+    "summary": "",
+    "certificates": [],
+    "courses": [
+      "Master of Business Administration",
+      "2022",
+      "Mobile : 7588821779"
+    ],
+    "raw_text": "Course : , Master of Business Administration, 2022\nEmail : sathehs 20.mba@coep.ac.in\nMobile : 7588821779\nCGPA : 8.33\nElectrical Fr. Conceicao Rodrigues Institute of 8.63\nUG University of Mumbai 2016\nEngineering Technology, Vashi, Navi Mumbai CGPA\nCLASS Computer Rashtriya Vidyalaya Junior College, Maharashtra State Board of Secondary and 71.83\n2012\nXII Science Chalisgaon Higher Secondary \n\n## Education\n (MSBSHSE) %\nDr. Kakasaheb Purnapatre Madhyamik Maharashtra State Board of Secondary and 96.18\nCLASS X 2010\nVidyalaya, Chalisgaon Higher Secondary \n\n## Education\n (MSBSHSE) %\nOperations Management - NPTEL\nInsurance, Trade Finance, Wealth Analysis\nProject: Trade Finance\nClient: SBI\nResponsibilities:\nSBI was using China Systems for Trade Finance, so my task was to enhance the system as per customer requirements and so its\nperformance improvement.\nWorked on Mckinsey s proposed framework for an understanding of the system.\nAfter finalizing, approached SBI s business team with an effort plan along with included services, and negotiated for the same.\nPlanned for all development-related activities including staffing, testing, and production schedule.\nSuccessful delivery of 2 enhanced modules followed by support of 2 months each\nConsulted regularly with the customer on application development status, new project proposals, and other related technical issues.\nProject: pre-CKYC, CKYC\nClient: SBI\nResponsibilities:\nVisited some of SBI branches, LCPC for data collection regarding account opening procedures\nCo-ordinated with Central KYC Registry, CERSAI for their requirements with SBI CKYC System and their rules and services\nAfter gathering sufficient data, worked with a design team for the finalization of their proposed application layout\nWorked as an application developer and document repository designer\nConducted pilot runs at some of SBI branches in Navi Mumbai and Mumbai region LCPC\nWorked on pilot observations and modified the system, followed by the successful delivery of an application\nLead support team of 10 for few months to support the application\nDiscussed project progress with customers, collected feedback on different stages, and addressed their concerns\nOptimized data collection procedures and generated reports on a weekly, monthly, and quarterly basis for continuous tracking for customer\nPreparation of 3 year financial projection Report\nPreparation of Operational Expense Forecast for next 3 years\nAwarded with 'Star of the Month Award' for my contribution towards successful delivery of one of the modules of Trade Finance.\nAwarded with 'Star of the Month Award' for my contribution towards Trade Finance success.\nAwarded with 'Star of the Month Award' for my contribution towards successful delivery of one of the modules of Trade Finance.\nAwarded with 'Technical Excellence Award' for my contribution towards CKYC success.\nOrganized by:\nAttended a workshop on Cricket Analytics using Python organized by Mad About Sports.\nSecured 27 th rank at district level in High School Scholarship Examination for Std. VII conducted in February 2007.",
+    "salary": {
+      "current_ctc_lpa": null,
+      "expected_ctc_lpa": 75888.22
+    },
+    "relevant_experience_map": {
+      "Testing & Debugging": 0.0,
+      "Teamwork": 0.0,
+      "AI": 0.0
+    },
+    "total_experience_years": 0.0
+  },
+  "local_score": {
+    "skills_score": 0,
+    "experience_score": 0,
+    "relevant_experience_score": 17,
+    "projects_score": 0,
+    "certificates_score": 0,
+    "tools_score": 0,
+    "technologies_score": 0,
+    "qualification_score": 0,
+    "responsibilities_score": 0,
+    "salary_score": 33,
+    "final_score": 2,
+    "notes": "Hybrid Score: Skills 0%; Tech 0%. (Semantic Enabled)",
+    "details": {
+      "jd_skill_count": 18,
+      "skills_matched": 0,
+      "jd_tech_count": 35,
+      "tech_matched": 0,
+      "tools_matched": 0,
+      "projects_matched": 0,
+      "candidate_total_experience_years": 0.0,
+      "candidate_relevant_years_per_skill_avg": 0.0
+    },
+    "matched_items": {
+      "skills": {
+        "matched": [],
+        "missing": [
+          "Problem Solving",
+          "Data Structures",
+          "Algorithms",
+          "OOP",
+          "Networking",
+          "Bachelor's Degree in Engineering",
+          "Cloud Computing",
+          "DevOps",
+          "Machine Learning",
+          "Deep Learning",
+          "AI",
+          "Database Management",
+          "Version Control",
+          "API Development",
+          "Teamwork",
+          "Leadership",
+          "Project Management",
+          "Testing & Debugging"
+        ]
+      },
+      "technologies": {
+        "matched": [],
+        "missing": [
+          "C",
+          "C++",
+          "Java",
+          "Python",
+          "JavaScript",
+          "TypeScript",
+          "HTML5",
+          "CSS3",
+          "MySQL",
+          "PostgreSQL",
+          "MongoDB",
+          "Django",
+          "Flask",
+          "Spring",
+          "Laravel",
+          "ReactJS",
+          "Angular",
+          "Bootstrap",
+          "API Development",
+          "GraphQL",
+          "Firebase",
+          "AWS",
+          "Azure",
+          "GCP",
+          "Linux",
+          "Docker",
+          "Kubernetes",
+          "Webpack",
+          "TensorFlow",
+          "PyTorch",
+          "Keras",
+          "OpenCV",
+          "Pandas",
+          "NumPy",
+          "Scikit-Learn"
+        ]
+      },
+      "tools": {
+        "matched": [],
+        "missing": [
+          "Vs Code",
+          "PyCharm",
+          "IntelliJ IDEA",
+          "Eclipse",
+          "Jira",
+          "Slack",
+          "GitHub",
+          "Bitbucket",
+          "Postman"
+        ]
+      },
+      "projects": {
+        "matched_keywords": []
+      }
+    },
+    "experience_range": {
+      "min": 3.0,
+      "max": 8.0
+    }
+  },
+  "ai_score": {
+    "ai_ok": true,
+    "ai_score": {
+      "final_score": 21,
+      "skills_score": 0,
+      "experience_score": 48,
+      "relevant_experience_score": 50,
+      "projects_score": 0,
+      "certificates_score": 0,
+      "tools_score": 0,
+      "technologies_score": 0,
+      "qualification_score": 80,
+      "responsibilities_score": 0,
+      "salary_score": 0,
+      "notes": "Candidate has relevant education but lacks specific skills and technologies required. Experience is relevant but not quantified. [Guardrail: rule_short_tenure] experience_score adjusted (multiply 0.8)."
+    }
+  },
+  "explanation": {
+    "recruiter_text_summary": "Skills: no JD skills provided. Experience score: 0%. Projects: 0% match; Technologies: 0% match. Salary expectation: not provided. Overall fit score: 0.",
+    "candidate_feedback": "Good alignment \u2014 your resume already matches the JD well. Consider adding more detail on measurable outcomes (metrics, scale, impact).",
+    "structured_explanation": {
+      "summary": {
+        "short": "Skills: no JD skills provided. Experience score: 0%. Projects: 0% match; Technologies: 0% match. Salary expectation: not provided. Overall fit score: 0.",
+        "one_line": "Matched 0/0 skills; overall fit 0%.",
+        "experience_years": 0
+      },
+      "strengths": [],
+      "improvements": [],
+      "skill_gaps": [],
+      "tech_gaps": [],
+      "tool_gaps": [],
+      "responsibility_gaps": [],
+      "project_keyword_match": {
+        "matched": [],
+        "missing": [],
+        "matched_pct": 0.0,
+        "total_keywords": 0
+      },
+      "scores": {
+        "skills_score": 0,
+        "experience_score": 0,
+        "relevant_experience_score": 0,
+        "projects_score": 0,
+        "certificates_score": 0,
+        "tools_score": 0,
+        "technologies_score": 0,
+        "qualification_score": 0,
+        "responsibilities_score": 0,
+        "salary_score": 0,
+        "final_score": 0
+      },
+      "matched_items": {}
+    },
+    "visual_payload": {
+      "radar": {
+        "labels": [
+          "Experience",
+          "Skills",
+          "Technologies",
+          "Tools",
+          "Projects",
+          "Certificates",
+          "Responsibilities",
+          "Relevant Exp"
+        ],
+        "values": [
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0
+        ]
+      },
+      "project_keyword_heatmap": {
+        "matched": [],
+        "missing": [],
+        "matched_pct": 0.0,
+        "total": 0
+      },
+      "coverage_bars": [
+        {
+          "category": "Experience",
+          "matched": 0,
+          "total": 1
+        },
+        {
+          "category": "Skills",
+          "matched": 0,
+          "total": 1
+        },
+        {
+          "category": "Technologies",
+          "matched": 0,
+          "total": 1
+        },
+        {
+          "category": "Tools",
+          "matched": 0,
+          "total": 1
+        },
+        {
+          "category": "Projects",
+          "matched": 0,
+          "total": 1
+        },
+        {
+          "category": "Certificates",
+          "matched": 0,
+          "total": 1
+        },
+        {
+          "category": "Responsibilities",
+          "matched": 0,
+          "total": 1
+        },
+        {
+          "category": "Relevant Exp",
+          "matched": 0,
+          "total": 100
+        }
+      ],
+      "experience_fit": {
+        "candidate_years": 0,
+        "jd_min": null,
+        "jd_max": null,
+        "fit_pct_vs_min": null
+      },
+      "salary_gauge": {
+        "score": 0,
+        "candidate_salary": null,
+        "matched_band": null
+      },
+      "summary_scores": {
+        "skills_score": 0,
+        "experience_score": 0,
+        "relevant_experience_score": 0,
+        "projects_score": 0,
+        "certificates_score": 0,
+        "tools_score": 0,
+        "technologies_score": 0,
+        "qualification_score": 0,
+        "responsibilities_score": 0,
+        "salary_score": 0
+      }
+    },
+    "ui_components": {
+      "sections": [
+        {
+          "id": "summary",
+          "label": "Profile Summary",
+          "icon": "mdi-account"
+        },
+        {
+          "id": "skills",
+          "label": "Skills Match",
+          "icon": "mdi-star"
+        },
+        {
+          "id": "technologies",
+          "label": "Technologies",
+          "icon": "mdi-chip"
+        },
+        {
+          "id": "tools",
+          "label": "Tools",
+          "icon": "mdi-hammer-wrench"
+        },
+        {
+          "id": "projects",
+          "label": "Projects",
+          "icon": "mdi-folder"
+        },
+        {
+          "id": "responsibilities",
+          "label": "Responsibilities",
+          "icon": "mdi-clipboard-check"
+        },
+        {
+          "id": "certificates",
+          "label": "Certificates",
+          "icon": "mdi-certificate"
+        },
+        {
+          "id": "experience",
+          "label": "Experience",
+          "icon": "mdi-briefcase"
+        },
+        {
+          "id": "salary",
+          "label": "Salary",
+          "icon": "mdi-currency-inr"
+        }
+      ],
+      "score_tags": {
+        "skills": "bad",
+        "technologies": "bad",
+        "tools": "bad",
+        "projects": "bad",
+        "responsibilities": "bad",
+        "experience": "bad",
+        "certificates": "bad",
+        "salary": "bad"
+      },
+      "filters": {
+        "strengths": 0,
+        "gaps": {
+          "skills": [],
+          "projects": [],
+          "tools": [],
+          "technologies": [],
+          "responsibilities": []
+        }
+      },
+      "chart_types": {
+        "radar": "radar",
+        "project_heatmap": "heatmap",
+        "coverage": "bar",
+        "experience": "bar",
+        "salary": "gauge"
+      }
+    },
+    "matched_items": {},
+    "details": {},
+    "summary_scores": {
+      "skills_score": 0,
+      "experience_score": 0,
+      "relevant_experience_score": 0,
+      "projects_score": 0,
+      "technologies_score": 0,
+      "tools_score": 0,
+      "certificates_score": 0,
+      "qualification_score": 0,
+      "responsibilities_score": 0,
+      "salary_score": 0,
+      "final_score": 0
+    },
+    "experience_range": {},
+    "final_score": 0
+  },
+  "pdf_report": "C:\\Users\\asr26\\OneDrive\\Desktop\\Reaper\\Work_101\\RaiyaRecuritment_Parser\\phi 4\\storage\\reports\\152090014 Harshita Sanjay Sathe__report_20260113_183158.pdf"
+}

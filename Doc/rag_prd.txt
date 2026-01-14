@@ -1,0 +1,167 @@
+Product Requirements Document (PRD)
+Project: RAG-Driven AI Resume Scoring Platform (Matcher-less Upgrade)
+
+1. Objective
+Upgrade the existing resume scoring system to:
+Remove matcher.py
+Introduce RAG-supervised AI scoring using Phi-4
+Create a deduplicated evidence memory
+Enable safe, controlled learning
+Generate clean fine-tuning datasets
+The system must remain:
+Deterministic where required
+Explainable
+Auditable
+Safe against hallucinations
+
+2. In-Scope (Must Build)
+2.1 Scoring Architecture Changes
+Replace matcher.py completely
+Make ai_scorer.py the primary scoring engine
+Enforce two-pass scoring:
+Primary scoring (Phi-4)
+Self-verification using RAG evidence
+Retain validator.py and guardrails.py as hard enforcement layers
+
+2.2 RAG Supervision Layer (New)
+Create a new module: app/rag_supervisor/
+Required Components
+query_builder.py
+Build compact RAG queries from:
+JD signature
+Resume signature
+Proposed scores
+retriever.py
+Retrieve Top-K evidence from vector store
+prompt_augmentor.py
+Inject retrieved evidence into Phi-4 prompt
+self_check.py
+Compare current scores vs past evidence
+confidence_scorer.py
+Assign confidence score to each run
+Constraints
+RAG is read-only at runtime
+No evidence → no correction
+RAG never invents rules
+
+2.3 Evidence Management System (New)
+Create a new module: app/evidence/
+Evidence Rules
+Evidence is created only after validation passes
+Evidence must be deduplicated
+Identical evidence is stored once and reused
+Required Components
+schema.py
+Atomic evidence definition (pattern / flaw / correction)
+hasher.py
+Content-based hash:
+JD signature
+Issue signature
+Resolution
+deduplicator.py
+Prevent duplicate evidence creation
+store.py
+Persist evidence (SQL + vector embeddings)
+linker.py
+Link job runs to existing evidence
+usage_tracker.py
+Track reuse count and stability
+
+2.4 Validation & Guardrails (Mandatory)
+Must continue to enforce:
+Experience strictly from roles (no CGPA, no summary claims)
+Skills counted only if used in experience/projects
+Salary rules (missing salary = zero)
+Weight normalization to 100
+Score bounds (0–100)
+If violated:
+Reject output
+Do NOT create evidence
+Log failure
+
+2.5 Learning & Fine-Tuning Pipeline (New)
+Create a new module: app/learning/
+Purpose
+Convert stable evidence into fine-tuning datasets
+Do NOT train directly from raw outputs
+Required Components
+eligibility_filter.py
+Evidence reuse ≥ threshold
+Validation always passed
+No overrides
+dataset_builder.py
+Build input-target pairs
+dataset_versioner.py
+Immutable dataset versions
+finetune_scheduler.py
+Manual or scheduled fine-tuning
+Explicitly Excluded from Training
+Raw resumes
+Unvalidated runs
+Tenant-specific preferences
+One-off edge cases
+
+3. Data & Storage Requirements
+3.1 New Database Tables
+evidence
+evidence_usage
+evidence_job_link
+learning_datasets
+dataset_versions
+3.2 Vector Store
+Store embeddings for:
+Evidence only
+One embedding per unique evidence record
+
+4. Prompting Requirements
+4.1 AI Scorer Prompt (Mandatory Sections)
+System rules (anti-hallucination)
+Retrieved RAG evidence
+Current JD
+Validated resume JSON
+Self-verification instructions
+Strict JSON output schema
+
+5. API & Backend Changes
+Update ai_scorer.py to:
+Call RAG supervisor
+Perform self-verification
+Remove all dependencies on matcher.py
+Log:
+Evidence used
+Corrections made
+Confidence score
+
+6. Frontend Impact
+No UI redesign required.
+Optional additions:
+Evidence count per score
+Confidence indicator
+Audit trail view (job → evidence)
+
+7. Non-Functional Requirements
+Deterministic validation must always override AI output
+Evidence creation must be idempotent
+System must be auditable per resume
+Fine-tuning must be reversible (versioned models)
+
+8. Success Metrics
+Reduced score variance for similar resumes
+Zero hallucinated skills or experience
+High evidence reuse ratio
+Fewer manual overrides
+Stable fine-tuning datasets
+
+9. Explicit Out-of-Scope
+End-to-end retraining from resumes
+Autonomous model updates without review
+Removal of validation or guardrails
+Prompt-only learning without evidence
+
+10. Final Acceptance Criteria
+The upgrade is considered complete when:
+matcher.py is fully removed
+Scoring runs with Phi-4 + RAG supervision
+Evidence is deduplicated and reused
+Learning datasets are generated automatically
+Fine-tuning can be triggered safely

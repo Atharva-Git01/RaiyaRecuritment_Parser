@@ -1,0 +1,1213 @@
+# Resume Screening Pipeline — Complete Architectural Map
+
+**System Name:** Raiya Recruitment Parser (Phi-4 Powered)  
+**Version:** 1.0  
+**Date:** December 30, 2025  
+**Document Type:** System Architecture Reference
+
+---
+
+## Executive Summary
+
+This document provides a **complete architectural map** of the Resume Screening Pipeline—a production-grade, AI-powered recruitment automation system. The system processes bulk resume uploads, extracts structured data using Azure OpenAI (Phi-4), scores candidates against job descriptions using hybrid matching, and generates explainable reports for recruiters.
+
+**Key Characteristics:**
+- **9-Stage Pipeline:** Extract → Normalize → Parse → Validate → Pre-Score → Match → AI Score → Explain → Report
+- **3-Layer Architecture:** Frontend (HTML/JS) → Backend (FastAPI) → Database (MySQL)
+- **Zero Hallucination:** Deterministic validation overrides AI outputs
+- **Multi-Tenant SaaS:** Isolated data per tenant/business unit
+- **Real-Time Processing:** Background workers with live status updates
+
+---
+
+## 1. System Architecture Overview
+
+### 1.1 High-Level Architecture Diagram
+
+```mermaid
+graph TB
+    subgraph "Frontend Layer"
+        UI1[Bulk Upload Platform]
+        UI2[Processing Queue Monitor]
+        UI3[Results Dashboard]
+        UI4[History Viewer]
+        UI5[Settings Panel]
+    end
+    
+    subgraph "Backend Layer - FastAPI Server"
+        API[server.py - REST API]
+        WORKER[Background Workers]
+        ORCH[main.py - Pipeline Orchestrator]
+    end
+    
+    subgraph "Processing Pipeline - 9 Stages"
+        S1[1. Extract PDF Text]
+        S2[2. Normalize Text]
+        S3[3. Parse with AI]
+        S4[4. Validate Data]
+        S5[5. Pre-Score Normalize]
+        S6[6. Local Matcher]
+        S7[7. AI Scorer]
+        S8[8. Explanation Engine]
+        S9[9. PDF Report]
+    end
+    
+    subgraph "Data Layer"
+        DB[(MySQL Database)]
+        FS[File Storage]
+    end
+    
+    subgraph "External Services"
+        AZURE[Azure OpenAI - Phi-4]
+        SEMANTIC[SentenceTransformers]
+    end
+    
+    UI1 --> API
+    UI2 --> API
+    UI3 --> API
+    UI4 --> API
+    UI5 --> API
+    
+    API --> WORKER
+    WORKER --> ORCH
+    
+    ORCH --> S1
+    S1 --> S2
+    S2 --> S3
+    S3 --> S4
+    S4 --> S5
+    S5 --> S6
+    S6 --> S7
+    S7 --> S8
+    S8 --> S9
+    
+    S3 -.AI Call.-> AZURE
+    S6 -.Semantic Match.-> SEMANTIC
+    S7 -.AI Call.-> AZURE
+    
+    S9 --> DB
+    S9 --> FS
+    
+    API -.Query.-> DB
+    API -.Read.-> FS
+```
+
+### 1.2 Technology Stack
+
+| Layer | Component | Technology | Purpose |
+|-------|-----------|------------|---------|
+| **Frontend** | UI Framework | HTML5 + Vanilla JS | Real-time dashboard |
+| | Styling | TailwindCSS | Responsive design |
+| | Charts | Chart.js | Data visualization |
+| **Backend** | Web Server | FastAPI + Uvicorn | REST API |
+| | Task Queue | FastAPI BackgroundTasks | Async processing |
+| | Pipeline | Python 3.x | Orchestration |
+| **AI/ML** | LLM | Azure OpenAI (Phi-4) | Parsing + Scoring |
+| | Embeddings | SentenceTransformers | Semantic matching |
+| **Database** | RDBMS | MySQL 8.0 | Multi-tenant data |
+| | Connection Pool | mysql-connector-python | Connection management |
+| **Processing** | PDF Extraction | PyMuPDF, pdfplumber | Text extraction |
+| | Report Generation | ReportLab | PDF creation |
+| **Infrastructure** | Environment | python-dotenv | Config management |
+
+---
+
+## 2. Data Flow Architecture
+
+### 2.1 End-to-End Data Flow Diagram
+
+```mermaid
+flowchart TD
+    START([User Uploads Resumes + JD]) --> UPLOAD[Upload to /uploads/]
+    UPLOAD --> TRIGGER[POST /api/process]
+    
+    TRIGGER --> DB_SETUP[Create Batch + Jobs in DB]
+    DB_SETUP --> DISPATCH[Dispatch Background Workers]
+    
+    DISPATCH --> PIPELINE{For Each Resume}
+    
+    PIPELINE --> EXTRACT[Stage 1: Extract Text<br/>extractor.py]
+    EXTRACT --> |Raw Text| NORMALIZE[Stage 2: Normalize<br/>normalizer.py]
+    NORMALIZE --> |Clean Text| PARSE[Stage 3: AI Parse<br/>parser.py]
+    
+    PARSE --> |Structured JSON| VALIDATE[Stage 4: Validate<br/>validator.py]
+    VALIDATE --> |Enriched JSON| PRESCORE[Stage 5: Pre-Score Normalize<br/>normalizer_pre_score.py]
+    PRESCORE --> |Scoring-Ready JSON| MATCH[Stage 6: Local Matcher<br/>matcher.py]
+    
+    MATCH --> |Local Scores| AISCORE[Stage 7: AI Scorer<br/>ai_scorer.py]
+    AISCORE --> |AI Scores| EXPLAIN[Stage 8: Explanation Engine<br/>explanation_engine.py]
+    EXPLAIN --> |Explanation JSON| REPORT[Stage 9: PDF Report<br/>pdf_report.py]
+    
+    REPORT --> PERSIST[Save to Database<br/>saas_db.py]
+    PERSIST --> STATUS[Update Job Status]
+    STATUS --> CHECK{All Jobs Done?}
+    
+    CHECK -->|Yes| BATCH_COMPLETE[Update Batch Status: Completed]
+    CHECK -->|No| PIPELINE
+    
+    BATCH_COMPLETE --> END([Results Available])
+    
+    PARSE -.Azure API.-> AZURE_LLM[Azure OpenAI<br/>Phi-4 Model]
+    AISCORE -.Azure API.-> AZURE_LLM
+    MATCH -.Semantic.-> SEMANTIC_MODEL[SentenceTransformers<br/>all-MiniLM-L6-v2]
+    
+    style EXTRACT fill:#e1f5ff
+    style NORMALIZE fill:#e1f5ff
+    style PARSE fill:#fff4e1
+    style VALIDATE fill:#e1f5ff
+    style PRESCORE fill:#e1f5ff
+    style MATCH fill:#e8f5e9
+    style AISCORE fill:#fff4e1
+    style EXPLAIN fill:#e8f5e9
+    style REPORT fill:#e8f5e9
+    style PERSIST fill:#f3e5f5
+```
+
+**Legend:**
+- 🔵 Blue: Text Processing (Deterministic)
+- 🟡 Yellow: AI-Powered (LLM)
+- 🟢 Green: Scoring & Analysis (Hybrid)
+- 🟣 Purple: Database Operations
+
+### 2.2 Data Transformation Flow
+
+| Stage | Input Format | Output Format | File Location | Size |
+|-------|--------------|---------------|---------------|------|
+| **0. Upload** | PDF Binary | PDF File | `uploads/*.pdf` | Variable |
+| **1. Extract** | PDF File | Raw Text | `storage/tmp/*__extracted.txt` | ~10-50 KB |
+| **2. Normalize** | Raw Text | Clean Markdown | `storage/tmp/*__normalized.md` | ~8-40 KB |
+| **3. Parse** | Markdown | Structured JSON | `storage/tmp/*__parsed.json` | ~2-5 KB |
+| **4. Validate** | Parsed JSON | Validated JSON | `storage/tmp/*__validated.json` | ~3-6 KB |
+| **5. Pre-Score** | Validated JSON | Scoring-Ready JSON | `storage/tmp/*__scoring_ready.json` | ~3-6 KB |
+| **6. Match** | Scoring JSON + JD | Local Score JSON | `storage/results/*__local_score.json` | ~5-10 KB |
+| **7. AI Score** | Scoring JSON + JD | AI Score JSON | `storage/results/*__ai_score.json` | ~5-10 KB |
+| **8. Explain** | Merged Scores | Explanation JSON | `storage/results/*__explanation.json` | ~15-30 KB |
+| **9. Report** | Explanation JSON | PDF Report | `storage/reports/*__report.pdf` | ~200-500 KB |
+| **10. Persist** | All Artifacts | Database Records | MySQL [resume_results](file:///c:/Users/asr26/OneDrive/Desktop/Reaper/Work_101/RaiyaRecuritment_Parser/phi%204/app/saas_db.py#537-551) | ~10-20 KB |
+
+---
+
+## 3. Component Architecture
+
+### 3.1 Module Dependency Map
+
+```mermaid
+graph LR
+    subgraph "Entry Points"
+        MAIN[main.py]
+        SERVER[server.py]
+    end
+    
+    subgraph "Pipeline Modules"
+        EXTRACT[extractor.py]
+        NORMALIZE[normalizer.py]
+        PARSER[parser.py]
+        VALIDATOR[validator.py]
+        PRESCORE[normalizer_pre_score.py]
+        MATCHER[matcher.py]
+        AISCORER[ai_scorer.py]
+        EXPLAINER[explanation_engine.py]
+        PDFREPORT[pdf_report.py]
+    end
+    
+    subgraph "Support Modules"
+        SAASDB[saas_db.py]
+        JDVAL[jd_validator.py]
+        JDNORM[jd_normalizer.py]
+        GUARDRAILS[guardrails.py]
+        SCHEMAS[schemas.py]
+    end
+    
+    subgraph "External Resources"
+        PROMPTS[prompts/v1/]
+        CONFIG[config/]
+        DATABASE[(MySQL DB)]
+    end
+    
+    SERVER --> MAIN
+    MAIN --> EXTRACT
+    MAIN --> NORMALIZE
+    MAIN --> PARSER
+    MAIN --> VALIDATOR
+    MAIN --> PRESCORE
+    MAIN --> MATCHER
+    MAIN --> AISCORER
+    MAIN --> EXPLAINER
+    MAIN --> PDFREPORT
+    MAIN --> SAASDB
+    
+    MATCHER --> JDVAL
+    MATCHER --> VALIDATOR
+    AISCORER --> JDVAL
+    PARSER --> PROMPTS
+    AISCORER --> PROMPTS
+    EXPLAINER --> PROMPTS
+    
+    SAASDB --> DATABASE
+    
+    style MAIN fill:#ff6b6b
+    style SERVER fill:#ff6b6b
+    style PARSER fill:#ffd93d
+    style AISCORER fill:#ffd93d
+    style MATCHER fill:#6bcf7f
+    style SAASDB fill:#a29bfe
+```
+
+### 3.2 Module Responsibilities Matrix
+
+| Module | Type | Responsibility | Dependencies | External Calls |
+|--------|------|----------------|--------------|----------------|
+| **main.py** | Orchestrator | Pipeline execution | All pipeline modules | None |
+| **server.py** | API Server | HTTP endpoints, background tasks | main.py, saas_db.py | None |
+| **extractor.py** | Processor | PDF → Text extraction | PyMuPDF, pdfplumber | None |
+| **normalizer.py** | Processor | Text cleaning | regex, unicodedata | None |
+| **parser.py** | AI Module | Text → JSON (LLM) | Azure OpenAI | Azure API |
+| **validator.py** | Processor | Data validation + enrichment | regex, datetime | None |
+| **normalizer_pre_score.py** | Processor | Alias normalization | None | None |
+| **matcher.py** | Scorer | Deterministic + semantic scoring | SentenceTransformers | Hugging Face (model download) |
+| **ai_scorer.py** | AI Module | AI-assisted scoring | Azure OpenAI | Azure API |
+| **explanation_engine.py** | Generator | Human-readable explanations | None | None |
+| **pdf_report.py** | Generator | PDF report creation | ReportLab | None |
+| **saas_db.py** | Data Layer | Database operations | MySQL connector | MySQL Server |
+| **jd_validator.py** | Validator | JD schema validation | None | None |
+| **jd_normalizer.py** | Processor | JD normalization | None | None |
+| **guardrails.py** | Safety | Anti-hallucination checks | None | None |
+
+---
+
+## 4. Database Architecture
+
+### 4.1 Entity-Relationship Diagram
+
+```mermaid
+erDiagram
+    TENANTS ||--o{ BUSINESS_UNITS : contains
+    BUSINESS_UNITS ||--o{ JOB_DESCRIPTIONS : has
+    BUSINESS_UNITS ||--o{ BATCHES : creates
+    BATCHES ||--o{ JOBS : contains
+    JOB_DESCRIPTIONS ||--o{ JOBS : evaluates
+    JOBS ||--o| RESUME_RESULTS : produces
+    
+    TENANTS {
+        int tenant_id PK
+        string tenant_name
+        string status
+        datetime created_at
+    }
+    
+    BUSINESS_UNITS {
+        int bu_id PK
+        int tenant_id FK
+        string bu_name
+        datetime created_at
+    }
+    
+    JOB_DESCRIPTIONS {
+        int jd_id PK
+        int bu_id FK
+        string jd_title
+        text jd_data_json
+        datetime created_at
+    }
+    
+    BATCHES {
+        int batch_id PK
+        int bu_id FK
+        int uploader_user_id
+        string status
+        string batch_guid
+        datetime created_at
+    }
+    
+    JOBS {
+        int job_id PK
+        int batch_id FK
+        int jd_id FK
+        int requester_user_id
+        string status
+        datetime created_at
+    }
+    
+    RESUME_RESULTS {
+        int result_id PK
+        int job_id FK
+        text parsed_resume_json
+        text scores_json
+        string report_url
+        datetime processed_at
+    }
+```
+
+### 4.2 Database Schema Details
+
+#### **Multi-Tenant Hierarchy**
+```
+Tenant (Organization)
+  └── Business Unit (Department/Team)
+       ├── Job Descriptions (Roles)
+       └── Batches (Processing Sessions)
+            └── Jobs (Individual Resumes)
+                 └── Resume Results (Parsed Data + Scores)
+```
+
+#### **Key Relationships**
+- **1 Tenant** → **N Business Units** (e.g., "Acme Corp" → "Engineering", "Sales")
+- **1 Business Unit** → **N Job Descriptions** (e.g., "Engineering" → "Senior SWE", "ML Engineer")
+- **1 Business Unit** → **N Batches** (e.g., "Engineering" → "Batch #1", "Batch #2")
+- **1 Batch** → **N Jobs** (e.g., "Batch #1" → 50 resume processing jobs)
+- **1 Job Description** → **N Jobs** (e.g., "Senior SWE JD" → evaluated against 50 resumes)
+- **1 Job** → **1 Resume Result** (1:1 relationship)
+
+#### **Status Flow**
+
+**Batch Status:**
+```
+pending → processing → completed/failed
+```
+
+**Job Status:**
+```
+queued → running → completed/failed
+```
+
+### 4.3 Data Persistence Strategy
+
+| Data Type | Storage Location | Persistence | Backup Strategy |
+|-----------|------------------|-------------|-----------------|
+| **Resume PDFs** | `uploads/` (filesystem) | Temporary | Not backed up (deleted after processing) |
+| **Intermediate Files** | `storage/tmp/` | Temporary | Not backed up (debugging only) |
+| **Score Files** | `storage/results/` | Permanent | File-based backup |
+| **PDF Reports** | `storage/reports/` | Permanent | File-based backup |
+| **Structured Data** | MySQL `resume_results` | Permanent | Database backup |
+| **Metadata** | MySQL (batches, jobs) | Permanent | Database backup |
+
+---
+
+## 5. Pipeline Deep Dive
+
+### 5.1 Detailed Pipeline Flow
+
+```mermaid
+sequenceDiagram
+    participant User
+    participant Frontend
+    participant API as server.py
+    participant Worker as Background Worker
+    participant Pipeline as main.py
+    participant Modules as Pipeline Modules
+    participant Azure as Azure OpenAI
+    participant DB as MySQL Database
+    participant FS as File Storage
+    
+    User->>Frontend: Upload Resumes + JD
+    Frontend->>API: POST /api/upload
+    API->>FS: Save files to uploads/
+    API-->>Frontend: Upload confirmed
+    
+    User->>Frontend: Click "Start Processing"
+    Frontend->>API: POST /api/process
+    
+    API->>DB: Create Batch record
+    API->>DB: Create JD record
+    loop For each resume
+        API->>DB: Create Job record (status: queued)
+    end
+    
+    API->>Worker: Dispatch background tasks
+    API-->>Frontend: Processing started
+    
+    loop For each resume
+        Worker->>Pipeline: run_full_pipeline(resume, jd, job_id)
+        Pipeline->>DB: Update job status: running
+        
+        Pipeline->>Modules: 1. Extract (extractor.py)
+        Modules->>FS: Save extracted text
+        
+        Pipeline->>Modules: 2. Normalize (normalizer.py)
+        Modules->>FS: Save normalized text
+        
+        Pipeline->>Modules: 3. Parse (parser.py)
+        Modules->>Azure: Send text for parsing
+        Azure-->>Modules: Return structured JSON
+        Modules->>FS: Save parsed JSON
+        
+        Pipeline->>Modules: 4. Validate (validator.py)
+        Modules->>FS: Save validated JSON
+        
+        Pipeline->>Modules: 5. Pre-Score (normalizer_pre_score.py)
+        Modules->>FS: Save scoring-ready JSON
+        
+        Pipeline->>Modules: 6. Match (matcher.py)
+        Modules->>FS: Save local scores
+        
+        Pipeline->>Modules: 7. AI Score (ai_scorer.py)
+        Modules->>Azure: Send resume + JD for scoring
+        Azure-->>Modules: Return AI scores
+        Modules->>FS: Save AI scores
+        
+        Pipeline->>Modules: 8. Explain (explanation_engine.py)
+        Modules->>FS: Save explanation JSON
+        
+        Pipeline->>Modules: 9. Report (pdf_report.py)
+        Modules->>FS: Save PDF report
+        
+        Pipeline->>DB: Save resume_result record
+        Pipeline->>DB: Update job status: completed
+        Pipeline->>DB: Check batch completion
+        
+        Pipeline-->>Worker: Job completed
+    end
+    
+    Worker->>DB: Update batch status: completed
+    Worker-->>API: All jobs done
+    
+    loop Every 2 seconds
+        Frontend->>API: GET /api/jobs (polling)
+        API-->>Frontend: Job statuses
+    end
+    
+    User->>Frontend: View Results
+    Frontend->>API: GET /api/results
+    API->>DB: Query resume_results
+    API->>FS: Read explanation files
+    API-->>Frontend: Results data
+```
+
+### 5.2 Stage-by-Stage Breakdown
+
+#### **Stage 1: Text Extraction**
+```
+Input:  PDF file (binary)
+Tool:   PyMuPDF (primary), pdfplumber (fallback)
+Logic:  
+  1. Try PyMuPDF.open() → extract text
+  2. If fails, try pdfplumber.open() → extract text
+  3. Handle encoding issues (UTF-8 normalization)
+Output: Raw text string
+File:   storage/tmp/{name}__extracted.txt
+```
+
+#### **Stage 2: Text Normalization**
+```
+Input:  Raw text
+Logic:  
+  1. Remove headers/footers (regex patterns)
+  2. Remove page numbers, watermarks
+  3. Standardize bullet points (•, -, *, →)
+  4. Fix encoding (smart quotes, em-dashes)
+  5. Normalize whitespace (multiple spaces → single)
+  6. Convert to markdown structure
+Output: Clean markdown text
+File:   storage/tmp/{name}__normalized.md
+```
+
+#### **Stage 3: AI Parsing (Azure Phi-4)**
+```
+Input:  Normalized text
+Prompt: "Extract ONLY what is explicitly present. Do NOT infer or add synonyms."
+Model:  Azure OpenAI Phi-4
+Logic:  
+  1. Send text to Azure API with strict prompt
+  2. Parse JSON response
+  3. Retry with higher max_tokens if parsing fails
+  4. Validate JSON schema
+Output: Structured JSON (name, email, skills, experience, etc.)
+File:   storage/tmp/{name}__parsed.json
+```
+
+#### **Stage 4: Validation**
+```
+Input:  Parsed JSON
+Logic:  
+  1. Normalize dates to YYYY-MM format
+  2. Calculate total experience from timeline (override LLM)
+  3. Extract salary via regex (fallback if LLM missed)
+  4. Extract projects from raw text (fallback)
+  5. Extract courses from raw text
+  6. Normalize experience descriptions to list format
+  7. Validate email, phone formats
+Output: Validated + enriched JSON
+File:   storage/tmp/{name}__validated.json
+```
+
+#### **Stage 5: Pre-Score Normalization**
+```
+Input:  Validated JSON
+Logic:  
+  1. Map skill aliases: "react" → "ReactJS", "ml" → "Machine Learning"
+  2. Map tech aliases: "postgres" → "PostgreSQL"
+  3. Map education aliases: "btech" → "Bachelor's Degree"
+  4. Separate skill/tech aliases from education aliases
+Output: Scoring-ready JSON
+File:   storage/tmp/{name}__scoring_ready.json
+```
+
+#### **Stage 6: Local Matcher**
+```
+Input:  Scoring-ready JSON + JD JSON
+Logic:  
+  1. Skills: Exact match (word boundaries) + Semantic (threshold 0.45)
+  2. Technologies: Same hybrid approach
+  3. Tools: Same hybrid approach
+  4. Experience: Timeline calculation + semantic role filtering
+  5. Relevant Experience: Skill-specific years mapping
+  6. Projects: Keyword extraction + matching
+  7. Certificates: Exact + semantic match
+  8. Qualification: Substring match
+  9. Responsibilities: Semantic match
+  10. Salary: Band mapping
+  11. Compute weighted final score
+Output: Local score JSON (10 component scores + final)
+File:   storage/results/{name}__local_score.json
+```
+
+#### **Stage 7: AI Scorer**
+```
+Input:  Scoring-ready JSON + JD JSON
+Prompt: "Experience MUST be from timelines. IGNORE irrelevant roles. Skills MUST appear in descriptions."
+Model:  Azure OpenAI Phi-4
+Logic:  
+  1. Send resume + JD to Azure API
+  2. Validate AI output schema
+  3. Recompute final_score if inconsistent
+  4. Hybrid fallback: merge local data if AI returns 0
+Output: AI score JSON (same schema as local)
+File:   storage/results/{name}__ai_score.json
+```
+
+#### **Stage 8: Explanation Generation**
+```
+Input:  Merged score object (local + AI)
+Logic:  
+  1. Generate recruiter summary (1-3 sentences)
+  2. Generate candidate feedback (actionable tips)
+  3. Build structured explanation (strengths, gaps)
+  4. Create visual payload (chart data)
+  5. Generate UI components metadata
+Output: Explanation JSON
+File:   storage/results/{name}__explanation.json
+```
+
+#### **Stage 9: PDF Report**
+```
+Input:  Explanation JSON
+Logic:  
+  1. Create PDF with ReportLab
+  2. Add candidate summary section
+  3. Add score breakdown table
+  4. Add matched/missing items
+  5. Add visual charts (radar, bar, gauge)
+Output: PDF file
+File:   storage/reports/{name}__report_{timestamp}.pdf
+```
+
+---
+
+## 6. Frontend Architecture
+
+### 6.1 Frontend Component Map
+
+```mermaid
+graph TD
+    subgraph "Frontend Pages"
+        PLATFORM[recruiter-platform.html<br/>Main Dashboard]
+        BULK[bulk-processing.html<br/>Queue Monitor]
+        RESULTS[recruiter-results.html<br/>Results List]
+        DETAIL[screening-results.html<br/>Candidate Detail]
+        HISTORY[history.html<br/>Batch History]
+        SETTINGS[settings.html<br/>User Settings]
+        DBMON[database-monitor.html<br/>DB Monitor]
+    end
+    
+    subgraph "Shared Assets"
+        APPJS[app.js<br/>Shared Logic]
+        STYLES[TailwindCSS<br/>Styling]
+        CHARTS[Chart.js<br/>Visualizations]
+    end
+    
+    subgraph "API Endpoints"
+        API1[/api/upload]
+        API2[/api/process]
+        API3[/api/jobs]
+        API4[/api/results]
+        API5[/api/batch-history]
+        API6[/api/settings]
+        API7[/api/database-monitor]
+    end
+    
+    PLATFORM --> API1
+    PLATFORM --> API2
+    BULK --> API3
+    RESULTS --> API4
+    DETAIL --> API4
+    HISTORY --> API5
+    SETTINGS --> API6
+    DBMON --> API7
+    
+    PLATFORM --> APPJS
+    BULK --> APPJS
+    RESULTS --> APPJS
+    DETAIL --> APPJS
+    
+    BULK --> CHARTS
+    RESULTS --> CHARTS
+    DETAIL --> CHARTS
+    
+    style PLATFORM fill:#4CAF50
+    style BULK fill:#2196F3
+    style RESULTS fill:#FF9800
+    style DETAIL fill:#9C27B0
+```
+
+### 6.2 User Journey Map
+
+```mermaid
+journey
+    title Recruiter User Journey
+    section Upload Phase
+      Navigate to Platform: 5: Recruiter
+      Upload Resumes (PDF): 4: Recruiter
+      Upload Job Description: 4: Recruiter
+      Review Upload Summary: 5: Recruiter
+    section Processing Phase
+      Click "Start Processing": 5: Recruiter
+      Monitor Queue Status: 4: Recruiter
+      View Progress Bars: 5: Recruiter
+      Wait for Completion: 3: Recruiter
+    section Review Phase
+      View Results Dashboard: 5: Recruiter
+      Sort by Score: 5: Recruiter
+      Filter Candidates: 4: Recruiter
+      View Candidate Details: 5: Recruiter
+      Review Matched Skills: 5: Recruiter
+      Check Experience Fit: 5: Recruiter
+    section Decision Phase
+      Download PDF Reports: 4: Recruiter
+      Export to CSV: 4: Recruiter
+      Shortlist Candidates: 5: Recruiter
+```
+
+### 6.3 API Integration Matrix
+
+| Frontend Page | API Endpoints | Update Frequency | Data Flow |
+|---------------|---------------|------------------|-----------|
+| **recruiter-platform.html** | `/api/upload`, `/api/process` | On action | Upload → Server |
+| **bulk-processing.html** | `/api/jobs` | 2s polling | Server → UI (real-time) |
+| **recruiter-results.html** | `/api/results` | On load | Server → UI |
+| **screening-results.html** | `/api/results/{filename}` | On load | Server → UI |
+| **history.html** | `/api/batch-history` | On load | Server → UI |
+| **settings.html** | `/api/settings` (GET/POST) | On save | Bidirectional |
+| **database-monitor.html** | `/api/database-monitor` | On load | Server → UI |
+
+---
+
+## 7. Integration Points
+
+### 7.1 External Service Integration
+
+```mermaid
+graph LR
+    subgraph "Resume Pipeline"
+        PARSER[parser.py]
+        AISCORER[ai_scorer.py]
+        MATCHER[matcher.py]
+    end
+    
+    subgraph "Azure OpenAI"
+        ENDPOINT[API Endpoint]
+        PHI4[Phi-4 Model]
+    end
+    
+    subgraph "Hugging Face"
+        HFHUB[Model Hub]
+        MINILM[all-MiniLM-L6-v2]
+    end
+    
+    subgraph "MySQL Server"
+        DBSERVER[MySQL 8.0]
+        SAASDB[saas_db Database]
+    end
+    
+    PARSER -->|REST API| ENDPOINT
+    AISCORER -->|REST API| ENDPOINT
+    ENDPOINT --> PHI4
+    
+    MATCHER -->|Model Download| HFHUB
+    HFHUB --> MINILM
+    MATCHER -->|Inference| MINILM
+    
+    PARSER -.Persist.-> DBSERVER
+    AISCORER -.Persist.-> DBSERVER
+    DBSERVER --> SAASDB
+    
+    style ENDPOINT fill:#0078D4
+    style PHI4 fill:#0078D4
+    style HFHUB fill:#FFD21E
+    style MINILM fill:#FFD21E
+    style DBSERVER fill:#00758F
+```
+
+### 7.2 Configuration Management
+
+| Configuration Type | Source | Format | Example |
+|-------------------|--------|--------|---------|
+| **Azure OpenAI** | `.env` | Key-Value | `AZURE_OPENAI_ENDPOINT=https://...` |
+| **Database** | `.env` | Key-Value | `DB_HOST=localhost` |
+| **Prompt Versions** | `prompts/v1/` | Text Files | `ai_scorer/system.txt` |
+| **System Config** | `config/system_config.json` | JSON | Weights, thresholds |
+| **User Settings** | `settings.json` | JSON | User preferences |
+
+### 7.3 Prompt Versioning System
+
+```
+prompts/
+├── v1/
+│   ├── ai_scorer/
+│   │   └── system.txt          # AI scorer system prompt
+│   ├── explainer/
+│   │   └── system.txt          # Explanation engine prompt
+│   └── parser/
+│       └── system.txt          # Resume parser prompt
+└── active_version.txt          # Points to active version (e.g., "v1")
+```
+
+**Version Control Strategy:**
+- Each prompt version is immutable (v1, v2, v3...)
+- `active_version.txt` determines which version to load
+- Allows A/B testing and rollback
+- Managed via `scripts/set_version.py`
+
+---
+
+## 8. Scoring Architecture
+
+### 8.1 Hybrid Scoring Model
+
+```mermaid
+graph TD
+    subgraph "Scoring Pipeline"
+        INPUT[Scoring-Ready JSON + JD]
+        
+        LOCAL[Local Matcher<br/>matcher.py]
+        AI[AI Scorer<br/>ai_scorer.py]
+        
+        MERGE[Score Merger]
+        EXPLAIN[Explanation Engine]
+        
+        INPUT --> LOCAL
+        INPUT --> AI
+        
+        LOCAL --> MERGE
+        AI --> MERGE
+        
+        MERGE --> EXPLAIN
+    end
+    
+    subgraph "Local Matcher Components"
+        EXACT[Exact Match<br/>Word Boundaries]
+        SEMANTIC[Semantic Match<br/>SentenceTransformers]
+        TIMELINE[Timeline Calculation<br/>Date Parsing]
+        
+        LOCAL --> EXACT
+        LOCAL --> SEMANTIC
+        LOCAL --> TIMELINE
+    end
+    
+    subgraph "AI Scorer Components"
+        PROMPT[Anti-Hallucination Prompt]
+        VALIDATE[Schema Validation]
+        FALLBACK[Hybrid Fallback]
+        
+        AI --> PROMPT
+        AI --> VALIDATE
+        AI --> FALLBACK
+    end
+    
+    style LOCAL fill:#4CAF50
+    style AI fill:#FF9800
+    style MERGE fill:#2196F3
+```
+
+### 8.2 Scoring Weights Configuration
+
+| Component | Weight | Rationale | Calculation Method |
+|-----------|--------|-----------|-------------------|
+| **Skills** | 30% | Most critical for technical roles | Hybrid: Exact + Semantic |
+| **Experience** | 25% | Second most important | Timeline-based (deterministic) |
+| **Relevant Experience** | 10% | Skill-specific depth | Skill-year mapping |
+| **Projects** | 10% | Practical application | Keyword matching |
+| **Certificates** | 5% | Professional development | Exact + Semantic |
+| **Technologies** | 5% | Tech stack fit | Hybrid: Exact + Semantic |
+| **Tools** | 5% | Tooling proficiency | Hybrid: Exact + Semantic |
+| **Qualification** | 5% | Educational background | Substring match |
+| **Responsibilities** | 3% | Role alignment | Semantic match |
+| **Salary** | 2% | Budget fit | Band mapping |
+| **Total** | **100%** | | Weighted sum |
+
+### 8.3 Matching Algorithm Flow
+
+```mermaid
+flowchart TD
+    START[Resume Skills + JD Skills] --> PHASE1{Phase 1: Exact Match}
+    
+    PHASE1 --> REGEX[Word Boundary Regex<br/>Pattern: \bskill\b]
+    REGEX --> MATCHED1[Matched List]
+    REGEX --> MISSING1[Missing List]
+    
+    MISSING1 --> PHASE2{Phase 2: Semantic Match}
+    
+    PHASE2 --> EMBED[Generate Embeddings<br/>SentenceTransformers]
+    EMBED --> COSINE[Cosine Similarity]
+    COSINE --> THRESHOLD{Similarity >= 0.45?}
+    
+    THRESHOLD -->|Yes| MATCHED2[Add to Matched]
+    THRESHOLD -->|No| MISSING2[Keep in Missing]
+    
+    MATCHED1 --> COMBINE[Combine Results]
+    MATCHED2 --> COMBINE
+    MISSING2 --> COMBINE
+    
+    COMBINE --> SCORE[Calculate Score<br/>matched/total * 100]
+    
+    SCORE --> OUTPUT[Return:<br/>matched_list<br/>missing_list<br/>skills_score]
+    
+    style REGEX fill:#4CAF50
+    style EMBED fill:#2196F3
+    style SCORE fill:#FF9800
+```
+
+---
+
+## 9. Safety & Guardrails
+
+### 9.1 Anti-Hallucination Architecture
+
+```mermaid
+graph TD
+    subgraph "AI Parsing Stage"
+        PROMPT1[Strict Prompt:<br/>'Extract ONLY explicit data']
+        PARSE[Azure Phi-4 Parse]
+        VALIDATE1[Schema Validation]
+        
+        PROMPT1 --> PARSE
+        PARSE --> VALIDATE1
+    end
+    
+    subgraph "Validation Stage"
+        OVERRIDE1[Timeline Override<br/>Replace LLM experience]
+        OVERRIDE2[Regex Salary Extract<br/>Fallback if LLM missed]
+        OVERRIDE3[Raw Text Project Extract<br/>Fallback if LLM missed]
+        
+        VALIDATE1 --> OVERRIDE1
+        VALIDATE1 --> OVERRIDE2
+        VALIDATE1 --> OVERRIDE3
+    end
+    
+    subgraph "Scoring Stage"
+        FILTER[Semantic Role Filter<br/>Ignore irrelevant jobs]
+        BOUNDARY[Word Boundary Match<br/>Prevent false positives]
+        
+        OVERRIDE1 --> FILTER
+        OVERRIDE2 --> BOUNDARY
+    end
+    
+    subgraph "AI Scoring Stage"
+        PROMPT2[Anti-Hallucination Prompt:<br/>'Experience from timeline ONLY']
+        AISCORE[Azure Phi-4 Score]
+        VALIDATE2[Schema Validation]
+        RECOMPUTE[Recompute Final Score<br/>Using weights]
+        FALLBACK[Hybrid Fallback<br/>Merge local if AI=0]
+        
+        PROMPT2 --> AISCORE
+        AISCORE --> VALIDATE2
+        VALIDATE2 --> RECOMPUTE
+        RECOMPUTE --> FALLBACK
+    end
+    
+    style PROMPT1 fill:#FF6B6B
+    style OVERRIDE1 fill:#4CAF50
+    style FILTER fill:#4CAF50
+    style PROMPT2 fill:#FF6B6B
+    style FALLBACK fill:#2196F3
+```
+
+### 9.2 Validation Rules
+
+| Rule Type | Implementation | Purpose | Example |
+|-----------|----------------|---------|---------|
+| **Date Normalization** | Regex + datetime parsing | Standardize date formats | "Jan 2020" → "2020-01" |
+| **Experience Override** | Timeline calculation | Prevent LLM hallucination | Ignore LLM's "5 years", calculate from dates |
+| **Role Filtering** | Semantic similarity | Ignore irrelevant experience | Filter "Finance Intern" for "Software Engineer" JD |
+| **Word Boundaries** | Regex `\b` | Prevent false matches | "AI" doesn't match "Raiya" |
+| **Salary Fallback** | Regex extraction | Fill LLM gaps | Extract "5 LPA" from raw text |
+| **Schema Validation** | JSON schema check | Ensure data integrity | Validate all required fields present |
+
+---
+
+## 10. Performance & Scalability
+
+### 10.1 Processing Metrics
+
+| Metric | Value | Notes |
+|--------|-------|-------|
+| **Average Resume Processing Time** | 30-60 seconds | Depends on Azure API latency |
+| **Concurrent Workers** | 5-10 | FastAPI BackgroundTasks pool |
+| **Database Connection Pool** | 5 connections | MySQL connection pool |
+| **Max Batch Size** | 100 resumes | Recommended limit |
+| **Storage per Resume** | ~500 KB - 1 MB | All artifacts combined |
+| **API Rate Limit** | Azure quota | Typically 60 RPM |
+
+### 10.2 Bottleneck Analysis
+
+```mermaid
+graph LR
+    subgraph "Processing Stages"
+        EXTRACT[Extract: 2-5s]
+        NORMALIZE[Normalize: 1-2s]
+        PARSE[Parse: 10-20s]
+        VALIDATE[Validate: 2-3s]
+        PRESCORE[Pre-Score: 1s]
+        MATCH[Match: 5-10s]
+        AISCORE[AI Score: 10-20s]
+        EXPLAIN[Explain: 2-3s]
+        REPORT[Report: 3-5s]
+    end
+    
+    EXTRACT --> NORMALIZE
+    NORMALIZE --> PARSE
+    PARSE --> VALIDATE
+    VALIDATE --> PRESCORE
+    PRESCORE --> MATCH
+    MATCH --> AISCORE
+    AISCORE --> EXPLAIN
+    EXPLAIN --> REPORT
+    
+    style PARSE fill:#FF6B6B
+    style AISCORE fill:#FF6B6B
+    style MATCH fill:#FFD93D
+```
+
+**Bottlenecks:**
+1. **Azure API Calls** (Parse + AI Score): 20-40s total
+2. **Semantic Matching** (Matcher): 5-10s (model inference)
+3. **PDF Report Generation**: 3-5s (ReportLab rendering)
+
+**Optimization Strategies:**
+- Cache SentenceTransformers model (done)
+- Batch Azure API calls (not implemented)
+- Async pipeline (not implemented)
+- Redis caching for repeated resumes (not implemented)
+
+---
+
+## 11. Deployment Architecture
+
+### 11.1 Current Deployment Model
+
+```
+Local Development Environment
+├── Python 3.x Runtime
+├── MySQL 8.0 Server (localhost:3306)
+├── FastAPI Server (localhost:8000)
+├── File Storage (local filesystem)
+└── Azure OpenAI (cloud service)
+```
+
+### 11.2 Recommended Production Architecture
+
+```mermaid
+graph TB
+    subgraph "Load Balancer"
+        LB[Nginx / AWS ALB]
+    end
+    
+    subgraph "Application Tier"
+        APP1[FastAPI Instance 1]
+        APP2[FastAPI Instance 2]
+        APP3[FastAPI Instance N]
+    end
+    
+    subgraph "Worker Tier"
+        WORKER1[Worker Pool 1]
+        WORKER2[Worker Pool 2]
+        WORKER3[Worker Pool N]
+    end
+    
+    subgraph "Data Tier"
+        DB[(MySQL RDS)]
+        S3[S3 / Blob Storage]
+        REDIS[(Redis Cache)]
+    end
+    
+    subgraph "External Services"
+        AZURE[Azure OpenAI]
+    end
+    
+    LB --> APP1
+    LB --> APP2
+    LB --> APP3
+    
+    APP1 --> WORKER1
+    APP2 --> WORKER2
+    APP3 --> WORKER3
+    
+    WORKER1 --> DB
+    WORKER2 --> DB
+    WORKER3 --> DB
+    
+    WORKER1 --> S3
+    WORKER2 --> S3
+    WORKER3 --> S3
+    
+    WORKER1 --> REDIS
+    WORKER2 --> REDIS
+    WORKER3 --> REDIS
+    
+    WORKER1 -.API.-> AZURE
+    WORKER2 -.API.-> AZURE
+    WORKER3 -.API.-> AZURE
+```
+
+---
+
+## 12. Quick Reference
+
+### 12.1 File Structure Map
+
+```
+phi 4/
+├── main.py                      # Pipeline orchestrator
+├── server.py                    # FastAPI server
+├── app/                         # Core modules
+│   ├── extractor.py             # PDF → Text
+│   ├── normalizer.py            # Text cleaning
+│   ├── parser.py                # AI parsing
+│   ├── validator.py             # Data validation
+│   ├── normalizer_pre_score.py  # Alias normalization
+│   ├── matcher.py               # Local scoring
+│   ├── ai_scorer.py             # AI scoring
+│   ├── explanation_engine.py    # Explanation generation
+│   ├── pdf_report.py            # PDF creation
+│   ├── saas_db.py               # Database layer
+│   ├── jd_validator.py          # JD validation
+│   ├── jd_normalizer.py         # JD normalization
+│   └── guardrails.py            # Safety checks
+├── frontend/                    # UI pages
+│   ├── recruiter-platform.html  # Main dashboard
+│   ├── bulk-processing.html     # Queue monitor
+│   ├── recruiter-results.html   # Results list
+│   ├── screening-results.html   # Candidate detail
+│   ├── history.html             # Batch history
+│   ├── settings.html            # User settings
+│   └── database-monitor.html    # DB monitor
+├── prompts/v1/                  # LLM prompts
+│   ├── ai_scorer/
+│   ├── explainer/
+│   └── parser/
+├── database/                    # SQL schemas
+├── uploads/                     # Input files
+├── storage/
+│   ├── tmp/                     # Intermediate files
+│   ├── results/                 # Score files
+│   └── reports/                 # PDF reports
+└── .env                         # Configuration
+```
+
+### 12.2 Key Environment Variables
+
+```bash
+# Azure OpenAI
+AZURE_OPENAI_ENDPOINT=https://your-resource.openai.azure.com
+AZURE_OPENAI_DEPLOYMENT=phi-4
+AZURE_OPENAI_API_KEY=your-api-key
+
+# MySQL Database
+DB_HOST=localhost
+DB_PORT=3306
+DB_USER=root
+DB_PASSWORD=your-password
+DB_NAME=saas_db
+```
+
+### 12.3 API Endpoint Reference
+
+| Endpoint | Method | Purpose | Request | Response |
+|----------|--------|---------|---------|----------|
+| `/api/upload` | POST | Upload files | Multipart form (files) | Upload confirmation |
+| `/api/process` | POST | Start processing | None | Batch ID + job IDs |
+| `/api/jobs` | GET | Get job statuses | None | Job status array |
+| `/api/results` | GET | Get all results | None | Results array |
+| `/api/results/{filename}` | GET | Get single result | Filename param | Result object |
+| `/api/batch-history` | GET | Get batch history | None | Batch history array |
+| `/api/settings` | GET | Get settings | None | Settings object |
+| `/api/settings` | POST | Update settings | Settings JSON | Updated settings |
+| `/api/database-monitor` | GET | Get DB data | None | All tables data |
+
+---
+
+## 13. System Boundaries & Limitations
+
+### 13.1 What the System Does
+
+✅ **Supported:**
+- PDF resume parsing (text-based PDFs)
+- English language resumes
+- Single JD per batch processing
+- Hybrid scoring (deterministic + AI)
+- Multi-tenant data isolation
+- Real-time progress monitoring
+- Explainable scoring with matched/missing items
+- PDF report generation
+- Batch history tracking
+
+### 13.2 What the System Does NOT Do
+
+❌ **Not Supported:**
+- DOCX, images, or scanned PDFs (no OCR)
+- Multi-language resumes (non-English)
+- Multi-JD comparison in single batch
+- Resume deduplication
+- Candidate ranking beyond scoring
+- Interview scheduling
+- Email notifications
+- Advanced analytics/reporting
+- Offline mode (requires Azure OpenAI)
+
+### 13.3 Critical Constraints
+
+| Constraint | Impact | Workaround |
+|------------|--------|------------|
+| **Single JD per batch** | Cannot compare same resume against multiple JDs | Create separate batches |
+| **Azure API dependency** | System fails if Azure is down | Implement retry logic |
+| **Synchronous pipeline** | Sequential processing per resume | Use async/await (future) |
+| **File-based storage** | Not scalable for large deployments | Migrate to S3/Blob storage |
+| **In-memory job queue** | Lost on server restart | Rely on database persistence |
+
+---
+
+## Conclusion
+
+This architectural map provides a complete reference for understanding, maintaining, and extending the Resume Screening Pipeline. The system is designed with three core principles:
+
+1. **Zero Hallucination:** Deterministic validation overrides AI outputs
+2. **Explainability:** Every score is backed by clear reasoning
+3. **Recruiter Trust:** Transparent, reproducible, and actionable results
+
+**For Developers:**
+- Follow the 9-stage pipeline flow strictly
+- Never modify weights without approval
+- Always test changes against existing batches
+- Respect anti-hallucination guardrails
+
+**For Stakeholders:**
+- Understand the hybrid scoring model (local + AI)
+- Trust the deterministic components (experience, salary)
+- Review AI outputs with validation fallbacks
+- Monitor batch processing via real-time dashboard
+
+---
+
+**Document Version:** 1.0  
+**Last Updated:** December 30, 2025  
+**Maintained By:** System Architecture Team  
+**Next Review:** Quarterly or on major system changes
