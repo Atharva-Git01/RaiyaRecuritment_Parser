@@ -1,0 +1,131 @@
+{
+    "metadata": {
+        "evaluation_id": "eval_2026_01_20_001",
+        "model_used": "phi-4",
+        "scoring_policy": {
+            "no_skill_inference": true,
+            "no_weight_adjustment": true,
+            "deterministic_calculation": true,
+            "auditability": "full"
+        }
+    },
+    "extracted_resume": {
+        "candidate_id": "CAND_123",
+        "skills": [
+            "Python",
+            "FastAPI",
+            "PostgreSQL",
+            "Docker"
+        ],
+        "experience": [
+            {
+                "role": "Backend Engineer",
+                "duration_years": 2,
+                "technologies_used": [
+                    "Python",
+                    "FastAPI",
+                    "PostgreSQL"
+                ]
+            }
+        ],
+        "education": {
+            "degree": "B.Tech Computer Engineering",
+            "institution": "State University",
+            "graduation_year": 2023
+        },
+        "certifications": []
+    },
+    "job_description": {
+        "job_id": "JD_BACKEND_01",
+        "required_skills": [
+            {
+                "skill": "Python",
+                "weight": 0.30
+            },
+            {
+                "skill": "FastAPI",
+                "weight": 0.20
+            },
+            {
+                "skill": "Docker",
+                "weight": 0.20
+            },
+            {
+                "skill": "Kubernetes",
+                "weight": 0.15
+            },
+            {
+                "skill": "PostgreSQL",
+                "weight": 0.15
+            }
+        ],
+        "pass_threshold": 0.70
+    },
+    "skill_matching": [
+        {
+            "skill": "Python",
+            "resume_presence": true,
+            "jd_weight": 0.30,
+            "score_awarded": 0.30
+        },
+        {
+            "skill": "FastAPI",
+            "resume_presence": true,
+            "jd_weight": 0.20,
+            "score_awarded": 0.20
+        },
+        {
+            "skill": "Docker",
+            "resume_presence": true,
+            "jd_weight": 0.20,
+            "score_awarded": 0.20
+        },
+        {
+            "skill": "Kubernetes",
+            "resume_presence": false,
+            "jd_weight": 0.15,
+            "score_awarded": 0.00
+        },
+        {
+            "skill": "PostgreSQL",
+            "resume_presence": true,
+            "jd_weight": 0.15,
+            "score_awarded": 0.15
+        }
+    ],
+    "score_calculation": {
+        "method": "sum_of_awarded_weights",
+        "total_score": 0.85,
+        "formula": "Σ(score_awarded)"
+    },
+    "candidate_verdict": {
+        "result": "PASS",
+        "final_score": 0.85,
+        "threshold": 0.70,
+        "reason": "Final score exceeds required threshold using only explicitly stated skills"
+    },
+    "scoring_evidence_verdict": {
+        "evidence_status": "ACCEPTED",
+        "evaluation": {
+            "weights_verified": true,
+            "threshold_verified": true,
+            "no_inference_detected": true,
+            "calculation_reproducible": true,
+            "missing_data_handling": "zero-score"
+        },
+        "reasoning": [
+            "All JD weights sum to 1.0",
+            "No skills were inferred or extrapolated",
+            "All awarded scores map directly to resume evidence",
+            "Score calculation is deterministic and reproducible",
+            "Decision can be independently re-evaluated"
+        ],
+        "failure_conditions_checked": [
+            "Weight tampering",
+            "Implicit skill inference",
+            "Hidden normalization",
+            "Non-deterministic scoring"
+        ],
+        "final_decision": "SCORING IS VALID AND MAY BE USED AS DECISION EVIDENCE"
+    }
+}

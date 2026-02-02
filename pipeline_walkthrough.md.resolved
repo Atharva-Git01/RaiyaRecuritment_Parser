@@ -1,0 +1,290 @@
+# Resume Screening Pipeline Architecture
+
+This document explains the end-to-end flow of the resume parsing and screening system.
+
+---
+
+## Pipeline Overview (Data Flow)
+
+```mermaid
+flowchart LR
+    A[PDF Resume] --> B[Extractor]
+    B --> C[Normalizer]
+    C --> D[Parser - Phi-4]
+    D --> E[Validator]
+    E --> F[Matcher - Local Score]
+    E --> G[AI Scorer - LLM Score]
+    F --> H[Explanation Engine]
+    G --> H
+    H --> I[PDF Report]
+    I --> J[Database - Optional]
+```
+
+---
+
+## Stage 1: Extraction
+
+**File:** [extractor.py](file:///c:/Users/asr26/OneDrive/Desktop/Reaper/Work_101/RaiyaRecuritment_Parser/phi%204/app/extractor.py)
+
+**Purpose:** Extract raw text from PDF resumes.
+
+| Input | Output |
+|-------|--------|
+| PDF file path | Raw text string |
+
+**What it does:**
+- Detects if PDF is **digital** (text-layer) or **scanned** (image).
+- Uses [pdfplumber](file:///c:/Users/asr26/OneDrive/Desktop/Reaper/Work_101/RaiyaRecuritment_Parser/phi%204/app/extractor.py#18-26) for digital PDFs.
+- Uses `PaddleOCR` for scanned/image PDFs.
+
+**What it does NOT do:**
+- Does not clean or structure the text.
+- Does not extract metadata (author, creation date).
+
+**Why it exists:** Different PDF types require different extraction methods. This ensures we can handle both machine-generated and scanned resumes.
+
+---
+
+## Stage 2: Normalization
+
+**File:** [normalizer.py](file:///c:/Users/asr26/OneDrive/Desktop/Reaper/Work_101/RaiyaRecuritment_Parser/phi%204/app/normalizer.py)
+
+**Purpose:** Clean and structure raw text for downstream processing.
+
+| Input | Output |
+|-------|--------|
+| Raw text | Cleaned, section-marked text (Markdown-like) |
+
+**What it does:**
+- Removes extra whitespace, non-ASCII characters.
+- Fixes broken words (e.g., `devel-\nopment` → `development`).
+- Inserts Markdown headers (`## Skills`, `## Experience`).
+- Extracts **CGPA/Percentage** and **Salary** into separate JSON files.
+
+**What it does NOT do:**
+- Does not identify specific entities (names, emails).
+- Does not evaluate content quality.
+
+**Why it exists:** Clean input improves LLM parsing accuracy. Section markers help the parser identify structure.
+
+---
+
+## Stage 3: Parsing (LLM)
+
+**File:** [parser.py](file:///c:/Users/asr26/OneDrive/Desktop/Reaper/Work_101/RaiyaRecuritment_Parser/phi%204/app/parser.py)
+
+**Prompt:** [system_prompt.txt](file:///c:/Users/asr26/OneDrive/Desktop/Reaper/Work_101/RaiyaRecuritment_Parser/phi%204/prompts/v1/parser/system_prompt.txt)
+
+**Purpose:** Convert normalized text into structured JSON using Azure OpenAI (Phi-4).
+
+| Input | Output |
+|-------|--------|
+| Normalized text | Structured JSON with [name](file:///c:/Users/asr26/OneDrive/Desktop/Reaper/Work_101/RaiyaRecuritment_Parser/phi%204/app/validator.py#619-634), `email`, `skills`, [experience](file:///c:/Users/asr26/OneDrive/Desktop/Reaper/Work_101/RaiyaRecuritment_Parser/phi%204/app/matcher.py#346-351), etc. |
+
+**What it does:**
+- Sends text to Azure OpenAI API with a strict system prompt.
+- Enforces **zero hallucination** — only extracts explicitly stated information.
+- Handles code fences and malformed JSON from model output.
+- Retries with higher `max_tokens` on failure.
+
+**What it does NOT do:**
+- Does not infer missing information.
+- Does not correct typos in the resume.
+- Does not score or rank the candidate.
+
+**Why it exists:** LLMs excel at understanding natural language structure. The strict prompt ensures deterministic, auditable output.
+
+---
+
+## Stage 4: Validation
+
+**File:** [validator.py](file:///c:/Users/asr26/OneDrive/Desktop/Reaper/Work_101/RaiyaRecuritment_Parser/phi%204/app/validator.py)
+
+**Purpose:** Clean, normalize, and enrich the parsed JSON.
+
+| Input | Output |
+|-------|--------|
+| Parsed JSON | Validated JSON with normalized dates, skills, durations |
+
+**What it does:**
+- Normalizes dates to `YYYY-MM` format.
+- Calculates `total_experience_years` from role timelines.
+- Extracts salary from raw text if missing.
+- Normalizes role titles (`sde intern` → `Software Development Intern`).
+- Cleans company names.
+- Extracts courses and projects from raw text.
+
+**What it does NOT do:**
+- Does not evaluate truthfulness of claims.
+- Does not score the candidate.
+
+**Why it exists:** Raw LLM output varies. Validation ensures consistent downstream schema.
+
+---
+
+## Stage 5: Scoring
+
+### 5A: Local Matcher
+
+**File:** [matcher.py](file:///c:/Users/asr26/OneDrive/Desktop/Reaper/Work_101/RaiyaRecuritment_Parser/phi%204/app/matcher.py)
+
+**Purpose:** Deterministic, rule-based scoring against Job Description (JD).
+
+| Input | Output |
+|-------|--------|
+| Validated resume JSON + JD JSON | Score breakdown (0-100 per category) |
+
+**What it does:**
+- **Skills matching:** Exact + semantic similarity (SentenceTransformers).
+- **Experience scoring:** Years vs. JD requirements.
+- **Qualification/Education matching.**
+- **Project keyword matching.**
+- **Salary fit scoring.**
+- Returns `matched_items`, `missing_items`, and component scores.
+
+**What it does NOT do:**
+- Does not understand context or nuance (e.g., "led a team" vs "was on a team").
+- Does not penalize red flags subjectively.
+
+**Why it exists:** Provides fast, explainable, auditable baseline scores.
+
+---
+
+### 5B: AI Scorer
+
+**File:** [ai_scorer.py](file:///c:/Users/asr26/OneDrive/Desktop/Reaper/Work_101/RaiyaRecuritment_Parser/phi%204/app/ai_scorer.py)
+
+**Prompt:** [system_prompt.txt](file:///c:/Users/asr26/OneDrive/Desktop/Reaper/Work_101/RaiyaRecuritment_Parser/phi%204/prompts/v1/ai_scorer/system_prompt.txt)
+
+**Purpose:** LLM-based qualitative scoring with reasoning.
+
+| Input | Output |
+|-------|--------|
+| Resume + JD + Weights | AI scores (0-100) + notes |
+
+**What it does:**
+- Sends resume facts + JD requirements to LLM.
+- LLM returns component scores and natural language notes.
+- Applies **evidence rules** (from [config/evidence_rules.json](file:///c:/Users/asr26/OneDrive/Desktop/Reaper/Work_101/RaiyaRecuritment_Parser/phi%204/config/evidence_rules.json)) to inject constraints.
+- Applies **guardrails** to cap scores when evidence is missing.
+
+**What it does NOT do:**
+- Does not replace local scorer (used as supplementary signal).
+- Does not make hiring decisions.
+
+**Why it exists:** Captures nuance that rule-based matching misses.
+
+---
+
+## Stage 6: Guardrails
+
+**Files:**
+- [guardrails.py](file:///c:/Users/asr26/OneDrive/Desktop/Reaper/Work_101/RaiyaRecuritment_Parser/phi%204/app/guardrails.py) — Explanation validation
+- [ai_guardrails.py](file:///c:/Users/asr26/OneDrive/Desktop/Reaper/Work_101/RaiyaRecuritment_Parser/phi%204/app/ai_guardrails.py) — Score correction
+
+**Purpose:** Prevent hallucinated or inflated scores.
+
+**What it does:**
+- **Evidence rules:** If no skills → `skills_score = 0`.
+- **Consistency checks:** If LLM says "5 years" but facts show 2 → flag.
+- **Leakage checks:** Missing skills should not appear in "strengths".
+- **Generic rules:** Configurable via [config/evidence_rules.json](file:///c:/Users/asr26/OneDrive/Desktop/Reaper/Work_101/RaiyaRecuritment_Parser/phi%204/config/evidence_rules.json).
+
+**What it does NOT do:**
+- Does not block pipeline on failure (fails open, logs warning).
+
+**Why it exists:** LLMs can hallucinate. Guardrails enforce factual grounding.
+
+---
+
+## Stage 7: Explanation Engine
+
+**File:** [explanation_engine.py](file:///c:/Users/asr26/OneDrive/Desktop/Reaper/Work_101/RaiyaRecuritment_Parser/phi%204/app/explanation_engine.py)
+
+**Purpose:** Generate human-readable summaries and structured feedback.
+
+| Input | Output |
+|-------|--------|
+| Matcher output | Recruiter summary, candidate feedback, visual payloads |
+
+**What it does:**
+- **Recruiter summary:** 1-3 sentence factual overview.
+- **Candidate feedback:** Actionable improvement suggestions.
+- **Structured JSON:** Strengths, improvements, skill gaps.
+- **Visual payload:** Radar charts, coverage bars, salary gauge data.
+
+**What it does NOT do:**
+- Does not call external APIs.
+- Does not make subjective judgments.
+
+**Why it exists:** Scores alone are not user-friendly. Explanations build trust.
+
+---
+
+## Stage 8: PDF Report
+
+**File:** [pdf_report.py](file:///c:/Users/asr26/OneDrive/Desktop/Reaper/Work_101/RaiyaRecuritment_Parser/phi%204/app/pdf_report.py)
+
+**Purpose:** Generate polished PDF reports for recruiters.
+
+| Input | Output |
+|-------|--------|
+| Matcher output | Corporate Blue PDF with charts and tables |
+
+**What it does:**
+- Renders radar chart (component scores).
+- Renders coverage bar chart.
+- Lists matched/missing skills, experience, projects.
+- Displays recruiter summary and candidate feedback.
+- Paginated, branded layout.
+
+**What it does NOT do:**
+- Does not store to database (separate step).
+
+**Why it exists:** Recruiters need shareable documents, not JSON.
+
+---
+
+## Orchestration
+
+**File:** [main.py](file:///c:/Users/asr26/OneDrive/Desktop/Reaper/Work_101/RaiyaRecuritment_Parser/phi%204/main.py)
+
+**Purpose:** Coordinates all stages into a single pipeline run.
+
+**Flow:**
+1. Load JD from [uploads/job_description.json](file:///c:/Users/asr26/OneDrive/Desktop/Reaper/Work_101/RaiyaRecuritment_Parser/phi%204/uploads/job_description.json)
+2. Extract → Normalize → Parse → Validate → Score → Explain → PDF
+3. Optionally save to database ([saas_db.py](file:///c:/Users/asr26/OneDrive/Desktop/Reaper/Work_101/RaiyaRecuritment_Parser/phi%204/app/saas_db.py))
+
+---
+
+## Prompt Versioning
+
+**Directory:** `prompts/v1/`
+
+| Module | Prompt File |
+|--------|-------------|
+| Parser | `prompts/v1/parser/system_prompt.txt` |
+| AI Scorer | `prompts/v1/ai_scorer/system_prompt.txt` |
+| Explainer | `prompts/v1/explainer/system_prompt.txt` |
+
+Active version configured in `config/system_config.json`.
+
+---
+
+## Key Design Decisions
+
+1. **Zero Hallucination Prompts:** LLMs are instructed to extract only explicit information.
+2. **Dual Scoring:** Local (fast, explainable) + AI (nuanced). Neither is sole authority.
+3. **Guardrails:** Post-processing rules ensure scores match evidence.
+4. **Deterministic Validation:** All dates, roles, salaries normalized before scoring.
+5. **Modular Architecture:** Each stage is independently testable.
+
+---
+
+## Limitations
+
+- **OCR Quality:** Scanned PDFs depend on PaddleOCR accuracy.
+- **LLM Latency:** Azure API calls add ~2-5 seconds per resume.
+- **Schema Rigidity:** Fixed output schema may miss non-standard resume sections.
+- **Single JD:** Currently one JD at a time; multi-JD ranking is separate.

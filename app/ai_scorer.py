@@ -148,6 +148,102 @@ def _extract_json_from_text(text: str) -> Tuple[bool, Any]:
         return False, None
 
 
+# === EVIDENCE RULES EVALUATION ===
+
+def _load_evidence_rules() -> list:
+    """Load evidence rules from config/evidence_rules.json."""
+    try:
+        base_dir = os.path.dirname(os.path.dirname(__file__))
+        rules_path = os.path.join(base_dir, "config", "evidence_rules.json")
+        if os.path.exists(rules_path):
+            with open(rules_path, "r", encoding="utf-8") as f:
+                return json.load(f)
+    except Exception as e:
+        print(f"⚠️ Failed to load evidence rules: {e}")
+    return []
+
+def _get_nested_val(obj: dict, path: str):
+    """Safe nested get, e.g. resume.experience"""
+    parts = path.split(".")
+    curr = obj
+    for p in parts:
+        if isinstance(curr, dict):
+            curr = curr.get(p)
+        else:
+            return None
+    return curr
+
+def _evaluate_rules(resume_data: dict, rules: list) -> list:
+    """
+    Evaluate rules against resume data.
+    Returns a list of triggered rule descriptions/actions.
+    """
+    triggered = []
+    
+    # Wrap in "resume" key if path expects it (e.g., "resume.experience")
+    # Our resume_data is usually the inner content, but let's standardize
+    context = {"resume": resume_data}
+
+    for rule in rules:
+        try:
+            cond = rule.get("condition", {})
+            field_path = cond.get("field", "")
+            operator = cond.get("operator", "")
+            
+            val = _get_nested_val(context, field_path)
+            
+            is_triggered = False
+            
+            if operator == "contains_keyword_ratio":
+                # Check ratio of items containing keyword
+                if isinstance(val, list) and val:
+                    keyword = cond.get("keyword", "").lower()
+                    threshold = cond.get("threshold", 0.0)
+                    count = 0
+                    for item in val:
+                        # naive check in string representation of item
+                        if keyword in str(item).lower():
+                            count += 1
+                    if (count / len(val)) >= threshold:
+                        is_triggered = True
+                        
+            elif operator == "empty":
+                # Check if empty string, list or None
+                if val in [None, "", [], {}]:
+                    is_triggered = True
+                    
+            elif operator == "avg_duration_months_lt":
+                # Special logic for duration
+                threshold_months = cond.get("value", 0)
+                if isinstance(val, list) and val:
+                    total_dur = 0
+                    valid_items = 0
+                    from app.validator import calculate_duration
+                    for item in val:
+                        s = item.get("start_date")
+                        e = item.get("end_date")
+                        dur = calculate_duration(s, e) # returns years
+                        if dur > 0:
+                            total_dur += dur * 12 # to months
+                            valid_items += 1
+                    
+                    if valid_items > 0:
+                        avg_months = total_dur / valid_items
+                        if avg_months < threshold_months:
+                            is_triggered = True
+
+            if is_triggered:
+                desc = rule.get("description", "")
+                action = rule.get("action", {})
+                triggered.append(f"CONSTRAINT: {desc} -> Action: Apply {action.get('operation')} {action.get('value')} to {action.get('target')}")
+                
+        except Exception as e:
+            print(f"⚠️ Error evaluating rule {rule.get('id')}: {e}")
+            continue
+            
+    return triggered
+
+
 # Import guardrails
 from app.ai_guardrails import apply_guardrails, GuardrailContext
 
@@ -284,10 +380,19 @@ def ai_score_resume(
         if k in resume_for_prompt:
             del resume_for_prompt[k]
 
+    # === EVIDENCE RULES CHECK ===
+    evidence_rules = _load_evidence_rules()
+    triggered_constraints = _evaluate_rules(resume_for_prompt, evidence_rules)
+    
+    constraints_text = ""
+    if triggered_constraints:
+        constraints_text = "\n\n### MANDATORY SCORING CONSTRAINTS (EVIDENCE-BASED):\n" + "\n".join(triggered_constraints)
+
     user_prompt = (
         "Below are the job description and the parsed resume JSON. Score strictly per the SYSTEM_PROMPT.\n\n"
         f"JOB_DESCRIPTION:\n{json.dumps(validated_jd, ensure_ascii=False)}\n\n"
-        f"PARSED_RESUME:\n{json.dumps(resume_for_prompt, ensure_ascii=False)}\n\n"
+        f"PARSED_RESUME:\n{json.dumps(resume_for_prompt, ensure_ascii=False)}"
+        f"{constraints_text}\n\n"
         "IMPORTANT: Use the 'relevant_experience_map' (if present) to weight the relevance of Skills, Tools, and Technologies. "
         "Skills with higher years of experience in this map MUST receive higher relevance scores. "
         "For example, 5 years of usage is significantly better than 1 year.\n\n"
