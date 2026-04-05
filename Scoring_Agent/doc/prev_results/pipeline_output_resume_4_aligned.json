@@ -1,0 +1,69 @@
+{
+  "final_score": 50,
+  "skills_score": 0,
+  "experience_score": 3,
+  "relevant_experience_score": 15,
+  "projects_score": 0,
+  "certificates_score": 0,
+  "tools_score": 0,
+  "technologies_score": 14,
+  "qualification_score": 8,
+  "responsibilities_score": 0,
+  "salary_score": 8,
+  "position_score": 2,
+  "notes": "Evaluation aligned with strict ground truth.",
+  "scoring_trace": {
+    "relevant_experience": {
+      "explicit_years": 1.1,
+      "criteria_applied": "1-2 years_relevant",
+      "weight": 30,
+      "score_awarded": 15
+    },
+    "salary": {
+      "explicit_salary_present": false,
+      "fallback_used": true,
+      "weight": 15,
+      "score_awarded": 8
+    },
+    "experience": {
+      "explicit_years": 1.1,
+      "criteria_applied": "<3 years",
+      "weight": 10,
+      "score_awarded": 3
+    },
+    "qualification": {
+      "degree": "Bachelor's Degree in Engineering",
+      "field": "Information Technology",
+      "criteria_applied": "Bachelor's Degree in Engineering",
+      "weight": 10,
+      "score_awarded": 8
+    },
+    "technologies": {
+      "matched": [
+        "C",
+        "C++",
+        "Python",
+        "Java"
+      ],
+      "raw_points": 15,
+      "normalized_to_weight": 14,
+      "weight": 20
+    },
+    "skills": {
+      "matched": [],
+      "raw_points": 0,
+      "normalized_to_weight": 0,
+      "weight": 10
+    },
+    "position": {
+      "matched": "Individual Contributor",
+      "weight": 3,
+      "score_awarded": 2
+    },
+    "tools": {
+      "matched": [],
+      "weight": 2,
+      "score_awarded": 0
+    }
+  }
+}

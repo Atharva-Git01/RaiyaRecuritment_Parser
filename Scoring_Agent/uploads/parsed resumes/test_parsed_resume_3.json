@@ -1,0 +1,80 @@
+{
+    "personal_info": {
+        "name": "Harshita Sanjay Sathe",
+        "email": "sathehs20.mba@coep.ac.in"
+    },
+    "education": [
+        {
+            "degree": "Master of Business Administration",
+            "institution": "COEP",
+            "year": 2022,
+            "cgpa": 8.33
+        },
+        {
+            "degree": "B.E.",
+            "field": "Electrical Engineering",
+            "institution": "Fr. Conceicao Rodrigues Institute of Technology",
+            "year": 2016,
+            "cgpa": 8.63
+        },
+        {
+            "degree": "Class XII",
+            "field": "Computer Science",
+            "board": "MSBSHSE",
+            "percentage": 71.83
+        },
+        {
+            "degree": "Class X",
+            "board": "MSBSHSE",
+            "percentage": 96.18
+        }
+    ],
+    "experience": [
+        {
+            "role": "Application Developer / Consultant",
+            "organization": "SBI (Client Projects)",
+            "description": "Worked on Trade Finance and CKYC systems. Enhanced China Systems for Trade Finance, implemented customer-specific changes, planned development activities, coordinated with business teams, and supported delivered modules. Designed CKYC application workflows, conducted pilot runs, led support team, and generated operational reports."
+        }
+    ],
+    "projects": [
+        {
+            "name": "Trade Finance System Enhancement",
+            "client": "SBI",
+            "responsibilities": [
+                "System enhancement",
+                "Performance improvement",
+                "Customer consultation",
+                "Delivery and support"
+            ]
+        },
+        {
+            "name": "CKYC / pre-CKYC Application",
+            "client": "SBI",
+            "responsibilities": [
+                "Data collection",
+                "Application design",
+                "Pilot execution",
+                "Support leadership"
+            ]
+        }
+    ],
+    "skills": [
+        "Operations Management",
+        "Trade Finance",
+        "Wealth Analysis",
+        "Project Management",
+        "Reporting",
+        "Customer Coordination"
+    ],
+    "technologies": [
+        "Python"
+    ],
+    "tools": [],
+    "certifications": [
+        "Operations Management - NPTEL"
+    ],
+    "awards": [
+        "Star of the Month Award",
+        "Technical Excellence Award"
+    ]
+}

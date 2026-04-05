@@ -1,0 +1,67 @@
+{
+  "final_score": 31,
+  "skills_score": 3,
+  "experience_score": 3,
+  "relevant_experience_score": 5,
+  "projects_score": 0,
+  "certificates_score": 0,
+  "tools_score": 0,
+  "technologies_score": 2,
+  "qualification_score": 8,
+  "responsibilities_score": 0,
+  "salary_score": 8,
+  "position_score": 2,
+  "notes": " aligned with user expectation.",
+  "scoring_trace": {
+    "relevant_experience": {
+      "explicit_years": "not specified",
+      "criteria_applied": "<1 year_relevant",
+      "weight": 30,
+      "score_awarded": 5
+    },
+    "salary": {
+      "explicit_salary_present": false,
+      "fallback_used": true,
+      "weight": 15,
+      "score_awarded": 8
+    },
+    "experience": {
+      "explicit_years": "not specified",
+      "criteria_applied": "<3 years",
+      "weight": 10,
+      "score_awarded": 3
+    },
+    "qualification": {
+      "degree": "Bachelor's Degree in Engineering",
+      "criteria_applied": "Bachelor's Degree in Engineering",
+      "weight": 10,
+      "score_awarded": 8
+    },
+    "technologies": {
+      "matched": [
+        "Python"
+      ],
+      "raw_points": 4,
+      "normalized_to_weight": 2,
+      "weight": 20
+    },
+    "skills": {
+      "matched": [
+        "Project Management"
+      ],
+      "raw_points": 3,
+      "normalized_to_weight": 3,
+      "weight": 10
+    },
+    "position": {
+      "matched": "Individual Contributor",
+      "weight": 3,
+      "score_awarded": 2
+    },
+    "tools": {
+      "matched": [],
+      "weight": 2,
+      "score_awarded": 0
+    }
+  }
+}

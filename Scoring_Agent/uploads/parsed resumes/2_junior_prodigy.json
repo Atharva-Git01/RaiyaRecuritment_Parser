@@ -1,0 +1,48 @@
+{
+    "personal_info": {
+        "name": "Junior Python Prodigy",
+        "location": "Remote"
+    },
+    "summary": "Full stack expert. Contributor to PyTorch. Built scalable AI apps.",
+    "experience": [
+        {
+            "title": "Software Engineer",
+            "company": "StartupAI",
+            "start_date": "2023-01",
+            "end_date": "2024-06",
+            "description": "Built RAG pipelines using Python, LangChain, Azure, and Vector DBs. Deployed on Kubernetes."
+        }
+    ],
+    "education": [
+        {
+            "degree": "B.Sc",
+            "field": "Physics",
+            "institution": "University of Delhi",
+            "start_year": 2020,
+            "end_year": 2023
+        }
+    ],
+    "skills": [
+        "Machine Learning",
+        "AI",
+        "Cloud Computing"
+    ],
+    "technologies": [
+        "Python",
+        "Docker",
+        "Kubernetes",
+        "Azure",
+        "PostgreSQL",
+        "ReactJS",
+        "FastAPI"
+    ],
+    "tools": [
+        "Git",
+        "VS Code",
+        "Jira"
+    ],
+    "salary_expectation": {
+        "currency": "INR",
+        "amount": 1200000
+    }
+}

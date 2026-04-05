@@ -1,0 +1,106 @@
+{
+  "job_title": "Data Scientist",
+  "experience": "2-5 years (Relevant experience in ML/AI preferred)",
+  "qualification": "Master's or Ph.D. in Computer Science / Statistics / Mathematics / Data Science",
+  "technologies": [
+    "Python", "R", "SQL", "TensorFlow", "PyTorch", "Keras",
+    "Scikit-Learn", "Pandas", "NumPy", "Matplotlib", "Seaborn",
+    "Spark", "Hadoop", "Jupyter", "Git"
+  ],
+  "skills": [
+    "Machine Learning", "Deep Learning", "Natural Language Processing",
+    "Computer Vision", "Statistical Analysis", "Data Visualization",
+    "Feature Engineering", "Model Deployment", "A/B Testing",
+    "Research", "Problem Solving", "Communication"
+  ],
+  "tools": [
+    "Jupyter Notebook", "VS Code", "GitHub", "Docker",
+    "MLflow", "Weights & Biases", "Tableau", "Power BI"
+  ],
+  "location": "Remote / Bangalore",
+  "position": "Individual Contributor",
+  "job_description": "Develop and deploy machine learning models to solve business problems. Analyze large datasets, build predictive models, and present findings to stakeholders. Collaborate with engineering teams to productionize ML solutions.",
+  "responsibilities": [
+    "Build and train ML models for classification, regression, and NLP tasks",
+    "Analyze large-scale datasets and extract actionable insights",
+    "Design and run A/B experiments",
+    "Deploy models to production using containerization",
+    "Present findings and recommendations to stakeholders",
+    "Stay current with latest ML/AI research"
+  ],
+  "employment_type": "Full-time",
+  "remote_option": "Yes",
+
+  "scoring": {
+    "relevant_experience": {
+      "weight": 30,
+      "criteria": {
+        ">=4 years_relevant": 30,
+        "2-3 years_relevant": 22,
+        "1-2 years_relevant": 12,
+        "<1 year_relevant": 5
+      }
+    },
+    "salary": {
+      "weight": 10,
+      "fallback_score": 5,
+      "criteria": {
+        "<5": 10,
+        "5-10": 8,
+        "10-20": 5,
+        ">20": 3
+      }
+    },
+    "experience": {
+      "weight": 10,
+      "criteria": {
+        ">=5 years": 10,
+        "3-4 years": 8,
+        "2-3 years": 6,
+        "<2 years": 3
+      }
+    },
+    "qualification": {
+      "weight": 15,
+      "criteria": {
+        "Ph.D. in relevant field": 15,
+        "Master's Degree in relevant field": 12,
+        "Bachelor's Degree in Engineering": 8,
+        "Other": 4
+      }
+    },
+    "technologies": {
+      "weight": 20,
+      "criteria": {
+        "Python": 5, "R": 3, "SQL": 4, "TensorFlow": 4, "PyTorch": 4,
+        "Keras": 3, "Scikit-Learn": 4, "Pandas": 3, "NumPy": 3,
+        "Matplotlib": 2, "Seaborn": 2, "Spark": 3, "Hadoop": 2,
+        "Jupyter": 2, "Git": 2
+      }
+    },
+    "skills": {
+      "weight": 10,
+      "criteria": {
+        "Machine Learning": 5, "Deep Learning": 4, "NLP": 4,
+        "Computer Vision": 3, "Statistical Analysis": 4,
+        "Data Visualization": 3, "Feature Engineering": 3,
+        "Model Deployment": 3, "A/B Testing": 2,
+        "Research": 3, "Problem Solving": 3, "Communication": 2
+      }
+    },
+    "position": {
+      "weight": 3,
+      "criteria": {
+        "Individual Contributor": 3,
+        "Team Lead": 2
+      }
+    },
+    "tools": {
+      "weight": 2,
+      "criteria": {
+        "Jupyter Notebook": 1, "VS Code": 1, "GitHub": 1, "Docker": 1,
+        "MLflow": 1, "Weights & Biases": 1, "Tableau": 1, "Power BI": 1
+      }
+    }
+  }
+}

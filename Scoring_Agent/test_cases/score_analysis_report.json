@@ -1,0 +1,2610 @@
+{
+  "generated_at": "2026-04-06T01:01:03.838947",
+  "total_files": 53,
+  "successful_files": 51,
+  "reproducibility": {
+    "1_senior_java_mismatch": {
+      "candidate_name": "Senior Java Legacy",
+      "run_count": 3,
+      "runs": [
+        {
+          "file": "score_1_senior_java_mismatch_20260217_143705.json",
+          "final_score": 47
+        },
+        {
+          "file": "score_1_senior_java_mismatch_20260226_180328.json",
+          "final_score": 47
+        },
+        {
+          "file": "score_1_senior_java_mismatch_20260304_154302.json",
+          "final_score": 51
+        }
+      ],
+      "variance": {
+        "final_score": {
+          "values": [
+            47,
+            47,
+            51
+          ],
+          "mean": 48.33,
+          "stdev": 2.31,
+          "max_drift": 4
+        },
+        "skills_score": {
+          "values": [
+            50,
+            0,
+            0
+          ],
+          "mean": 16.67,
+          "stdev": 28.87,
+          "max_drift": 50
+        },
+        "experience_score": {
+          "values": [
+            25,
+            100,
+            100
+          ],
+          "mean": 75,
+          "stdev": 43.3,
+          "max_drift": 75
+        },
+        "relevant_experience_score": {
+          "values": [
+            25,
+            73,
+            73
+          ],
+          "mean": 57,
+          "stdev": 27.71,
+          "max_drift": 48
+        },
+        "projects_score": {
+          "values": [
+            0,
+            0,
+            0
+          ],
+          "mean": 0,
+          "stdev": 0.0,
+          "max_drift": 0
+        },
+        "certificates_score": {
+          "values": [
+            0,
+            0,
+            0
+          ],
+          "mean": 0,
+          "stdev": 0.0,
+          "max_drift": 0
+        },
+        "tools_score": {
+          "values": [
+            50,
+            2,
+            100
+          ],
+          "mean": 50.67,
+          "stdev": 49.0,
+          "max_drift": 98
+        },
+        "technologies_score": {
+          "values": [
+            50,
+            0,
+            0
+          ],
+          "mean": 16.67,
+          "stdev": 28.87,
+          "max_drift": 50
+        },
+        "qualification_score": {
+          "values": [
+            80,
+            100,
+            100
+          ],
+          "mean": 93.33,
+          "stdev": 11.55,
+          "max_drift": 20
+        },
+        "responsibilities_score": {
+          "values": [
+            0,
+            0,
+            0
+          ],
+          "mean": 0,
+          "stdev": 0.0,
+          "max_drift": 0
+        },
+        "salary_score": {
+          "values": [
+            80,
+            33,
+            33
+          ],
+          "mean": 48.67,
+          "stdev": 27.14,
+          "max_drift": 47
+        },
+        "position_score": {
+          "values": [
+            0,
+            0,
+            67
+          ],
+          "mean": 22.33,
+          "stdev": 38.68,
+          "max_drift": 67
+        }
+      },
+      "flags": [
+        "\u26a0\ufe0f skills_score drift = 50 (threshold: 10)",
+        "\u26a0\ufe0f experience_score drift = 75 (threshold: 10)",
+        "\u26a0\ufe0f relevant_experience_score drift = 48 (threshold: 10)",
+        "\u26a0\ufe0f tools_score drift = 98 (threshold: 10)",
+        "\u26a0\ufe0f technologies_score drift = 50 (threshold: 10)",
+        "\u26a0\ufe0f qualification_score drift = 20 (threshold: 10)",
+        "\u26a0\ufe0f salary_score drift = 47 (threshold: 10)",
+        "\u26a0\ufe0f position_score drift = 67 (threshold: 10)"
+      ]
+    },
+    "2_junior_prodigy": {
+      "candidate_name": "Junior Python Prodigy",
+      "run_count": 3,
+      "runs": [
+        {
+          "file": "score_2_junior_prodigy_20260217_144332.json",
+          "final_score": 52
+        },
+        {
+          "file": "score_2_junior_prodigy_20260226_180414.json",
+          "final_score": 13
+        },
+        {
+          "file": "score_2_junior_prodigy_20260304_154343.json",
+          "final_score": 40
+        }
+      ],
+      "variance": {
+        "final_score": {
+          "values": [
+            52,
+            13,
+            40
+          ],
+          "mean": 35,
+          "stdev": 19.97,
+          "max_drift": 39
+        },
+        "skills_score": {
+          "values": [
+            75,
+            0,
+            0
+          ],
+          "mean": 25,
+          "stdev": 43.3,
+          "max_drift": 75
+        },
+        "experience_score": {
+          "values": [
+            25,
+            30,
+            30
+          ],
+          "mean": 28.33,
+          "stdev": 2.89,
+          "max_drift": 5
+        },
+        "relevant_experience_score": {
+          "values": [
+            25,
+            0,
+            50
+          ],
+          "mean": 25,
+          "stdev": 25.0,
+          "max_drift": 50
+        },
+        "projects_score": {
+          "values": [
+            0,
+            0,
+            0
+          ],
+          "mean": 0,
+          "stdev": 0.0,
+          "max_drift": 0
+        },
+        "certificates_score": {
+          "values": [
+            0,
+            0,
+            0
+          ],
+          "mean": 0,
+          "stdev": 0.0,
+          "max_drift": 0
+        },
+        "tools_score": {
+          "values": [
+            50,
+            6,
+            20
+          ],
+          "mean": 25.33,
+          "stdev": 22.48,
+          "max_drift": 44
+        },
+        "technologies_score": {
+          "values": [
+            75,
+            0,
+            50
+          ],
+          "mean": 41.67,
+          "stdev": 38.19,
+          "max_drift": 75
+        },
+        "qualification_score": {
+          "values": [
+            50,
+            50,
+            50
+          ],
+          "mean": 50,
+          "stdev": 0.0,
+          "max_drift": 0
+        },
+        "responsibilities_score": {
+          "values": [
+            0,
+            0,
+            0
+          ],
+          "mean": 0,
+          "stdev": 0.0,
+          "max_drift": 0
+        },
+        "salary_score": {
+          "values": [
+            80,
+            33,
+            33
+          ],
+          "mean": 48.67,
+          "stdev": 27.14,
+          "max_drift": 47
+        },
+        "position_score": {
+          "values": [
+            0,
+            0,
+            67
+          ],
+          "mean": 22.33,
+          "stdev": 38.68,
+          "max_drift": 67
+        }
+      },
+      "flags": [
+        "\u26a0\ufe0f final_score drift = 39 (threshold: 5)",
+        "\u26a0\ufe0f skills_score drift = 75 (threshold: 10)",
+        "\u26a0\ufe0f relevant_experience_score drift = 50 (threshold: 10)",
+        "\u26a0\ufe0f tools_score drift = 44 (threshold: 10)",
+        "\u26a0\ufe0f technologies_score drift = 75 (threshold: 10)",
+        "\u26a0\ufe0f salary_score drift = 47 (threshold: 10)",
+        "\u26a0\ufe0f position_score drift = 67 (threshold: 10)"
+      ]
+    },
+    "3_phd_academic": {
+      "candidate_name": "Dr. Academic Theo",
+      "run_count": 3,
+      "runs": [
+        {
+          "file": "score_3_phd_academic_20260217_144356.json",
+          "final_score": 18
+        },
+        {
+          "file": "score_3_phd_academic_20260226_180510.json",
+          "final_score": 38
+        },
+        {
+          "file": "score_3_phd_academic_20260304_154425.json",
+          "final_score": 33
+        }
+      ],
+      "variance": {
+        "final_score": {
+          "values": [
+            18,
+            38,
+            33
+          ],
+          "mean": 29.67,
+          "stdev": 10.41,
+          "max_drift": 20
+        },
+        "skills_score": {
+          "values": [
+            20,
+            0,
+            0
+          ],
+          "mean": 6.67,
+          "stdev": 11.55,
+          "max_drift": 20
+        },
+        "experience_score": {
+          "values": [
+            0,
+            80,
+            80
+          ],
+          "mean": 53.33,
+          "stdev": 46.19,
+          "max_drift": 80
+        },
+        "relevant_experience_score": {
+          "values": [
+            25,
+            73,
+            50
+          ],
+          "mean": 49.33,
+          "stdev": 24.01,
+          "max_drift": 48
+        },
+        "projects_score": {
+          "values": [
+            0,
+            0,
+            0
+          ],
+          "mean": 0,
+          "stdev": 0.0,
+          "max_drift": 0
+        },
+        "certificates_score": {
+          "values": [
+            0,
+            0,
+            0
+          ],
+          "mean": 0,
+          "stdev": 0.0,
+          "max_drift": 0
+        },
+        "tools_score": {
+          "values": [
+            0,
+            0,
+            0
+          ],
+          "mean": 0,
+          "stdev": 0.0,
+          "max_drift": 0
+        },
+        "technologies_score": {
+          "values": [
+            0,
+            0,
+            0
+          ],
+          "mean": 0,
+          "stdev": 0.0,
+          "max_drift": 0
+        },
+        "qualification_score": {
+          "values": [
+            80,
+            80,
+            80
+          ],
+          "mean": 80,
+          "stdev": 0.0,
+          "max_drift": 0
+        },
+        "responsibilities_score": {
+          "values": [
+            0,
+            0,
+            0
+          ],
+          "mean": 0,
+          "stdev": 0.0,
+          "max_drift": 0
+        },
+        "salary_score": {
+          "values": [
+            0,
+            0,
+            0
+          ],
+          "mean": 0,
+          "stdev": 0.0,
+          "max_drift": 0
+        },
+        "position_score": {
+          "values": [
+            0,
+            0,
+            67
+          ],
+          "mean": 22.33,
+          "stdev": 38.68,
+          "max_drift": 67
+        }
+      },
+      "flags": [
+        "\u26a0\ufe0f final_score drift = 20 (threshold: 5)",
+        "\u26a0\ufe0f skills_score drift = 20 (threshold: 10)",
+        "\u26a0\ufe0f experience_score drift = 80 (threshold: 10)",
+        "\u26a0\ufe0f relevant_experience_score drift = 48 (threshold: 10)",
+        "\u26a0\ufe0f position_score drift = 67 (threshold: 10)"
+      ]
+    },
+    "4_career_switcher": {
+      "candidate_name": "Switcher Sam",
+      "run_count": 3,
+      "runs": [
+        {
+          "file": "score_4_career_switcher_20260217_144416.json",
+          "final_score": 0
+        },
+        {
+          "file": "score_4_career_switcher_20260226_180550.json",
+          "final_score": 27
+        },
+        {
+          "file": "score_4_career_switcher_20260304_154514.json",
+          "final_score": 27
+        }
+      ],
+      "variance": {
+        "final_score": {
+          "values": [
+            0,
+            27,
+            27
+          ],
+          "mean": 18,
+          "stdev": 15.59,
+          "max_drift": 27
+        },
+        "skills_score": {
+          "values": [
+            0,
+            0,
+            0
+          ],
+          "mean": 0,
+          "stdev": 0.0,
+          "max_drift": 0
+        },
+        "experience_score": {
+          "values": [
+            0,
+            100,
+            100
+          ],
+          "mean": 66.67,
+          "stdev": 57.74,
+          "max_drift": 100
+        },
+        "relevant_experience_score": {
+          "values": [
+            0,
+            0,
+            0
+          ],
+          "mean": 0,
+          "stdev": 0.0,
+          "max_drift": 0
+        },
+        "projects_score": {
+          "values": [
+            0,
+            0,
+            0
+          ],
+          "mean": 0,
+          "stdev": 0.0,
+          "max_drift": 0
+        },
+        "certificates_score": {
+          "values": [
+            0,
+            0,
+            0
+          ],
+          "mean": 0,
+          "stdev": 0.0,
+          "max_drift": 0
+        },
+        "tools_score": {
+          "values": [
+            0,
+            0,
+            0
+          ],
+          "mean": 0,
+          "stdev": 0.0,
+          "max_drift": 0
+        },
+        "technologies_score": {
+          "values": [
+            0,
+            0,
+            0
+          ],
+          "mean": 0,
+          "stdev": 0.0,
+          "max_drift": 0
+        },
+        "qualification_score": {
+          "values": [
+            0,
+            50,
+            50
+          ],
+          "mean": 33.33,
+          "stdev": 28.87,
+          "max_drift": 50
+        },
+        "responsibilities_score": {
+          "values": [
+            0,
+            0,
+            0
+          ],
+          "mean": 0,
+          "stdev": 0.0,
+          "max_drift": 0
+        },
+        "salary_score": {
+          "values": [
+            0,
+            80,
+            80
+          ],
+          "mean": 53.33,
+          "stdev": 46.19,
+          "max_drift": 80
+        },
+        "position_score": {
+          "values": [
+            0,
+            0,
+            0
+          ],
+          "mean": 0,
+          "stdev": 0.0,
+          "max_drift": 0
+        }
+      },
+      "flags": [
+        "\u26a0\ufe0f final_score drift = 27 (threshold: 5)",
+        "\u26a0\ufe0f experience_score drift = 100 (threshold: 10)",
+        "\u26a0\ufe0f qualification_score drift = 50 (threshold: 10)",
+        "\u26a0\ufe0f salary_score drift = 80 (threshold: 10)"
+      ]
+    },
+    "5_perfect_lead": {
+      "candidate_name": "Perfect Lead Paul",
+      "run_count": 3,
+      "runs": [
+        {
+          "file": "score_5_perfect_lead_20260217_144553.json",
+          "final_score": 55
+        },
+        {
+          "file": "score_5_perfect_lead_20260226_180627.json",
+          "final_score": 74
+        },
+        {
+          "file": "score_5_perfect_lead_20260304_154606.json",
+          "final_score": 82
+        }
+      ],
+      "variance": {
+        "final_score": {
+          "values": [
+            55,
+            74,
+            82
+          ],
+          "mean": 70.33,
+          "stdev": 13.87,
+          "max_drift": 27
+        },
+        "skills_score": {
+          "values": [
+            75,
+            75,
+            75
+          ],
+          "mean": 75,
+          "stdev": 0.0,
+          "max_drift": 0
+        },
+        "experience_score": {
+          "values": [
+            25,
+            80,
+            80
+          ],
+          "mean": 61.67,
+          "stdev": 31.75,
+          "max_drift": 55
+        },
+        "relevant_experience_score": {
+          "values": [
+            25,
+            100,
+            100
+          ],
+          "mean": 75,
+          "stdev": 43.3,
+          "max_drift": 75
+        },
+        "projects_score": {
+          "values": [
+            0,
+            0,
+            0
+          ],
+          "mean": 0,
+          "stdev": 0.0,
+          "max_drift": 0
+        },
+        "certificates_score": {
+          "values": [
+            0,
+            0,
+            0
+          ],
+          "mean": 0,
+          "stdev": 0.0,
+          "max_drift": 0
+        },
+        "tools_score": {
+          "values": [
+            50,
+            20,
+            20
+          ],
+          "mean": 30,
+          "stdev": 17.32,
+          "max_drift": 30
+        },
+        "technologies_score": {
+          "values": [
+            75,
+            75,
+            100
+          ],
+          "mean": 83.33,
+          "stdev": 14.43,
+          "max_drift": 25
+        },
+        "qualification_score": {
+          "values": [
+            80,
+            80,
+            80
+          ],
+          "mean": 80,
+          "stdev": 0.0,
+          "max_drift": 0
+        },
+        "responsibilities_score": {
+          "values": [
+            0,
+            0,
+            0
+          ],
+          "mean": 0,
+          "stdev": 0.0,
+          "max_drift": 0
+        },
+        "salary_score": {
+          "values": [
+            80,
+            33,
+            33
+          ],
+          "mean": 48.67,
+          "stdev": 27.14,
+          "max_drift": 47
+        },
+        "position_score": {
+          "values": [
+            0,
+            0,
+            100
+          ],
+          "mean": 33.33,
+          "stdev": 57.74,
+          "max_drift": 100
+        }
+      },
+      "flags": [
+        "\u26a0\ufe0f final_score drift = 27 (threshold: 5)",
+        "\u26a0\ufe0f experience_score drift = 55 (threshold: 10)",
+        "\u26a0\ufe0f relevant_experience_score drift = 75 (threshold: 10)",
+        "\u26a0\ufe0f tools_score drift = 30 (threshold: 10)",
+        "\u26a0\ufe0f technologies_score drift = 25 (threshold: 10)",
+        "\u26a0\ufe0f salary_score drift = 47 (threshold: 10)",
+        "\u26a0\ufe0f position_score drift = 100 (threshold: 10)"
+      ]
+    },
+    "my_resume": {
+      "candidate_name": "Atharva Sharad Ranpise",
+      "run_count": 4,
+      "runs": [
+        {
+          "file": "score_my_resume_20260217_140308.json",
+          "final_score": 55
+        },
+        {
+          "file": "score_my_resume_20260217_144623.json",
+          "final_score": 55
+        },
+        {
+          "file": "score_my_resume_20260226_180708.json",
+          "final_score": 38
+        },
+        {
+          "file": "score_my_resume_20260304_154710.json",
+          "final_score": 55
+        }
+      ],
+      "variance": {
+        "final_score": {
+          "values": [
+            55,
+            55,
+            38,
+            55
+          ],
+          "mean": 50.75,
+          "stdev": 8.5,
+          "max_drift": 17
+        },
+        "skills_score": {
+          "values": [
+            75,
+            75,
+            50,
+            75
+          ],
+          "mean": 68.75,
+          "stdev": 12.5,
+          "max_drift": 25
+        },
+        "experience_score": {
+          "values": [
+            25,
+            25,
+            25,
+            25
+          ],
+          "mean": 25,
+          "stdev": 0.0,
+          "max_drift": 0
+        },
+        "relevant_experience_score": {
+          "values": [
+            25,
+            25,
+            25,
+            25
+          ],
+          "mean": 25,
+          "stdev": 0.0,
+          "max_drift": 0
+        },
+        "projects_score": {
+          "values": [
+            0,
+            0,
+            0,
+            0
+          ],
+          "mean": 0,
+          "stdev": 0.0,
+          "max_drift": 0
+        },
+        "certificates_score": {
+          "values": [
+            0,
+            0,
+            0,
+            0
+          ],
+          "mean": 0,
+          "stdev": 0.0,
+          "max_drift": 0
+        },
+        "tools_score": {
+          "values": [
+            20,
+            20,
+            20,
+            20
+          ],
+          "mean": 20,
+          "stdev": 0.0,
+          "max_drift": 0
+        },
+        "technologies_score": {
+          "values": [
+            75,
+            75,
+            50,
+            75
+          ],
+          "mean": 68.75,
+          "stdev": 12.5,
+          "max_drift": 25
+        },
+        "qualification_score": {
+          "values": [
+            80,
+            80,
+            80,
+            80
+          ],
+          "mean": 80,
+          "stdev": 0.0,
+          "max_drift": 0
+        },
+        "responsibilities_score": {
+          "values": [
+            0,
+            0,
+            0,
+            0
+          ],
+          "mean": 0,
+          "stdev": 0.0,
+          "max_drift": 0
+        },
+        "salary_score": {
+          "values": [
+            80,
+            80,
+            33,
+            80
+          ],
+          "mean": 68.25,
+          "stdev": 23.5,
+          "max_drift": 47
+        },
+        "position_score": {
+          "values": [
+            0,
+            0,
+            0,
+            67
+          ],
+          "mean": 16.75,
+          "stdev": 33.5,
+          "max_drift": 67
+        }
+      },
+      "flags": [
+        "\u26a0\ufe0f final_score drift = 17 (threshold: 5)",
+        "\u26a0\ufe0f skills_score drift = 25 (threshold: 10)",
+        "\u26a0\ufe0f technologies_score drift = 25 (threshold: 10)",
+        "\u26a0\ufe0f salary_score drift = 47 (threshold: 10)",
+        "\u26a0\ufe0f position_score drift = 67 (threshold: 10)"
+      ]
+    },
+    "test_BTECH-sales_parsed_resume": {
+      "candidate_name": "Rahul Deshpande",
+      "run_count": 4,
+      "runs": [
+        {
+          "file": "score_test_BTECH-sales_parsed_resume_20260217_140053.json",
+          "final_score": 6
+        },
+        {
+          "file": "score_test_BTECH-sales_parsed_resume_20260217_144740.json",
+          "final_score": 19
+        },
+        {
+          "file": "score_test_BTECH-sales_parsed_resume_20260226_180739.json",
+          "final_score": 34
+        },
+        {
+          "file": "score_test_BTECH-sales_parsed_resume_20260304_154815.json",
+          "final_score": 36
+        }
+      ],
+      "variance": {
+        "final_score": {
+          "values": [
+            6,
+            19,
+            34,
+            36
+          ],
+          "mean": 23.75,
+          "stdev": 14.06,
+          "max_drift": 30
+        },
+        "skills_score": {
+          "values": [
+            20,
+            0,
+            0,
+            0
+          ],
+          "mean": 5,
+          "stdev": 10.0,
+          "max_drift": 20
+        },
+        "experience_score": {
+          "values": [
+            10,
+            0,
+            60,
+            60
+          ],
+          "mean": 32.5,
+          "stdev": 32.02,
+          "max_drift": 60
+        },
+        "relevant_experience_score": {
+          "values": [
+            10,
+            17,
+            50,
+            50
+          ],
+          "mean": 31.75,
+          "stdev": 21.27,
+          "max_drift": 40
+        },
+        "projects_score": {
+          "values": [
+            0,
+            0,
+            0,
+            0
+          ],
+          "mean": 0,
+          "stdev": 0.0,
+          "max_drift": 0
+        },
+        "certificates_score": {
+          "values": [
+            0,
+            0,
+            0,
+            0
+          ],
+          "mean": 0,
+          "stdev": 0.0,
+          "max_drift": 0
+        },
+        "tools_score": {
+          "values": [
+            5,
+            0,
+            0,
+            20
+          ],
+          "mean": 6.25,
+          "stdev": 9.46,
+          "max_drift": 20
+        },
+        "technologies_score": {
+          "values": [
+            0,
+            0,
+            0,
+            0
+          ],
+          "mean": 0,
+          "stdev": 0.0,
+          "max_drift": 0
+        },
+        "qualification_score": {
+          "values": [
+            0,
+            80,
+            80,
+            80
+          ],
+          "mean": 60,
+          "stdev": 40.0,
+          "max_drift": 80
+        },
+        "responsibilities_score": {
+          "values": [
+            0,
+            0,
+            0,
+            0
+          ],
+          "mean": 0,
+          "stdev": 0.0,
+          "max_drift": 0
+        },
+        "salary_score": {
+          "values": [
+            0,
+            33,
+            33,
+            33
+          ],
+          "mean": 24.75,
+          "stdev": 16.5,
+          "max_drift": 33
+        },
+        "position_score": {
+          "values": [
+            0,
+            0,
+            0,
+            67
+          ],
+          "mean": 16.75,
+          "stdev": 33.5,
+          "max_drift": 67
+        }
+      },
+      "flags": [
+        "\u26a0\ufe0f final_score drift = 30 (threshold: 5)",
+        "\u26a0\ufe0f skills_score drift = 20 (threshold: 10)",
+        "\u26a0\ufe0f experience_score drift = 60 (threshold: 10)",
+        "\u26a0\ufe0f relevant_experience_score drift = 40 (threshold: 10)",
+        "\u26a0\ufe0f tools_score drift = 20 (threshold: 10)",
+        "\u26a0\ufe0f qualification_score drift = 80 (threshold: 10)",
+        "\u26a0\ufe0f salary_score drift = 33 (threshold: 10)",
+        "\u26a0\ufe0f position_score drift = 67 (threshold: 10)"
+      ]
+    },
+    "test_cs_parsed_resume": {
+      "candidate_name": "Arjun Mehta",
+      "run_count": 4,
+      "runs": [
+        {
+          "file": "score_test_cs_parsed_resume_20260217_140150.json",
+          "final_score": 74
+        },
+        {
+          "file": "score_test_cs_parsed_resume_20260217_144813.json",
+          "final_score": 74
+        },
+        {
+          "file": "score_test_cs_parsed_resume_20260226_180858.json",
+          "final_score": 66
+        },
+        {
+          "file": "score_test_cs_parsed_resume_20260304_154904.json",
+          "final_score": 83
+        }
+      ],
+      "variance": {
+        "final_score": {
+          "values": [
+            74,
+            74,
+            66,
+            83
+          ],
+          "mean": 74.25,
+          "stdev": 6.95,
+          "max_drift": 17
+        },
+        "skills_score": {
+          "values": [
+            80,
+            80,
+            75,
+            75
+          ],
+          "mean": 77.5,
+          "stdev": 2.89,
+          "max_drift": 5
+        },
+        "experience_score": {
+          "values": [
+            60,
+            60,
+            80,
+            80
+          ],
+          "mean": 70,
+          "stdev": 11.55,
+          "max_drift": 20
+        },
+        "relevant_experience_score": {
+          "values": [
+            73,
+            73,
+            73,
+            100
+          ],
+          "mean": 79.75,
+          "stdev": 13.5,
+          "max_drift": 27
+        },
+        "projects_score": {
+          "values": [
+            0,
+            0,
+            0,
+            0
+          ],
+          "mean": 0,
+          "stdev": 0.0,
+          "max_drift": 0
+        },
+        "certificates_score": {
+          "values": [
+            0,
+            0,
+            0,
+            0
+          ],
+          "mean": 0,
+          "stdev": 0.0,
+          "max_drift": 0
+        },
+        "tools_score": {
+          "values": [
+            50,
+            50,
+            20,
+            100
+          ],
+          "mean": 55,
+          "stdev": 33.17,
+          "max_drift": 80
+        },
+        "technologies_score": {
+          "values": [
+            75,
+            75,
+            75,
+            100
+          ],
+          "mean": 81.25,
+          "stdev": 12.5,
+          "max_drift": 25
+        },
+        "qualification_score": {
+          "values": [
+            80,
+            80,
+            80,
+            80
+          ],
+          "mean": 80,
+          "stdev": 0.0,
+          "max_drift": 0
+        },
+        "responsibilities_score": {
+          "values": [
+            0,
+            0,
+            0,
+            0
+          ],
+          "mean": 0,
+          "stdev": 0.0,
+          "max_drift": 0
+        },
+        "salary_score": {
+          "values": [
+            80,
+            80,
+            33,
+            33
+          ],
+          "mean": 56.5,
+          "stdev": 27.14,
+          "max_drift": 47
+        },
+        "position_score": {
+          "values": [
+            0,
+            0,
+            0,
+            100
+          ],
+          "mean": 25,
+          "stdev": 50.0,
+          "max_drift": 100
+        }
+      },
+      "flags": [
+        "\u26a0\ufe0f final_score drift = 17 (threshold: 5)",
+        "\u26a0\ufe0f experience_score drift = 20 (threshold: 10)",
+        "\u26a0\ufe0f relevant_experience_score drift = 27 (threshold: 10)",
+        "\u26a0\ufe0f tools_score drift = 80 (threshold: 10)",
+        "\u26a0\ufe0f technologies_score drift = 25 (threshold: 10)",
+        "\u26a0\ufe0f salary_score drift = 47 (threshold: 10)",
+        "\u26a0\ufe0f position_score drift = 100 (threshold: 10)"
+      ]
+    },
+    "test_parsed_resume_2": {
+      "candidate_name": "Jayesh Pingle",
+      "run_count": 3,
+      "runs": [
+        {
+          "file": "score_test_parsed_resume_2_20260217_144940.json",
+          "final_score": 9
+        },
+        {
+          "file": "score_test_parsed_resume_2_20260226_180936.json",
+          "final_score": 10
+        },
+        {
+          "file": "score_test_parsed_resume_2_20260304_154942.json",
+          "final_score": 18
+        }
+      ],
+      "variance": {
+        "final_score": {
+          "values": [
+            9,
+            10,
+            18
+          ],
+          "mean": 12.33,
+          "stdev": 4.93,
+          "max_drift": 9
+        },
+        "skills_score": {
+          "values": [
+            25,
+            0,
+            0
+          ],
+          "mean": 8.33,
+          "stdev": 14.43,
+          "max_drift": 25
+        },
+        "experience_score": {
+          "values": [
+            0,
+            25,
+            25
+          ],
+          "mean": 16.67,
+          "stdev": 14.43,
+          "max_drift": 25
+        },
+        "relevant_experience_score": {
+          "values": [
+            20,
+            0,
+            17
+          ],
+          "mean": 12.33,
+          "stdev": 10.79,
+          "max_drift": 20
+        },
+        "projects_score": {
+          "values": [
+            0,
+            0,
+            0
+          ],
+          "mean": 0,
+          "stdev": 0.0,
+          "max_drift": 0
+        },
+        "certificates_score": {
+          "values": [
+            0,
+            0,
+            0
+          ],
+          "mean": 0,
+          "stdev": 0.0,
+          "max_drift": 0
+        },
+        "tools_score": {
+          "values": [
+            0,
+            0,
+            0
+          ],
+          "mean": 0,
+          "stdev": 0.0,
+          "max_drift": 0
+        },
+        "technologies_score": {
+          "values": [
+            0,
+            0,
+            0
+          ],
+          "mean": 0,
+          "stdev": 0.0,
+          "max_drift": 0
+        },
+        "qualification_score": {
+          "values": [
+            0,
+            80,
+            80
+          ],
+          "mean": 53.33,
+          "stdev": 46.19,
+          "max_drift": 80
+        },
+        "responsibilities_score": {
+          "values": [
+            0,
+            0,
+            0
+          ],
+          "mean": 0,
+          "stdev": 0.0,
+          "max_drift": 0
+        },
+        "salary_score": {
+          "values": [
+            0,
+            0,
+            0
+          ],
+          "mean": 0,
+          "stdev": 0.0,
+          "max_drift": 0
+        },
+        "position_score": {
+          "values": [
+            0,
+            0,
+            67
+          ],
+          "mean": 22.33,
+          "stdev": 38.68,
+          "max_drift": 67
+        }
+      },
+      "flags": [
+        "\u26a0\ufe0f final_score drift = 9 (threshold: 5)",
+        "\u26a0\ufe0f skills_score drift = 25 (threshold: 10)",
+        "\u26a0\ufe0f experience_score drift = 25 (threshold: 10)",
+        "\u26a0\ufe0f relevant_experience_score drift = 20 (threshold: 10)",
+        "\u26a0\ufe0f qualification_score drift = 80 (threshold: 10)",
+        "\u26a0\ufe0f position_score drift = 67 (threshold: 10)"
+      ]
+    },
+    "test_parsed_resume_3": {
+      "candidate_name": "Harshita Sanjay Sathe",
+      "run_count": 3,
+      "runs": [
+        {
+          "file": "score_test_parsed_resume_3_20260217_145145.json",
+          "final_score": 5
+        },
+        {
+          "file": "score_test_parsed_resume_3_20260226_181018.json",
+          "final_score": 10
+        },
+        {
+          "file": "score_test_parsed_resume_3_20260304_155026.json",
+          "final_score": 18
+        }
+      ],
+      "variance": {
+        "final_score": {
+          "values": [
+            5,
+            10,
+            18
+          ],
+          "mean": 11,
+          "stdev": 6.56,
+          "max_drift": 13
+        },
+        "skills_score": {
+          "values": [
+            0,
+            0,
+            0
+          ],
+          "mean": 0,
+          "stdev": 0.0,
+          "max_drift": 0
+        },
+        "experience_score": {
+          "values": [
+            0,
+            25,
+            25
+          ],
+          "mean": 16.67,
+          "stdev": 14.43,
+          "max_drift": 25
+        },
+        "relevant_experience_score": {
+          "values": [
+            0,
+            0,
+            17
+          ],
+          "mean": 5.67,
+          "stdev": 9.81,
+          "max_drift": 17
+        },
+        "projects_score": {
+          "values": [
+            0,
+            0,
+            0
+          ],
+          "mean": 0,
+          "stdev": 0.0,
+          "max_drift": 0
+        },
+        "certificates_score": {
+          "values": [
+            0,
+            0,
+            0
+          ],
+          "mean": 0,
+          "stdev": 0.0,
+          "max_drift": 0
+        },
+        "tools_score": {
+          "values": [
+            0,
+            0,
+            0
+          ],
+          "mean": 0,
+          "stdev": 0.0,
+          "max_drift": 0
+        },
+        "technologies_score": {
+          "values": [
+            0,
+            0,
+            0
+          ],
+          "mean": 0,
+          "stdev": 0.0,
+          "max_drift": 0
+        },
+        "qualification_score": {
+          "values": [
+            50,
+            80,
+            80
+          ],
+          "mean": 70,
+          "stdev": 17.32,
+          "max_drift": 30
+        },
+        "responsibilities_score": {
+          "values": [
+            0,
+            0,
+            0
+          ],
+          "mean": 0,
+          "stdev": 0.0,
+          "max_drift": 0
+        },
+        "salary_score": {
+          "values": [
+            0,
+            0,
+            0
+          ],
+          "mean": 0,
+          "stdev": 0.0,
+          "max_drift": 0
+        },
+        "position_score": {
+          "values": [
+            0,
+            0,
+            67
+          ],
+          "mean": 22.33,
+          "stdev": 38.68,
+          "max_drift": 67
+        }
+      },
+      "flags": [
+        "\u26a0\ufe0f final_score drift = 13 (threshold: 5)",
+        "\u26a0\ufe0f experience_score drift = 25 (threshold: 10)",
+        "\u26a0\ufe0f relevant_experience_score drift = 17 (threshold: 10)",
+        "\u26a0\ufe0f qualification_score drift = 30 (threshold: 10)",
+        "\u26a0\ufe0f position_score drift = 67 (threshold: 10)"
+      ]
+    },
+    "test_parsed_resume_4": {
+      "candidate_name": "Sagar Shrinivas Somani",
+      "run_count": 3,
+      "runs": [
+        {
+          "file": "score_test_parsed_resume_4_20260217_145232.json",
+          "final_score": 24
+        },
+        {
+          "file": "score_test_parsed_resume_4_20260226_181054.json",
+          "final_score": 21
+        },
+        {
+          "file": "score_test_parsed_resume_4_20260304_155101.json",
+          "final_score": 16
+        }
+      ],
+      "variance": {
+        "final_score": {
+          "values": [
+            24,
+            21,
+            16
+          ],
+          "mean": 20.33,
+          "stdev": 4.04,
+          "max_drift": 8
+        },
+        "skills_score": {
+          "values": [
+            0,
+            0,
+            0
+          ],
+          "mean": 0,
+          "stdev": 0.0,
+          "max_drift": 0
+        },
+        "experience_score": {
+          "values": [
+            0,
+            80,
+            80
+          ],
+          "mean": 53.33,
+          "stdev": 46.19,
+          "max_drift": 80
+        },
+        "relevant_experience_score": {
+          "values": [
+            17,
+            17,
+            0
+          ],
+          "mean": 11.33,
+          "stdev": 9.81,
+          "max_drift": 17
+        },
+        "projects_score": {
+          "values": [
+            0,
+            0,
+            0
+          ],
+          "mean": 0,
+          "stdev": 0.0,
+          "max_drift": 0
+        },
+        "certificates_score": {
+          "values": [
+            0,
+            0,
+            0
+          ],
+          "mean": 0,
+          "stdev": 0.0,
+          "max_drift": 0
+        },
+        "tools_score": {
+          "values": [
+            0,
+            0,
+            0
+          ],
+          "mean": 0,
+          "stdev": 0.0,
+          "max_drift": 0
+        },
+        "technologies_score": {
+          "values": [
+            50,
+            0,
+            0
+          ],
+          "mean": 16.67,
+          "stdev": 28.87,
+          "max_drift": 50
+        },
+        "qualification_score": {
+          "values": [
+            80,
+            80,
+            80
+          ],
+          "mean": 80,
+          "stdev": 0.0,
+          "max_drift": 0
+        },
+        "responsibilities_score": {
+          "values": [
+            0,
+            0,
+            0
+          ],
+          "mean": 0,
+          "stdev": 0.0,
+          "max_drift": 0
+        },
+        "salary_score": {
+          "values": [
+            0,
+            0,
+            0
+          ],
+          "mean": 0,
+          "stdev": 0.0,
+          "max_drift": 0
+        },
+        "position_score": {
+          "values": [
+            0,
+            0,
+            0
+          ],
+          "mean": 0,
+          "stdev": 0.0,
+          "max_drift": 0
+        }
+      },
+      "flags": [
+        "\u26a0\ufe0f final_score drift = 8 (threshold: 5)",
+        "\u26a0\ufe0f experience_score drift = 80 (threshold: 10)",
+        "\u26a0\ufe0f relevant_experience_score drift = 17 (threshold: 10)",
+        "\u26a0\ufe0f technologies_score drift = 50 (threshold: 10)"
+      ]
+    },
+    "test_parsed_resume_5": {
+      "candidate_name": "Aayush Jain",
+      "run_count": 3,
+      "runs": [
+        {
+          "file": "score_test_parsed_resume_5_20260217_145329.json",
+          "final_score": 14
+        },
+        {
+          "file": "score_test_parsed_resume_5_20260226_181122.json",
+          "final_score": 8
+        },
+        {
+          "file": "score_test_parsed_resume_5_20260304_155125.json",
+          "final_score": 10
+        }
+      ],
+      "variance": {
+        "final_score": {
+          "values": [
+            14,
+            8,
+            10
+          ],
+          "mean": 10.67,
+          "stdev": 3.06,
+          "max_drift": 6
+        },
+        "skills_score": {
+          "values": [
+            0,
+            0,
+            0
+          ],
+          "mean": 0,
+          "stdev": 0.0,
+          "max_drift": 0
+        },
+        "experience_score": {
+          "values": [
+            0,
+            30,
+            30
+          ],
+          "mean": 20,
+          "stdev": 17.32,
+          "max_drift": 30
+        },
+        "relevant_experience_score": {
+          "values": [
+            17,
+            0,
+            0
+          ],
+          "mean": 5.67,
+          "stdev": 9.81,
+          "max_drift": 17
+        },
+        "projects_score": {
+          "values": [
+            0,
+            0,
+            0
+          ],
+          "mean": 0,
+          "stdev": 0.0,
+          "max_drift": 0
+        },
+        "certificates_score": {
+          "values": [
+            0,
+            0,
+            0
+          ],
+          "mean": 0,
+          "stdev": 0.0,
+          "max_drift": 0
+        },
+        "tools_score": {
+          "values": [
+            0,
+            0,
+            0
+          ],
+          "mean": 0,
+          "stdev": 0.0,
+          "max_drift": 0
+        },
+        "technologies_score": {
+          "values": [
+            0,
+            0,
+            0
+          ],
+          "mean": 0,
+          "stdev": 0.0,
+          "max_drift": 0
+        },
+        "qualification_score": {
+          "values": [
+            80,
+            50,
+            50
+          ],
+          "mean": 60,
+          "stdev": 17.32,
+          "max_drift": 30
+        },
+        "responsibilities_score": {
+          "values": [
+            0,
+            0,
+            0
+          ],
+          "mean": 0,
+          "stdev": 0.0,
+          "max_drift": 0
+        },
+        "salary_score": {
+          "values": [
+            0,
+            0,
+            0
+          ],
+          "mean": 0,
+          "stdev": 0.0,
+          "max_drift": 0
+        },
+        "position_score": {
+          "values": [
+            0,
+            0,
+            67
+          ],
+          "mean": 22.33,
+          "stdev": 38.68,
+          "max_drift": 67
+        }
+      },
+      "flags": [
+        "\u26a0\ufe0f final_score drift = 6 (threshold: 5)",
+        "\u26a0\ufe0f experience_score drift = 30 (threshold: 10)",
+        "\u26a0\ufe0f relevant_experience_score drift = 17 (threshold: 10)",
+        "\u26a0\ufe0f qualification_score drift = 30 (threshold: 10)",
+        "\u26a0\ufe0f position_score drift = 67 (threshold: 10)"
+      ]
+    },
+    "test_parsed_resume_6": {
+      "candidate_name": "Ravi Adipata",
+      "run_count": 2,
+      "runs": [
+        {
+          "file": "score_test_parsed_resume_6_20260217_145424.json",
+          "final_score": 54
+        },
+        {
+          "file": "score_test_parsed_resume_6_20260304_155155.json",
+          "final_score": 55
+        }
+      ],
+      "variance": {
+        "final_score": {
+          "values": [
+            54,
+            55
+          ],
+          "mean": 54.5,
+          "stdev": 0.71,
+          "max_drift": 1
+        },
+        "skills_score": {
+          "values": [
+            60,
+            50
+          ],
+          "mean": 55,
+          "stdev": 7.07,
+          "max_drift": 10
+        },
+        "experience_score": {
+          "values": [
+            60,
+            80
+          ],
+          "mean": 70,
+          "stdev": 14.14,
+          "max_drift": 20
+        },
+        "relevant_experience_score": {
+          "values": [
+            73,
+            73
+          ],
+          "mean": 73,
+          "stdev": 0.0,
+          "max_drift": 0
+        },
+        "projects_score": {
+          "values": [
+            0,
+            0
+          ],
+          "mean": 0,
+          "stdev": 0.0,
+          "max_drift": 0
+        },
+        "certificates_score": {
+          "values": [
+            0,
+            0
+          ],
+          "mean": 0,
+          "stdev": 0.0,
+          "max_drift": 0
+        },
+        "tools_score": {
+          "values": [
+            0,
+            0
+          ],
+          "mean": 0,
+          "stdev": 0.0,
+          "max_drift": 0
+        },
+        "technologies_score": {
+          "values": [
+            50,
+            50
+          ],
+          "mean": 50,
+          "stdev": 0.0,
+          "max_drift": 0
+        },
+        "qualification_score": {
+          "values": [
+            80,
+            80
+          ],
+          "mean": 80,
+          "stdev": 0.0,
+          "max_drift": 0
+        },
+        "responsibilities_score": {
+          "values": [
+            0,
+            0
+          ],
+          "mean": 0,
+          "stdev": 0.0,
+          "max_drift": 0
+        },
+        "salary_score": {
+          "values": [
+            0,
+            0
+          ],
+          "mean": 0,
+          "stdev": 0.0,
+          "max_drift": 0
+        },
+        "position_score": {
+          "values": [
+            0,
+            67
+          ],
+          "mean": 33.5,
+          "stdev": 47.38,
+          "max_drift": 67
+        }
+      },
+      "flags": [
+        "\u26a0\ufe0f experience_score drift = 20 (threshold: 10)",
+        "\u26a0\ufe0f position_score drift = 67 (threshold: 10)"
+      ]
+    },
+    "test_parsed_resume_7": {
+      "candidate_name": "Rohit Kulkarni",
+      "run_count": 3,
+      "runs": [
+        {
+          "file": "score_test_parsed_resume_7_20260217_145539.json",
+          "final_score": 55
+        },
+        {
+          "file": "score_test_parsed_resume_7_20260226_181152.json",
+          "final_score": 39
+        },
+        {
+          "file": "score_test_parsed_resume_7_20260304_155214.json",
+          "final_score": 41
+        }
+      ],
+      "variance": {
+        "final_score": {
+          "values": [
+            55,
+            39,
+            41
+          ],
+          "mean": 45,
+          "stdev": 8.72,
+          "max_drift": 16
+        },
+        "skills_score": {
+          "values": [
+            75,
+            50,
+            50
+          ],
+          "mean": 58.33,
+          "stdev": 14.43,
+          "max_drift": 25
+        },
+        "experience_score": {
+          "values": [
+            25,
+            25,
+            25
+          ],
+          "mean": 25,
+          "stdev": 0.0,
+          "max_drift": 0
+        },
+        "relevant_experience_score": {
+          "values": [
+            25,
+            17,
+            17
+          ],
+          "mean": 19.67,
+          "stdev": 4.62,
+          "max_drift": 8
+        },
+        "projects_score": {
+          "values": [
+            0,
+            0,
+            0
+          ],
+          "mean": 0,
+          "stdev": 0.0,
+          "max_drift": 0
+        },
+        "certificates_score": {
+          "values": [
+            0,
+            0,
+            0
+          ],
+          "mean": 0,
+          "stdev": 0.0,
+          "max_drift": 0
+        },
+        "tools_score": {
+          "values": [
+            50,
+            20,
+            20
+          ],
+          "mean": 30,
+          "stdev": 17.32,
+          "max_drift": 30
+        },
+        "technologies_score": {
+          "values": [
+            75,
+            50,
+            50
+          ],
+          "mean": 58.33,
+          "stdev": 14.43,
+          "max_drift": 25
+        },
+        "qualification_score": {
+          "values": [
+            80,
+            80,
+            80
+          ],
+          "mean": 80,
+          "stdev": 0.0,
+          "max_drift": 0
+        },
+        "responsibilities_score": {
+          "values": [
+            0,
+            0,
+            0
+          ],
+          "mean": 0,
+          "stdev": 0.0,
+          "max_drift": 0
+        },
+        "salary_score": {
+          "values": [
+            80,
+            53,
+            53
+          ],
+          "mean": 62,
+          "stdev": 15.59,
+          "max_drift": 27
+        },
+        "position_score": {
+          "values": [
+            0,
+            0,
+            67
+          ],
+          "mean": 22.33,
+          "stdev": 38.68,
+          "max_drift": 67
+        }
+      },
+      "flags": [
+        "\u26a0\ufe0f final_score drift = 16 (threshold: 5)",
+        "\u26a0\ufe0f skills_score drift = 25 (threshold: 10)",
+        "\u26a0\ufe0f tools_score drift = 30 (threshold: 10)",
+        "\u26a0\ufe0f technologies_score drift = 25 (threshold: 10)",
+        "\u26a0\ufe0f salary_score drift = 27 (threshold: 10)",
+        "\u26a0\ufe0f position_score drift = 67 (threshold: 10)"
+      ]
+    },
+    "test_parsed_resume_8": {
+      "candidate_name": "Nikhil Patil",
+      "run_count": 3,
+      "runs": [
+        {
+          "file": "score_test_parsed_resume_8_20260217_145656.json",
+          "final_score": 13
+        },
+        {
+          "file": "score_test_parsed_resume_8_20260226_181250.json",
+          "final_score": 19
+        },
+        {
+          "file": "score_test_parsed_resume_8_20260304_155236.json",
+          "final_score": 19
+        }
+      ],
+      "variance": {
+        "final_score": {
+          "values": [
+            13,
+            19,
+            19
+          ],
+          "mean": 17,
+          "stdev": 3.46,
+          "max_drift": 6
+        },
+        "skills_score": {
+          "values": [
+            0,
+            0,
+            0
+          ],
+          "mean": 0,
+          "stdev": 0.0,
+          "max_drift": 0
+        },
+        "experience_score": {
+          "values": [
+            0,
+            60,
+            60
+          ],
+          "mean": 40,
+          "stdev": 34.64,
+          "max_drift": 60
+        },
+        "relevant_experience_score": {
+          "values": [
+            0,
+            0,
+            0
+          ],
+          "mean": 0,
+          "stdev": 0.0,
+          "max_drift": 0
+        },
+        "projects_score": {
+          "values": [
+            0,
+            0,
+            0
+          ],
+          "mean": 0,
+          "stdev": 0.0,
+          "max_drift": 0
+        },
+        "certificates_score": {
+          "values": [
+            0,
+            0,
+            0
+          ],
+          "mean": 0,
+          "stdev": 0.0,
+          "max_drift": 0
+        },
+        "tools_score": {
+          "values": [
+            0,
+            2,
+            20
+          ],
+          "mean": 7.33,
+          "stdev": 11.02,
+          "max_drift": 20
+        },
+        "technologies_score": {
+          "values": [
+            0,
+            0,
+            0
+          ],
+          "mean": 0,
+          "stdev": 0.0,
+          "max_drift": 0
+        },
+        "qualification_score": {
+          "values": [
+            80,
+            80,
+            80
+          ],
+          "mean": 80,
+          "stdev": 0.0,
+          "max_drift": 0
+        },
+        "responsibilities_score": {
+          "values": [
+            0,
+            0,
+            0
+          ],
+          "mean": 0,
+          "stdev": 0.0,
+          "max_drift": 0
+        },
+        "salary_score": {
+          "values": [
+            33,
+            33,
+            33
+          ],
+          "mean": 33,
+          "stdev": 0.0,
+          "max_drift": 0
+        },
+        "position_score": {
+          "values": [
+            0,
+            0,
+            0
+          ],
+          "mean": 0,
+          "stdev": 0.0,
+          "max_drift": 0
+        }
+      },
+      "flags": [
+        "\u26a0\ufe0f final_score drift = 6 (threshold: 5)",
+        "\u26a0\ufe0f experience_score drift = 60 (threshold: 10)",
+        "\u26a0\ufe0f tools_score drift = 20 (threshold: 10)"
+      ]
+    },
+    "test_vague_parsed_resume": {
+      "candidate_name": "Samar Jadhav",
+      "run_count": 3,
+      "runs": [
+        {
+          "file": "score_test_vague_parsed_resume_20260217_145803.json",
+          "final_score": 75
+        },
+        {
+          "file": "score_test_vague_parsed_resume_20260226_181324.json",
+          "final_score": 49
+        },
+        {
+          "file": "score_test_vague_parsed_resume_20260304_155254.json",
+          "final_score": 53
+        }
+      ],
+      "variance": {
+        "final_score": {
+          "values": [
+            75,
+            49,
+            53
+          ],
+          "mean": 59,
+          "stdev": 14.0,
+          "max_drift": 26
+        },
+        "skills_score": {
+          "values": [
+            75,
+            50,
+            50
+          ],
+          "mean": 58.33,
+          "stdev": 14.43,
+          "max_drift": 25
+        },
+        "experience_score": {
+          "values": [
+            60,
+            30,
+            30
+          ],
+          "mean": 40,
+          "stdev": 17.32,
+          "max_drift": 30
+        },
+        "relevant_experience_score": {
+          "values": [
+            73,
+            50,
+            50
+          ],
+          "mean": 57.67,
+          "stdev": 13.28,
+          "max_drift": 23
+        },
+        "projects_score": {
+          "values": [
+            0,
+            0,
+            0
+          ],
+          "mean": 0,
+          "stdev": 0.0,
+          "max_drift": 0
+        },
+        "certificates_score": {
+          "values": [
+            0,
+            0,
+            0
+          ],
+          "mean": 0,
+          "stdev": 0.0,
+          "max_drift": 0
+        },
+        "tools_score": {
+          "values": [
+            100,
+            20,
+            100
+          ],
+          "mean": 73.33,
+          "stdev": 46.19,
+          "max_drift": 80
+        },
+        "technologies_score": {
+          "values": [
+            75,
+            50,
+            50
+          ],
+          "mean": 58.33,
+          "stdev": 14.43,
+          "max_drift": 25
+        },
+        "qualification_score": {
+          "values": [
+            80,
+            80,
+            80
+          ],
+          "mean": 80,
+          "stdev": 0.0,
+          "max_drift": 0
+        },
+        "responsibilities_score": {
+          "values": [
+            0,
+            0,
+            0
+          ],
+          "mean": 0,
+          "stdev": 0.0,
+          "max_drift": 0
+        },
+        "salary_score": {
+          "values": [
+            80,
+            53,
+            53
+          ],
+          "mean": 62,
+          "stdev": 15.59,
+          "max_drift": 27
+        },
+        "position_score": {
+          "values": [
+            0,
+            0,
+            67
+          ],
+          "mean": 22.33,
+          "stdev": 38.68,
+          "max_drift": 67
+        }
+      },
+      "flags": [
+        "\u26a0\ufe0f final_score drift = 26 (threshold: 5)",
+        "\u26a0\ufe0f skills_score drift = 25 (threshold: 10)",
+        "\u26a0\ufe0f experience_score drift = 30 (threshold: 10)",
+        "\u26a0\ufe0f relevant_experience_score drift = 23 (threshold: 10)",
+        "\u26a0\ufe0f tools_score drift = 80 (threshold: 10)",
+        "\u26a0\ufe0f technologies_score drift = 25 (threshold: 10)",
+        "\u26a0\ufe0f salary_score drift = 27 (threshold: 10)",
+        "\u26a0\ufe0f position_score drift = 67 (threshold: 10)"
+      ]
+    }
+  },
+  "ranking_stability": {
+    "expected_order": [
+      "5_perfect_lead",
+      "1_senior_java_mismatch",
+      "2_junior_prodigy",
+      "3_phd_academic",
+      "4_career_switcher"
+    ],
+    "runs": {
+      "20260217": {
+        "scores": {
+          "1_senior_java_mismatch": 47,
+          "2_junior_prodigy": 52,
+          "3_phd_academic": 18,
+          "4_career_switcher": 0,
+          "5_perfect_lead": 55
+        },
+        "ranking": [
+          "5_perfect_lead",
+          "2_junior_prodigy",
+          "1_senior_java_mismatch",
+          "3_phd_academic",
+          "4_career_switcher"
+        ]
+      },
+      "20260226": {
+        "scores": {
+          "1_senior_java_mismatch": 47,
+          "2_junior_prodigy": 13,
+          "3_phd_academic": 38,
+          "4_career_switcher": 27,
+          "5_perfect_lead": 74
+        },
+        "ranking": [
+          "5_perfect_lead",
+          "1_senior_java_mismatch",
+          "3_phd_academic",
+          "4_career_switcher",
+          "2_junior_prodigy"
+        ]
+      },
+      "20260304": {
+        "scores": {
+          "1_senior_java_mismatch": 51,
+          "2_junior_prodigy": 40,
+          "3_phd_academic": 33,
+          "4_career_switcher": 27,
+          "5_perfect_lead": 82
+        },
+        "ranking": [
+          "5_perfect_lead",
+          "1_senior_java_mismatch",
+          "2_junior_prodigy",
+          "3_phd_academic",
+          "4_career_switcher"
+        ]
+      }
+    },
+    "inversions": [
+      {
+        "date": "20260217",
+        "expected_pos": 1,
+        "actual_pos": 2,
+        "archetype": "1_senior_java_mismatch",
+        "score": 47
+      },
+      {
+        "date": "20260217",
+        "expected_pos": 2,
+        "actual_pos": 1,
+        "archetype": "2_junior_prodigy",
+        "score": 52
+      },
+      {
+        "date": "20260226",
+        "expected_pos": 2,
+        "actual_pos": 4,
+        "archetype": "2_junior_prodigy",
+        "score": 13
+      },
+      {
+        "date": "20260226",
+        "expected_pos": 3,
+        "actual_pos": 2,
+        "archetype": "3_phd_academic",
+        "score": 38
+      },
+      {
+        "date": "20260226",
+        "expected_pos": 4,
+        "actual_pos": 3,
+        "archetype": "4_career_switcher",
+        "score": 27
+      }
+    ]
+  },
+  "guardrail_fire_rates": {
+    "total_results": 51,
+    "salary_override_fired": 18,
+    "salary_override_pct": 35.3,
+    "fresher_guardrail_fired": 8,
+    "fresher_guardrail_pct": 15.7,
+    "any_guardrail_fired": 8
+  },
+  "score_distribution": {
+    "final_score": {
+      "count": 51,
+      "min": 0,
+      "max": 83,
+      "mean": 37.0,
+      "median": 38,
+      "stdev": 22.8
+    },
+    "skills_score": {
+      "count": 51,
+      "min": 0,
+      "max": 80,
+      "mean": 29.6,
+      "median": 0,
+      "stdev": 33.2
+    },
+    "experience_score": {
+      "count": 51,
+      "min": 0,
+      "max": 100,
+      "mean": 42.5,
+      "median": 30,
+      "stdev": 31.4
+    },
+    "relevant_experience_score": {
+      "count": 51,
+      "min": 0,
+      "max": 100,
+      "mean": 32.8,
+      "median": 25,
+      "stdev": 30.7
+    },
+    "projects_score": {
+      "count": 51,
+      "min": 0,
+      "max": 0,
+      "mean": 0,
+      "median": 0,
+      "stdev": 0.0
+    },
+    "certificates_score": {
+      "count": 51,
+      "min": 0,
+      "max": 0,
+      "mean": 0,
+      "median": 0,
+      "stdev": 0.0
+    },
+    "tools_score": {
+      "count": 51,
+      "min": 0,
+      "max": 100,
+      "mean": 21.1,
+      "median": 5,
+      "stdev": 30.9
+    },
+    "technologies_score": {
+      "count": 51,
+      "min": 0,
+      "max": 100,
+      "mean": 31.4,
+      "median": 0,
+      "stdev": 35.3
+    },
+    "qualification_score": {
+      "count": 51,
+      "min": 0,
+      "max": 100,
+      "mean": 71.4,
+      "median": 80,
+      "stdev": 21.6
+    },
+    "responsibilities_score": {
+      "count": 51,
+      "min": 0,
+      "max": 0,
+      "mean": 0,
+      "median": 0,
+      "stdev": 0.0
+    },
+    "salary_score": {
+      "count": 51,
+      "min": 0,
+      "max": 80,
+      "mean": 34.3,
+      "median": 33,
+      "stdev": 31.9
+    },
+    "position_score": {
+      "count": 51,
+      "min": 0,
+      "max": 100,
+      "mean": 18.4,
+      "median": 0,
+      "stdev": 32.3
+    },
+    "final_score_histogram": {
+      "0-20": 18,
+      "21-40": 11,
+      "41-60": 15,
+      "61-80": 5,
+      "81-100": 2
+    }
+  }
+}

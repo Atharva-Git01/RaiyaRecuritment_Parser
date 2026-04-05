@@ -1,17 +1,25 @@
-__pycache__/
-*.py[cod]
-*$py.class
-*.so
+# Sensitive Data
+**/.env
 .env
-.venv
-env/
+auth.py
+saas_db.py
+
+# Dependencies
+node_modules/
+dist/
+build/
+phi4-venv/
 venv/
-ENV/
-env.bak/
-venv.bak/
-.idea/
-.vscode/
-*.log
-storage/
-uploads/
-resume-env/
+env/
+.venv/
+__pycache__/
+*.pyc
+
+# Test Artifacts
+.pytest_cache/
+test_output.log
+test_repro_output.log
+
+# Directories to exclude if not specifically requested
+*.bak
+*.tmp

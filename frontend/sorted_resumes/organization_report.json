@@ -1,0 +1,62 @@
+﻿[
+    {
+        "RoleFolder":  "Developer",
+        "TotalResumes":  240,
+        "SubfoldersCreated":  24,
+        "Status":  "Completed"
+    },
+    {
+        "RoleFolder":  "Tester",
+        "TotalResumes":  0,
+        "SubfoldersCreated":  0,
+        "Status":  "Empty"
+    },
+    {
+        "RoleFolder":  "DevOps",
+        "TotalResumes":  7,
+        "SubfoldersCreated":  1,
+        "Status":  "Completed"
+    },
+    {
+        "RoleFolder":  "Intern",
+        "TotalResumes":  38,
+        "SubfoldersCreated":  4,
+        "Status":  "Completed"
+    },
+    {
+        "RoleFolder":  "Fresher",
+        "TotalResumes":  57,
+        "SubfoldersCreated":  6,
+        "Status":  "Completed"
+    },
+    {
+        "RoleFolder":  "Manager",
+        "TotalResumes":  4,
+        "SubfoldersCreated":  1,
+        "Status":  "Completed"
+    },
+    {
+        "RoleFolder":  "Designer",
+        "TotalResumes":  27,
+        "SubfoldersCreated":  3,
+        "Status":  "Completed"
+    },
+    {
+        "RoleFolder":  "Data_Scientist",
+        "TotalResumes":  3,
+        "SubfoldersCreated":  1,
+        "Status":  "Completed"
+    },
+    {
+        "RoleFolder":  "Business_Analyst",
+        "TotalResumes":  1,
+        "SubfoldersCreated":  1,
+        "Status":  "Completed"
+    },
+    {
+        "RoleFolder":  "Other",
+        "TotalResumes":  38,
+        "SubfoldersCreated":  4,
+        "Status":  "Completed"
+    }
+]

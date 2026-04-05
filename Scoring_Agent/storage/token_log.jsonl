@@ -1,0 +1,196 @@
+{"ts": "2026-03-04T10:13:02", "candidate": "None", "model": "mmresumeparser", "prompt_tokens": 3008, "completion_tokens": 332, "total_tokens": 3340, "est_cost_usd": 0.001102}
+{"ts": "2026-03-04T10:13:43", "candidate": "None", "model": "mmresumeparser", "prompt_tokens": 3000, "completion_tokens": 389, "total_tokens": 3389, "est_cost_usd": 0.001133}
+{"ts": "2026-03-04T10:14:25", "candidate": "None", "model": "mmresumeparser", "prompt_tokens": 2987, "completion_tokens": 334, "total_tokens": 3321, "est_cost_usd": 0.001096}
+{"ts": "2026-03-04T10:15:14", "candidate": "None", "model": "mmresumeparser", "prompt_tokens": 3019, "completion_tokens": 376, "total_tokens": 3395, "est_cost_usd": 0.001131}
+{"ts": "2026-03-04T10:16:06", "candidate": "None", "model": "mmresumeparser", "prompt_tokens": 3009, "completion_tokens": 359, "total_tokens": 3368, "est_cost_usd": 0.001118}
+{"ts": "2026-03-04T10:17:10", "candidate": "Atharva Sharad Ranpise", "model": "mmresumeparser", "prompt_tokens": 3379, "completion_tokens": 353, "total_tokens": 3732, "est_cost_usd": 0.001226}
+{"ts": "2026-03-04T10:18:15", "candidate": "Rahul Deshpande", "model": "mmresumeparser", "prompt_tokens": 3203, "completion_tokens": 339, "total_tokens": 3542, "est_cost_usd": 0.001164}
+{"ts": "2026-03-04T10:19:04", "candidate": "Arjun Mehta", "model": "mmresumeparser", "prompt_tokens": 3235, "completion_tokens": 442, "total_tokens": 3677, "est_cost_usd": 0.001236}
+{"ts": "2026-03-04T10:19:42", "candidate": "None", "model": "mmresumeparser", "prompt_tokens": 3008, "completion_tokens": 322, "total_tokens": 3330, "est_cost_usd": 0.001096}
+{"ts": "2026-03-04T10:20:26", "candidate": "None", "model": "mmresumeparser", "prompt_tokens": 3164, "completion_tokens": 404, "total_tokens": 3568, "est_cost_usd": 0.001192}
+{"ts": "2026-03-04T10:21:01", "candidate": "None", "model": "mmresumeparser", "prompt_tokens": 3237, "completion_tokens": 404, "total_tokens": 3641, "est_cost_usd": 0.001213}
+{"ts": "2026-03-04T10:21:25", "candidate": "None", "model": "mmresumeparser", "prompt_tokens": 3154, "completion_tokens": 382, "total_tokens": 3536, "est_cost_usd": 0.001175}
+{"ts": "2026-03-04T10:21:55", "candidate": "Ravi Adipata", "model": "mmresumeparser", "prompt_tokens": 3207, "completion_tokens": 375, "total_tokens": 3582, "est_cost_usd": 0.001187}
+{"ts": "2026-03-04T10:22:14", "candidate": "Rohit Kulkarni", "model": "mmresumeparser", "prompt_tokens": 3178, "completion_tokens": 355, "total_tokens": 3533, "est_cost_usd": 0.001166}
+{"ts": "2026-03-04T10:22:36", "candidate": "Nikhil Patil", "model": "mmresumeparser", "prompt_tokens": 3224, "completion_tokens": 396, "total_tokens": 3620, "est_cost_usd": 0.001205}
+{"ts": "2026-03-04T10:22:54", "candidate": "Samar Jadhav", "model": "mmresumeparser", "prompt_tokens": 3237, "completion_tokens": 405, "total_tokens": 3642, "est_cost_usd": 0.001214}
+{"ts": "2026-03-05T06:21:01", "candidate": "Rohit Kulkarni", "model": "mmresumeparser", "prompt_tokens": 3178, "completion_tokens": 357, "total_tokens": 3535, "est_cost_usd": 0.001168}
+{"ts": "2026-03-05T06:25:36", "candidate": "Rohit Kulkarni", "model": "mmresumeparser", "prompt_tokens": 3178, "completion_tokens": 361, "total_tokens": 3539, "est_cost_usd": 0.00117}
+{"ts": "2026-03-05T06:31:03", "candidate": "None", "model": "mmresumeparser", "prompt_tokens": 3008, "completion_tokens": 331, "total_tokens": 3339, "est_cost_usd": 0.001101}
+{"ts": "2026-03-05T06:33:15", "candidate": "None", "model": "mmresumeparser", "prompt_tokens": 3000, "completion_tokens": 329, "total_tokens": 3329, "est_cost_usd": 0.001097}
+{"ts": "2026-03-05T06:34:50", "candidate": "None", "model": "mmresumeparser", "prompt_tokens": 2987, "completion_tokens": 363, "total_tokens": 3350, "est_cost_usd": 0.001114}
+{"ts": "2026-03-05T06:36:16", "candidate": "None", "model": "mmresumeparser", "prompt_tokens": 3019, "completion_tokens": 372, "total_tokens": 3391, "est_cost_usd": 0.001129}
+{"ts": "2026-03-05T06:37:30", "candidate": "None", "model": "mmresumeparser", "prompt_tokens": 3009, "completion_tokens": 368, "total_tokens": 3377, "est_cost_usd": 0.001123}
+{"ts": "2026-03-05T06:39:01", "candidate": "Atharva Sharad Ranpise", "model": "mmresumeparser", "prompt_tokens": 3379, "completion_tokens": 419, "total_tokens": 3798, "est_cost_usd": 0.001265}
+{"ts": "2026-03-05T06:40:35", "candidate": "Rahul Deshpande", "model": "mmresumeparser", "prompt_tokens": 3203, "completion_tokens": 355, "total_tokens": 3558, "est_cost_usd": 0.001174}
+{"ts": "2026-03-05T06:41:19", "candidate": "Test", "model": "mock-dep", "prompt_tokens": 10, "completion_tokens": 20, "total_tokens": 30, "est_cost_usd": 1.5e-05}
+{"ts": "2026-03-05T06:42:14", "candidate": "Arjun Mehta", "model": "mmresumeparser", "prompt_tokens": 3235, "completion_tokens": 426, "total_tokens": 3661, "est_cost_usd": 0.001226}
+{"ts": "2026-03-05T06:43:48", "candidate": "None", "model": "mmresumeparser", "prompt_tokens": 3008, "completion_tokens": 318, "total_tokens": 3326, "est_cost_usd": 0.001093}
+{"ts": "2026-03-05T06:45:29", "candidate": "None", "model": "mmresumeparser", "prompt_tokens": 3164, "completion_tokens": 341, "total_tokens": 3505, "est_cost_usd": 0.001154}
+{"ts": "2026-03-05T06:47:27", "candidate": "None", "model": "mmresumeparser", "prompt_tokens": 3237, "completion_tokens": 400, "total_tokens": 3637, "est_cost_usd": 0.001211}
+{"ts": "2026-03-05T06:49:33", "candidate": "None", "model": "mmresumeparser", "prompt_tokens": 3154, "completion_tokens": 382, "total_tokens": 3536, "est_cost_usd": 0.001175}
+{"ts": "2026-03-05T06:50:31", "candidate": "Ravi Adipata", "model": "mmresumeparser", "prompt_tokens": 3207, "completion_tokens": 375, "total_tokens": 3582, "est_cost_usd": 0.001187}
+{"ts": "2026-03-05T06:51:29", "candidate": "Rohit Kulkarni", "model": "mmresumeparser", "prompt_tokens": 3178, "completion_tokens": 353, "total_tokens": 3531, "est_cost_usd": 0.001165}
+{"ts": "2026-03-05T06:53:18", "candidate": "Nikhil Patil", "model": "mmresumeparser", "prompt_tokens": 3224, "completion_tokens": 416, "total_tokens": 3640, "est_cost_usd": 0.001217}
+{"ts": "2026-03-05T06:54:34", "candidate": "Samar Jadhav", "model": "mmresumeparser", "prompt_tokens": 3237, "completion_tokens": 384, "total_tokens": 3621, "est_cost_usd": 0.001201}
+{"ts": "2026-03-05T07:16:24", "candidate": "Test Candidate", "model": "mmresumeparser", "prompt_tokens": 1460, "completion_tokens": 267, "total_tokens": 1727, "est_cost_usd": 0.000598}
+{"ts": "2026-03-05T07:16:24", "candidate": "Test", "model": "mock-dep", "prompt_tokens": 10, "completion_tokens": 20, "total_tokens": 30, "est_cost_usd": 1.5e-05}
+{"ts": "2026-03-05T07:16:24", "candidate": "Integrated Test User", "model": "mock-deployment", "prompt_tokens": 10, "completion_tokens": 20, "total_tokens": 30, "est_cost_usd": 1.5e-05}
+{"ts": "2026-03-05T07:33:02", "candidate": "Test Candidate", "model": "mmresumeparser", "prompt_tokens": 1460, "completion_tokens": 267, "total_tokens": 1727, "est_cost_usd": 0.000598}
+{"ts": "2026-03-05T07:33:02", "candidate": "Test", "model": "mock-dep", "prompt_tokens": 10, "completion_tokens": 20, "total_tokens": 30, "est_cost_usd": 1.5e-05}
+{"ts": "2026-03-05T07:33:02", "candidate": "Integrated Test User", "model": "mock-deployment", "prompt_tokens": 10, "completion_tokens": 20, "total_tokens": 30, "est_cost_usd": 1.5e-05}
+{"ts": "2026-04-01T10:23:02", "candidate": "None", "model": "mock", "prompt_tokens": 100, "completion_tokens": 50, "total_tokens": 150, "est_cost_usd": 6e-05}
+{"ts": "2026-04-01T10:23:02", "candidate": "None", "model": "mock", "prompt_tokens": 100, "completion_tokens": 50, "total_tokens": 150, "est_cost_usd": 6e-05}
+{"ts": "2026-04-01T10:23:02", "candidate": "None", "model": "mock", "prompt_tokens": 100, "completion_tokens": 50, "total_tokens": 150, "est_cost_usd": 6e-05}
+{"ts": "2026-04-01T10:23:02", "candidate": "None", "model": "mock", "prompt_tokens": 100, "completion_tokens": 50, "total_tokens": 150, "est_cost_usd": 6e-05}
+{"ts": "2026-04-01T10:23:02", "candidate": "None", "model": "mock", "prompt_tokens": 100, "completion_tokens": 50, "total_tokens": 150, "est_cost_usd": 6e-05}
+{"ts": "2026-04-01T10:23:02", "candidate": "None", "model": "mock", "prompt_tokens": 100, "completion_tokens": 50, "total_tokens": 150, "est_cost_usd": 6e-05}
+{"ts": "2026-04-01T10:23:02", "candidate": "None", "model": "mock", "prompt_tokens": 100, "completion_tokens": 50, "total_tokens": 150, "est_cost_usd": 6e-05}
+{"ts": "2026-04-01T10:23:02", "candidate": "None", "model": "mock", "prompt_tokens": 100, "completion_tokens": 50, "total_tokens": 150, "est_cost_usd": 6e-05}
+{"ts": "2026-04-01T10:23:02", "candidate": "None", "model": "mock", "prompt_tokens": 100, "completion_tokens": 50, "total_tokens": 150, "est_cost_usd": 6e-05}
+{"ts": "2026-04-01T10:23:02", "candidate": "None", "model": "mock", "prompt_tokens": 100, "completion_tokens": 50, "total_tokens": 150, "est_cost_usd": 6e-05}
+{"ts": "2026-04-01T10:23:58", "candidate": "None", "model": "mock", "prompt_tokens": 100, "completion_tokens": 50, "total_tokens": 150, "est_cost_usd": 6e-05}
+{"ts": "2026-04-01T10:23:58", "candidate": "None", "model": "mock", "prompt_tokens": 100, "completion_tokens": 50, "total_tokens": 150, "est_cost_usd": 6e-05}
+{"ts": "2026-04-01T10:23:58", "candidate": "None", "model": "mock", "prompt_tokens": 100, "completion_tokens": 50, "total_tokens": 150, "est_cost_usd": 6e-05}
+{"ts": "2026-04-01T10:23:58", "candidate": "None", "model": "mock", "prompt_tokens": 100, "completion_tokens": 50, "total_tokens": 150, "est_cost_usd": 6e-05}
+{"ts": "2026-04-01T10:23:58", "candidate": "None", "model": "mock", "prompt_tokens": 100, "completion_tokens": 50, "total_tokens": 150, "est_cost_usd": 6e-05}
+{"ts": "2026-04-01T10:23:59", "candidate": "None", "model": "mock", "prompt_tokens": 100, "completion_tokens": 50, "total_tokens": 150, "est_cost_usd": 6e-05}
+{"ts": "2026-04-01T10:23:59", "candidate": "None", "model": "mock", "prompt_tokens": 100, "completion_tokens": 50, "total_tokens": 150, "est_cost_usd": 6e-05}
+{"ts": "2026-04-01T10:23:59", "candidate": "None", "model": "mock", "prompt_tokens": 100, "completion_tokens": 50, "total_tokens": 150, "est_cost_usd": 6e-05}
+{"ts": "2026-04-01T10:23:59", "candidate": "None", "model": "mock", "prompt_tokens": 100, "completion_tokens": 50, "total_tokens": 150, "est_cost_usd": 6e-05}
+{"ts": "2026-04-01T10:23:59", "candidate": "None", "model": "mock", "prompt_tokens": 100, "completion_tokens": 50, "total_tokens": 150, "est_cost_usd": 6e-05}
+{"ts": "2026-04-01T10:25:03", "candidate": "None", "model": "mock", "prompt_tokens": 100, "completion_tokens": 50, "total_tokens": 150, "est_cost_usd": 6e-05}
+{"ts": "2026-04-01T10:27:49", "candidate": "None", "model": "mock", "prompt_tokens": 100, "completion_tokens": 50, "total_tokens": 150, "est_cost_usd": 6e-05}
+{"ts": "2026-04-01T10:27:49", "candidate": "None", "model": "mock", "prompt_tokens": 100, "completion_tokens": 50, "total_tokens": 150, "est_cost_usd": 6e-05}
+{"ts": "2026-04-01T10:27:49", "candidate": "None", "model": "mock", "prompt_tokens": 100, "completion_tokens": 50, "total_tokens": 150, "est_cost_usd": 6e-05}
+{"ts": "2026-04-01T10:27:49", "candidate": "None", "model": "mock", "prompt_tokens": 100, "completion_tokens": 50, "total_tokens": 150, "est_cost_usd": 6e-05}
+{"ts": "2026-04-01T10:27:49", "candidate": "None", "model": "mock", "prompt_tokens": 100, "completion_tokens": 50, "total_tokens": 150, "est_cost_usd": 6e-05}
+{"ts": "2026-04-01T10:27:49", "candidate": "None", "model": "mock", "prompt_tokens": 100, "completion_tokens": 50, "total_tokens": 150, "est_cost_usd": 6e-05}
+{"ts": "2026-04-01T10:27:49", "candidate": "None", "model": "mock", "prompt_tokens": 100, "completion_tokens": 50, "total_tokens": 150, "est_cost_usd": 6e-05}
+{"ts": "2026-04-01T10:27:49", "candidate": "None", "model": "mock", "prompt_tokens": 100, "completion_tokens": 50, "total_tokens": 150, "est_cost_usd": 6e-05}
+{"ts": "2026-04-01T10:27:49", "candidate": "None", "model": "mock", "prompt_tokens": 100, "completion_tokens": 50, "total_tokens": 150, "est_cost_usd": 6e-05}
+{"ts": "2026-04-01T10:27:49", "candidate": "None", "model": "mock", "prompt_tokens": 100, "completion_tokens": 50, "total_tokens": 150, "est_cost_usd": 6e-05}
+{"ts": "2026-04-01T10:32:20", "candidate": "None", "model": "mock", "prompt_tokens": 100, "completion_tokens": 50, "total_tokens": 150, "est_cost_usd": 6e-05}
+{"ts": "2026-04-01T10:32:20", "candidate": "None", "model": "mock", "prompt_tokens": 100, "completion_tokens": 50, "total_tokens": 150, "est_cost_usd": 6e-05}
+{"ts": "2026-04-01T10:32:20", "candidate": "None", "model": "mock", "prompt_tokens": 100, "completion_tokens": 50, "total_tokens": 150, "est_cost_usd": 6e-05}
+{"ts": "2026-04-01T10:32:20", "candidate": "None", "model": "mock", "prompt_tokens": 100, "completion_tokens": 50, "total_tokens": 150, "est_cost_usd": 6e-05}
+{"ts": "2026-04-01T10:32:20", "candidate": "None", "model": "mock", "prompt_tokens": 100, "completion_tokens": 50, "total_tokens": 150, "est_cost_usd": 6e-05}
+{"ts": "2026-04-01T10:32:20", "candidate": "None", "model": "mock", "prompt_tokens": 100, "completion_tokens": 50, "total_tokens": 150, "est_cost_usd": 6e-05}
+{"ts": "2026-04-01T10:32:20", "candidate": "None", "model": "mock", "prompt_tokens": 100, "completion_tokens": 50, "total_tokens": 150, "est_cost_usd": 6e-05}
+{"ts": "2026-04-01T10:32:20", "candidate": "None", "model": "mock", "prompt_tokens": 100, "completion_tokens": 50, "total_tokens": 150, "est_cost_usd": 6e-05}
+{"ts": "2026-04-01T10:32:20", "candidate": "None", "model": "mock", "prompt_tokens": 100, "completion_tokens": 50, "total_tokens": 150, "est_cost_usd": 6e-05}
+{"ts": "2026-04-01T10:32:20", "candidate": "None", "model": "mock", "prompt_tokens": 100, "completion_tokens": 50, "total_tokens": 150, "est_cost_usd": 6e-05}
+{"ts": "2026-04-01T10:36:29", "candidate": "None", "model": "mock", "prompt_tokens": 100, "completion_tokens": 50, "total_tokens": 150, "est_cost_usd": 6e-05}
+{"ts": "2026-04-01T10:36:29", "candidate": "None", "model": "mock", "prompt_tokens": 100, "completion_tokens": 50, "total_tokens": 150, "est_cost_usd": 6e-05}
+{"ts": "2026-04-01T10:36:29", "candidate": "None", "model": "mock", "prompt_tokens": 100, "completion_tokens": 50, "total_tokens": 150, "est_cost_usd": 6e-05}
+{"ts": "2026-04-01T10:36:29", "candidate": "None", "model": "mock", "prompt_tokens": 100, "completion_tokens": 50, "total_tokens": 150, "est_cost_usd": 6e-05}
+{"ts": "2026-04-01T10:36:29", "candidate": "None", "model": "mock", "prompt_tokens": 100, "completion_tokens": 50, "total_tokens": 150, "est_cost_usd": 6e-05}
+{"ts": "2026-04-01T10:36:29", "candidate": "None", "model": "mock", "prompt_tokens": 100, "completion_tokens": 50, "total_tokens": 150, "est_cost_usd": 6e-05}
+{"ts": "2026-04-01T10:36:29", "candidate": "None", "model": "mock", "prompt_tokens": 100, "completion_tokens": 50, "total_tokens": 150, "est_cost_usd": 6e-05}
+{"ts": "2026-04-01T10:36:29", "candidate": "None", "model": "mock", "prompt_tokens": 100, "completion_tokens": 50, "total_tokens": 150, "est_cost_usd": 6e-05}
+{"ts": "2026-04-01T10:37:32", "candidate": "None", "model": "mock", "prompt_tokens": 100, "completion_tokens": 50, "total_tokens": 150, "est_cost_usd": 6e-05}
+{"ts": "2026-04-01T10:37:32", "candidate": "None", "model": "mock", "prompt_tokens": 100, "completion_tokens": 50, "total_tokens": 150, "est_cost_usd": 6e-05}
+{"ts": "2026-04-01T10:37:32", "candidate": "None", "model": "mock", "prompt_tokens": 100, "completion_tokens": 50, "total_tokens": 150, "est_cost_usd": 6e-05}
+{"ts": "2026-04-01T10:37:32", "candidate": "None", "model": "mock", "prompt_tokens": 100, "completion_tokens": 50, "total_tokens": 150, "est_cost_usd": 6e-05}
+{"ts": "2026-04-01T10:37:32", "candidate": "None", "model": "mock", "prompt_tokens": 100, "completion_tokens": 50, "total_tokens": 150, "est_cost_usd": 6e-05}
+{"ts": "2026-04-01T10:37:32", "candidate": "None", "model": "mock", "prompt_tokens": 100, "completion_tokens": 50, "total_tokens": 150, "est_cost_usd": 6e-05}
+{"ts": "2026-04-01T10:37:32", "candidate": "None", "model": "mock", "prompt_tokens": 100, "completion_tokens": 50, "total_tokens": 150, "est_cost_usd": 6e-05}
+{"ts": "2026-04-01T10:37:32", "candidate": "None", "model": "mock", "prompt_tokens": 100, "completion_tokens": 50, "total_tokens": 150, "est_cost_usd": 6e-05}
+{"ts": "2026-04-01T10:37:32", "candidate": "None", "model": "mock", "prompt_tokens": 100, "completion_tokens": 50, "total_tokens": 150, "est_cost_usd": 6e-05}
+{"ts": "2026-04-01T10:37:32", "candidate": "None", "model": "mock", "prompt_tokens": 100, "completion_tokens": 50, "total_tokens": 150, "est_cost_usd": 6e-05}
+{"ts": "2026-04-01T10:39:21", "candidate": "None", "model": "mock", "prompt_tokens": 100, "completion_tokens": 50, "total_tokens": 150, "est_cost_usd": 6e-05}
+{"ts": "2026-04-01T10:40:25", "candidate": "None", "model": "mock", "prompt_tokens": 100, "completion_tokens": 50, "total_tokens": 150, "est_cost_usd": 6e-05}
+{"ts": "2026-04-01T10:40:25", "candidate": "None", "model": "mock", "prompt_tokens": 100, "completion_tokens": 50, "total_tokens": 150, "est_cost_usd": 6e-05}
+{"ts": "2026-04-01T10:40:25", "candidate": "None", "model": "mock", "prompt_tokens": 100, "completion_tokens": 50, "total_tokens": 150, "est_cost_usd": 6e-05}
+{"ts": "2026-04-01T10:40:25", "candidate": "None", "model": "mock", "prompt_tokens": 100, "completion_tokens": 50, "total_tokens": 150, "est_cost_usd": 6e-05}
+{"ts": "2026-04-01T10:40:25", "candidate": "None", "model": "mock", "prompt_tokens": 100, "completion_tokens": 50, "total_tokens": 150, "est_cost_usd": 6e-05}
+{"ts": "2026-04-01T10:40:25", "candidate": "None", "model": "mock", "prompt_tokens": 100, "completion_tokens": 50, "total_tokens": 150, "est_cost_usd": 6e-05}
+{"ts": "2026-04-01T10:40:25", "candidate": "None", "model": "mock", "prompt_tokens": 100, "completion_tokens": 50, "total_tokens": 150, "est_cost_usd": 6e-05}
+{"ts": "2026-04-01T10:40:25", "candidate": "None", "model": "mock", "prompt_tokens": 100, "completion_tokens": 50, "total_tokens": 150, "est_cost_usd": 6e-05}
+{"ts": "2026-04-01T10:40:25", "candidate": "None", "model": "mock", "prompt_tokens": 100, "completion_tokens": 50, "total_tokens": 150, "est_cost_usd": 6e-05}
+{"ts": "2026-04-01T10:40:25", "candidate": "None", "model": "mock", "prompt_tokens": 100, "completion_tokens": 50, "total_tokens": 150, "est_cost_usd": 6e-05}
+{"ts": "2026-04-01T10:40:44", "candidate": "None", "model": "mock", "prompt_tokens": 100, "completion_tokens": 50, "total_tokens": 150, "est_cost_usd": 6e-05}
+{"ts": "2026-04-01T10:40:44", "candidate": "None", "model": "mock", "prompt_tokens": 100, "completion_tokens": 50, "total_tokens": 150, "est_cost_usd": 6e-05}
+{"ts": "2026-04-01T10:40:44", "candidate": "None", "model": "mock", "prompt_tokens": 100, "completion_tokens": 50, "total_tokens": 150, "est_cost_usd": 6e-05}
+{"ts": "2026-04-01T10:40:44", "candidate": "None", "model": "mock", "prompt_tokens": 100, "completion_tokens": 50, "total_tokens": 150, "est_cost_usd": 6e-05}
+{"ts": "2026-04-01T10:40:44", "candidate": "None", "model": "mock", "prompt_tokens": 100, "completion_tokens": 50, "total_tokens": 150, "est_cost_usd": 6e-05}
+{"ts": "2026-04-01T10:40:44", "candidate": "None", "model": "mock", "prompt_tokens": 100, "completion_tokens": 50, "total_tokens": 150, "est_cost_usd": 6e-05}
+{"ts": "2026-04-01T10:40:44", "candidate": "None", "model": "mock", "prompt_tokens": 100, "completion_tokens": 50, "total_tokens": 150, "est_cost_usd": 6e-05}
+{"ts": "2026-04-01T10:40:44", "candidate": "None", "model": "mock", "prompt_tokens": 100, "completion_tokens": 50, "total_tokens": 150, "est_cost_usd": 6e-05}
+{"ts": "2026-04-01T10:40:44", "candidate": "None", "model": "mock", "prompt_tokens": 100, "completion_tokens": 50, "total_tokens": 150, "est_cost_usd": 6e-05}
+{"ts": "2026-04-01T10:40:44", "candidate": "None", "model": "mock", "prompt_tokens": 100, "completion_tokens": 50, "total_tokens": 150, "est_cost_usd": 6e-05}
+{"ts": "2026-04-01T10:43:29", "candidate": "None", "model": "mmresumeparser", "prompt_tokens": 2840, "completion_tokens": 390, "total_tokens": 3230, "est_cost_usd": 0.001086}
+{"ts": "2026-04-01T10:43:48", "candidate": "None", "model": "mmresumeparser", "prompt_tokens": 2808, "completion_tokens": 392, "total_tokens": 3200, "est_cost_usd": 0.001078}
+{"ts": "2026-04-01T10:44:12", "candidate": "None", "model": "mmresumeparser", "prompt_tokens": 2471, "completion_tokens": 435, "total_tokens": 2906, "est_cost_usd": 0.001002}
+{"ts": "2026-04-01T10:44:32", "candidate": "None", "model": "mmresumeparser", "prompt_tokens": 2821, "completion_tokens": 417, "total_tokens": 3238, "est_cost_usd": 0.001097}
+{"ts": "2026-04-01T10:44:50", "candidate": "None", "model": "mmresumeparser", "prompt_tokens": 2830, "completion_tokens": 399, "total_tokens": 3229, "est_cost_usd": 0.001088}
+{"ts": "2026-04-01T10:45:04", "candidate": "None", "model": "mmresumeparser", "prompt_tokens": 2808, "completion_tokens": 390, "total_tokens": 3198, "est_cost_usd": 0.001076}
+{"ts": "2026-04-01T10:45:15", "candidate": "None", "model": "mmresumeparser", "prompt_tokens": 2830, "completion_tokens": 357, "total_tokens": 3187, "est_cost_usd": 0.001063}
+{"ts": "2026-04-01T10:45:29", "candidate": "None", "model": "mmresumeparser", "prompt_tokens": 2829, "completion_tokens": 398, "total_tokens": 3227, "est_cost_usd": 0.001087}
+{"ts": "2026-04-01T10:45:42", "candidate": "None", "model": "mmresumeparser", "prompt_tokens": 2821, "completion_tokens": 411, "total_tokens": 3232, "est_cost_usd": 0.001093}
+{"ts": "2026-04-01T10:45:53", "candidate": "None", "model": "mmresumeparser", "prompt_tokens": 2808, "completion_tokens": 390, "total_tokens": 3198, "est_cost_usd": 0.001076}
+{"ts": "2026-04-01T10:46:07", "candidate": "None", "model": "mmresumeparser", "prompt_tokens": 2840, "completion_tokens": 375, "total_tokens": 3215, "est_cost_usd": 0.001077}
+{"ts": "2026-04-01T10:46:19", "candidate": "None", "model": "mmresumeparser", "prompt_tokens": 2829, "completion_tokens": 386, "total_tokens": 3215, "est_cost_usd": 0.00108}
+{"ts": "2026-04-01T10:49:00", "candidate": "None", "model": "mmresumeparser", "prompt_tokens": 2854, "completion_tokens": 345, "total_tokens": 3199, "est_cost_usd": 0.001063}
+{"ts": "2026-04-01T10:49:11", "candidate": "None", "model": "mmresumeparser", "prompt_tokens": 2822, "completion_tokens": 355, "total_tokens": 3177, "est_cost_usd": 0.00106}
+{"ts": "2026-04-01T10:49:26", "candidate": "None", "model": "mmresumeparser", "prompt_tokens": 2483, "completion_tokens": 447, "total_tokens": 2930, "est_cost_usd": 0.001013}
+{"ts": "2026-04-01T10:49:38", "candidate": "None", "model": "mmresumeparser", "prompt_tokens": 2835, "completion_tokens": 384, "total_tokens": 3219, "est_cost_usd": 0.001081}
+{"ts": "2026-04-01T10:49:50", "candidate": "None", "model": "mmresumeparser", "prompt_tokens": 2844, "completion_tokens": 362, "total_tokens": 3206, "est_cost_usd": 0.00107}
+{"ts": "2026-04-01T10:50:03", "candidate": "None", "model": "mmresumeparser", "prompt_tokens": 2822, "completion_tokens": 355, "total_tokens": 3177, "est_cost_usd": 0.00106}
+{"ts": "2026-04-01T10:50:15", "candidate": "None", "model": "mmresumeparser", "prompt_tokens": 2844, "completion_tokens": 392, "total_tokens": 3236, "est_cost_usd": 0.001088}
+{"ts": "2026-04-01T10:50:29", "candidate": "None", "model": "mmresumeparser", "prompt_tokens": 2843, "completion_tokens": 406, "total_tokens": 3249, "est_cost_usd": 0.001097}
+{"ts": "2026-04-01T10:50:41", "candidate": "None", "model": "mmresumeparser", "prompt_tokens": 2835, "completion_tokens": 385, "total_tokens": 3220, "est_cost_usd": 0.001081}
+{"ts": "2026-04-01T10:50:52", "candidate": "None", "model": "mmresumeparser", "prompt_tokens": 2822, "completion_tokens": 355, "total_tokens": 3177, "est_cost_usd": 0.00106}
+{"ts": "2026-04-01T10:51:02", "candidate": "None", "model": "mmresumeparser", "prompt_tokens": 2854, "completion_tokens": 350, "total_tokens": 3204, "est_cost_usd": 0.001066}
+{"ts": "2026-04-01T10:51:14", "candidate": "None", "model": "mmresumeparser", "prompt_tokens": 2843, "completion_tokens": 392, "total_tokens": 3235, "est_cost_usd": 0.001088}
+{"ts": "2026-04-01T10:51:45", "candidate": "None", "model": "mmresumeparser", "prompt_tokens": 2854, "completion_tokens": 345, "total_tokens": 3199, "est_cost_usd": 0.001063}
+{"ts": "2026-04-01T10:55:08", "candidate": "None", "model": "mmresumeparser", "prompt_tokens": 2822, "completion_tokens": 427, "total_tokens": 3249, "est_cost_usd": 0.001103}
+{"ts": "2026-04-01T10:55:20", "candidate": "None", "model": "mmresumeparser", "prompt_tokens": 2483, "completion_tokens": 389, "total_tokens": 2872, "est_cost_usd": 0.000978}
+{"ts": "2026-04-01T10:55:32", "candidate": "None", "model": "mmresumeparser", "prompt_tokens": 2835, "completion_tokens": 408, "total_tokens": 3243, "est_cost_usd": 0.001095}
+{"ts": "2026-04-01T10:55:44", "candidate": "None", "model": "mmresumeparser", "prompt_tokens": 2844, "completion_tokens": 362, "total_tokens": 3206, "est_cost_usd": 0.00107}
+{"ts": "2026-04-01T10:55:57", "candidate": "None", "model": "mmresumeparser", "prompt_tokens": 2822, "completion_tokens": 423, "total_tokens": 3245, "est_cost_usd": 0.0011}
+{"ts": "2026-04-01T10:56:09", "candidate": "None", "model": "mmresumeparser", "prompt_tokens": 2844, "completion_tokens": 412, "total_tokens": 3256, "est_cost_usd": 0.0011}
+{"ts": "2026-04-01T10:56:20", "candidate": "None", "model": "mmresumeparser", "prompt_tokens": 2843, "completion_tokens": 392, "total_tokens": 3235, "est_cost_usd": 0.001088}
+{"ts": "2026-04-01T10:56:32", "candidate": "None", "model": "mmresumeparser", "prompt_tokens": 2835, "completion_tokens": 388, "total_tokens": 3223, "est_cost_usd": 0.001083}
+{"ts": "2026-04-01T10:56:45", "candidate": "None", "model": "mmresumeparser", "prompt_tokens": 2822, "completion_tokens": 420, "total_tokens": 3242, "est_cost_usd": 0.001099}
+{"ts": "2026-04-01T10:56:57", "candidate": "None", "model": "mmresumeparser", "prompt_tokens": 2854, "completion_tokens": 349, "total_tokens": 3203, "est_cost_usd": 0.001066}
+{"ts": "2026-04-01T10:57:11", "candidate": "None", "model": "mmresumeparser", "prompt_tokens": 2843, "completion_tokens": 409, "total_tokens": 3252, "est_cost_usd": 0.001098}
+{"ts": "2026-04-01T10:57:39", "candidate": "None", "model": "mmresumeparser", "prompt_tokens": 2854, "completion_tokens": 345, "total_tokens": 3199, "est_cost_usd": 0.001063}
+{"ts": "2026-04-01T10:57:51", "candidate": "None", "model": "mmresumeparser", "prompt_tokens": 2822, "completion_tokens": 390, "total_tokens": 3212, "est_cost_usd": 0.001081}
+{"ts": "2026-04-01T10:58:06", "candidate": "None", "model": "mmresumeparser", "prompt_tokens": 2483, "completion_tokens": 450, "total_tokens": 2933, "est_cost_usd": 0.001015}
+{"ts": "2026-04-01T10:58:19", "candidate": "None", "model": "mmresumeparser", "prompt_tokens": 2835, "completion_tokens": 406, "total_tokens": 3241, "est_cost_usd": 0.001094}
+{"ts": "2026-04-01T10:58:30", "candidate": "None", "model": "mmresumeparser", "prompt_tokens": 2844, "completion_tokens": 392, "total_tokens": 3236, "est_cost_usd": 0.001088}
+{"ts": "2026-04-01T10:58:42", "candidate": "None", "model": "mmresumeparser", "prompt_tokens": 2822, "completion_tokens": 422, "total_tokens": 3244, "est_cost_usd": 0.0011}
+{"ts": "2026-04-01T10:58:54", "candidate": "None", "model": "mmresumeparser", "prompt_tokens": 2844, "completion_tokens": 381, "total_tokens": 3225, "est_cost_usd": 0.001082}
+{"ts": "2026-04-01T10:59:08", "candidate": "None", "model": "mmresumeparser", "prompt_tokens": 2843, "completion_tokens": 413, "total_tokens": 3256, "est_cost_usd": 0.001101}
+{"ts": "2026-04-01T10:59:20", "candidate": "None", "model": "mmresumeparser", "prompt_tokens": 2835, "completion_tokens": 408, "total_tokens": 3243, "est_cost_usd": 0.001095}
+{"ts": "2026-04-01T10:59:33", "candidate": "None", "model": "mmresumeparser", "prompt_tokens": 2822, "completion_tokens": 420, "total_tokens": 3242, "est_cost_usd": 0.001099}
+{"ts": "2026-04-01T10:59:44", "candidate": "None", "model": "mmresumeparser", "prompt_tokens": 2854, "completion_tokens": 344, "total_tokens": 3198, "est_cost_usd": 0.001063}
+{"ts": "2026-04-01T10:59:57", "candidate": "None", "model": "mmresumeparser", "prompt_tokens": 2843, "completion_tokens": 392, "total_tokens": 3235, "est_cost_usd": 0.001088}
+{"ts": "2026-04-01T11:02:55", "candidate": "None", "model": "mmresumeparser", "prompt_tokens": 2844, "completion_tokens": 363, "total_tokens": 3207, "est_cost_usd": 0.001071}
+{"ts": "2026-04-01T11:03:11", "candidate": "None", "model": "mmresumeparser", "prompt_tokens": 2844, "completion_tokens": 392, "total_tokens": 3236, "est_cost_usd": 0.001088}
+{"ts": "2026-04-01T11:03:23", "candidate": "None", "model": "mmresumeparser", "prompt_tokens": 2844, "completion_tokens": 392, "total_tokens": 3236, "est_cost_usd": 0.001088}
+{"ts": "2026-04-01T11:03:35", "candidate": "None", "model": "mmresumeparser", "prompt_tokens": 2843, "completion_tokens": 392, "total_tokens": 3235, "est_cost_usd": 0.001088}
+{"ts": "2026-04-01T11:03:47", "candidate": "None", "model": "mmresumeparser", "prompt_tokens": 2843, "completion_tokens": 410, "total_tokens": 3253, "est_cost_usd": 0.001099}
+{"ts": "2026-04-01T11:03:58", "candidate": "None", "model": "mmresumeparser", "prompt_tokens": 2843, "completion_tokens": 392, "total_tokens": 3235, "est_cost_usd": 0.001088}
+{"ts": "2026-04-01T11:04:10", "candidate": "None", "model": "mmresumeparser", "prompt_tokens": 2835, "completion_tokens": 393, "total_tokens": 3228, "est_cost_usd": 0.001086}
+{"ts": "2026-04-01T11:04:22", "candidate": "None", "model": "mmresumeparser", "prompt_tokens": 2835, "completion_tokens": 408, "total_tokens": 3243, "est_cost_usd": 0.001095}
+{"ts": "2026-04-01T11:04:42", "candidate": "None", "model": "mmresumeparser", "prompt_tokens": 2835, "completion_tokens": 392, "total_tokens": 3227, "est_cost_usd": 0.001086}
+{"ts": "2026-04-01T11:04:56", "candidate": "None", "model": "mmresumeparser", "prompt_tokens": 2822, "completion_tokens": 425, "total_tokens": 3247, "est_cost_usd": 0.001102}
+{"ts": "2026-04-01T11:05:09", "candidate": "None", "model": "mmresumeparser", "prompt_tokens": 2822, "completion_tokens": 391, "total_tokens": 3213, "est_cost_usd": 0.001081}
+{"ts": "2026-04-01T11:05:23", "candidate": "None", "model": "mmresumeparser", "prompt_tokens": 2822, "completion_tokens": 427, "total_tokens": 3249, "est_cost_usd": 0.001103}
+{"ts": "2026-04-01T11:05:35", "candidate": "None", "model": "mmresumeparser", "prompt_tokens": 2854, "completion_tokens": 335, "total_tokens": 3189, "est_cost_usd": 0.001057}
+{"ts": "2026-04-01T11:05:48", "candidate": "None", "model": "mmresumeparser", "prompt_tokens": 2854, "completion_tokens": 344, "total_tokens": 3198, "est_cost_usd": 0.001063}
+{"ts": "2026-04-01T11:05:59", "candidate": "None", "model": "mmresumeparser", "prompt_tokens": 2854, "completion_tokens": 344, "total_tokens": 3198, "est_cost_usd": 0.001063}
+{"ts": "2026-04-05T19:30:30", "candidate": "Senior Java Legacy", "model": "mmresumeparser", "prompt_tokens": 2843, "completion_tokens": 395, "total_tokens": 3238, "est_cost_usd": 0.00109}
+{"ts": "2026-04-05T19:30:45", "candidate": "Junior Python Prodigy", "model": "mmresumeparser", "prompt_tokens": 2835, "completion_tokens": 408, "total_tokens": 3243, "est_cost_usd": 0.001095}
+{"ts": "2026-04-05T19:30:59", "candidate": "Dr. Academic Theo", "model": "mmresumeparser", "prompt_tokens": 2822, "completion_tokens": 371, "total_tokens": 3193, "est_cost_usd": 0.001069}
+{"ts": "2026-04-05T19:31:12", "candidate": "Switcher Sam", "model": "mmresumeparser", "prompt_tokens": 2854, "completion_tokens": 344, "total_tokens": 3198, "est_cost_usd": 0.001063}
+{"ts": "2026-04-05T19:31:24", "candidate": "Perfect Lead Paul", "model": "mmresumeparser", "prompt_tokens": 2844, "completion_tokens": 362, "total_tokens": 3206, "est_cost_usd": 0.00107}
+{"ts": "2026-04-05T19:31:39", "candidate": "Perfect Lead Paul", "model": "mmresumeparser", "prompt_tokens": 2844, "completion_tokens": 393, "total_tokens": 3237, "est_cost_usd": 0.001089}
+{"ts": "2026-04-05T19:31:53", "candidate": "Senior Java Legacy", "model": "mmresumeparser", "prompt_tokens": 2843, "completion_tokens": 413, "total_tokens": 3256, "est_cost_usd": 0.001101}
+{"ts": "2026-04-05T19:32:08", "candidate": "Junior Python Prodigy", "model": "mmresumeparser", "prompt_tokens": 2835, "completion_tokens": 393, "total_tokens": 3228, "est_cost_usd": 0.001086}
+{"ts": "2026-04-05T19:32:25", "candidate": "Dr. Academic Theo", "model": "mmresumeparser", "prompt_tokens": 2822, "completion_tokens": 428, "total_tokens": 3250, "est_cost_usd": 0.001103}
+{"ts": "2026-04-05T19:32:38", "candidate": "Switcher Sam", "model": "mmresumeparser", "prompt_tokens": 2854, "completion_tokens": 345, "total_tokens": 3199, "est_cost_usd": 0.001063}
+{"ts": "2026-04-05T19:32:51", "candidate": "Dr. Academic Theo", "model": "mmresumeparser", "prompt_tokens": 2822, "completion_tokens": 355, "total_tokens": 3177, "est_cost_usd": 0.00106}
+{"ts": "2026-04-05T19:33:08", "candidate": "Dr. Academic Theo", "model": "mmresumeparser", "prompt_tokens": 2483, "completion_tokens": 389, "total_tokens": 2872, "est_cost_usd": 0.000978}

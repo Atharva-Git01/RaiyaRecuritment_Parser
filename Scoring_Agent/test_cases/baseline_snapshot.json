@@ -1,0 +1,32 @@
+{
+  "captured_at": "2026-04-01T15:50:09.956033",
+  "source_artifacts": {
+    "score_analysis_report": "test_cases/score_analysis_report.json",
+    "ground_truth_log": "test_output.log",
+    "repro_log": "test_repro_output.log"
+  },
+  "known_regressions": {
+    "ranking_inversions": 5,
+    "max_final_score_drift": 39,
+    "ground_truth_failures": 6,
+    "examples": [
+      "1_senior_java_mismatch technologies_score over-scored to 100",
+      "2_junior_prodigy final_score over-scored to 68",
+      "3_phd_academic final_score landed above target band"
+    ]
+  },
+  "frozen_defaults": {
+    "evidence_enforcement": "resume.skills and resume.technologies stripped from AI prompt",
+    "deterministic_overrides": [
+      "experience_score",
+      "qualification_score",
+      "salary_score",
+      "relevant_experience_score_band_snap"
+    ],
+    "stability_thresholds": {
+      "archetype_final_score_drift_max": 5,
+      "non_archetype_final_score_drift_max": 8,
+      "ai_component_drift_max": 10
+    }
+  }
+}

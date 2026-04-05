@@ -1,0 +1,395 @@
+{
+    "current_state": "COMPLETED",
+    "inputs": {
+        "resume_summary": "Present",
+        "resume": {
+            "personal_info": {
+                "name": "Jayesh Pingle",
+                "location": "Pune, India"
+            },
+            "summary": "1+ year Data Engineer with experience in data pipelines, ETL, cloud platforms, and big data technologies.",
+            "experience": [
+                {
+                    "title": "Data Engineer",
+                    "company": "Walwil",
+                    "start_date": "2024-07",
+                    "end_date": "2025-06",
+                    "location": "United Kingdom",
+                    "description": "Designed and deployed ingestion pipelines using Azure Logic Apps and Azure Data Factory. Implemented Medallion Architecture using Databricks and PySpark. Delivered ML-ready data to Couchbase. Built dynamic pipelines for multiple clients."
+                }
+            ],
+            "education": [
+                {
+                    "degree": "B.Tech",
+                    "field": "Engineering",
+                    "institution": "Vishwakarma Institute of Technology",
+                    "start_year": 2021,
+                    "end_year": 2025
+                }
+            ],
+            "skills": [
+                "Python",
+                "SQL",
+                "ETL",
+                "Apache Spark",
+                "PySpark",
+                "Data Modeling",
+                "Data Warehousing",
+                "Machine Learning",
+                "Problem Solving"
+            ],
+            "technologies": [
+                "Python",
+                "SQL",
+                "Apache Spark",
+                "PySpark",
+                "Azure",
+                "AWS",
+                "Databricks",
+                "Azure Data Factory",
+                "Docker",
+                "Kubernetes",
+                "MySQL",
+                "PostgreSQL",
+                "MongoDB"
+            ],
+            "tools": [
+                "Git",
+                "Jenkins"
+            ],
+            "salary_expectation": null
+        },
+        "jd": {
+            "job_title": "Computer Engineer",
+            "experience": "3-8 years (Relevant experience preferred)",
+            "qualification": "Bachelor's or Master's Degree in Computer Engineering / Computer Science / IT",
+            "technologies": [
+                "C",
+                "C++",
+                "Java",
+                "Python",
+                "Javascript",
+                "Typescript",
+                "Html5",
+                "Css3",
+                "Mysql",
+                "Postgresql",
+                "Mongodb",
+                "Node.js",
+                "Express.js",
+                "Django",
+                "Flask",
+                "Spring",
+                "Laravel",
+                "Reactjs",
+                "Angular",
+                "Vue.js",
+                "Bootstrap",
+                "Tailwind Css",
+                "Rest Api",
+                "Graphql",
+                "Firebase",
+                "Aws",
+                "Azure",
+                "Gcp",
+                "Linux",
+                "Docker",
+                "Kubernetes",
+                "Webpack",
+                "Tensorflow",
+                "Pytorch",
+                "Keras",
+                "Opencv",
+                "Pandas",
+                "Numpy",
+                "Scikit-learn"
+            ],
+            "skills": [
+                "Problem Solving",
+                "Data Structures",
+                "Algorithms",
+                "Oop",
+                "Networking",
+                "Cyber Security",
+                "Cloud Computing",
+                "Devops",
+                "Machine Learning",
+                "Deep Learning",
+                "Ai",
+                "Database Management",
+                "Version Control",
+                "Api Development",
+                "Teamwork",
+                "Leadership",
+                "Project Management",
+                "Testing & Debugging"
+            ],
+            "tools": [
+                "Vs Code",
+                "Pycharm",
+                "Intellij Idea",
+                "Eclipse",
+                "Jira",
+                "Slack",
+                "Github",
+                "Gitlab",
+                "Bitbucket",
+                "Postman"
+            ],
+            "location": "Flexible / Multiple Locations",
+            "position": "Individual Contributor / Team Lead",
+            "job_description": "Design, develop, and maintain software systems across frontend, backend, cloud, and AI/ML environments. Work on scalable architectures, mentor junior members, and contribute to clean, testable, and robust codebases.",
+            "responsibilities": [
+                "Develop software solutions using modern frameworks and technologies",
+                "Design and optimize APIs, databases, and backend systems",
+                "Implement algorithms and data structures for efficient performance",
+                "Ensure system security, scalability, cloud readiness, and reliability",
+                "Collaborate with cross-functional teams for end-to-end delivery",
+                "Mentor junior engineers and maintain coding standards"
+            ],
+            "employment_type": "Full-time",
+            "remote_option": "Yes",
+            "scoring": {
+                "skills": {
+                    "weight": 0.1,
+                    "criteria": {
+                        "Problem Solving": 100,
+                        "Data Structures": 100,
+                        "Algorithms": 100,
+                        "OOP": 75,
+                        "Networking": 75,
+                        "Cyber Security": 75,
+                        "Cloud Computing": 75,
+                        "DevOps": 75,
+                        "Machine Learning": 100,
+                        "Deep Learning": 100,
+                        "AI": 100,
+                        "Database Management": 75,
+                        "Version Control": 50,
+                        "API Development": 75,
+                        "Teamwork": 75,
+                        "Leadership": 75,
+                        "Project Management": 75,
+                        "Testing & Debugging": 75
+                    }
+                },
+                "experience": {
+                    "weight": 0.1,
+                    "criteria": {
+                        ">=8 years": 100,
+                        "5-7 years": 80,
+                        "3-4 years": 60,
+                        "<3 years": 30
+                    }
+                },
+                "relevant_experience": {
+                    "weight": 0.3,
+                    "criteria": {
+                        ">=5 years_relevant": 100,
+                        "3-4 years_relevant": 73,
+                        "1-2 years_relevant": 50,
+                        "<1 year_relevant": 17
+                    }
+                },
+                "projects": {
+                    "weight": 0.0,
+                    "criteria": {}
+                },
+                "certificates": {
+                    "weight": 0.0,
+                    "criteria": {}
+                },
+                "tools": {
+                    "weight": 0.02,
+                    "criteria": {
+                        "VS Code": 100,
+                        "PyCharm": 100,
+                        "IntelliJ IDEA": 100,
+                        "Eclipse": 100,
+                        "Jira": 100,
+                        "Slack": 100,
+                        "GitHub": 100,
+                        "GitLab": 100,
+                        "Bitbucket": 100,
+                        "Postman": 100
+                    }
+                },
+                "technologies": {
+                    "weight": 0.2,
+                    "criteria": {
+                        "C": 100,
+                        "C++": 100,
+                        "Java": 75,
+                        "Python": 100,
+                        "JavaScript": 100,
+                        "TypeScript": 75,
+                        "HTML5": 50,
+                        "CSS3": 50,
+                        "MySQL": 100,
+                        "PostgreSQL": 75,
+                        "MongoDB": 75,
+                        "Node.js": 75,
+                        "Express.js": 50,
+                        "Django": 75,
+                        "Flask": 75,
+                        "Spring": 75,
+                        "Laravel": 75,
+                        "ReactJS": 75,
+                        "Angular": 75,
+                        "Vue.js": 75,
+                        "Bootstrap": 50,
+                        "Tailwind CSS": 50,
+                        "REST API": 75,
+                        "GraphQL": 50,
+                        "Firebase": 50,
+                        "AWS": 75,
+                        "Azure": 75,
+                        "GCP": 75,
+                        "Linux": 50,
+                        "Docker": 50,
+                        "Kubernetes": 50,
+                        "Webpack": 50,
+                        "TensorFlow": 75,
+                        "PyTorch": 75,
+                        "Keras": 75,
+                        "OpenCV": 75,
+                        "Pandas": 50,
+                        "NumPy": 50,
+                        "Scikit-Learn": 50
+                    }
+                },
+                "qualification": {
+                    "weight": 0.1,
+                    "criteria": {
+                        "Master's Degree in Engineering": 100,
+                        "Bachelor's Degree in Engineering": 80,
+                        "Other": 50
+                    }
+                },
+                "responsibilities": {
+                    "weight": 0.0,
+                    "criteria": {}
+                },
+                "salary": {
+                    "weight": 0.15,
+                    "criteria": {
+                        "<3": 100,
+                        "3-6": 80,
+                        "6-10": 53,
+                        ">10": 33
+                    }
+                },
+                "position": {
+                    "weight": 0.03,
+                    "criteria": {
+                        "Team Lead (Preferred)": 100,
+                        "Individual Contributor": 67
+                    }
+                }
+            },
+            "experience_range": {
+                "min": 3.0,
+                "max": 8.0
+            },
+            "weights": {
+                "skills_score": 0.1,
+                "experience_score": 0.1,
+                "relevant_experience_score": 0.3,
+                "projects_score": 0.0,
+                "certificates_score": 0.0,
+                "tools_score": 0.02,
+                "technologies_score": 0.2,
+                "qualification_score": 0.1,
+                "responsibilities_score": 0.0,
+                "salary_score": 0.15,
+                "position_score": 0.03
+            }
+        },
+        "weights": null
+    },
+    "history": [
+        {
+            "from_state": "INIT",
+            "to_state": "VALIDATING_INPUT",
+            "timestamp": "2026-03-04T15:49:05.006035",
+            "reason": null
+        },
+        {
+            "from_state": "VALIDATING_INPUT",
+            "to_state": "FETCHING_CONTEXT",
+            "timestamp": "2026-03-04T15:49:05.006035",
+            "reason": null
+        },
+        {
+            "from_state": "FETCHING_CONTEXT",
+            "to_state": "SCORING",
+            "timestamp": "2026-03-04T15:49:05.008049",
+            "reason": null
+        },
+        {
+            "from_state": "SCORING",
+            "to_state": "VERIFYING_OUTPUT",
+            "timestamp": "2026-03-04T15:49:42.232710",
+            "reason": null
+        },
+        {
+            "from_state": "VERIFYING_OUTPUT",
+            "to_state": "COMPLETED",
+            "timestamp": "2026-03-04T15:49:42.234308",
+            "reason": null
+        }
+    ],
+    "result": {
+        "final_score": 18,
+        "skills_score": 0,
+        "experience_score": 25,
+        "relevant_experience_score": 17,
+        "projects_score": 0,
+        "certificates_score": 0,
+        "tools_score": 0,
+        "technologies_score": 0,
+        "qualification_score": 80,
+        "responsibilities_score": 0,
+        "salary_score": 0,
+        "position_score": 67,
+        "notes": "Candidate has relevant experience in data engineering with technologies like Azure, Databricks, and PySpark. However, no direct match for required skills or technologies in experience descriptions. Qualification matches Bachelor's in Engineering. Position inferred as Individual Contributor. [Exp. Limited <1y]",
+        "scoring_trace": {
+            "relevant_experience": {
+                "score_awarded": 17,
+                "weight": 0.3,
+                "notes": "1 year of relevant experience in data engineering."
+            },
+            "salary": {
+                "score_awarded": 0,
+                "weight": 0.15
+            },
+            "qualification": {
+                "score_awarded": 80,
+                "weight": 0.1
+            },
+            "skills": {
+                "score_awarded": 0,
+                "weight": 0.1
+            },
+            "technologies": {
+                "score_awarded": 0,
+                "weight": 0.2
+            },
+            "position": {
+                "score_awarded": 67,
+                "weight": 0.03,
+                "notes": "Inferred as Individual Contributor based on experience description."
+            }
+        },
+        "guardrails_applied": [
+            "Exp. Limited <1y (0.9yr calculated)"
+        ]
+    },
+    "error": null,
+    "success": true,
+    "token_usage": {
+        "prompt_tokens": 3008,
+        "completion_tokens": 322,
+        "total_tokens": 3330
+    }
+}

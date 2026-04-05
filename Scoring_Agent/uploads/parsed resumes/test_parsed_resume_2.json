@@ -1,0 +1,57 @@
+{
+    "personal_info": {
+        "name": "Jayesh Pingle",
+        "location": "Pune, India"
+    },
+    "summary": "1+ year Data Engineer with experience in data pipelines, ETL, cloud platforms, and big data technologies.",
+    "experience": [
+        {
+            "title": "Data Engineer",
+            "company": "Walwil",
+            "start_date": "2024-07",
+            "end_date": "2025-06",
+            "location": "United Kingdom",
+            "description": "Designed and deployed ingestion pipelines using Azure Logic Apps and Azure Data Factory. Implemented Medallion Architecture using Databricks and PySpark. Delivered ML-ready data to Couchbase. Built dynamic pipelines for multiple clients."
+        }
+    ],
+    "education": [
+        {
+            "degree": "B.Tech",
+            "field": "Engineering",
+            "institution": "Vishwakarma Institute of Technology",
+            "start_year": 2021,
+            "end_year": 2025
+        }
+    ],
+    "skills": [
+        "Python",
+        "SQL",
+        "ETL",
+        "Apache Spark",
+        "PySpark",
+        "Data Modeling",
+        "Data Warehousing",
+        "Machine Learning",
+        "Problem Solving"
+    ],
+    "technologies": [
+        "Python",
+        "SQL",
+        "Apache Spark",
+        "PySpark",
+        "Azure",
+        "AWS",
+        "Databricks",
+        "Azure Data Factory",
+        "Docker",
+        "Kubernetes",
+        "MySQL",
+        "PostgreSQL",
+        "MongoDB"
+    ],
+    "tools": [
+        "Git",
+        "Jenkins"
+    ],
+    "salary_expectation": null
+}

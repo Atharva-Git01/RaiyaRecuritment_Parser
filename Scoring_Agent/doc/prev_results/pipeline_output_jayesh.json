@@ -1,0 +1,58 @@
+{
+  "final_score": 59,
+  "skills_score": 7,
+  "experience_score": 3,
+  "relevant_experience_score": 15,
+  "projects_score": 0,
+  "certificates_score": 0,
+  "tools_score": 0,
+  "technologies_score": 16,
+  "qualification_score": 8,
+  "responsibilities_score": 0,
+  "salary_score": 8,
+  "position_score": 2,
+  "notes": "Evaluation based on strict JD criteria.",
+  "scoring_trace": {
+    "relevant_experience": {
+      "explicit_years": 1.0,
+      "score_awarded": 15,
+      "weight": 30
+    },
+    "salary": {
+      "explicit_salary_present": false,
+      "fallback_used": true,
+      "score_awarded": 8,
+      "weight": 15
+    },
+    "experience": {
+      "explicit_years": 1.0,
+      "score_awarded": 3,
+      "weight": 10
+    },
+    "qualification": {
+      "degree": "B.Tech",
+      "score_awarded": 8,
+      "weight": 10
+    },
+    "technologies": {
+      "raw_points": 22,
+      "normalized_to_weight": 16,
+      "weight": 20
+    },
+    "skills": {
+      "raw_points": 14,
+      "normalized_to_weight": 7,
+      "weight": 10
+    },
+    "position": {
+      "matched": "Individual Contributor",
+      "score_awarded": 2,
+      "weight": 3
+    },
+    "tools": {
+      "matched": [],
+      "score_awarded": 0,
+      "weight": 2
+    }
+  }
+}

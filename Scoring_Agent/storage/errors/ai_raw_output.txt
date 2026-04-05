@@ -1,0 +1,80 @@
+To compute the score for the candidate against the job description, we need to evaluate each category based on the provided guidelines and weights. Here's the detailed breakdown:
+
+### 1. Skills Score
+- **Skills in Experience/Projects**: 
+  - Python, C++, JavaScript, Data Structures, Algorithms, REST API Development, Machine Learning Basics, Problem Solving.
+- **Matched Skills**: 
+  - Problem Solving (100), Data Structures (100), Algorithms (100), OOP (Object Oriented Programming, 75), REST API Development (75), Machine Learning Basics (Machine Learning, 100).
+- **Score Calculation**: 
+  - Total possible score = 100 + 100 + 100 + 75 + 75 + 100 = 550
+  - Weight = 0.10309278350515463
+  - Skills Score = (550 / 1000) * 100 * 0.10309278350515463 = 5.67
+
+### 2. Experience Score
+- **Total Experience**: 
+  - Freelance Software Developer: March 2024 to Present (2026-02-16) = 2.5 years
+  - Software Engineering Intern: June 2023 to February 2024 = 0.8 years
+  - Total = 3.3 years
+- **Matched Experience**: 
+  - 3-4 years = 60
+- **Score Calculation**: 
+  - Weight = 0.10309278350515463
+  - Experience Score = 60 * 0.10309278350515463 = 6.19
+
+### 3. Relevant Experience Score
+- **Relevant Experience**: 
+  - Freelance Software Developer (2.5 years) is relevant.
+  - Total Relevant Experience = 2.5 years
+- **Matched Relevant Experience**: 
+  - 1-2 years_relevant = 50
+- **Score Calculation**: 
+  - Weight = 0.30927835051546393
+  - Relevant Experience Score = 50 * 0.30927835051546393 = 15.46
+
+### 4. Projects Score
+- **Projects**: 
+  - Mini E-commerce Backend, Image Classification Experiment, Algorithm Visualizer.
+- **Matched Technologies**: 
+  - Python, Flask, REST API, TensorFlow, NumPy.
+- **Score Calculation**: 
+  - Weight = 0.0
+  - Projects Score = 0
+
+### 5. Certificates Score
+- **Certificates**: 
+  - Python for Everybody - Coursera.
+- **Score Calculation**: 
+  - Weight = 0.0
+  - Certificates Score = 0
+
+### 6. Tools Score
+- **Tools in Experience/Projects**: 
+  - GitHub, VS Code, Postman.
+- **Matched Tools**: 
+  - GitHub (100), VS Code (100), Postman (100).
+- **Score Calculation**: 
+  - Total possible score = 300
+  - Weight = 0.020618556701030927
+  - Tools Score = (300 / 1000) * 100 * 0.020618556701030927 = 0.62
+
+### 7. Technologies Score
+- **Technologies in Experience/Projects**: 
+  - Python, C++, JavaScript, Flask, REST API, TensorFlow, NumPy.
+- **Matched Technologies**: 
+  - Python (100), C++ (100), JavaScript (100), Flask (50), REST API (75), TensorFlow (75), NumPy (50).
+- **Score Calculation**: 
+  - Total possible score = 650
+  - Weight = 0.20618556701030927
+  - Technologies Score = (650 / 1000) * 100 * 0.20618556701030927 = 13.40
+
+### 8. Qualification Score
+- **Qualification**: 
+  - Bachelor of Engineering in Computer Engineering.
+- **Matched Qualification**: 
+  - Bachelor's Degree in Engineering = 80
+- **Score Calculation**: 
+  - Weight = 0.10309278350515463
+  - Qualification Score = 80 * 0.10309278350515463 = 8.25
+
+### 9. Responsibilities Score
+- **

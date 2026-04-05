@@ -1,0 +1,414 @@
+{
+    "current_state": "COMPLETED",
+    "inputs": {
+        "resume_summary": "Present",
+        "resume": {
+            "name": "Nikhil Patil",
+            "email": "nikhil.patil.sales@gmail.com",
+            "skills": [
+                "B2B Sales",
+                "Technical Solution Selling",
+                "Client Relationship Management",
+                "Product Demonstrations",
+                "Requirement Analysis",
+                "CRM Management",
+                "Python (Foundational)",
+                "SQL Basics",
+                "API Understanding",
+                "Problem Solving"
+            ],
+            "experience": [
+                {
+                    "title": "Senior Sales Executive",
+                    "company": "CloudBridge Technologies Pvt Ltd",
+                    "start": "July 2023",
+                    "end": "Present",
+                    "description": "Handling enterprise SaaS sales and client onboarding for cloud-based workflow automation platform.",
+                    "responsibilities": [
+                        "Managed B2B sales pipeline and closed mid-market SaaS deals.",
+                        "Conducted product demos tailored to client technical requirements.",
+                        "Collaborated with engineering team to scope integrations and deployment timelines.",
+                        "Maintained CRM records and monitored customer success metrics."
+                    ]
+                },
+                {
+                    "title": "Sales Associate",
+                    "company": "DataSprint Solutions",
+                    "start": "June 2021",
+                    "end": "June 2023",
+                    "description": "Worked in inside sales for analytics software products and supported pre-sales technical discussions.",
+                    "responsibilities": [
+                        "Qualified leads and coordinated technical discovery calls.",
+                        "Assisted in preparing technical proposals and solution documents.",
+                        "Worked with implementation team during onboarding phase.",
+                        "Supported customer queries related to API integrations."
+                    ]
+                }
+            ],
+            "projects": [
+                {
+                    "name": "Personal Expense Tracker",
+                    "description": "Developed a Python-based expense tracking application during college to store and analyze spending data.",
+                    "technologies": [
+                        "Python",
+                        "SQLite",
+                        "Tkinter"
+                    ]
+                },
+                {
+                    "name": "Student Result Analysis Tool",
+                    "description": "Built a small data analysis script to process CSV student results and generate performance summaries.",
+                    "technologies": [
+                        "Python",
+                        "Pandas",
+                        "Matplotlib"
+                    ]
+                }
+            ],
+            "education": [
+                {
+                    "degree": "Bachelor of Engineering in Information Technology",
+                    "institution": "Mumbai University",
+                    "year": "2021"
+                }
+            ],
+            "certifications": [
+                "Certified SaaS Sales Professional",
+                "SQL for Data Analysis - Coursera"
+            ],
+            "tools": [
+                "Salesforce",
+                "HubSpot",
+                "MS Excel",
+                "Postman",
+                "GitHub"
+            ],
+            "technologies": [
+                "Python",
+                "SQL",
+                "REST API",
+                "CRM Platforms",
+                "Pandas"
+            ],
+            "salary_expectation": {
+                "value": 1200000,
+                "currency": "INR"
+            }
+        },
+        "jd": {
+            "job_title": "Computer Engineer",
+            "experience": "3-8 years (Relevant experience preferred)",
+            "qualification": "Bachelor's or Master's Degree in Computer Engineering / Computer Science / IT",
+            "technologies": [
+                "C",
+                "C++",
+                "Java",
+                "Python",
+                "Javascript",
+                "Typescript",
+                "Html5",
+                "Css3",
+                "Mysql",
+                "Postgresql",
+                "Mongodb",
+                "Node.js",
+                "Express.js",
+                "Django",
+                "Flask",
+                "Spring",
+                "Laravel",
+                "Reactjs",
+                "Angular",
+                "Vue.js",
+                "Bootstrap",
+                "Tailwind Css",
+                "Rest Api",
+                "Graphql",
+                "Firebase",
+                "Aws",
+                "Azure",
+                "Gcp",
+                "Linux",
+                "Docker",
+                "Kubernetes",
+                "Webpack",
+                "Tensorflow",
+                "Pytorch",
+                "Keras",
+                "Opencv",
+                "Pandas",
+                "Numpy",
+                "Scikit-learn"
+            ],
+            "skills": [
+                "Problem Solving",
+                "Data Structures",
+                "Algorithms",
+                "Oop",
+                "Networking",
+                "Cyber Security",
+                "Cloud Computing",
+                "Devops",
+                "Machine Learning",
+                "Deep Learning",
+                "Ai",
+                "Database Management",
+                "Version Control",
+                "Api Development",
+                "Teamwork",
+                "Leadership",
+                "Project Management",
+                "Testing & Debugging"
+            ],
+            "tools": [
+                "Vs Code",
+                "Pycharm",
+                "Intellij Idea",
+                "Eclipse",
+                "Jira",
+                "Slack",
+                "Github",
+                "Gitlab",
+                "Bitbucket",
+                "Postman"
+            ],
+            "location": "Flexible / Multiple Locations",
+            "position": "Individual Contributor / Team Lead",
+            "job_description": "Design, develop, and maintain software systems across frontend, backend, cloud, and AI/ML environments. Work on scalable architectures, mentor junior members, and contribute to clean, testable, and robust codebases.",
+            "responsibilities": [
+                "Develop software solutions using modern frameworks and technologies",
+                "Design and optimize APIs, databases, and backend systems",
+                "Implement algorithms and data structures for efficient performance",
+                "Ensure system security, scalability, cloud readiness, and reliability",
+                "Collaborate with cross-functional teams for end-to-end delivery",
+                "Mentor junior engineers and maintain coding standards"
+            ],
+            "employment_type": "Full-time",
+            "remote_option": "Yes",
+            "scoring": {
+                "skills": {
+                    "weight": 0.10309278350515463,
+                    "criteria": {
+                        "Problem Solving": 100,
+                        "Data Structures": 100,
+                        "Algorithms": 100,
+                        "OOP": 75,
+                        "Networking": 75,
+                        "Cyber Security": 75,
+                        "Cloud Computing": 75,
+                        "DevOps": 75,
+                        "Machine Learning": 100,
+                        "Deep Learning": 100,
+                        "AI": 100,
+                        "Database Management": 75,
+                        "Version Control": 50,
+                        "API Development": 75,
+                        "Teamwork": 75,
+                        "Leadership": 75,
+                        "Project Management": 75,
+                        "Testing & Debugging": 75
+                    }
+                },
+                "experience": {
+                    "weight": 0.10309278350515463,
+                    "criteria": {
+                        ">=8 years": 100,
+                        "5-7 years": 80,
+                        "3-4 years": 60,
+                        "<3 years": 30
+                    }
+                },
+                "relevant_experience": {
+                    "weight": 0.30927835051546393,
+                    "criteria": {
+                        ">=5 years_relevant": 100,
+                        "3-4 years_relevant": 73,
+                        "1-2 years_relevant": 50,
+                        "<1 year_relevant": 17
+                    }
+                },
+                "projects": {
+                    "weight": 0.0,
+                    "criteria": {}
+                },
+                "certificates": {
+                    "weight": 0.0,
+                    "criteria": {}
+                },
+                "tools": {
+                    "weight": 0.020618556701030927,
+                    "criteria": {
+                        "VS Code": 100,
+                        "PyCharm": 100,
+                        "IntelliJ IDEA": 100,
+                        "Eclipse": 100,
+                        "Jira": 100,
+                        "Slack": 100,
+                        "GitHub": 100,
+                        "GitLab": 100,
+                        "Bitbucket": 100,
+                        "Postman": 100
+                    }
+                },
+                "technologies": {
+                    "weight": 0.20618556701030927,
+                    "criteria": {
+                        "C": 100,
+                        "C++": 100,
+                        "Java": 75,
+                        "Python": 100,
+                        "JavaScript": 100,
+                        "TypeScript": 75,
+                        "HTML5": 50,
+                        "CSS3": 50,
+                        "MySQL": 100,
+                        "PostgreSQL": 75,
+                        "MongoDB": 75,
+                        "Node.js": 75,
+                        "Express.js": 50,
+                        "Django": 75,
+                        "Flask": 75,
+                        "Spring": 75,
+                        "Laravel": 75,
+                        "ReactJS": 75,
+                        "Angular": 75,
+                        "Vue.js": 75,
+                        "Bootstrap": 50,
+                        "Tailwind CSS": 50,
+                        "REST API": 75,
+                        "GraphQL": 50,
+                        "Firebase": 50,
+                        "AWS": 75,
+                        "Azure": 75,
+                        "GCP": 75,
+                        "Linux": 50,
+                        "Docker": 50,
+                        "Kubernetes": 50,
+                        "Webpack": 50,
+                        "TensorFlow": 75,
+                        "PyTorch": 75,
+                        "Keras": 75,
+                        "OpenCV": 75,
+                        "Pandas": 50,
+                        "NumPy": 50,
+                        "Scikit-Learn": 50
+                    }
+                },
+                "qualification": {
+                    "weight": 0.10309278350515463,
+                    "criteria": {
+                        "Master's Degree in Engineering": 100,
+                        "Bachelor's Degree in Engineering": 80,
+                        "Other": 50
+                    }
+                },
+                "responsibilities": {
+                    "weight": 0.0,
+                    "criteria": {}
+                },
+                "salary": {
+                    "weight": 0.15463917525773196,
+                    "criteria": {
+                        "<3": 100,
+                        "3-6": 80,
+                        "6-10": 53,
+                        ">10": 33
+                    }
+                }
+            },
+            "experience_range": {
+                "min": 3.0,
+                "max": 8.0
+            },
+            "weights": {
+                "skills_score": 0.10309278350515463,
+                "experience_score": 0.10309278350515463,
+                "relevant_experience_score": 0.30927835051546393,
+                "projects_score": 0.0,
+                "certificates_score": 0.0,
+                "tools_score": 0.020618556701030927,
+                "technologies_score": 0.20618556701030927,
+                "qualification_score": 0.10309278350515463,
+                "responsibilities_score": 0.0,
+                "salary_score": 0.15463917525773196
+            }
+        },
+        "weights": null
+    },
+    "history": [
+        {
+            "from_state": "INIT",
+            "to_state": "VALIDATING_INPUT",
+            "timestamp": "2026-02-17T14:55:40.040477",
+            "reason": null
+        },
+        {
+            "from_state": "VALIDATING_INPUT",
+            "to_state": "FETCHING_CONTEXT",
+            "timestamp": "2026-02-17T14:55:40.041496",
+            "reason": null
+        },
+        {
+            "from_state": "FETCHING_CONTEXT",
+            "to_state": "SCORING",
+            "timestamp": "2026-02-17T14:55:40.043378",
+            "reason": null
+        },
+        {
+            "from_state": "SCORING",
+            "to_state": "VERIFYING_OUTPUT",
+            "timestamp": "2026-02-17T14:56:56.341479",
+            "reason": null
+        },
+        {
+            "from_state": "VERIFYING_OUTPUT",
+            "to_state": "COMPLETED",
+            "timestamp": "2026-02-17T14:56:56.341990",
+            "reason": null
+        }
+    ],
+    "result": {
+        "final_score": 13,
+        "skills_score": 0,
+        "experience_score": 0,
+        "relevant_experience_score": 0,
+        "projects_score": 0,
+        "certificates_score": 0,
+        "tools_score": 0,
+        "technologies_score": 0,
+        "qualification_score": 80,
+        "responsibilities_score": 0,
+        "salary_score": 33,
+        "position_score": 0,
+        "notes": "Candidate lacks relevant skills, experience, and technologies for the role.",
+        "scoring_trace": {
+            "relevant_experience": {
+                "score_awarded": 0,
+                "weight": 0.30927835051546393,
+                "notes": "No relevant experience in required technologies or skills."
+            },
+            "salary": {
+                "score_awarded": 33,
+                "weight": 0.15463917525773196,
+                "notes": "Salary expectation is within the acceptable range."
+            },
+            "qualification": {
+                "score_awarded": 80,
+                "weight": 0.10309278350515463,
+                "notes": "Candidate has a Bachelor's Degree in Information Technology."
+            },
+            "skills": {
+                "score_awarded": 0,
+                "weight": 0.10309278350515463,
+                "notes": "No relevant skills demonstrated in experience or projects."
+            },
+            "technologies": {
+                "score_awarded": 0,
+                "weight": 0.20618556701030927,
+                "notes": "No relevant technologies demonstrated in experience or projects."
+            }
+        }
+    },
+    "error": null,
+    "success": true
+}

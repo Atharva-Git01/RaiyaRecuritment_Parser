@@ -1,0 +1,210 @@
+[
+  {
+    "case_id": "5_perfect_lead_ce",
+    "expected_hiring_judgment": "strong_yes",
+    "component_expectations": {
+      "experience_score": "Should map exactly to the 5-7 year band.",
+      "qualification_score": "Should map to engineering bachelor's tier.",
+      "technologies_score": "Must reflect strong evidence for Python, AWS, Docker, and Kubernetes.",
+      "position_score": "Should confirm team-lead evidence from title and experience text."
+    },
+    "required_evidence": {
+      "technologies_score": ["Python", "AWS", "Docker", "K8s"],
+      "position_score": ["Team Lead", "Led team of 8"]
+    },
+    "disallowed_evidence": {},
+    "explanation_quality_notes": "Summary should mention strong fit, leadership evidence, and salary tradeoff without contradiction.",
+    "recruiter_reviewer": "unassigned",
+    "engineering_reviewer": "unassigned",
+    "review_status": "pending_review"
+  },
+  {
+    "case_id": "1_senior_java_mismatch_ce",
+    "expected_hiring_judgment": "lean_no",
+    "component_expectations": {
+      "experience_score": "Should stay maxed due to tenure.",
+      "technologies_score": "Should not be near-perfect because modern stack evidence is weak.",
+      "salary_score": "Must be set by deterministic salary override."
+    },
+    "required_evidence": {},
+    "disallowed_evidence": {
+      "technologies_score": ["Infer modern cloud/container technologies from legacy Java tenure only."]
+    },
+    "explanation_quality_notes": "Explanation should clearly separate seniority from actual stack fit.",
+    "recruiter_reviewer": "unassigned",
+    "engineering_reviewer": "unassigned",
+    "review_status": "pending_review"
+  },
+  {
+    "case_id": "2_junior_prodigy_ce",
+    "expected_hiring_judgment": "mixed",
+    "component_expectations": {
+      "experience_score": "Should remain low because tenure is below three years.",
+      "qualification_score": "Should land in the non-engineering tier.",
+      "technologies_score": "Can be moderate to high only when supported by role descriptions."
+    },
+    "required_evidence": {
+      "technologies_score": ["Python", "Docker", "Azure"]
+    },
+    "disallowed_evidence": {},
+    "explanation_quality_notes": "Should frame as technically promising but under-tenured.",
+    "recruiter_reviewer": "unassigned",
+    "engineering_reviewer": "unassigned",
+    "review_status": "pending_review"
+  },
+  {
+    "case_id": "3_phd_academic_ce",
+    "expected_hiring_judgment": "no",
+    "component_expectations": {
+      "skills_score": "Should stay near zero for CE JD because engineering evidence is missing.",
+      "technologies_score": "Should stay near zero for CE JD because listed tools are academic."
+    },
+    "required_evidence": {},
+    "disallowed_evidence": {
+      "skills_score": ["Do not infer engineering skills from academic seniority alone."],
+      "technologies_score": ["Do not map Matlab or LaTeX to CE technology criteria."]
+    },
+    "explanation_quality_notes": "Should explicitly explain wrong-domain mismatch rather than just low score.",
+    "recruiter_reviewer": "unassigned",
+    "engineering_reviewer": "unassigned",
+    "review_status": "pending_review"
+  },
+  {
+    "case_id": "4_career_switcher_ce",
+    "expected_hiring_judgment": "strong_no",
+    "component_expectations": {
+      "relevant_experience_score": "Should remain very low.",
+      "salary_score": "Should be favorable if expectation is low.",
+      "experience_score": "May be high overall but explanation must note irrelevance."
+    },
+    "required_evidence": {},
+    "disallowed_evidence": {
+      "skills_score": ["Do not treat general sales leadership as software-engineering skills evidence."]
+    },
+    "explanation_quality_notes": "Must distinguish total experience from relevant engineering experience.",
+    "recruiter_reviewer": "unassigned",
+    "engineering_reviewer": "unassigned",
+    "review_status": "pending_review"
+  },
+  {
+    "case_id": "3_phd_academic_ds",
+    "expected_hiring_judgment": "yes",
+    "component_expectations": {},
+    "required_evidence": {},
+    "disallowed_evidence": {},
+    "explanation_quality_notes": "Should explain why the same profile scores better for data science than general software engineering.",
+    "recruiter_reviewer": "unassigned",
+    "engineering_reviewer": "unassigned",
+    "review_status": "pending_review"
+  },
+  {
+    "case_id": "minimal_resume_sparse",
+    "expected_hiring_judgment": "strong_no",
+    "component_expectations": {},
+    "required_evidence": {},
+    "disallowed_evidence": {},
+    "explanation_quality_notes": "Should clearly say there is insufficient evidence instead of inventing strengths.",
+    "recruiter_reviewer": "unassigned",
+    "engineering_reviewer": "unassigned",
+    "review_status": "pending_review"
+  },
+  {
+    "case_id": "skills_only_inflation",
+    "expected_hiring_judgment": "no",
+    "component_expectations": {},
+    "required_evidence": {},
+    "disallowed_evidence": {},
+    "explanation_quality_notes": "Should warn that listed skills without experience evidence were discounted.",
+    "recruiter_reviewer": "unassigned",
+    "engineering_reviewer": "unassigned",
+    "review_status": "pending_review"
+  },
+  {
+    "case_id": "future_dates_candidate",
+    "expected_hiring_judgment": "lean_no",
+    "component_expectations": {},
+    "required_evidence": {},
+    "disallowed_evidence": {},
+    "explanation_quality_notes": "Should not treat future roles as completed tenure.",
+    "recruiter_reviewer": "unassigned",
+    "engineering_reviewer": "unassigned",
+    "review_status": "pending_review"
+  },
+  {
+    "case_id": "extreme_salary_candidate",
+    "expected_hiring_judgment": "mixed",
+    "component_expectations": {},
+    "required_evidence": {},
+    "disallowed_evidence": {},
+    "explanation_quality_notes": "Should reflect salary as a tradeoff without distorting other score categories.",
+    "recruiter_reviewer": "unassigned",
+    "engineering_reviewer": "unassigned",
+    "review_status": "pending_review"
+  },
+  {
+    "case_id": "zero_salary_candidate",
+    "expected_hiring_judgment": "mixed",
+    "component_expectations": {},
+    "required_evidence": {},
+    "disallowed_evidence": {},
+    "explanation_quality_notes": "Should remain factual and avoid dividing by zero or fabricating a salary band match.",
+    "recruiter_reviewer": "unassigned",
+    "engineering_reviewer": "unassigned",
+    "review_status": "pending_review"
+  },
+  {
+    "case_id": "overlapping_roles_candidate",
+    "expected_hiring_judgment": "mixed",
+    "component_expectations": {},
+    "required_evidence": {},
+    "disallowed_evidence": {},
+    "explanation_quality_notes": "Should avoid double-counting overlapping employment periods.",
+    "recruiter_reviewer": "unassigned",
+    "engineering_reviewer": "unassigned",
+    "review_status": "pending_review"
+  },
+  {
+    "case_id": "vague_descriptions_candidate",
+    "expected_hiring_judgment": "lean_no",
+    "component_expectations": {},
+    "required_evidence": {},
+    "disallowed_evidence": {},
+    "explanation_quality_notes": "Should cite lack of concrete evidence rather than awarding inferred technical depth.",
+    "recruiter_reviewer": "unassigned",
+    "engineering_reviewer": "unassigned",
+    "review_status": "pending_review"
+  },
+  {
+    "case_id": "academic_only_candidate",
+    "expected_hiring_judgment": "lean_no",
+    "component_expectations": {},
+    "required_evidence": {},
+    "disallowed_evidence": {},
+    "explanation_quality_notes": "Should distinguish academic output from relevant production experience.",
+    "recruiter_reviewer": "unassigned",
+    "engineering_reviewer": "unassigned",
+    "review_status": "pending_review"
+  },
+  {
+    "case_id": "legacy_stack_candidate",
+    "expected_hiring_judgment": "lean_no",
+    "component_expectations": {},
+    "required_evidence": {},
+    "disallowed_evidence": {},
+    "explanation_quality_notes": "Should call out that legacy-stack tenure is not equivalent to modern stack readiness.",
+    "recruiter_reviewer": "unassigned",
+    "engineering_reviewer": "unassigned",
+    "review_status": "pending_review"
+  },
+  {
+    "case_id": "career_switcher_variant",
+    "expected_hiring_judgment": "strong_no",
+    "component_expectations": {},
+    "required_evidence": {},
+    "disallowed_evidence": {},
+    "explanation_quality_notes": "Should not confuse training or bootcamp experience with demonstrated production evidence.",
+    "recruiter_reviewer": "unassigned",
+    "engineering_reviewer": "unassigned",
+    "review_status": "pending_review"
+  }
+]

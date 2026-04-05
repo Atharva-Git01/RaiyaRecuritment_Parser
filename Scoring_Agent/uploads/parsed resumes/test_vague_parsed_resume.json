@@ -1,0 +1,103 @@
+{
+    "name": "Samar Jadhav",
+    "email": "samar.jadhav.ce@gmail.com",
+    "skills": [
+        "Python",
+        "C++",
+        "JavaScript",
+        "Data Structures",
+        "Algorithms",
+        "Object Oriented Programming",
+        "REST API Development",
+        "Machine Learning Basics",
+        "Database Design",
+        "Problem Solving"
+    ],
+    "experience": [
+        {
+            "title": "Freelance Software Developer",
+            "company": "Self-Employed",
+            "start": "March 2024",
+            "end": "Present",
+            "description": "Worked on small backend utilities and automation scripts for local businesses.",
+            "responsibilities": [
+                "Built small Flask-based REST APIs for internal automation tools.",
+                "Created Python scripts for CSV data processing and reporting.",
+                "Integrated third-party APIs for sending automated notifications.",
+                "Maintained GitHub repositories for client deliverables."
+            ]
+        },
+        {
+            "title": "Software Engineering Intern",
+            "company": "Innotech Labs",
+            "start": "June 2023",
+            "end": "February 2024",
+            "description": "Supported backend development and testing of internal analytics platform.",
+            "responsibilities": [
+                "Assisted in debugging backend modules written in Python.",
+                "Wrote SQL queries for data extraction and reporting.",
+                "Used Postman to test API endpoints.",
+                "Collaborated with team members during sprint reviews."
+            ]
+        }
+    ],
+    "projects": [
+        {
+            "name": "Mini E-commerce Backend",
+            "description": "Developed a lightweight backend for an e-commerce demo supporting product CRUD and order APIs.",
+            "technologies": [
+                "Python",
+                "Flask",
+                "SQLite",
+                "REST API"
+            ]
+        },
+        {
+            "name": "Image Classification Experiment",
+            "description": "Experimented with a basic TensorFlow CNN model for classifying small image datasets.",
+            "technologies": [
+                "Python",
+                "TensorFlow",
+                "NumPy"
+            ]
+        },
+        {
+            "name": "Algorithm Visualizer",
+            "description": "Created a web-based visualization tool for sorting algorithms.",
+            "technologies": [
+                "JavaScript",
+                "HTML",
+                "CSS"
+            ]
+        }
+    ],
+    "education": [
+        {
+            "degree": "Bachelor of Engineering in Computer Engineering",
+            "institution": "Sinhgad College of Engineering, Pune",
+            "year": "2023"
+        }
+    ],
+    "certifications": [
+        "Python for Everybody - Coursera"
+    ],
+    "tools": [
+        "GitHub",
+        "VS Code",
+        "Postman"
+    ],
+    "technologies": [
+        "Python",
+        "C++",
+        "JavaScript",
+        "Flask",
+        "REST API",
+        "TensorFlow",
+        "NumPy",
+        "SQL"
+    ],
+    "salary_expectation": {
+        "value": 720000,
+        "currency": "INR"
+    }
+}

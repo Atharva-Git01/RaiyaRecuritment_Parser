@@ -1,0 +1,424 @@
+import json
+import os
+import tempfile
+import fitz            # PyMuPDF – text extraction & page rendering
+import pytesseract     # Tesseract OCR wrapper
+from PIL import Image  # Pillow – image handling for Tesseract
+from modules import (
+from pathlib import Path
+import os
+import re
+from pathlib import Path
+from typing import List, Dict, Any, Optional, Set
+import hashlib
+import json
+import re
+from datetime import datetime, timezone
+from pathlib import Path
+from typing import Dict, Optional, Tuple
+from pathlib import Path
+from typing import List, Optional
+import sys
+from pathlib import Path
+from docstrange import DocumentExtractor, ConversionResult
+import json
+from pathlib import Path
+from typing import Any, Dict, Optional
+from app.pipeline.stages import ResumePipeline
+import hashlib
+import json
+import time
+from contextlib import asynccontextmanager
+from datetime import datetime, timedelta, timezone
+from pathlib import Path
+from typing import Callable, Optional
+from urllib.parse import quote
+from fastapi import Depends, FastAPI, File, Form, HTTPException, Request, Response, UploadFile, status
+from fastapi.middleware.cors import CORSMiddleware
+from fastapi.responses import FileResponse, JSONResponse, RedirectResponse
+from fastapi.staticfiles import StaticFiles
+from pydantic import BaseModel, EmailStr
+from app import repositories
+from app.auth import (
+from app.config import ensure_runtime_directories, get_settings
+from app.logging_utils import get_logger, new_request_id
+from app.migrations import ensure_runtime_ready
+from app.queue_backends import get_queue_backend
+from app.saas_db import get_db_connection
+from app.storage_backends import get_storage_backend
+from app.uploads import build_object_key, read_and_validate_upload, sanitize_filename, scan_upload
+from azure.identity import DefaultAzureCredential
+from azure.keyvault.secrets import SecretClient
+import stripe
+import json
+import traceback
+from pathlib import Path
+import sys
+from app.pipeline.stages import AIScoringStage, RAGEvidenceStage, PipelineContext
+import sys, json, os, tempfile, traceback
+from pathlib import Path
+import fitz
+import pytesseract, tempfile as tmp_mod
+from PIL import Image
+from docstrange import DocumentExtractor
+from app.normalizer_pre_score import normalize_for_scoring
+from app.matcher import score_resume_against_jd
+from agent_controller import AgentController
+from deterministic_validator import DeterministicValidator
+from mathematical_validator import MathematicalValidator
+from app.explanation_engine import generate_full_report
+from datetime import datetime
+from app.pdf_report import generate_pdf_report
+import os
+import sys
+from pathlib import Path
+import pytest
+import json
+import re
+from fastapi.testclient import TestClient
+from server import app as fastapi_app
+import app.saas_db
+from app.saas_db import get_connection_pool, get_db_connection, update_job_status, save_resume_result
+import mysql.connector
+from app.saas_db import save_resume_result, update_job_status
+import json
+import traceback
+from pathlib import Path
+import sys
+from app.pipeline.stages import ResumePipeline
+import shutil
+import socket
+import time
+import uuid
+from pathlib import Path
+from typing import Dict, Optional
+from app import repositories
+from app.config import ensure_runtime_directories, get_settings
+from app.migrations import ensure_runtime_ready
+from app.pipeline.contracts import PipelineExecutionError
+from app.pipeline.stages import ResumePipeline
+from app.queue_backends import get_queue_backend
+from app.storage_backends import get_storage_backend
+import hashlib
+import secrets
+import uuid
+from dataclasses import dataclass
+from datetime import datetime, timedelta, timezone
+from typing import Any, Dict, List, Tuple
+from urllib.parse import urlencode
+import jwt
+import requests
+from argon2 import PasswordHasher
+from argon2.exceptions import VerifyMismatchError
+from fastapi import HTTPException, Response, status
+from app.config import get_settings
+import os
+from dataclasses import dataclass, field
+from functools import lru_cache
+from pathlib import Path
+from typing import List
+from dotenv import load_dotenv
+import json
+import os
+from datetime import datetime
+from typing import List
+from app.saas_db import get_db_connection
+import os
+import mysql.connector
+from dotenv import load_dotenv
+from mysql.connector import Error
+import json
+import math
+from typing import Any, Dict, List, Tuple
+from app.phi4_explainer import generate_explanation, get_config
+from app.schemas import CandidateFacts, JDRequirements, Role, Education, MatchDetails
+from app.guardrails import validate_explanation # ensure we have this if needed explicitly, though explainer does it
+from app.db_manager import get_db_connection
+import json
+from datetime import datetime
+from typing import Optional
+from app.saas_db import get_db_connection
+from app.schemas import LearningEvent
+import json
+import logging
+import sys
+import uuid
+from datetime import datetime, timezone
+from typing import Any
+import re
+from copy import deepcopy
+from typing import Any, Dict, List, Tuple
+from app.jd_validator import validate_jd
+from app.validator import validate_resume_data
+from sentence_transformers import SentenceTransformer
+from sentence_transformers import util
+from datetime import datetime
+from start_date and end_date fields.
+from sentence_transformers import util
+from pathlib import Path
+from typing import List
+from app.config import get_settings
+from app import repositories
+from app.saas_db import get_db_connection
+import mysql.connector
+import contextlib
+import json
+import os
+import re
+import sys
+from collections import defaultdict
+from datetime import datetime
+import pandas as pd
+import pdfplumber
+from docx import Document
+from sentence_transformers import SentenceTransformer, util
+from tqdm import tqdm
+from tqdm import tqdm
+from copy import deepcopy
+from difflib import SequenceMatcher
+from app.pdf_report import generate_pdf_report
+import os
+from io import BytesIO
+from typing import Any, Dict, List
+import matplotlib
+import matplotlib.pyplot as plt
+from reportlab.lib import colors
+from reportlab.lib.pagesizes import A4, landscape
+from reportlab.lib.styles import ParagraphStyle, getSampleStyleSheet
+from reportlab.lib.units import mm
+from reportlab.platypus import (
+from reportlab.platypus import Flowable
+import json
+import os
+import hashlib
+from typing import Dict, Any, Optional
+import requests
+from dotenv import load_dotenv
+from app.schemas import CandidateFacts, JDRequirements, Phi4Explanation, LearningEvent
+from app.ledger_db import log_learning_event
+from app.guardrails import validate_explanation
+import json
+import os
+import hashlib
+from datetime import datetime
+from typing import List, Optional, Literal, Dict, Any
+from pydantic import BaseModel, Field, field_validator, ValidationError, constr
+from abc import ABC, abstractmethod
+from typing import Any, Dict, Optional
+from app import repositories
+from app.config import Settings, get_settings
+from azure.servicebus import ServiceBusClient
+from azure.servicebus import ServiceBusMessage
+import json
+from datetime import datetime, timedelta
+from typing import Any, Dict, List, Optional
+from app.auth import hash_password
+from app.config import get_settings
+from app.saas_db import get_db_connection, test_connection
+FROM global_users gu
+FROM global_users gu
+FROM global_users gu
+FROM service_entitlements se
+FROM jobs
+FROM batches b
+FROM jobs j
+FROM jobs j
+FROM jobs j
+FROM resume_results rr
+FROM resume_results rr
+FROM batches b
+import json
+import os
+from contextlib import contextmanager
+from datetime import datetime
+from typing import Any, Dict, List, Optional
+import mysql.connector
+from mysql.connector import Error, pooling
+from dotenv import load_dotenv
+FROM jobs
+FROM batches b
+FROM jobs j
+FROM jobs j
+FROM jobs j
+FROM resume_results
+from typing import List, Optional, Dict, Any
+from pydantic import BaseModel, Field, conlist
+from datetime import datetime
+import shutil
+import tempfile
+from abc import ABC, abstractmethod
+from dataclasses import dataclass
+from pathlib import Path
+from typing import Optional
+from app.config import Settings, get_settings
+from azure.storage.blob import BlobServiceClient, ContentSettings
+import json
+import re
+import uuid
+from dataclasses import dataclass
+from pathlib import Path
+from typing import Any, Dict, List, Optional
+from fastapi import HTTPException, UploadFile, status
+from app.config import Settings, get_settings
+import time
+from app.db_manager import get_db_connection
+from dataclasses import dataclass, field
+from datetime import datetime, timezone
+from pathlib import Path
+from typing import Any, Dict, List, Optional
+import os
+import re
+import sys
+import argparse
+import logging
+import tempfile
+from pathlib import Path
+from typing import List, Tuple, Optional
+from docstrange import DocumentExtractor
+import fitz  # PyMuPDF - used for PDF analysis and layout detection
+from PIL import Image, ImageFilter, ImageEnhance
+import torch
+from app.auth import hash_password, principal_roles_from_claims, verify_password
+from types import SimpleNamespace
+from app.pipeline.contracts import PipelineArtifacts
+from worker import process_job
+from app.uploads import build_object_key, sanitize_filename
+import re
+from typing import Dict, Any, List
+from sentence_transformers import SentenceTransformer, util
+from rule_extractor import RuleExtractor
+from normalizer_pre_score import normalize_pre_score
+from typing import Dict, Any
+import re
+from typing import Dict, Any, List, Set
+import pytest
+from unittest.mock import MagicMock
+import sys
+from deterministic_validator import DeterministicValidator
+import pytest
+from unittest.mock import MagicMock
+import sys
+from deterministic_validator import DeterministicValidator
+from mathematical_validator import MathematicalValidator
+import pytest
+from mathematical_validator import MathematicalValidator
+import pytest
+from normalizer_pre_score import normalize_pre_score
+import pytest
+from rule_extractor import RuleExtractor
+import logging
+from typing import Dict, List, Any, Optional
+from agent_state import AgentState
+import sys
+import os
+from agent_state import AgentState
+import logging
+from typing import Optional, Dict, Any, List
+from app.ai_guardrails import AgentGuardrails, ValidationFailure
+from app.jd_validator import validate_jd
+from agent_authority import AuthorityGovernance
+from agent_state import AgentState, AgentMemory
+import sys
+import os
+from app.ai_guardrails import AgentGuardrails, ValidationFailure
+from app.jd_validator import validate_jd
+from agent_authority import AuthorityGovernance
+from agent_state import AgentState, AgentMemory
+from ai_scorer import ai_score_resume
+import json
+import logging
+from typing import Dict, Any, Optional
+from datetime import datetime
+import datetime
+from enum import Enum
+from dataclasses import dataclass, field, asdict
+from typing import Optional, Dict, List, Any
+import json
+import math
+import os
+import datetime
+from dateutil import parser
+from copy import deepcopy
+from typing import Any, Dict, Tuple, Union, Optional
+import requests
+from dotenv import load_dotenv
+from app.scoring_contracts import AIScorerInput, ResumeFacts, JDRequirements, ScoringWeights
+from pydantic import ValidationError
+from token_usage_monitor import log_usage as _log_token_usage
+import sys
+import os
+from Monitor_Agent.metrics_collector import log_token_usage as monitor_log_token_usage, log_latency as monitor_log_latency, MetricsCollector, MetricType
+from app.validator import calculate_duration
+from app.ai_guardrails import apply_guardrails, GuardrailContext
+from app.jd_validator import validate_jd
+import time
+import os
+import json
+import time
+import sys
+from datetime import datetime
+from agent_controller import AgentController, AgentState
+import sys
+import os
+import json
+import logging
+import time
+import datetime
+from agent_controller import AgentController, AgentState
+import sys
+import os
+import json
+import logging
+from agent_guardrails import AgentGuardrails
+from token_usage_monitor import log_usage, get_summary, print_summary
+import os
+import json
+import datetime
+import logging
+from typing import Dict, Any, Optional
+from datetime import datetime
+import re
+from copy import deepcopy
+from app.normalizer_pre_score import edu_aliases, skill_aliases, tech_aliases
+from pydantic import BaseModel
+from typing import Dict, Any, Optional
+import unittest
+import sys
+import os
+from unittest.mock import MagicMock
+import app.scoring_contracts
+from agent_controller import AgentController
+from agent_state import AgentState
+from agent_authority import AuthorityGovernance
+import unittest
+import sys
+import os
+from agent_authority import AuthorityGovernance
+from agent_state import AgentState
+import unittest
+import sys
+import os
+import shutil
+from unittest.mock import MagicMock, patch
+import app.scoring_contracts
+from agent_controller import AgentController
+from agent_state import AgentState
+import unittest
+import sys
+import os
+from agent_guardrails import AgentGuardrails, ValidationFailure
+import unittest
+import sys
+import os
+import json
+from dataclasses import asdict
+from agent_state import AgentState, AgentMemory
+import unittest
+import sys
+import os
+import json
+from unittest.mock import MagicMock, patch
+import app.scoring_contracts
+from agent_controller import AgentController
+from agent_state import AgentState
+import ai_scorer

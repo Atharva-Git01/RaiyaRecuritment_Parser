@@ -1,0 +1,95 @@
+{
+    "name": "Rahul Deshpande",
+    "email": "rahul.deshpande.sales@gmail.com",
+    "skills": [
+        "Technical Sales",
+        "Solution Consulting",
+        "SaaS Architecture Understanding",
+        "CRM Customization",
+        "API Integration",
+        "Data Analysis",
+        "Sales Automation",
+        "Cloud Fundamentals",
+        "Technical Communication",
+        "Pre-Sales Engineering"
+    ],
+    "experience": [
+        {
+            "title": "Senior Account Executive (Tech-SaaS)",
+            "company": "Freshworks",
+            "start": "September 2023",
+            "end": "Present",
+            "description": "Managing enterprise SaaS accounts with technical solution alignment.",
+            "responsibilities": [
+                "Led pre-sales technical consultations for mid-market clients.",
+                "Created solution architecture diagrams for CRM deployments.",
+                "Explained cloud deployment models and SaaS APIs to clients.",
+                "Achieved 120% annual sales quota."
+            ]
+        },
+        {
+            "title": "Technical Sales Executive",
+            "company": "Zoho Corporation",
+            "start": "June 2021",
+            "end": "August 2023",
+            "description": "Delivered SaaS product demonstrations and handled CRM implementations.",
+            "responsibilities": [
+                "Delivered 200+ API-focused product demos.",
+                "Collaborated with engineering teams for workflow customization.",
+                "Closed enterprise deals worth ₹3.2 Cr annually.",
+                "Automated onboarding workflows reducing manual work by 25%."
+            ]
+        }
+    ],
+    "projects": [
+        {
+            "name": "Sales Analytics Dashboard",
+            "description": "Developed Power BI dashboard to analyze sales funnel metrics.",
+            "technologies": [
+                "SQL",
+                "Power BI",
+                "Excel"
+            ]
+        },
+        {
+            "name": "CRM Workflow Automation",
+            "description": "Automated lead assignment system using Python and API integrations.",
+            "technologies": [
+                "Python",
+                "REST APIs",
+                "Zapier"
+            ]
+        }
+    ],
+    "education": [
+        {
+            "degree": "B.Tech in Information Technology",
+            "institution": "Pune Institute of Computer Technology",
+            "year": "2021"
+        }
+    ],
+    "certifications": [
+        "AWS Cloud Practitioner",
+        "Salesforce Certified Administrator"
+    ],
+    "tools": [
+        "Salesforce",
+        "HubSpot",
+        "Postman",
+        "Zapier",
+        "Git"
+    ],
+    "technologies": [
+        "Python",
+        "SQL",
+        "Java",
+        "AWS",
+        "Azure",
+        "CRM APIs",
+        "SaaS Platforms"
+    ],
+    "salary_expectation": {
+        "value": 1800000,
+        "currency": "INR"
+    }
+}

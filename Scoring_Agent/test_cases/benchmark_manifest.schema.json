@@ -1,0 +1,79 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "Benchmark Manifest",
+  "type": "array",
+  "items": {
+    "type": "object",
+    "required": [
+      "case_id",
+      "resume_path",
+      "jd_path",
+      "case_type",
+      "expected_final_band",
+      "expected_component_bands",
+      "expected_rank_bucket",
+      "must_match_evidence",
+      "must_not_match_evidence",
+      "expected_overrides",
+      "review_owner",
+      "review_status",
+      "notes"
+    ],
+    "properties": {
+      "case_id": { "type": "string" },
+      "resume_path": { "type": "string" },
+      "jd_path": { "type": "string" },
+      "case_type": { "type": "string" },
+      "expected_final_band": {
+        "type": "object",
+        "required": ["min", "max"],
+        "properties": {
+          "min": { "type": "integer", "minimum": 0, "maximum": 100 },
+          "max": { "type": "integer", "minimum": 0, "maximum": 100 }
+        }
+      },
+      "expected_component_bands": {
+        "type": "object",
+        "additionalProperties": {
+          "type": "object",
+          "required": ["min", "max"],
+          "properties": {
+            "min": { "type": "integer", "minimum": 0, "maximum": 100 },
+            "max": { "type": "integer", "minimum": 0, "maximum": 100 }
+          }
+        }
+      },
+      "expected_rank_bucket": { "type": "string" },
+      "must_match_evidence": {
+        "type": "array",
+        "items": {
+          "type": "object",
+          "required": ["score_key", "required_terms", "forbidden_terms", "notes"],
+          "properties": {
+            "score_key": { "type": "string" },
+            "required_terms": { "type": "array", "items": { "type": "string" } },
+            "forbidden_terms": { "type": "array", "items": { "type": "string" } },
+            "notes": { "type": "string" }
+          }
+        }
+      },
+      "must_not_match_evidence": {
+        "type": "array",
+        "items": {
+          "type": "object",
+          "required": ["score_key", "required_terms", "forbidden_terms", "notes"],
+          "properties": {
+            "score_key": { "type": "string" },
+            "required_terms": { "type": "array", "items": { "type": "string" } },
+            "forbidden_terms": { "type": "array", "items": { "type": "string" } },
+            "notes": { "type": "string" }
+          }
+        }
+      },
+      "expected_overrides": { "type": "array", "items": { "type": "string" } },
+      "review_owner": { "type": "string" },
+      "review_status": { "type": "string" },
+      "notes": { "type": "string" }
+    }
+  }
+}

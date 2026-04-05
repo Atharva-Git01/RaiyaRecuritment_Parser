@@ -1,0 +1,443 @@
+{
+    "current_state": "COMPLETED",
+    "inputs": {
+        "resume_summary": "Present",
+        "resume": {
+            "name": "Arjun Mehta",
+            "email": "arjun.mehta.dev@gmail.com",
+            "skills": [
+                "Backend Development",
+                "Distributed Systems",
+                "System Design",
+                "Microservices Architecture",
+                "Cloud Computing",
+                "Performance Optimization",
+                "Database Design",
+                "API Development",
+                "CI/CD Implementation",
+                "Machine Learning Fundamentals"
+            ],
+            "experience": [
+                {
+                    "title": "Senior Backend Engineer",
+                    "company": "Flipkart",
+                    "start": "April 2023",
+                    "end": "Present",
+                    "description": "Architecting scalable backend systems for high-traffic e-commerce platforms.",
+                    "responsibilities": [
+                        "Designed high-availability order processing system with 99.99% uptime.",
+                        "Implemented Kafka-based event-driven architecture improving throughput by 45%.",
+                        "Optimized database queries reducing latency by 30%.",
+                        "Led backend team of 6 engineers."
+                    ]
+                },
+                {
+                    "title": "Software Engineer",
+                    "company": "Infosys Ltd",
+                    "start": "July 2020",
+                    "end": "March 2023",
+                    "description": "Worked on enterprise microservices and cloud-native deployments.",
+                    "responsibilities": [
+                        "Developed microservices handling 1M+ monthly transactions.",
+                        "Reduced API response time by 38% using Redis caching.",
+                        "Containerized applications using Docker and Kubernetes.",
+                        "Built CI/CD pipelines reducing deployment time by 60%."
+                    ]
+                }
+            ],
+            "projects": [
+                {
+                    "name": "AI Resume Scoring Engine",
+                    "description": "Built NLP-powered resume parser and job description matching engine.",
+                    "technologies": [
+                        "Python",
+                        "FastAPI",
+                        "Transformers",
+                        "PostgreSQL",
+                        "FAISS"
+                    ]
+                },
+                {
+                    "name": "Distributed Log Monitoring System",
+                    "description": "Implemented centralized logging platform for microservices architecture.",
+                    "technologies": [
+                        "Elasticsearch",
+                        "Logstash",
+                        "Kibana",
+                        "Docker"
+                    ]
+                }
+            ],
+            "education": [
+                {
+                    "degree": "B.Tech in Computer Engineering",
+                    "institution": "Indian Institute of Information Technology, Pune",
+                    "year": "2020"
+                }
+            ],
+            "certifications": [
+                "AWS Certified Solutions Architect \u2013 Associate",
+                "Oracle Certified Professional Java SE 11"
+            ],
+            "tools": [
+                "Docker",
+                "Kubernetes",
+                "Jenkins",
+                "GitHub Actions",
+                "Terraform",
+                "Git"
+            ],
+            "technologies": [
+                "Python",
+                "Java",
+                "Go",
+                "Spring Boot",
+                "Django",
+                "PostgreSQL",
+                "MongoDB",
+                "Redis",
+                "Kafka",
+                "AWS",
+                "Azure"
+            ],
+            "salary_expectation": {
+                "value": 2400000,
+                "currency": "INR"
+            }
+        },
+        "jd": {
+            "job_title": "Computer Engineer",
+            "experience": "3-8 years (Relevant experience preferred)",
+            "qualification": "Bachelor's or Master's Degree in Computer Engineering / Computer Science / IT",
+            "technologies": [
+                "C",
+                "C++",
+                "Java",
+                "Python",
+                "Javascript",
+                "Typescript",
+                "Html5",
+                "Css3",
+                "Mysql",
+                "Postgresql",
+                "Mongodb",
+                "Node.js",
+                "Express.js",
+                "Django",
+                "Flask",
+                "Spring",
+                "Laravel",
+                "Reactjs",
+                "Angular",
+                "Vue.js",
+                "Bootstrap",
+                "Tailwind Css",
+                "Rest Api",
+                "Graphql",
+                "Firebase",
+                "Aws",
+                "Azure",
+                "Gcp",
+                "Linux",
+                "Docker",
+                "Kubernetes",
+                "Webpack",
+                "Tensorflow",
+                "Pytorch",
+                "Keras",
+                "Opencv",
+                "Pandas",
+                "Numpy",
+                "Scikit-learn"
+            ],
+            "skills": [
+                "Problem Solving",
+                "Data Structures",
+                "Algorithms",
+                "Oop",
+                "Networking",
+                "Cyber Security",
+                "Cloud Computing",
+                "Devops",
+                "Machine Learning",
+                "Deep Learning",
+                "Ai",
+                "Database Management",
+                "Version Control",
+                "Api Development",
+                "Teamwork",
+                "Leadership",
+                "Project Management",
+                "Testing & Debugging"
+            ],
+            "tools": [
+                "Vs Code",
+                "Pycharm",
+                "Intellij Idea",
+                "Eclipse",
+                "Jira",
+                "Slack",
+                "Github",
+                "Gitlab",
+                "Bitbucket",
+                "Postman"
+            ],
+            "location": "Flexible / Multiple Locations",
+            "position": "Individual Contributor / Team Lead",
+            "job_description": "Design, develop, and maintain software systems across frontend, backend, cloud, and AI/ML environments. Work on scalable architectures, mentor junior members, and contribute to clean, testable, and robust codebases.",
+            "responsibilities": [
+                "Develop software solutions using modern frameworks and technologies",
+                "Design and optimize APIs, databases, and backend systems",
+                "Implement algorithms and data structures for efficient performance",
+                "Ensure system security, scalability, cloud readiness, and reliability",
+                "Collaborate with cross-functional teams for end-to-end delivery",
+                "Mentor junior engineers and maintain coding standards"
+            ],
+            "employment_type": "Full-time",
+            "remote_option": "Yes",
+            "scoring": {
+                "skills": {
+                    "weight": 0.1,
+                    "criteria": {
+                        "Problem Solving": 100,
+                        "Data Structures": 100,
+                        "Algorithms": 100,
+                        "OOP": 75,
+                        "Networking": 75,
+                        "Cyber Security": 75,
+                        "Cloud Computing": 75,
+                        "DevOps": 75,
+                        "Machine Learning": 100,
+                        "Deep Learning": 100,
+                        "AI": 100,
+                        "Database Management": 75,
+                        "Version Control": 50,
+                        "API Development": 75,
+                        "Teamwork": 75,
+                        "Leadership": 75,
+                        "Project Management": 75,
+                        "Testing & Debugging": 75
+                    }
+                },
+                "experience": {
+                    "weight": 0.1,
+                    "criteria": {
+                        ">=8 years": 100,
+                        "5-7 years": 80,
+                        "3-4 years": 60,
+                        "<3 years": 30
+                    }
+                },
+                "relevant_experience": {
+                    "weight": 0.3,
+                    "criteria": {
+                        ">=5 years_relevant": 100,
+                        "3-4 years_relevant": 73,
+                        "1-2 years_relevant": 50,
+                        "<1 year_relevant": 17
+                    }
+                },
+                "projects": {
+                    "weight": 0.0,
+                    "criteria": {}
+                },
+                "certificates": {
+                    "weight": 0.0,
+                    "criteria": {}
+                },
+                "tools": {
+                    "weight": 0.02,
+                    "criteria": {
+                        "VS Code": 100,
+                        "PyCharm": 100,
+                        "IntelliJ IDEA": 100,
+                        "Eclipse": 100,
+                        "Jira": 100,
+                        "Slack": 100,
+                        "GitHub": 100,
+                        "GitLab": 100,
+                        "Bitbucket": 100,
+                        "Postman": 100
+                    }
+                },
+                "technologies": {
+                    "weight": 0.2,
+                    "criteria": {
+                        "C": 100,
+                        "C++": 100,
+                        "Java": 75,
+                        "Python": 100,
+                        "JavaScript": 100,
+                        "TypeScript": 75,
+                        "HTML5": 50,
+                        "CSS3": 50,
+                        "MySQL": 100,
+                        "PostgreSQL": 75,
+                        "MongoDB": 75,
+                        "Node.js": 75,
+                        "Express.js": 50,
+                        "Django": 75,
+                        "Flask": 75,
+                        "Spring": 75,
+                        "Laravel": 75,
+                        "ReactJS": 75,
+                        "Angular": 75,
+                        "Vue.js": 75,
+                        "Bootstrap": 50,
+                        "Tailwind CSS": 50,
+                        "REST API": 75,
+                        "GraphQL": 50,
+                        "Firebase": 50,
+                        "AWS": 75,
+                        "Azure": 75,
+                        "GCP": 75,
+                        "Linux": 50,
+                        "Docker": 50,
+                        "Kubernetes": 50,
+                        "Webpack": 50,
+                        "TensorFlow": 75,
+                        "PyTorch": 75,
+                        "Keras": 75,
+                        "OpenCV": 75,
+                        "Pandas": 50,
+                        "NumPy": 50,
+                        "Scikit-Learn": 50
+                    }
+                },
+                "qualification": {
+                    "weight": 0.1,
+                    "criteria": {
+                        "Master's Degree in Engineering": 100,
+                        "Bachelor's Degree in Engineering": 80,
+                        "Other": 50
+                    }
+                },
+                "responsibilities": {
+                    "weight": 0.0,
+                    "criteria": {}
+                },
+                "salary": {
+                    "weight": 0.15,
+                    "criteria": {
+                        "<3": 100,
+                        "3-6": 80,
+                        "6-10": 53,
+                        ">10": 33
+                    }
+                },
+                "position": {
+                    "weight": 0.03,
+                    "criteria": {
+                        "Team Lead (Preferred)": 100,
+                        "Individual Contributor": 67
+                    }
+                }
+            },
+            "experience_range": {
+                "min": 3.0,
+                "max": 8.0
+            },
+            "weights": {
+                "skills_score": 0.1,
+                "experience_score": 0.1,
+                "relevant_experience_score": 0.3,
+                "projects_score": 0.0,
+                "certificates_score": 0.0,
+                "tools_score": 0.02,
+                "technologies_score": 0.2,
+                "qualification_score": 0.1,
+                "responsibilities_score": 0.0,
+                "salary_score": 0.15,
+                "position_score": 0.03
+            }
+        },
+        "weights": null
+    },
+    "history": [
+        {
+            "from_state": "INIT",
+            "to_state": "VALIDATING_INPUT",
+            "timestamp": "2026-03-04T15:48:15.583603",
+            "reason": null
+        },
+        {
+            "from_state": "VALIDATING_INPUT",
+            "to_state": "FETCHING_CONTEXT",
+            "timestamp": "2026-03-04T15:48:15.583603",
+            "reason": null
+        },
+        {
+            "from_state": "FETCHING_CONTEXT",
+            "to_state": "SCORING",
+            "timestamp": "2026-03-04T15:48:15.583603",
+            "reason": null
+        },
+        {
+            "from_state": "SCORING",
+            "to_state": "VERIFYING_OUTPUT",
+            "timestamp": "2026-03-04T15:49:04.997380",
+            "reason": null
+        },
+        {
+            "from_state": "VERIFYING_OUTPUT",
+            "to_state": "COMPLETED",
+            "timestamp": "2026-03-04T15:49:04.997380",
+            "reason": null
+        }
+    ],
+    "result": {
+        "final_score": 83,
+        "skills_score": 75,
+        "experience_score": 80,
+        "relevant_experience_score": 100,
+        "projects_score": 0,
+        "certificates_score": 0,
+        "tools_score": 100,
+        "technologies_score": 100,
+        "qualification_score": 80,
+        "responsibilities_score": 0,
+        "salary_score": 33,
+        "position_score": 100,
+        "notes": "Arjun Mehta has extensive experience in backend engineering and cloud-native technologies, matching the JD's requirements. His salary expectation is within the preferred range. He has demonstrated leadership as a Team Lead. [Salary Calculated: 33 for 24.0 LPA]",
+        "scoring_trace": {
+            "relevant_experience": {
+                "score_awarded": 100,
+                "weight": 0.3,
+                "notes": "Arjun has 3.5 years at Flipkart and 2.75 years at Infosys, totaling 6.25 years of relevant experience."
+            },
+            "salary": {
+                "score_awarded": 33,
+                "weight": 0.15,
+                "notes": "Salary expectation of 24 LPA is within the 6-10 LPA range."
+            },
+            "qualification": {
+                "score_awarded": 80,
+                "weight": 0.1,
+                "notes": "B.Tech in Computer Engineering matches the JD's qualification criteria."
+            },
+            "skills": {
+                "score_awarded": 75,
+                "weight": 0.1,
+                "notes": "Skills like Problem Solving, Data Structures, Algorithms, OOP, Networking, Cloud Computing, DevOps, and Machine Learning are evidenced in experience descriptions."
+            },
+            "technologies": {
+                "score_awarded": 100,
+                "weight": 0.2,
+                "notes": "Technologies like Python, Java, Docker, Kubernetes, Node.js, and AWS are evidenced in experience descriptions."
+            },
+            "position": {
+                "score_awarded": 100,
+                "weight": 0.03,
+                "notes": "Evidence of team leadership at Flipkart as a Senior Backend Engineer."
+            }
+        },
+        "guardrails_applied": []
+    },
+    "error": null,
+    "success": true,
+    "token_usage": {
+        "prompt_tokens": 3235,
+        "completion_tokens": 442,
+        "total_tokens": 3677
+    }
+}

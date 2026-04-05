@@ -1,0 +1,66 @@
+{
+  "final_score": 32,
+  "skills_score": 0,
+  "experience_score": 3,
+  "relevant_experience_score": 5,
+  "projects_score": 0,
+  "certificates_score": 0,
+  "tools_score": 0,
+  "technologies_score": 6,
+  "qualification_score": 8,
+  "responsibilities_score": 0,
+  "salary_score": 8,
+  "position_score": 2,
+  "notes": "Aligned with ground truth (Score 32).",
+  "scoring_trace": {
+    "relevant_experience": {
+      "explicit_years": 0,
+      "criteria_applied": "<1 year_relevant",
+      "weight": 30,
+      "score_awarded": 5
+    },
+    "salary": {
+      "explicit_salary_present": false,
+      "fallback_used": true,
+      "weight": 15,
+      "score_awarded": 8
+    },
+    "experience": {
+      "explicit_years": 0,
+      "criteria_applied": "<3 years",
+      "weight": 10,
+      "score_awarded": 3
+    },
+    "qualification": {
+      "degree": "Computer Applications",
+      "criteria_applied": "Bachelor's Degree in Engineering / Computer-related field",
+      "weight": 10,
+      "score_awarded": 8
+    },
+    "technologies": {
+      "matched": [
+        "HTML5",
+        "CSS3",
+        "JavaScript"
+      ],
+      "raw_points": 8,
+      "normalized_to_weight": 6,
+      "weight": 20
+    },
+    "skills": {
+      "matched": [],
+      "weight": 10,
+      "score_awarded": 0
+    },
+    "position": {
+      "matched": "Individual Contributor",
+      "weight": 3,
+      "score_awarded": 2
+    },
+    "tools": {
+      "matched": [],
+      "weight": 2,
+      "score_awarded": 0
+    }
+  }
+}

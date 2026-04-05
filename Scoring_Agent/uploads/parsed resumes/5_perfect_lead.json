@@ -1,0 +1,50 @@
+{
+    "personal_info": {
+        "name": "Perfect Lead Paul",
+        "location": "Remote"
+    },
+    "summary": "6 years exp Lead Engineer. Expert in Python, Cloud, and Team Leadership.",
+    "experience": [
+        {
+            "title": "Team Lead",
+            "company": "BigTech",
+            "start_date": "2018-01",
+            "end_date": "2024-06",
+            "description": "Led team of 8. Architected microservices on AWS using Python, Docker, K8s. Implemented CI/CD."
+        }
+    ],
+    "education": [
+        {
+            "degree": "B.Tech",
+            "field": "Computer Science",
+            "institution": "NIT",
+            "start_year": 2014,
+            "end_year": 2018
+        }
+    ],
+    "skills": [
+        "Leadership",
+        "Teamwork",
+        "System Design",
+        "Cloud Computing"
+    ],
+    "technologies": [
+        "Python",
+        "AWS",
+        "Docker",
+        "Kubernetes",
+        "PostgreSQL",
+        "Redis",
+        "FastAPI"
+    ],
+    "tools": [
+        "Jira",
+        "GitHub",
+        "Jenkins",
+        "Slack"
+    ],
+    "salary_expectation": {
+        "currency": "INR",
+        "amount": 3500000
+    }
+}

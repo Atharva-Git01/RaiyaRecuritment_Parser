@@ -1,0 +1,94 @@
+{
+    "personal_info": {
+        "name": "Rohan Mehta",
+        "email": "rohan.mehta@example.com",
+        "location": "Bangalore, India"
+    },
+    "summary": "Machine learning engineer with experience in Python, NLP, and data pipelines.",
+    "skills": [
+        "Python",
+        "SQL",
+        "Machine Learning",
+        "Deep Learning",
+        "NLP",
+        "Docker",
+        "AWS",
+        "TensorFlow",
+        "PyTorch"
+    ],
+    "experience": [
+        {
+            "title": "Machine Learning Engineer",
+            "company": "FinTech Alpha",
+            "start_date": "2022-03",
+            "end_date": "2024-01",
+            "description": "Built NLP models using Python and PyTorch. Deployed models with Docker. Worked on fraud detection pipelines."
+        },
+        {
+            "title": "Data Scientist",
+            "company": "Retail Insights",
+            "start_date": "2021-06",
+            "end_date": "2022-02",
+            "description": "Used Python for data analysis. SQL used for reporting dashboards. Machine learning mentioned but not detailed."
+        },
+        {
+            "title": "ML Intern",
+            "company": "AI Labs",
+            "start_date": "2020-01",
+            "end_date": null,
+            "description": "Assisted in model experimentation. Python mentioned. No explicit deployment or project ownership."
+        }
+    ],
+    "projects": [
+        {
+            "name": "Resume Screening System",
+            "description": "Developed a resume screening tool using Python and NLP techniques. Used TensorFlow for model training.",
+            "start_date": "2023-05",
+            "end_date": "2023-09"
+        },
+        {
+            "name": "Chatbot Prototype",
+            "description": "Built a chatbot. NLP mentioned without framework details.",
+            "start_date": null,
+            "end_date": null
+        }
+    ],
+    "education": [
+        {
+            "degree": "B.Tech",
+            "field": "Computer Science",
+            "institution": "ABC Institute of Technology",
+            "start_year": 2017,
+            "end_year": 2021
+        }
+    ],
+    "certifications": [
+        {
+            "name": "AWS Certified Machine Learning – Specialty",
+            "year": 2022
+        },
+        {
+            "name": "Deep Learning Specialization",
+            "year": null
+        }
+    ],
+    "tools": [
+        "Docker",
+        "Git",
+        "Jenkins"
+    ],
+    "technologies": [
+        "AWS",
+        "TensorFlow",
+        "PyTorch"
+    ],
+    "salary_expectation": {
+        "currency": "INR",
+        "amount": 1800000
+    },
+    "metadata": {
+        "parser_version": "v3.4.1",
+        "source": "pdf_resume",
+        "confidence": 0.91
+    }
+}

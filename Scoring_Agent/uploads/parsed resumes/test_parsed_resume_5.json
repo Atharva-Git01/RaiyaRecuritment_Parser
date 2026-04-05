@@ -1,0 +1,75 @@
+{
+    "personal_info": {
+        "name": "Aayush Jain",
+        "email": "aayushjain1108@gmail.com",
+        "phone": "+91 7758864901",
+        "location": "Pune, Maharashtra"
+    },
+    "summary": "Digital Marketing Executive with experience in SEO, social media marketing, paid advertising, analytics, and website tools.",
+    "experience": [
+        {
+            "role": "Digital Marketing Executive",
+            "company": "Vinfro IT Solution Pvt Ltd",
+            "start_date": "2023-08",
+            "end_date": "Present",
+            "description": "Developed digital marketing strategies, executed SEO initiatives, managed social media campaigns, analyzed data using Google Analytics, collaborated with sales and design teams."
+        },
+        {
+            "role": "Digital Marketing Intern",
+            "company": "InternBug",
+            "start_date": "2021-10",
+            "end_date": "2022-02",
+            "description": "Created content for blogs and social media, assisted with SEO strategies, used Google Analytics for tracking."
+        }
+    ],
+    "education": [
+        {
+            "degree": "Master of Computer Application",
+            "institution": "JAIN Deemed-to-be-University",
+            "start_year": 2022,
+            "end_year": "Present",
+            "cgpa": 9.20
+        },
+        {
+            "degree": "Bachelor of Computer Application",
+            "institution": "G H Raisoni Institute Of Business Management",
+            "start_year": 2019,
+            "end_year": 2022
+        }
+    ],
+    "skills": [
+        "SEO",
+        "Social Media Marketing",
+        "Google Analytics",
+        "Google Search Console",
+        "Google Ads",
+        "HTML",
+        "CSS",
+        "JavaScript",
+        "Bootstrap",
+        "jQuery",
+        "Email Marketing"
+    ],
+    "technologies": [
+        "HTML",
+        "CSS",
+        "JavaScript",
+        "Bootstrap",
+        "jQuery"
+    ],
+    "tools": [
+        "Google Analytics",
+        "Google Search Console",
+        "Google Ads",
+        "Google Tag Manager",
+        "Canva",
+        "Wix",
+        "WordPress",
+        "Mailchimp"
+    ],
+    "languages": [
+        "English",
+        "Hindi",
+        "Marathi"
+    ]
+}

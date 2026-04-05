@@ -1,0 +1,74 @@
+{
+    "candidate_name": "Ravi Adipata",
+    "contact": {
+        "email": "raviadipata@gmail.com",
+        "phone": "+917100353966",
+        "linkedin": "linkedin.com/in/raviadipata-14339a203",
+        "location": "Pune, India"
+    },
+    "objective": "Build high-quality, bug-free applications and support all stages of software development lifecycle.",
+    "skills": [
+        "React Native",
+        "TypeScript",
+        "Redux",
+        "Git",
+        "Firebase",
+        "HTML",
+        "CSS",
+        "PHP"
+    ],
+    "experience": [
+        {
+            "title": "Senior React Native Developer",
+            "company": "Edufund Private Ltd",
+            "start": "November 2022",
+            "end": "Present",
+            "duration_estimated_years": 3.3,
+            "responsibilities": [
+                "Develop React Native mobile applications",
+                "Develop TypeScript and ReactJS web applications",
+                "Work with PHP backend",
+                "Client communication",
+                "Requirement gathering"
+            ]
+        },
+        {
+            "title": "React Native Developer",
+            "company": "ExelanceIT",
+            "start": "August 2020",
+            "end": "October 2022",
+            "duration_estimated_years": 2.2,
+            "responsibilities": [
+                "Implement React Native applications",
+                "Handle project requirements",
+                "Mentor trainees"
+            ]
+        }
+    ],
+    "total_experience_years": 5.5,
+    "education": [
+        {
+            "degree": "Bachelor of Engineering",
+            "field": "Computer Engineering",
+            "institution": "SSASIT, Surat (GTU)",
+            "year": "2020",
+            "cgpa": "8.53/10"
+        },
+        {
+            "degree": "Higher Secondary Education",
+            "institution": "Krishan Science School, Pune",
+            "year": "2016"
+        }
+    ],
+    "projects": [
+        {
+            "name": "HOLYREADS",
+            "description": "Book reading application with social login, audio/video player, offline download functionality"
+        },
+        {
+            "name": "DOXBOX",
+            "description": "Digi-locker style document management app with dynamic document verification, localization, QR sharing, document download"
+        }
+    ],
+    "position_inference": "Individual Contributor with partial leadership exposure"
+}

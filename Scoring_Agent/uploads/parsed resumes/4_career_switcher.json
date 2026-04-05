@@ -1,0 +1,49 @@
+{
+    "personal_info": {
+        "name": "Switcher Sam",
+        "location": "Mumbai"
+    },
+    "summary": "Experienced Sales Manager pivoting to Coding. Fast learner.",
+    "experience": [
+        {
+            "title": "Sales Manager",
+            "company": "AutoCorp",
+            "start_date": "2015-01",
+            "end_date": "2023-12",
+            "description": "Led sales team. Hit targets."
+        },
+        {
+            "title": "Intern Developer",
+            "company": "SmallSoft",
+            "start_date": "2024-01",
+            "end_date": "2024-06",
+            "description": "Fixed UI bugs using React and CSS."
+        }
+    ],
+    "education": [
+        {
+            "degree": "B.Com",
+            "field": "Commerce",
+            "institution": "Mumbai Univ",
+            "start_year": 2011,
+            "end_year": 2014
+        }
+    ],
+    "skills": [
+        "Communication",
+        "Sales",
+        "HTML"
+    ],
+    "technologies": [
+        "HTML",
+        "CSS",
+        "ReactJS"
+    ],
+    "tools": [
+        "Excel"
+    ],
+    "salary_expectation": {
+        "currency": "INR",
+        "amount": 600000
+    }
+}

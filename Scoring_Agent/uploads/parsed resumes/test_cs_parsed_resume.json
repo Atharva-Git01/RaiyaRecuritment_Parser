@@ -1,0 +1,103 @@
+{
+    "name": "Arjun Mehta",
+    "email": "arjun.mehta.dev@gmail.com",
+    "skills": [
+        "Backend Development",
+        "Distributed Systems",
+        "System Design",
+        "Microservices Architecture",
+        "Cloud Computing",
+        "Performance Optimization",
+        "Database Design",
+        "API Development",
+        "CI/CD Implementation",
+        "Machine Learning Fundamentals"
+    ],
+    "experience": [
+        {
+            "title": "Senior Backend Engineer",
+            "company": "Flipkart",
+            "start": "April 2023",
+            "end": "Present",
+            "description": "Architecting scalable backend systems for high-traffic e-commerce platforms.",
+            "responsibilities": [
+                "Designed high-availability order processing system with 99.99% uptime.",
+                "Implemented Kafka-based event-driven architecture improving throughput by 45%.",
+                "Optimized database queries reducing latency by 30%.",
+                "Led backend team of 6 engineers."
+            ]
+        },
+        {
+            "title": "Software Engineer",
+            "company": "Infosys Ltd",
+            "start": "July 2020",
+            "end": "March 2023",
+            "description": "Worked on enterprise microservices and cloud-native deployments.",
+            "responsibilities": [
+                "Developed microservices handling 1M+ monthly transactions.",
+                "Reduced API response time by 38% using Redis caching.",
+                "Containerized applications using Docker and Kubernetes.",
+                "Built CI/CD pipelines reducing deployment time by 60%."
+            ]
+        }
+    ],
+    "projects": [
+        {
+            "name": "AI Resume Scoring Engine",
+            "description": "Built NLP-powered resume parser and job description matching engine.",
+            "technologies": [
+                "Python",
+                "FastAPI",
+                "Transformers",
+                "PostgreSQL",
+                "FAISS"
+            ]
+        },
+        {
+            "name": "Distributed Log Monitoring System",
+            "description": "Implemented centralized logging platform for microservices architecture.",
+            "technologies": [
+                "Elasticsearch",
+                "Logstash",
+                "Kibana",
+                "Docker"
+            ]
+        }
+    ],
+    "education": [
+        {
+            "degree": "B.Tech in Computer Engineering",
+            "institution": "Indian Institute of Information Technology, Pune",
+            "year": "2020"
+        }
+    ],
+    "certifications": [
+        "AWS Certified Solutions Architect – Associate",
+        "Oracle Certified Professional Java SE 11"
+    ],
+    "tools": [
+        "Docker",
+        "Kubernetes",
+        "Jenkins",
+        "GitHub Actions",
+        "Terraform",
+        "Git"
+    ],
+    "technologies": [
+        "Python",
+        "Java",
+        "Go",
+        "Spring Boot",
+        "Django",
+        "PostgreSQL",
+        "MongoDB",
+        "Redis",
+        "Kafka",
+        "AWS",
+        "Azure"
+    ],
+    "salary_expectation": {
+        "value": 2400000,
+        "currency": "INR"
+    }
+}

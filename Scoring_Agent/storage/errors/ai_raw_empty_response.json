@@ -1,0 +1,15 @@
+{
+  "choices": [
+    {
+      "message": {
+        "tool_calls": [
+          {
+            "function": {
+              "arguments": "{\"final_score\": 999, \"skills_score\": 200, \"notes\": \"Hallucinated score.\"}"
+            }
+          }
+        ]
+      }
+    }
+  ]
+}

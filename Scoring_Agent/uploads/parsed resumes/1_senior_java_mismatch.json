@@ -1,0 +1,47 @@
+{
+    "personal_info": {
+        "name": "Senior Java Legacy",
+        "location": "Bangalore"
+    },
+    "summary": "15 years experience in Java Enterprise Edition, Oracle DB, and Waterfall methodologies. Expert in legacy system maintenance.",
+    "experience": [
+        {
+            "title": "Senior Java Architect",
+            "company": "OldBank",
+            "start_date": "2009-01",
+            "end_date": "2024-06",
+            "description": "Maintained legacy EJB applications. Managed team of 20. Used Java 7, JSP, Servlets."
+        }
+    ],
+    "education": [
+        {
+            "degree": "M.Tech",
+            "field": "Computer Science",
+            "institution": "IIT Bombay",
+            "start_year": 2007,
+            "end_year": 2009
+        }
+    ],
+    "skills": [
+        "Java",
+        "J2EE",
+        "EJB",
+        "Oracle",
+        "Project Management",
+        "Waterfall"
+    ],
+    "technologies": [
+        "Java",
+        "Oracle 11g",
+        "WebSphere",
+        "Ant"
+    ],
+    "tools": [
+        "Eclipse",
+        "SVN"
+    ],
+    "salary_expectation": {
+        "currency": "INR",
+        "amount": 4000000
+    }
+}

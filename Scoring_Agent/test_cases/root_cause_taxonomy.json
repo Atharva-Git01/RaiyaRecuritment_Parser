@@ -1,0 +1,10 @@
+[
+  "prompt_issue",
+  "override_bug",
+  "jd_normalization_issue",
+  "evidence_extraction_gap",
+  "guardrail_gap",
+  "observability_gap",
+  "entrypoint_bug",
+  "test_expectation_wrong"
+]

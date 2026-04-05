@@ -1,0 +1,43 @@
+{
+    "personal_info": {
+        "name": "Dr. Academic Theo",
+        "location": "USA"
+    },
+    "summary": "Ph.D. in Computer Vision. Research focused on theoretical deep learning bounds.",
+    "experience": [
+        {
+            "title": "Research Assistant",
+            "company": "University Lab",
+            "start_date": "2018-01",
+            "end_date": "2023-12",
+            "description": "Published 5 papers on convex optimization for neural networks. Used Matlab and LaTeX."
+        }
+    ],
+    "education": [
+        {
+            "degree": "Ph.D.",
+            "field": "Computer Science",
+            "institution": "MIT",
+            "start_year": 2018,
+            "end_year": 2023
+        },
+        {
+            "degree": "B.Tech",
+            "field": "CS",
+            "institution": "BITS",
+            "start_year": 2014,
+            "end_year": 2018
+        }
+    ],
+    "skills": [
+        "Algorithms",
+        "Mathematics",
+        "Research"
+    ],
+    "technologies": [
+        "Matlab",
+        "LaTeX"
+    ],
+    "tools": [],
+    "salary_expectation": null
+}

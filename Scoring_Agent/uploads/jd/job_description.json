@@ -1,0 +1,125 @@
+{
+  "job_title": "Computer Engineer",
+  "experience": "3-8 years (Relevant experience preferred)",
+  "qualification": "Bachelor's or Master's Degree in Computer Engineering / Computer Science / IT",
+  "technologies": [
+    "C", "C++", "Java", "Python", "JavaScript", "TypeScript",
+    "HTML5", "CSS3", "MySQL", "PostgreSQL", "MongoDB",
+    "Node.js", "Express.js", "Django", "Flask", "Spring", "Laravel",
+    "ReactJS", "Angular", "Vue.js", "Bootstrap", "Tailwind CSS",
+    "REST API", "GraphQL", "Firebase", "AWS", "Azure", "GCP",
+    "Linux", "Docker", "Kubernetes", "Webpack",
+    "TensorFlow", "PyTorch", "Keras", "OpenCV", "Pandas",
+    "NumPy", "Scikit-Learn"
+  ],
+  "skills": [
+    "Problem Solving", "Data Structures", "Algorithms",
+    "OOP", "Networking", "Cyber Security", "Cloud Computing",
+    "DevOps", "Machine Learning", "Deep Learning", "AI",
+    "Database Management", "Version Control", "API Development",
+    "Teamwork", "Leadership", "Project Management", "Testing & Debugging"
+  ],
+  "tools": [
+    "VS Code", "PyCharm", "IntelliJ IDEA", "Eclipse", "Jira",
+    "Slack", "GitHub", "GitLab", "Bitbucket", "Postman"
+  ],
+  "location": "Flexible / Multiple Locations",
+  "position": "Individual Contributor / Team Lead",
+  "job_description": "Design, develop, and maintain software systems across frontend, backend, cloud, and AI/ML environments. Work on scalable architectures, mentor junior members, and contribute to clean, testable, and robust codebases.",
+  "responsibilities": [
+    "Develop software solutions using modern frameworks and technologies",
+    "Design and optimize APIs, databases, and backend systems",
+    "Implement algorithms and data structures for efficient performance",
+    "Ensure system security, scalability, cloud readiness, and reliability",
+    "Collaborate with cross-functional teams for end-to-end delivery",
+    "Mentor junior engineers and maintain coding standards"
+  ],
+  "employment_type": "Full-time",
+  "remote_option": "Yes",
+
+  "scoring": {
+    "relevant_experience": {
+      "weight": 30,
+      "criteria": {
+        ">=5 years_relevant": 30,
+        "3-4 years_relevant": 22,
+        "1-2 years_relevant": 15,
+        "<1 year_relevant": 5
+      }
+    },
+
+    "salary": {
+      "weight": 15,
+      "fallback_score": 8,
+      "criteria": {
+        "<3": 15,
+        "3-6": 12,
+        "6-10": 8,
+        ">10": 5
+      }
+    },
+
+    "experience": {
+      "weight": 10,
+      "criteria": {
+        ">=8 years": 10,
+        "5-7 years": 8,
+        "3-4 years": 6,
+        "<3 years": 3
+      }
+    },
+
+    "qualification": {
+      "weight": 10,
+      "criteria": {
+        "Master's Degree in Engineering": 10,
+        "Bachelor's Degree in Engineering": 8,
+        "Other": 5
+      }
+    },
+
+    "technologies": {
+      "weight": 20,
+      "criteria": {
+        "C": 4, "C++": 4, "Java": 3, "Python": 4, "JavaScript": 4,
+        "TypeScript": 3, "HTML5": 2, "CSS3": 2, "MySQL": 4,
+        "PostgreSQL": 3, "MongoDB": 3, "Node.js": 3, "Express.js": 2,
+        "Django": 3, "Flask": 3, "Spring": 3, "Laravel": 3,
+        "ReactJS": 3, "Angular": 3, "Vue.js": 3, "Bootstrap": 2,
+        "Tailwind CSS": 2, "REST API": 3, "GraphQL": 2, "Firebase": 2,
+        "AWS": 3, "Azure": 3, "GCP": 3, "Linux": 2, "Docker": 2,
+        "Kubernetes": 2, "Webpack": 2, "TensorFlow": 3, "PyTorch": 3,
+        "Keras": 3, "OpenCV": 3, "Pandas": 2, "NumPy": 2, "Scikit-Learn": 2
+      }
+    },
+
+    "skills": {
+      "weight": 10,
+      "criteria": {
+        "Problem Solving": 4, "Data Structures": 4, "Algorithms": 4, "OOP": 3,
+        "Networking": 3, "Cyber Security": 3, "Cloud Computing": 3, "DevOps": 3,
+        "Machine Learning": 4, "Deep Learning": 4, "AI": 4,
+        "Database Management": 3, "Version Control": 2, "API Development": 3,
+        "Teamwork": 3, "Leadership": 3, "Project Management": 3,
+        "Testing & Debugging": 3
+      }
+    },
+
+    "position": {
+      "weight": 3,
+      "criteria": {
+        "Team Lead (Preferred)": 3,
+        "Individual Contributor": 2
+      }
+    },
+
+    "tools": {
+      "weight": 2,
+      "criteria": {
+        "VS Code": 1, "PyCharm": 1, "IntelliJ IDEA": 1, "Eclipse": 1,
+        "Jira": 1, "Slack": 1, "GitHub": 1, "GitLab": 1,
+        "Bitbucket": 1, "Postman": 1
+      }
+    }
+  }
+}

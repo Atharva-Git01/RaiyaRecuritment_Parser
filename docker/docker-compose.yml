@@ -1,0 +1,52 @@
+version: '3.9'
+services:
+  mysql:
+    image: mysql:8.4
+    environment:
+      MYSQL_DATABASE: saas_db
+      MYSQL_ROOT_PASSWORD: root
+    ports:
+      - '3306:3306'
+    volumes:
+      - mysql_data:/var/lib/mysql
+
+  api:
+    build:
+      context: .
+      dockerfile: Dockerfile.api
+    environment:
+      APP_SECRET_KEY: local-dev-secret
+      DB_HOST: mysql
+      DB_PORT: 3306
+      DB_USER: root
+      DB_PASSWORD: root
+      DB_NAME: saas_db
+      STORAGE_BACKEND: local
+      QUEUE_BACKEND: database
+      SCAN_BACKEND: stub_local
+      AUTO_APPLY_MIGRATIONS: 'true'
+    ports:
+      - '8000:8000'
+    depends_on:
+      - mysql
+
+  worker:
+    build:
+      context: .
+      dockerfile: Dockerfile.worker
+    environment:
+      APP_SECRET_KEY: local-dev-secret
+      DB_HOST: mysql
+      DB_PORT: 3306
+      DB_USER: root
+      DB_PASSWORD: root
+      DB_NAME: saas_db
+      STORAGE_BACKEND: local
+      QUEUE_BACKEND: database
+      SCAN_BACKEND: stub_local
+      AUTO_APPLY_MIGRATIONS: 'true'
+    depends_on:
+      - mysql
+
+volumes:
+  mysql_data:

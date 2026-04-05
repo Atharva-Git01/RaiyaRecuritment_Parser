@@ -1,0 +1,25 @@
+{
+  "final_score": 57,
+  "skills_score": 6,
+  "experience_score": 3,
+  "relevant_experience_score": 15,
+  "projects_score": 0,
+  "certificates_score": 0,
+  "tools_score": 0,
+  "technologies_score": 15,
+  "qualification_score": 8,
+  "responsibilities_score": 0,
+  "salary_score": 8,
+  "position_score": 2,
+  "notes": "Salary bands not directly comparable; fallback score applied",
+  "scoring_trace": {
+    "relevant_experience": {
+      "score_awarded": 15,
+      "weight": 30
+    },
+    "salary": {
+      "score_awarded": 8,
+      "weight": 15
+    }
+  }
+}

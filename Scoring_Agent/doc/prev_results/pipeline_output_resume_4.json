@@ -1,0 +1,43 @@
+{
+  "final_score": 60,
+  "skills_score": 3,
+  "experience_score": 3,
+  "relevant_experience_score": 15,
+  "projects_score": 2,
+  "certificates_score": 0,
+  "tools_score": 0,
+  "technologies_score": 16,
+  "qualification_score": 8,
+  "responsibilities_score": 3,
+  "salary_score": 8,
+  "position_score": 2,
+  "notes": "Good technical foundation (C/C++/Java). Relevant experience ~1 year.",
+  "scoring_trace": {
+    "relevant_experience": {
+      "years": 1.1,
+      "criteria": "1-2 years_relevant",
+      "weight": 30,
+      "score_awarded": 15
+    },
+    "technologies": {
+      "matched": [
+        "C",
+        "C++",
+        "Java",
+        "Python"
+      ],
+      "weight": 20,
+      "score_awarded": 16
+    },
+    "salary": {
+      "fallback": true,
+      "weight": 15,
+      "score_awarded": 8
+    },
+    "qualification": {
+      "matched": "B.E. IT",
+      "weight": 10,
+      "score_awarded": 8
+    }
+  }
+}

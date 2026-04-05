@@ -1,0 +1,100 @@
+{
+    "name": "Rohit Kulkarni",
+    "email": "rohit.kulkarni.ce@gmail.com",
+    "skills": [
+        "Python",
+        "C++",
+        "Java",
+        "Data Structures",
+        "Algorithms",
+        "Object Oriented Programming",
+        "Problem Solving",
+        "Database Management",
+        "API Development",
+        "Machine Learning Basics"
+    ],
+    "experience": [
+        {
+            "title": "Software Engineering Intern",
+            "company": "TechNova Solutions Pvt Ltd",
+            "start": "January 2024",
+            "end": "June 2024",
+            "description": "Worked on backend API development and database optimization for internal web applications.",
+            "responsibilities": [
+                "Developed REST APIs using Flask for internal tools.",
+                "Optimized SQL queries improving response time by 25%.",
+                "Implemented data validation and debugging fixes.",
+                "Collaborated with frontend team for API integration."
+            ]
+        }
+    ],
+    "projects": [
+        {
+            "name": "Online Code Judge System",
+            "description": "Built a web-based coding platform that evaluates user submissions using automated test cases.",
+            "technologies": [
+                "Python",
+                "Flask",
+                "MySQL",
+                "HTML",
+                "CSS",
+                "JavaScript"
+            ]
+        },
+        {
+            "name": "Student Performance Prediction",
+            "description": "Developed a machine learning model to predict student performance based on attendance and marks.",
+            "technologies": [
+                "Python",
+                "Scikit-Learn",
+                "Pandas",
+                "NumPy"
+            ]
+        },
+        {
+            "name": "Distributed Chat Application",
+            "description": "Created a socket-based multi-client chat system supporting concurrent messaging.",
+            "technologies": [
+                "Java",
+                "Socket Programming",
+                "Multithreading"
+            ]
+        }
+    ],
+    "education": [
+        {
+            "degree": "Bachelor of Engineering in Computer Engineering",
+            "institution": "Pune Institute of Computer Technology",
+            "year": "2024"
+        }
+    ],
+    "certifications": [
+        "AWS Cloud Practitioner Essentials",
+        "Data Structures and Algorithms Specialization - Coursera"
+    ],
+    "tools": [
+        "Git",
+        "GitHub",
+        "VS Code",
+        "Postman",
+        "MySQL Workbench"
+    ],
+    "technologies": [
+        "Python",
+        "C++",
+        "Java",
+        "Flask",
+        "MySQL",
+        "REST API",
+        "HTML",
+        "CSS",
+        "JavaScript",
+        "Scikit-Learn",
+        "Pandas",
+        "NumPy"
+    ],
+    "salary_expectation": {
+        "value": 650000,
+        "currency": "INR"
+    }
+}

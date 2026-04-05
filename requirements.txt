@@ -1,12 +1,123 @@
-fastapi
-uvicorn
-sentence-transformers
-python-multipart
-mysql-connector-python
-python-dotenv
-requests
-pdfplumber
-paddleocr
-tqdm
-matplotlib
-reportlab
+# ============================================================
+# requirements.txt — Full Modular Pipeline (Consolidated)
+# Generated from deep scan of all 4 pipeline folders:
+#   - modularized_resume_extraction_normalization (Pipeline 1)
+#   - phi 4                                       (Pipeline 2 / Reporting)
+#   - RAG - Evidence                              (Validation Layer)
+#   - Scoring_Agent                               (Pipeline 3)
+#
+# Install: pip install -r requirements.txt
+# ============================================================
+
+
+# ------------------------------------------------------------------
+# WEB FRAMEWORK & SERVER
+# (FastAPI server, worker, uploads)
+# ------------------------------------------------------------------
+fastapi==0.116.1
+uvicorn[standard]==0.35.0
+python-multipart==0.0.20
+
+
+# ------------------------------------------------------------------
+# DATA VALIDATION & SCHEMAS
+# ------------------------------------------------------------------
+pydantic==2.11.7
+email-validator==2.2.0
+
+
+# ------------------------------------------------------------------
+# DATABASE
+# (MySQL via saas_db.py / db_manager.py)
+# ------------------------------------------------------------------
+mysql-connector-python==9.4.0
+
+
+# ------------------------------------------------------------------
+# ENVIRONMENT & CONFIGURATION
+# ------------------------------------------------------------------
+python-dotenv==1.1.1
+
+
+# ------------------------------------------------------------------
+# HTTP / API CALLS
+# (Azure OpenAI REST calls in parser.py & ai_scorer.py)
+# ------------------------------------------------------------------
+requests==2.32.4
+
+
+# ------------------------------------------------------------------
+# AUTHENTICATION
+# (auth.py — JWT + password hashing)
+# ------------------------------------------------------------------
+PyJWT==2.10.1
+argon2-cffi==25.1.0
+
+
+# ------------------------------------------------------------------
+# AZURE CLOUD SERVICES
+# (storage, service bus, key vault, identity)
+# ------------------------------------------------------------------
+azure-storage-blob==12.26.0
+azure-servicebus==7.14.2
+azure-identity==1.24.0
+azure-keyvault-secrets==4.10.0
+
+
+# ------------------------------------------------------------------
+# PAYMENTS
+# ------------------------------------------------------------------
+stripe==13.0.1
+
+
+# ------------------------------------------------------------------
+# PDF & DOCUMENT PROCESSING
+# (Pipeline 1 extraction + reporting)
+# ------------------------------------------------------------------
+PyMuPDF==1.26.4            # fitz — PDF text extraction & page rendering
+pdfplumber==0.11.7         # Digital PDF text extraction
+pytesseract>=0.3.10        # Tesseract OCR Python wrapper
+Pillow==11.3.0             # Image handling for OCR pipeline
+tqdm>=4.66.0               # Progress bars
+reportlab==4.4.3           # PDF report generation (pdf_report.py)
+
+
+# ------------------------------------------------------------------
+# AI / ML — OCR & LANGUAGE MODELS
+# (DeepSeek OCR model + NLP scoring)
+# ------------------------------------------------------------------
+torch==2.8.0
+transformers==4.56.1
+sentence-transformers==5.1.0
+
+
+# ------------------------------------------------------------------
+# VISUALIZATION
+# ------------------------------------------------------------------
+matplotlib==3.10.5
+
+
+# ------------------------------------------------------------------
+# LANGGRAPH & LANGCHAIN
+# (Agentic pipeline orchestration)
+# ------------------------------------------------------------------
+langchain==0.3.17
+langchain-core==0.3.34
+langchain-openai==0.3.5
+langgraph==0.2.68
+langgraph-checkpoint-mysql
+
+
+# ------------------------------------------------------------------
+# NOTE: docstrange
+# Embedded locally — no pip install required.
+# Located at: modularized_resume_extraction_normalization/modules/docstrange-main/
+# ------------------------------------------------------------------
+
+
+# ------------------------------------------------------------------
+# DEV / TESTING
+# ------------------------------------------------------------------
+pytest==8.4.1
+httpx==0.28.1
+ruff==0.12.10

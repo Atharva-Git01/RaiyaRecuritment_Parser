@@ -1,0 +1,130 @@
+{
+    "name": "Atharva Sharad Ranpise",
+    "email": "asr260303@gmail.com",
+    "skills": [
+        "Python",
+        "C++",
+        "Java",
+        "SQL",
+        "MongoDB",
+        "Data Structures and Algorithms",
+        "Complexity Analysis",
+        "TensorFlow",
+        "Scikit-learn",
+        "NumPy",
+        "Pandas",
+        "OpenCV",
+        "Supervised Learning",
+        "Model Evaluation Metrics",
+        "LLM Benchmarking",
+        "Schema-Constrained Prompting",
+        "Embedding-Based Semantic Similarity",
+        "Cosine Similarity Scoring",
+        "Regex and Fuzzy Matching",
+        "Hybrid Rule-Based Validation",
+        "Weighted Scoring Algorithms",
+        "RAG Research",
+        "Vector Database Integration",
+        "Local LLM Deployment",
+        "Multi-Agent Orchestration",
+        "Ensemble Inference Systems",
+        "Flask REST APIs",
+        "Modular Architecture Design"
+    ],
+    "experience": [
+        {
+            "title": "Software Engineer – Trainee",
+            "company": "SpeedTech.ai Division, EarnWealth Solutions Pvt Ltd",
+            "start": "September 2025",
+            "end": "Present",
+            "description": "Working on AI Resume Intelligence and Candidate Scoring Platform with hybrid LLM and embedding-based architecture.",
+            "responsibilities": [
+                "Benchmarked multiple LLMs (FLAN, GPT variants, Phi, DeepSeek, Qwen) for JSON compliance, hallucination rate, and context retention.",
+                "Designed schema-constrained prompts for structured JSON extraction.",
+                "Implemented embedding-based semantic similarity using MiniLM variants.",
+                "Computed cosine similarity for JD-resume skill alignment.",
+                "Calibrated Strong/Partial/Weak classification thresholds.",
+                "Integrated regex and fuzzy matching to reduce semantic false negatives.",
+                "Designed weighted scoring matrix aligned with job priority weights.",
+                "Built multi-layer evaluation pipeline combining LLM extraction, embedding validation, rule-based verification, and weighted aggregation.",
+                "Developed modular Flask REST APIs with model-swappable backend architecture.",
+                "Led a 3-member team and owned architecture and model selection."
+            ]
+        }
+    ],
+    "projects": [
+        {
+            "name": "Multi-Model LLM Coding Agent",
+            "description": "Built a multi-stage autonomous coding agent with role-based LLM specialization for task planning, code generation, and iterative refinement.",
+            "technologies": [
+                "Qwen",
+                "DeepSeek",
+                "Python",
+                "LLM Orchestration",
+                "Prompt Engineering"
+            ]
+        },
+        {
+            "name": "Multi-LLM Council System",
+            "description": "Designed an ensemble-based inference validation system using majority voting and approval thresholds to reduce hallucinations and enforce consensus gating.",
+            "technologies": [
+                "LLMs",
+                "Ensemble Systems",
+                "Consensus Algorithms",
+                "Python"
+            ]
+        },
+        {
+            "name": "AI Resume Parsing & Scoring Prototype",
+            "description": "Developed rule-based and NLP-based resume-to-JSON extraction engine with weighted skill scoring and embedding-based validation.",
+            "technologies": [
+                "Python",
+                "MiniLM",
+                "Cosine Similarity",
+                "Regex",
+                "NLP"
+            ]
+        },
+        {
+            "name": "AI-Based Railway Travel Experience System",
+            "description": "Built supervised sentiment classification model with OpenCV-based preprocessing and integrated ML chatbot for complaint analysis.",
+            "technologies": [
+                "TensorFlow",
+                "Scikit-learn",
+                "OpenCV",
+                "NLP",
+                "Python"
+            ]
+        }
+    ],
+    "education": [
+        {
+            "degree": "Bachelor of Engineering in Computer Engineering",
+            "institution": "Sinhgad College of Engineering, Pune",
+            "year": "2025 (Expected)"
+        }
+    ],
+    "certifications": [],
+    "tools": [
+        "Git",
+        "GitHub",
+        "Ollama",
+        "n8n",
+        "Flask",
+        "MySQL",
+        "MongoDB"
+    ],
+    "technologies": [
+        "LLM Systems",
+        "Embedding Models",
+        "Vector Databases",
+        "RAG",
+        "Multi-Agent Systems",
+        "Hybrid AI Pipelines",
+        "REST APIs"
+    ],
+    "salary_expectation": {
+        "value": "800000",
+        "currency": "INR"
+    }
+}

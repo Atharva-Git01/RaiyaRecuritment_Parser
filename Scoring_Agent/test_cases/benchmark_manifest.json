@@ -1,0 +1,338 @@
+[
+  {
+    "case_id": "5_perfect_lead_ce",
+    "resume_path": "uploads/parsed resumes/5_perfect_lead.json",
+    "jd_path": "uploads/jd/job_description.json",
+    "case_type": "archetype_strong_match",
+    "expected_final_band": { "min": 65, "max": 95 },
+    "expected_component_bands": {
+      "experience_score": { "min": 75, "max": 85 },
+      "qualification_score": { "min": 75, "max": 85 },
+      "position_score": { "min": 90, "max": 100 }
+    },
+    "expected_rank_bucket": "top",
+    "must_match_evidence": [
+      {
+        "score_key": "technologies_score",
+        "required_terms": ["Python", "AWS", "Docker"],
+        "forbidden_terms": [],
+        "notes": "Strong technology score must be anchored to role descriptions."
+      }
+    ],
+    "must_not_match_evidence": [],
+    "expected_overrides": ["experience_score", "qualification_score", "salary_score"],
+    "review_owner": "recruiting+engineering",
+    "review_status": "seeded_from_existing_tests",
+    "notes": "Top-tier archetype used for ranking and strong-fit validation."
+  },
+  {
+    "case_id": "1_senior_java_mismatch_ce",
+    "resume_path": "uploads/parsed resumes/1_senior_java_mismatch.json",
+    "jd_path": "uploads/jd/job_description.json",
+    "case_type": "archetype_legacy_mismatch",
+    "expected_final_band": { "min": 35, "max": 85 },
+    "expected_component_bands": {
+      "experience_score": { "min": 100, "max": 100 },
+      "salary_score": { "min": 20, "max": 50 }
+    },
+    "expected_rank_bucket": "middle",
+    "must_match_evidence": [],
+    "must_not_match_evidence": [
+      {
+        "score_key": "technologies_score",
+        "required_terms": [],
+        "forbidden_terms": ["Python", "Docker", "Kubernetes", "AWS"],
+        "notes": "Technology score should not be high if evidence is absent from experience."
+      }
+    ],
+    "expected_overrides": ["salary_score"],
+    "review_owner": "recruiting+engineering",
+    "review_status": "seeded_from_existing_tests",
+    "notes": "Mismatch archetype expected to expose technology over-scoring."
+  },
+  {
+    "case_id": "2_junior_prodigy_ce",
+    "resume_path": "uploads/parsed resumes/2_junior_prodigy.json",
+    "jd_path": "uploads/jd/job_description.json",
+    "case_type": "archetype_junior_high_signal",
+    "expected_final_band": { "min": 20, "max": 75 },
+    "expected_component_bands": {
+      "experience_score": { "min": 25, "max": 35 },
+      "qualification_score": { "min": 45, "max": 55 },
+      "salary_score": { "min": 20, "max": 50 }
+    },
+    "expected_rank_bucket": "middle",
+    "must_match_evidence": [
+      {
+        "score_key": "technologies_score",
+        "required_terms": ["Python", "Docker", "Azure"],
+        "forbidden_terms": [],
+        "notes": "Partial technology match should be evidenced in experience descriptions."
+      }
+    ],
+    "must_not_match_evidence": [],
+    "expected_overrides": ["experience_score", "qualification_score", "salary_score"],
+    "review_owner": "recruiting+engineering",
+    "review_status": "seeded_from_existing_tests",
+    "notes": "Junior profile with strong technical evidence but low tenure."
+  },
+  {
+    "case_id": "3_phd_academic_ce",
+    "resume_path": "uploads/parsed resumes/3_phd_academic.json",
+    "jd_path": "uploads/jd/job_description.json",
+    "case_type": "archetype_academic_mismatch",
+    "expected_final_band": { "min": 15, "max": 55 },
+    "expected_component_bands": {
+      "technologies_score": { "min": 0, "max": 10 },
+      "skills_score": { "min": 0, "max": 15 }
+    },
+    "expected_rank_bucket": "low",
+    "must_match_evidence": [],
+    "must_not_match_evidence": [
+      {
+        "score_key": "skills_score",
+        "required_terms": [],
+        "forbidden_terms": ["Problem Solving", "Cloud Computing", "DevOps"],
+        "notes": "Academic profile should not inherit engineering skill credit without explicit evidence."
+      }
+    ],
+    "expected_overrides": [],
+    "review_owner": "recruiting+engineering",
+    "review_status": "seeded_from_existing_tests",
+    "notes": "Core low-fit archetype for wrong-domain detection."
+  },
+  {
+    "case_id": "4_career_switcher_ce",
+    "resume_path": "uploads/parsed resumes/4_career_switcher.json",
+    "jd_path": "uploads/jd/job_description.json",
+    "case_type": "archetype_career_switcher",
+    "expected_final_band": { "min": 15, "max": 35 },
+    "expected_component_bands": {
+      "relevant_experience_score": { "min": 0, "max": 25 },
+      "salary_score": { "min": 75, "max": 100 }
+    },
+    "expected_rank_bucket": "bottom",
+    "must_match_evidence": [],
+    "must_not_match_evidence": [
+      {
+        "score_key": "skills_score",
+        "required_terms": [],
+        "forbidden_terms": ["Python", "AWS", "Docker"],
+        "notes": "Short internship should not create broad engineering-skill credit."
+      }
+    ],
+    "expected_overrides": ["experience_score", "qualification_score", "salary_score"],
+    "review_owner": "recruiting+engineering",
+    "review_status": "seeded_from_existing_tests",
+    "notes": "Bottom-tier archetype for rank-order gating."
+  },
+  {
+    "case_id": "3_phd_academic_ds",
+    "resume_path": "uploads/parsed resumes/3_phd_academic.json",
+    "jd_path": "uploads/jd/job_description_data_scientist.json",
+    "case_type": "cross_jd_differentiation",
+    "expected_final_band": { "min": 35, "max": 95 },
+    "expected_component_bands": {},
+    "expected_rank_bucket": "relative_higher_than_ce",
+    "must_match_evidence": [],
+    "must_not_match_evidence": [],
+    "expected_overrides": [],
+    "review_owner": "recruiting+engineering",
+    "review_status": "seeded_from_existing_tests",
+    "notes": "Used only for cross-JD differentiation checks."
+  },
+  {
+    "case_id": "minimal_resume_sparse",
+    "resume_path": "generated://minimal_resume",
+    "jd_path": "uploads/jd/job_description.json",
+    "case_type": "adversarial_sparse_resume",
+    "expected_final_band": { "min": 0, "max": 5 },
+    "expected_component_bands": {},
+    "expected_rank_bucket": "bottom",
+    "must_match_evidence": [],
+    "must_not_match_evidence": [],
+    "expected_overrides": [],
+    "review_owner": "engineering",
+    "review_status": "needs_human_review",
+    "notes": "Synthetic sparse case covered by mock-based edge tests."
+  },
+  {
+    "case_id": "skills_only_inflation",
+    "resume_path": "generated://skills_only_candidate",
+    "jd_path": "uploads/jd/job_description.json",
+    "case_type": "adversarial_skill_inflation",
+    "expected_final_band": { "min": 0, "max": 50 },
+    "expected_component_bands": {},
+    "expected_rank_bucket": "low",
+    "must_match_evidence": [],
+    "must_not_match_evidence": [
+      {
+        "score_key": "skills_score",
+        "required_terms": [],
+        "forbidden_terms": ["Python", "AWS", "Docker"],
+        "notes": "Listed skills alone should not justify a strong score."
+      }
+    ],
+    "expected_overrides": [],
+    "review_owner": "engineering",
+    "review_status": "needs_human_review",
+    "notes": "Synthetic case from edge-suite fixtures."
+  },
+  {
+    "case_id": "future_dates_candidate",
+    "resume_path": "generated://future_dates_candidate",
+    "jd_path": "uploads/jd/job_description.json",
+    "case_type": "adversarial_future_dates",
+    "expected_final_band": { "min": 0, "max": 60 },
+    "expected_component_bands": {},
+    "expected_rank_bucket": "low",
+    "must_match_evidence": [],
+    "must_not_match_evidence": [],
+    "expected_overrides": [],
+    "review_owner": "engineering",
+    "review_status": "needs_human_review",
+    "notes": "Synthetic case ensuring date handling does not crash or inflate experience."
+  },
+  {
+    "case_id": "extreme_salary_candidate",
+    "resume_path": "generated://extreme_salary_candidate",
+    "jd_path": "uploads/jd/job_description.json",
+    "case_type": "adversarial_salary_extreme",
+    "expected_final_band": { "min": 0, "max": 100 },
+    "expected_component_bands": {
+      "salary_score": { "min": 0, "max": 40 }
+    },
+    "expected_rank_bucket": "any",
+    "must_match_evidence": [],
+    "must_not_match_evidence": [],
+    "expected_overrides": ["salary_score"],
+    "review_owner": "engineering",
+    "review_status": "needs_human_review",
+    "notes": "Synthetic salary edge case mapped to deterministic override behavior."
+  },
+  {
+    "case_id": "zero_salary_candidate",
+    "resume_path": "generated://zero_salary_candidate",
+    "jd_path": "uploads/jd/job_description.json",
+    "case_type": "adversarial_zero_salary",
+    "expected_final_band": { "min": 0, "max": 100 },
+    "expected_component_bands": {},
+    "expected_rank_bucket": "any",
+    "must_match_evidence": [],
+    "must_not_match_evidence": [],
+    "expected_overrides": [],
+    "review_owner": "engineering",
+    "review_status": "needs_human_review",
+    "notes": "Synthetic salary case that should not crash or produce malformed output."
+  },
+  {
+    "case_id": "overlapping_roles_candidate",
+    "resume_path": "generated://overlapping_roles_candidate",
+    "jd_path": "uploads/jd/job_description.json",
+    "case_type": "adversarial_overlapping_experience",
+    "expected_final_band": { "min": 0, "max": 100 },
+    "expected_component_bands": {},
+    "expected_rank_bucket": "any",
+    "must_match_evidence": [
+      {
+        "score_key": "technologies_score",
+        "required_terms": ["Python", "AWS"],
+        "forbidden_terms": [],
+        "notes": "Overlapping roles still need explicit technology evidence."
+      }
+    ],
+    "must_not_match_evidence": [],
+    "expected_overrides": ["experience_score"],
+    "review_owner": "engineering",
+    "review_status": "needs_human_review",
+    "notes": "Synthetic overlap case used to verify total-year merge logic."
+  },
+  {
+    "case_id": "vague_descriptions_candidate",
+    "resume_path": "generated://vague_descriptions_candidate",
+    "jd_path": "uploads/jd/job_description.json",
+    "case_type": "adversarial_vague_evidence",
+    "expected_final_band": { "min": 0, "max": 45 },
+    "expected_component_bands": {},
+    "expected_rank_bucket": "low",
+    "must_match_evidence": [],
+    "must_not_match_evidence": [
+      {
+        "score_key": "skills_score",
+        "required_terms": [],
+        "forbidden_terms": ["Python", "AWS", "Docker"],
+        "notes": "Vague experience text should not permit strong skills or technology scores."
+      }
+    ],
+    "expected_overrides": [],
+    "review_owner": "engineering",
+    "review_status": "needs_human_review",
+    "notes": "Synthetic vague profile for evidence-validity gating."
+  },
+  {
+    "case_id": "academic_only_candidate",
+    "resume_path": "generated://academic_only_candidate",
+    "jd_path": "uploads/jd/job_description.json",
+    "case_type": "adversarial_academic_only",
+    "expected_final_band": { "min": 0, "max": 45 },
+    "expected_component_bands": {},
+    "expected_rank_bucket": "low",
+    "must_match_evidence": [],
+    "must_not_match_evidence": [
+      {
+        "score_key": "technologies_score",
+        "required_terms": [],
+        "forbidden_terms": ["Python", "AWS", "Docker"],
+        "notes": "Academic-only project language should not count as production stack evidence without explicit work usage."
+      }
+    ],
+    "expected_overrides": [],
+    "review_owner": "engineering",
+    "review_status": "needs_human_review",
+    "notes": "Synthetic academic-only resume for wrong-domain behavior."
+  },
+  {
+    "case_id": "legacy_stack_candidate",
+    "resume_path": "generated://legacy_stack_candidate",
+    "jd_path": "uploads/jd/job_description.json",
+    "case_type": "adversarial_legacy_stack",
+    "expected_final_band": { "min": 10, "max": 70 },
+    "expected_component_bands": {},
+    "expected_rank_bucket": "middle",
+    "must_match_evidence": [],
+    "must_not_match_evidence": [
+      {
+        "score_key": "technologies_score",
+        "required_terms": [],
+        "forbidden_terms": ["Docker", "AWS", "Kubernetes"],
+        "notes": "Legacy-only technologies should not inflate modern stack matching."
+      }
+    ],
+    "expected_overrides": [],
+    "review_owner": "engineering",
+    "review_status": "needs_human_review",
+    "notes": "Synthetic legacy-stack case that mirrors common over-scoring patterns."
+  },
+  {
+    "case_id": "career_switcher_variant",
+    "resume_path": "generated://career_switcher_variant",
+    "jd_path": "uploads/jd/job_description.json",
+    "case_type": "adversarial_switcher_variant",
+    "expected_final_band": { "min": 0, "max": 35 },
+    "expected_component_bands": {},
+    "expected_rank_bucket": "bottom",
+    "must_match_evidence": [],
+    "must_not_match_evidence": [
+      {
+        "score_key": "skills_score",
+        "required_terms": [],
+        "forbidden_terms": ["Python", "AWS", "Docker"],
+        "notes": "Recent bootcamp exposure alone should not look like production engineering fit."
+      }
+    ],
+    "expected_overrides": ["salary_score"],
+    "review_owner": "engineering",
+    "review_status": "needs_human_review",
+    "notes": "Synthetic switcher variant used to harden rank-order and explanation checks."
+  }
+]

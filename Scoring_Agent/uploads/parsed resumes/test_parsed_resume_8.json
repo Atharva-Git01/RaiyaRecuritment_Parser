@@ -1,0 +1,93 @@
+{
+    "name": "Nikhil Patil",
+    "email": "nikhil.patil.sales@gmail.com",
+    "skills": [
+        "B2B Sales",
+        "Technical Solution Selling",
+        "Client Relationship Management",
+        "Product Demonstrations",
+        "Requirement Analysis",
+        "CRM Management",
+        "Python (Foundational)",
+        "SQL Basics",
+        "API Understanding",
+        "Problem Solving"
+    ],
+    "experience": [
+        {
+            "title": "Senior Sales Executive",
+            "company": "CloudBridge Technologies Pvt Ltd",
+            "start": "July 2023",
+            "end": "Present",
+            "description": "Handling enterprise SaaS sales and client onboarding for cloud-based workflow automation platform.",
+            "responsibilities": [
+                "Managed B2B sales pipeline and closed mid-market SaaS deals.",
+                "Conducted product demos tailored to client technical requirements.",
+                "Collaborated with engineering team to scope integrations and deployment timelines.",
+                "Maintained CRM records and monitored customer success metrics."
+            ]
+        },
+        {
+            "title": "Sales Associate",
+            "company": "DataSprint Solutions",
+            "start": "June 2021",
+            "end": "June 2023",
+            "description": "Worked in inside sales for analytics software products and supported pre-sales technical discussions.",
+            "responsibilities": [
+                "Qualified leads and coordinated technical discovery calls.",
+                "Assisted in preparing technical proposals and solution documents.",
+                "Worked with implementation team during onboarding phase.",
+                "Supported customer queries related to API integrations."
+            ]
+        }
+    ],
+    "projects": [
+        {
+            "name": "Personal Expense Tracker",
+            "description": "Developed a Python-based expense tracking application during college to store and analyze spending data.",
+            "technologies": [
+                "Python",
+                "SQLite",
+                "Tkinter"
+            ]
+        },
+        {
+            "name": "Student Result Analysis Tool",
+            "description": "Built a small data analysis script to process CSV student results and generate performance summaries.",
+            "technologies": [
+                "Python",
+                "Pandas",
+                "Matplotlib"
+            ]
+        }
+    ],
+    "education": [
+        {
+            "degree": "Bachelor of Engineering in Information Technology",
+            "institution": "Mumbai University",
+            "year": "2021"
+        }
+    ],
+    "certifications": [
+        "Certified SaaS Sales Professional",
+        "SQL for Data Analysis - Coursera"
+    ],
+    "tools": [
+        "Salesforce",
+        "HubSpot",
+        "MS Excel",
+        "Postman",
+        "GitHub"
+    ],
+    "technologies": [
+        "Python",
+        "SQL",
+        "REST API",
+        "CRM Platforms",
+        "Pandas"
+    ],
+    "salary_expectation": {
+        "value": 1200000,
+        "currency": "INR"
+    }
+}
