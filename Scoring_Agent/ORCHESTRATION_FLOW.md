@@ -1,21 +1,10 @@
-          │ APPROVED        │ REJECTED
-          ▼                 ▼
-┌─────────────────────────┐  ┌─────────────────┐
-│ STATE: RAG_VALIDATION   │  │  STATE: FAILED  │
-│  ┌──────────────────┐   │  │  Store Error    │
-│  │ RAG Validation   │   │  └─────────────────┘
-│  │ Layer            │   │
-│  │ • Semantic Check │   │
-│  │ • Ground Truth   │   │
-│  │ • Evidence Gen   │   │
-│  └──────────────────┘   │
-└────────┬────────────────┘
-          │                 │
-          │ PASSED          │ FAILED
-          ▼                 ▼
-┌─────────────────┐  ┌─────────────────┐
-│ STATE: COMPLETED│  │  STATE: FAILED  │
-│ Success = True  │  │  Store Error    │
-└────────┬────────┘  └─────────────────┘
-          │
-          ▼
+- ✅ **Fail-Fast**: Invalid input stops execution immediately
+- ✅ **Closed World**: Only whitelisted transitions allowed
+- ✅ **Immutable History**: Full audit trail of state changes
+- ✅ **Contract Enforcement**: Pydantic validation at boundaries
+- ✅ **Retry Logic**: 3 attempts for AI calls
+- ✅ **Score Recomputation**: AI cannot hallucinate final_score
+- ✅ **Evidence-Based Constraints**: Rules applied from config
+- ✅ **Timeout Protection**: 180s max per AI request
+- ✅ **RAG Validation**: Semantic ground truth with MAE/RMSE metrics
+- ✅ **Historical Indexing**: Evidence stored in Pinecone for retrieval
