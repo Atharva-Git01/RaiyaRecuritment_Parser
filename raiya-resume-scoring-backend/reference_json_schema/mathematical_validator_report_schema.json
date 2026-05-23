@@ -1,0 +1,85 @@
+{
+    "type": "object",
+    "description": "Output of rag_validation Step 4. Ground truth is label_weighted_coverage (falls back to weighted_coverage for legacy JDs). MAE is importance-weighted using Phase 9 section_importance_factor. Cross-references JD Phase 13 mathematical_validation.",
+    "properties": {
+        "section_accuracy": {
+            "type": "object",
+            "description": "Per-section accuracy percentage comparing AI (hybrid × weight) against ground truth (label_weighted_coverage × weight)",
+            "additionalProperties": {
+                "type": "number"
+            }
+        },
+        "ground_truth_scores": {
+            "type": "object",
+            "description": "Deterministic ground truth score per section = label_weighted_coverage × weight / 100",
+            "additionalProperties": {
+                "type": "number"
+            }
+        },
+        "ai_scores": {
+            "type": "object",
+            "description": "AI-generated score per section = hybrid_score × weight",
+            "additionalProperties": {
+                "type": "number"
+            }
+        },
+        "global_metrics": {
+            "type": "object",
+            "properties": {
+                "ground_truth_final_score": {
+                    "type": "number",
+                    "description": "Sum of all ground_truth_scores"
+                },
+                "ai_final_score": {
+                    "type": "number",
+                    "description": "Sum of all ai_scores"
+                },
+                "overall_accuracy": {
+                    "type": "number",
+                    "description": "max(0, 100 − flat_mae). Passes when ≥ 80."
+                },
+                "is_valid": {
+                    "type": "boolean",
+                    "description": "overall_accuracy ≥ 80"
+                },
+                "mae": {
+                    "type": "number",
+                    "description": "Flat Mean Absolute Error: |ai_total − gt_total|"
+                },
+                "importance_weighted_mae": {
+                    "type": "number",
+                    "description": "Importance-weighted MAE: Σ(section_importance_factor × |ai − gt|) / Σ(section_importance_factor). Uses Phase 9 factors. Falls back to flat MAE when no importance factors are present."
+                },
+                "rmse": {
+                    "type": "number",
+                    "description": "Root Mean Square Error (currently equal to flat MAE)"
+                },
+                "total_weight_checked": {
+                    "type": "number",
+                    "description": "Sum of all section weights processed"
+                },
+                "jd_weights_math_valid": {
+                    "type": "boolean",
+                    "description": "Cross-reference of jd_weights.weighting_metadata.mathematical_validation.is_valid (Phase 13 output). False means the JD weight pipeline itself flagged a math error — propagated to rag_final_verdict and score_adjustment."
+                }
+            },
+            "required": [
+                "ground_truth_final_score",
+                "ai_final_score",
+                "overall_accuracy",
+                "is_valid",
+                "mae",
+                "importance_weighted_mae",
+                "rmse",
+                "total_weight_checked",
+                "jd_weights_math_valid"
+            ]
+        }
+    },
+    "required": [
+        "section_accuracy",
+        "ground_truth_scores",
+        "ai_scores",
+        "global_metrics"
+    ]
+}

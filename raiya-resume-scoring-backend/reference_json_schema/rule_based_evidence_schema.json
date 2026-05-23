@@ -1,0 +1,226 @@
+{
+    "type": "object",
+    "description": "Output of rag_validation Step 5. Contains per-section evidence with 5 rule detectors. coverage_pct is label_weighted_coverage (not raw hybrid score). R001 threshold scales with section_importance_factor. R005 fires when mandatory/critical criteria are absent.",
+    "properties": {
+        "evidence_id": {
+            "type": "string",
+            "description": "Short evidence identifier: EVD_{jd_id[:8]}"
+        },
+        "timestamp": {
+            "type": "string",
+            "format": "date-time"
+        },
+        "job_id": {
+            "type": "string"
+        },
+        "job_title": {
+            "type": "string"
+        },
+        "section_evidences": {
+            "type": "array",
+            "items": {
+                "$ref": "#/definitions/section_evidence"
+            }
+        },
+        "overall_summary": {
+            "$ref": "#/definitions/overall_summary"
+        },
+        "rule_applications": {
+            "$ref": "#/definitions/rule_applications"
+        }
+    },
+    "required": [
+        "evidence_id",
+        "timestamp",
+        "job_id",
+        "job_title",
+        "section_evidences",
+        "overall_summary",
+        "rule_applications"
+    ],
+    "definitions": {
+        "criterion_evidence": {
+            "type": "object",
+            "description": "A matched criterion entry. criterion_weight is the enterprise criteria score (0–100).",
+            "properties": {
+                "criterion": {
+                    "type": "string"
+                },
+                "criterion_weight": {
+                    "type": "number",
+                    "description": "Enterprise: criteria score. Legacy: original numeric value."
+                },
+                "matched": {
+                    "type": "boolean"
+                },
+                "evidence": {
+                    "type": "string"
+                }
+            },
+            "required": [
+                "criterion",
+                "matched"
+            ]
+        },
+        "action_applied": {
+            "type": "object",
+            "properties": {
+                "explanation": {
+                    "type": "string"
+                },
+                "score_after": {
+                    "type": "number"
+                }
+            },
+            "required": [
+                "explanation",
+                "score_after"
+            ]
+        },
+        "rule_entry": {
+            "type": "object",
+            "description": "A fired rule instance. rule_id is one of R001–R005.",
+            "properties": {
+                "rule_id": {
+                    "type": "string",
+                    "description": "R001_LOW_COVERAGE | R002_OVERESTIMATION | R003_DENSE_BM25_DIVERGENCE | R004_NO_EXACT_HIGH_HYBRID | R005_MANDATORY_UNMATCHED",
+                    "enum": [
+                        "R001_LOW_COVERAGE",
+                        "R002_OVERESTIMATION",
+                        "R003_DENSE_BM25_DIVERGENCE",
+                        "R004_NO_EXACT_HIGH_HYBRID",
+                        "R005_MANDATORY_UNMATCHED"
+                    ]
+                },
+                "description": {
+                    "type": "string"
+                },
+                "fired": {
+                    "type": "boolean"
+                },
+                "condition_evaluation": {
+                    "type": "string",
+                    "description": "Human-readable condition that caused the rule to fire, e.g. 'coverage=15.3% < 23%' or 'mandatory_unmatched=[Python, Docker]'"
+                },
+                "action_applied": {
+                    "$ref": "#/definitions/action_applied"
+                }
+            },
+            "required": [
+                "rule_id",
+                "description",
+                "fired",
+                "condition_evaluation",
+                "action_applied"
+            ]
+        },
+        "section_evidence": {
+            "type": "object",
+            "properties": {
+                "section_name": {
+                    "type": "string"
+                },
+                "section_weight": {
+                    "type": "number"
+                },
+                "rule_type": {
+                    "type": "string",
+                    "enum": ["hybrid_search_validated"]
+                },
+                "criteria_evaluated": {
+                    "type": "array",
+                    "items": {
+                        "$ref": "#/definitions/criterion_evidence"
+                    }
+                },
+                "total_criteria": {
+                    "type": "integer"
+                },
+                "matched_count": {
+                    "type": "integer"
+                },
+                "coverage_pct": {
+                    "type": "number",
+                    "description": "label_weighted_coverage for this section: Σ(matched multipliers) / Σ(all multipliers) × 100. Falls back to hybrid_score × 100 for legacy plain-number criteria."
+                },
+                "ai_score": {
+                    "type": "number"
+                },
+                "ground_truth_score": {
+                    "type": "number"
+                },
+                "score_delta": {
+                    "type": "number",
+                    "description": "ai_score − ground_truth_score"
+                },
+                "verdict": {
+                    "type": "string",
+                    "enum": [
+                        "ACCURATE",
+                        "OVERESTIMATED",
+                        "UNDERESTIMATED"
+                    ]
+                },
+                "applied_rules": {
+                    "type": "array",
+                    "items": {
+                        "$ref": "#/definitions/rule_entry"
+                    }
+                }
+            },
+            "required": [
+                "section_name",
+                "section_weight",
+                "rule_type",
+                "criteria_evaluated",
+                "coverage_pct",
+                "ai_score",
+                "ground_truth_score",
+                "score_delta",
+                "verdict",
+                "applied_rules"
+            ]
+        },
+        "overall_summary": {
+            "type": "object",
+            "properties": {
+                "total_sections": {
+                    "type": "integer"
+                },
+                "sections_with_overestimation": {
+                    "type": "integer"
+                },
+                "sections_with_underestimation": {
+                    "type": "integer"
+                },
+                "sections_accurate": {
+                    "type": "integer"
+                },
+                "ai_final_score": {
+                    "type": "number"
+                },
+                "rule_based_final_score": {
+                    "type": "number"
+                },
+                "delta": {
+                    "type": "number"
+                }
+            }
+        },
+        "rule_applications": {
+            "type": "object",
+            "properties": {
+                "total_rules_generated": {
+                    "type": "integer"
+                },
+                "rule_log": {
+                    "type": "array",
+                    "description": "Flat list of all fired rules across all sections",
+                    "items": {
+                        "$ref": "#/definitions/rule_entry"
+                    }
+                }
+            }
+        }
+    }
+}

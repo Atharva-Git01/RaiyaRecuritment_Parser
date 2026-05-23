@@ -1,0 +1,60 @@
+{
+  "name": "string (Required)",
+  "email": "string (Optional)",
+  "skills": [
+    "string",
+    "string"
+  ],
+  "experience": [
+    {
+      "title": "string",
+      "company": "string",
+      "start": "string (ISO8601 or 'Month Year')",
+      "end": "string",
+      "description": "string (Optional)",
+      "responsibilities": [
+        "string"
+      ]
+    }
+  ],
+  "projects": [
+    {
+      "name": "string",
+      "description": "string",
+      "technologies": [
+        "string"
+      ]
+    }
+  ],
+  "education": [
+    {
+      "degree": "string",
+      "institution": "string",
+      "start_year": "string or int",
+      "end_year" : "string or int",
+      "field_of_study": "string (Optional)",
+      "cgpa": "string (Optional)",
+      
+      "institute_location": "string (Optional)"
+
+    }
+  ],
+
+  "candidate_achievements": [
+    "string"
+  ],
+
+  "certifications": [
+    "string"
+  ],
+  "tools": [
+    "string"
+  ],
+  "technologies": [
+    "string"
+  ],
+  "salary_expectation": {
+    "value": "string or number",
+    "currency": "string"
+  }
+}

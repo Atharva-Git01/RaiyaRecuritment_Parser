@@ -1,0 +1,107 @@
+{
+  "job_title": "Aspiring Engineer Intern",
+  "experience": "Not specified",
+  "qualification": "BE/BTech-Computer Science, AI/ML/DS/IT, BSc CS, BCA/MCA/M-Tech/BBA CA, MSc CS",
+  "technologies": [],
+  "relevant_experience": [],
+  "skills": [
+    "clean coding",
+    "technical skills",
+    "creative thinking",
+    "high-quality standards",
+    "scalability",
+    "performance",
+    "maintainability",
+    "verbal and written communication",
+    "problem-solving",
+    "work ethic",
+    "eagerness to learn",
+    "basic knowledge of coding"
+  ],
+  "tools": [],
+  "location": "Pune, Maharashtra",
+  "position": "entry_level",
+  "job_description": "Aspiring engineers with a passion for clean coding looking to kickstart their careers in software development.",
+  "responsibilities": [
+    "Participate in a structured training program focused on technical tracks",
+    "Participate in workshops, seminars, and interactive sessions designed to enhance technical skills and creative thinking",
+    "Write, test, and maintain code that adheres to high-quality standards and follows best practices for scalability, performance, and maintainability"
+  ],
+  "employment_type": "internship",
+  "work_mode": {
+    "remote_option": false,
+    "work_from_office": true,
+    "hybrid": false
+  },
+  "scoring": {
+    "relevant_experience": {
+      "weight": 20.0,
+      "criteria": {
+        ">=5 years_relevant": 0.0,
+        "3-4 years_relevant": 0.0,
+        "1-2 years_relevant": 0.0,
+        "<1 year_relevant": 80.0
+      }
+    },
+    "experience": {
+      "weight": 10.0,
+      "criteria": {
+        ">=8 years": 0.0,
+        "5-7 years": 0.0,
+        "3-4 years": 0.0,
+        "<3 years": 80.0
+      }
+    },
+    "qualification": {
+      "weight": 30.0,
+      "criteria": {
+        "Masters": 50.0,
+        "Bachelors": 80.0,
+        "Diploma": 0.0
+      }
+    },
+    "technologies": {
+      "weight": 10.0,
+      "criteria": {}
+    },
+    "skills": {
+      "weight": 20.0,
+      "criteria": {
+        "clean coding": 80.0,
+        "technical skills": 70.0,
+        "creative thinking": 60.0,
+        "high-quality standards": 70.0,
+        "scalability": 60.0,
+        "performance": 60.0,
+        "maintainability": 60.0,
+        "verbal and written communication": 70.0,
+        "problem-solving": 80.0,
+        "work ethic": 70.0,
+        "eagerness to learn": 70.0,
+        "basic knowledge of coding": 80.0
+      }
+    },
+    "position": {
+      "weight": 5.0,
+      "criteria": {
+        "senior_level": 0.0,
+        "mid_level": 0.0,
+        "entry_level": 80.0
+      }
+    },
+    "tools": {
+      "weight": 5.0,
+      "criteria": {}
+    }
+  },
+  "salary": {
+    "weight": 0.0,
+    "fallback_score": 50.0,
+    "criteria_based_on_salary_expectation": {
+      "3-6": 0.0,
+      "6-10": 0.0,
+      ">10": 0.0
+    }
+  },
+  "jd_content_hash": "06660ffac838bb158c9da2a30a2059db80b3e40af78f5038c0f2907927901cd7"
+}

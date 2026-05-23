@@ -1,0 +1,312 @@
+{
+  "skills": {
+    "weight": 10,
+    "min_score": 50,
+    "max_score": 100,
+    "allowed_scores": [
+      50,
+      75,
+      100
+    ],
+    "criteria": {
+      "Problem Solving": 100,
+      "Data Structures": 100,
+      "Algorithms": 100,
+      "OOP": 75,
+      "Networking": 75,
+      "Cyber Security": 75,
+      "Cloud Computing": 75,
+      "DevOps": 75,
+      "Machine Learning": 100,
+      "Deep Learning": 100,
+      "AI": 100,
+      "Database Management": 75,
+      "Version Control": 50,
+      "API Development": 75,
+      "Teamwork": 75,
+      "Leadership": 75,
+      "Project Management": 75,
+      "Testing & Debugging": 75
+    },
+    "jd_items": [
+      "Problem Solving",
+      "Data Structures",
+      "Algorithms",
+      "OOP",
+      "Networking",
+      "Cyber Security",
+      "Cloud Computing",
+      "DevOps",
+      "Machine Learning",
+      "Deep Learning",
+      "AI",
+      "Database Management",
+      "Version Control",
+      "API Development",
+      "Teamwork",
+      "Leadership",
+      "Project Management",
+      "Testing & Debugging"
+    ],
+    "required": true,
+    "description": "Section 'skills' (weight=10): score must be one of [50, 75, 100]. JD defines 18 item(s) in this section."
+  },
+  "experience": {
+    "weight": 10,
+    "min_score": 30,
+    "max_score": 100,
+    "allowed_scores": [
+      30,
+      60,
+      80,
+      100
+    ],
+    "criteria": {
+      ">=8 years": 100,
+      "5-7 years": 80,
+      "3-4 years": 60,
+      "<3 years": 30
+    },
+    "jd_items": [],
+    "required": true,
+    "description": "Section 'experience' (weight=10): score must be one of [30, 60, 80, 100]. JD defines 0 item(s) in this section."
+  },
+  "relevant_experience": {
+    "weight": 30,
+    "min_score": 17,
+    "max_score": 100,
+    "allowed_scores": [
+      17,
+      50,
+      73,
+      100
+    ],
+    "criteria": {
+      ">=5 years_relevant": 100,
+      "3-4 years_relevant": 73,
+      "1-2 years_relevant": 50,
+      "<1 year_relevant": 17
+    },
+    "jd_items": [],
+    "required": true,
+    "description": "Section 'relevant_experience' (weight=30): score must be one of [17, 50, 73, 100]. JD defines 0 item(s) in this section."
+  },
+  "projects": {
+    "weight": 0,
+    "min_score": 0,
+    "max_score": 0,
+    "allowed_scores": [],
+    "criteria": {},
+    "jd_items": [],
+    "required": false,
+    "description": "Section 'projects' has no scoring criteria (weight=0). Score must be 0."
+  },
+  "certificates": {
+    "weight": 0,
+    "min_score": 0,
+    "max_score": 0,
+    "allowed_scores": [],
+    "criteria": {},
+    "jd_items": [],
+    "required": false,
+    "description": "Section 'certificates' has no scoring criteria (weight=0). Score must be 0."
+  },
+  "tools": {
+    "weight": 2,
+    "min_score": 100,
+    "max_score": 100,
+    "allowed_scores": [
+      100
+    ],
+    "criteria": {
+      "VS Code": 100,
+      "PyCharm": 100,
+      "IntelliJ IDEA": 100,
+      "Eclipse": 100,
+      "Jira": 100,
+      "Slack": 100,
+      "GitHub": 100,
+      "GitLab": 100,
+      "Bitbucket": 100,
+      "Postman": 100
+    },
+    "jd_items": [
+      "VS Code",
+      "PyCharm",
+      "IntelliJ IDEA",
+      "Eclipse",
+      "Jira",
+      "Slack",
+      "GitHub",
+      "GitLab",
+      "Bitbucket",
+      "Postman"
+    ],
+    "required": true,
+    "description": "Section 'tools' (weight=2): score must be one of [100]. JD defines 10 item(s) in this section."
+  },
+  "technologies": {
+    "weight": 20,
+    "min_score": 50,
+    "max_score": 100,
+    "allowed_scores": [
+      50,
+      75,
+      100
+    ],
+    "criteria": {
+      "C": 100,
+      "C++": 100,
+      "Java": 75,
+      "Python": 100,
+      "JavaScript": 100,
+      "TypeScript": 75,
+      "HTML5": 50,
+      "CSS3": 50,
+      "MySQL": 100,
+      "PostgreSQL": 75,
+      "MongoDB": 75,
+      "Node.js": 75,
+      "Express.js": 50,
+      "Django": 75,
+      "Flask": 75,
+      "Spring": 75,
+      "Laravel": 75,
+      "ReactJS": 75,
+      "Angular": 75,
+      "Vue.js": 75,
+      "Bootstrap": 50,
+      "Tailwind CSS": 50,
+      "REST API": 75,
+      "GraphQL": 50,
+      "Firebase": 50,
+      "AWS": 75,
+      "Azure": 75,
+      "GCP": 75,
+      "Linux": 50,
+      "Docker": 50,
+      "Kubernetes": 50,
+      "Webpack": 50,
+      "TensorFlow": 75,
+      "PyTorch": 75,
+      "Keras": 75,
+      "OpenCV": 75,
+      "Pandas": 50,
+      "NumPy": 50,
+      "Scikit-Learn": 50
+    },
+    "jd_items": [
+      "C",
+      "C++",
+      "Java",
+      "Python",
+      "JavaScript",
+      "TypeScript",
+      "HTML5",
+      "CSS3",
+      "MySQL",
+      "PostgreSQL",
+      "MongoDB",
+      "Node.js",
+      "Express.js",
+      "Django",
+      "Flask",
+      "Spring",
+      "Laravel",
+      "ReactJS",
+      "Angular",
+      "Bootstrap",
+      "Tailwind CSS",
+      "REST API",
+      "GraphQL",
+      "Firebase",
+      "AWS",
+      "Azure",
+      "GCP",
+      "Linux",
+      "Docker",
+      "Kubernetes",
+      "Webpack",
+      "TensorFlow",
+      "PyTorch",
+      "Keras",
+      "OpenCV",
+      "Pandas",
+      "NumPy",
+      "Scikit-Learn"
+    ],
+    "required": true,
+    "description": "Section 'technologies' (weight=20): score must be one of [50, 75, 100]. JD defines 38 item(s) in this section."
+  },
+  "qualification": {
+    "weight": 10,
+    "min_score": 50,
+    "max_score": 100,
+    "allowed_scores": [
+      50,
+      80,
+      100
+    ],
+    "criteria": {
+      "Master's Degree in Engineering": 100,
+      "Bachelor's Degree in Engineering": 80,
+      "Other": 50
+    },
+    "jd_items": [],
+    "required": true,
+    "description": "Section 'qualification' (weight=10): score must be one of [50, 80, 100]. JD defines 0 item(s) in this section."
+  },
+  "responsibilities": {
+    "weight": 0,
+    "min_score": 0,
+    "max_score": 0,
+    "allowed_scores": [],
+    "criteria": {},
+    "jd_items": [
+      "Develop software solutions using modern frameworks and technologies",
+      "Design and optimize APIs, databases, and backend systems",
+      "Implement algorithms and data structures for efficient performance",
+      "Ensure system security, scalability, cloud readiness, and reliability",
+      "Collaborate with cross-functional teams for end-to-end delivery",
+      "Mentor junior engineers and maintain coding standards"
+    ],
+    "required": false,
+    "description": "Section 'responsibilities' has no scoring criteria (weight=0). Score must be 0."
+  },
+  "salary": {
+    "weight": 15,
+    "min_score": 33,
+    "max_score": 100,
+    "allowed_scores": [
+      33,
+      53,
+      80,
+      100
+    ],
+    "criteria": {
+      "<3": 100,
+      "3-6": 80,
+      "6-10": 53,
+      ">10": 33
+    },
+    "jd_items": [],
+    "required": true,
+    "description": "Section 'salary' (weight=15): score must be one of [33, 53, 80, 100]. JD defines 0 item(s) in this section."
+  },
+  "position": {
+    "weight": 3,
+    "min_score": 67,
+    "max_score": 100,
+    "allowed_scores": [
+      67,
+      100
+    ],
+    "criteria": {
+      "Team Lead (Preferred)": 100,
+      "Individual Contributor": 67
+    },
+    "jd_items": [],
+    "required": true,
+    "description": "Section 'position' (weight=3): score must be one of [67, 100]. JD defines 0 item(s) in this section."
+  }
+}

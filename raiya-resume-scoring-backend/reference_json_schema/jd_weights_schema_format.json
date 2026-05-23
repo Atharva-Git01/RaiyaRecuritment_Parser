@@ -1,0 +1,273 @@
+{
+    "_comment": "Enterprise 14-phase JD weight assignment output (ontology_label_criteria_average_normalized). Criteria use rich dict format produced by Phase 7. Legacy plain-number criteria are still accepted by the validator.",
+    "jd_content_hash": "",
+    "weighting_metadata": {
+        "weight_generation_strategy": "ontology_label_criteria_average_normalized",
+        "normalization_applied": true,
+        "total_raw_weight": 0.0,
+        "normalized_total_weight": 100.0,
+        "hitl_review": {
+            "reviewed_by_human": false,
+            "review_stage": "pipeline_hitl_pause",
+            "reviewed_at": null,
+            "labels_modified": 0,
+            "audit_log": []
+        },
+        "mathematical_validation": {
+            "is_valid": true,
+            "normalized_total_weight": 100.0,
+            "variance_score": 0.0,
+            "section_balance_valid": true,
+            "errors": [],
+            "warnings": []
+        }
+    },
+    "job_title": "",
+    "experience": "",
+    "qualification": "",
+    "technologies": [],
+    "relevant_experience": [],
+    "skills": [],
+    "tools": [],
+    "certifications": [],
+    "location": "",
+    "position": "",
+    "job_description": "",
+    "responsibilities": [],
+    "employment_type": "",
+    "work_mode": {
+        "remote_option": false,
+        "work_from_office": false,
+        "hybrid": false
+    },
+    "scoring": {
+        "relevant_experience": {
+            "weight": 0.0,
+            "weight_generation_metadata": {
+                "raw_weight": 0.0,
+                "criteria_count": 4,
+                "section_importance_factor": 1.0,
+                "normalization_factor": 0.0
+            },
+            "criteria": {
+                ">=5 years_relevant": {
+                    "score": 0.0,
+                    "reasoning_label": "mandatory_core_skill",
+                    "multiplier": 1.0,
+                    "confidence": 1.0,
+                    "evidence": ""
+                },
+                "3-4 years_relevant": {
+                    "score": 0.0,
+                    "reasoning_label": "important_skill",
+                    "multiplier": 0.8,
+                    "confidence": 1.0,
+                    "evidence": ""
+                },
+                "1-2 years_relevant": {
+                    "score": 0.0,
+                    "reasoning_label": "preferred_skill",
+                    "multiplier": 0.7,
+                    "confidence": 1.0,
+                    "evidence": ""
+                },
+                "<1 year_relevant": {
+                    "score": 0.0,
+                    "reasoning_label": "nice_to_have",
+                    "multiplier": 0.35,
+                    "confidence": 1.0,
+                    "evidence": ""
+                }
+            }
+        },
+        "experience": {
+            "weight": 0.0,
+            "weight_generation_metadata": {
+                "raw_weight": 0.0,
+                "criteria_count": 4,
+                "section_importance_factor": 1.0,
+                "normalization_factor": 0.0
+            },
+            "criteria": {
+                ">=8 years": {
+                    "score": 0.0,
+                    "reasoning_label": "mandatory_core_skill",
+                    "multiplier": 1.0,
+                    "confidence": 1.0,
+                    "evidence": ""
+                },
+                "5-7 years": {
+                    "score": 0.0,
+                    "reasoning_label": "important_skill",
+                    "multiplier": 0.8,
+                    "confidence": 1.0,
+                    "evidence": ""
+                },
+                "3-4 years": {
+                    "score": 0.0,
+                    "reasoning_label": "preferred_skill",
+                    "multiplier": 0.7,
+                    "confidence": 1.0,
+                    "evidence": ""
+                },
+                "<3 years": {
+                    "score": 0.0,
+                    "reasoning_label": "nice_to_have",
+                    "multiplier": 0.35,
+                    "confidence": 1.0,
+                    "evidence": ""
+                }
+            }
+        },
+        "qualification": {
+            "weight": 0.0,
+            "weight_generation_metadata": {
+                "raw_weight": 0.0,
+                "criteria_count": 6,
+                "section_importance_factor": 1.0,
+                "normalization_factor": 0.0
+            },
+            "criteria": {
+                "PhD": {
+                    "score": 0.0,
+                    "reasoning_label": "preferred_skill",
+                    "multiplier": 0.7,
+                    "confidence": 1.0,
+                    "evidence": ""
+                },
+                "Masters": {
+                    "score": 0.0,
+                    "reasoning_label": "important_skill",
+                    "multiplier": 0.8,
+                    "confidence": 1.0,
+                    "evidence": ""
+                },
+                "Bachelors": {
+                    "score": 0.0,
+                    "reasoning_label": "mandatory_core_skill",
+                    "multiplier": 1.0,
+                    "confidence": 1.0,
+                    "evidence": ""
+                },
+                "Associate": {
+                    "score": 0.0,
+                    "reasoning_label": "supporting_skill",
+                    "multiplier": 0.55,
+                    "confidence": 1.0,
+                    "evidence": ""
+                },
+                "Diploma": {
+                    "score": 0.0,
+                    "reasoning_label": "nice_to_have",
+                    "multiplier": 0.35,
+                    "confidence": 1.0,
+                    "evidence": ""
+                },
+                "Certification": {
+                    "score": 0.0,
+                    "reasoning_label": "preferred_skill",
+                    "multiplier": 0.7,
+                    "confidence": 1.0,
+                    "evidence": ""
+                }
+            }
+        },
+        "technologies": {
+            "weight": 0.0,
+            "weight_generation_metadata": {
+                "raw_weight": 0.0,
+                "criteria_count": 0,
+                "section_importance_factor": 1.0,
+                "normalization_factor": 0.0
+            },
+            "criteria": {}
+        },
+        "skills": {
+            "weight": 0.0,
+            "weight_generation_metadata": {
+                "raw_weight": 0.0,
+                "criteria_count": 0,
+                "section_importance_factor": 1.0,
+                "normalization_factor": 0.0
+            },
+            "criteria": {}
+        },
+        "position": {
+            "weight": 0.0,
+            "weight_generation_metadata": {
+                "raw_weight": 0.0,
+                "criteria_count": 3,
+                "section_importance_factor": 1.0,
+                "normalization_factor": 0.0
+            },
+            "criteria": {
+                "senior_level": {
+                    "score": 0.0,
+                    "reasoning_label": "mandatory_core_skill",
+                    "multiplier": 1.0,
+                    "confidence": 1.0,
+                    "evidence": ""
+                },
+                "mid_level": {
+                    "score": 0.0,
+                    "reasoning_label": "preferred_skill",
+                    "multiplier": 0.7,
+                    "confidence": 1.0,
+                    "evidence": ""
+                },
+                "entry_level": {
+                    "score": 0.0,
+                    "reasoning_label": "nice_to_have",
+                    "multiplier": 0.35,
+                    "confidence": 1.0,
+                    "evidence": ""
+                }
+            }
+        },
+        "tools": {
+            "weight": 0.0,
+            "weight_generation_metadata": {
+                "raw_weight": 0.0,
+                "criteria_count": 0,
+                "section_importance_factor": 1.0,
+                "normalization_factor": 0.0
+            },
+            "criteria": {}
+        },
+        "certifications": {
+            "weight": 0.0,
+            "weight_generation_metadata": {
+                "raw_weight": 0.0,
+                "criteria_count": 0,
+                "section_importance_factor": 1.0,
+                "normalization_factor": 0.0
+            },
+            "criteria": {}
+        },
+        "responsibilities": {
+            "weight": 0.0,
+            "weight_generation_metadata": {
+                "raw_weight": 0.0,
+                "criteria_count": 0,
+                "section_importance_factor": 1.0,
+                "normalization_factor": 0.0
+            },
+            "criteria": {}
+        },
+        "salary": {
+            "weight": 0.0,
+            "weight_generation_metadata": {
+                "raw_weight": 0.0,
+                "criteria_count": 3,
+                "section_importance_factor": null,
+                "normalization_factor": 0.0
+            },
+            "fallback_score": 50,
+            "criteria_based_on_salary_expectation": {
+                "3-6": 0,
+                "6-10": 0,
+                ">10": 0
+            }
+        }
+    }
+}

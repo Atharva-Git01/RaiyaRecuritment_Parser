@@ -1,0 +1,238 @@
+{
+  "structured_data": {
+    "content": {
+      "pipeline_metadata": {
+        "jd_content_hash": "baa51848faab65b200de1de7bc805cc4b8f1636eec293ab25c45a553a9eae273",
+        "created_at": null,
+        "source": null
+      },
+      "job_information": {
+        "job_title": "Business Analyst (Entry Level – Energy Domain)",
+        "position": {
+          "senior_level": false,
+          "mid_level": false,
+          "entry_level": true
+        },
+        "employment_type": "full-time",
+        "location": "Pune",
+        "work_mode": {
+          "remote_option": false,
+          "work_from_office": true,
+          "hybrid": false
+        }
+      },
+      "experience_requirements": {
+        "experience_range": {
+          
+          "<3_years": true,
+          "3_4_years": false,
+          "5_7_years": false,
+          "8_plus_years": false
+        },
+        "minimum_years": 0,
+        "preferred_years": 1
+      },
+      "education_requirements": {
+        "qualification": {
+          "phd": false,
+          "masters": true,
+          "bachelors": false,
+          "associate": false,
+          "diploma": false,
+          "certification": false
+        },
+        "preferred_field_of_study": [
+          "Energy Domain",
+          "Energy",
+          "Utilities",
+          "Power",
+          "Renewable",
+          "Retail Energy (Electricity/Gas)"
+        ]
+      },
+      "skills_and_technologies": {
+        "technologies": [
+          "JIRA",
+          "Confluence",
+          "SQL",
+          "Power BI"
+        ],
+        "skills": [
+          "Analytical skills",
+          "Problem-solving skills",
+          "Documentation skills",
+          "Basic understanding of SDLC",
+          "Agile methodologies",
+          "Ability to interpret data",
+          "Analyze trends",
+          "Present observations",
+          "Excellent communication",
+          "Listening",
+          "Stakeholder interaction skills",
+          "Quick learner",
+          "Willingness to understand energy market processes and tools",
+          "Team player",
+          "Proactive mindset",
+          "Curiosity-driven mindset",
+          "Requirement gathering",
+          "Business process analysis",
+          "Coordination between stakeholders and development teams",
+          "Data analysis",
+          "Process mapping",
+          "Workflow diagrams",
+          "Impact analysis",
+          "Functional testing",
+          "UAT coordination",
+          "Defect tracking",
+          "Preparing meeting notes",
+          "Presentations",
+          "Status reports",
+          "Understanding energy industry processes (metering, billing, settlements, tariffs, customer onboarding, service requests)",
+          "Excel analytics"
+        ],
+        "tools": [
+          "MS Office tools (Excel, Word, PowerPoint)"
+        ],
+        "certifications": [
+          "Agile",
+          "BA",
+          "Energy market concepts"
+        ]
+      },
+      "job_details": {
+        "job_description": "We are looking for a motivated entry-level Business Analyst to support business and technical teams in the energy domain. The candidate will participate in requirement gathering, documentation, business process analysis, and coordination between stakeholders and development teams using Agile methodologies.",
+        "responsibilities": [
+          "Collaborate with stakeholders to understand business processes, user needs, and solution requirements.",
+          "Assist in capturing, documenting, and refining requirements (BRD, FRD, User Stories, Use Cases).",
+          "Participate in Agile ceremonies (Daily Stand-ups, Sprint Planning, Grooming, Retrospective).",
+          "Perform data analysis and support in preparing reports, dashboards, and insights.",
+          "Contribute to process mapping, workflow diagrams, and impact analysis.",
+          "Work closely with product owners, QA, and development teams to ensure requirement clarity.",
+          "Support functional testing, UAT coordination, and defect tracking.",
+          "Prepare meeting notes, presentations, and status reports for stakeholders.",
+          "Learn and apply energy industry processes such as metering, billing, settlements, tariffs, customer onboarding, and service requests."
+        ],
+        "requirements": [
+          "First Class or better throughout (>60% from 10th onwards)",
+          "Strong analytical, problem-solving, and documentation skills",
+          "Basic understanding of SDLC and Agile methodologies",
+          "Good knowledge of MS Office tools (Excel, Word, PowerPoint), JIRA/Confluence (added advantage)",
+          "Ability to interpret data, analyze trends, and present observations",
+          "Excellent communication, listening, and stakeholder interaction skills",
+          "Quick learner with willingness to understand energy market processes and tools",
+          "Team player with a proactive and curiosity-driven mindset"
+        ],
+        "preferred_qualifications": [
+          "Internship or academic project in energy, utilities, or analytics",
+          "Knowledge of SQL, Power BI, or Excel analytics",
+          "Basic understanding of energy supplier operations (billing, smart meters, tariff, CRM, customer lifecycle)"
+        ]
+      }
+    },
+    "metadata": {
+      "page_attributions": {
+        "job_information.job_title": 1,
+        "job_information.position.senior_level": 1,
+        "job_information.position.mid_level": 1,
+        "job_information.position.entry_level": 1,
+        "job_information.employment_type": 1,
+        "job_information.location": 1,
+        "job_information.work_mode.remote_option": 1,
+        "job_information.work_mode.work_from_office": 1,
+        "job_information.work_mode.hybrid": 1,
+        "experience_requirements.experience_range.<3_years": 1,
+        "experience_requirements.experience_range.3_4_years": 1,
+        "experience_requirements.experience_range.5_7_years": 1,
+        "experience_requirements.experience_range.8_plus_years": 1,
+        "experience_requirements.minimum_years": 1,
+        "experience_requirements.preferred_years": 1,
+        "education_requirements.qualification.phd": 1,
+        "education_requirements.qualification.masters": 1,
+        "education_requirements.qualification.bachelors": 1,
+        "education_requirements.qualification.associate": 1,
+        "education_requirements.qualification.diploma": 1,
+        "education_requirements.qualification.certification": 1,
+        "education_requirements.preferred_field_of_study[0]": 1,
+        "education_requirements.preferred_field_of_study[1]": 1,
+        "education_requirements.preferred_field_of_study[2]": 1,
+        "education_requirements.preferred_field_of_study[3]": 1,
+        "education_requirements.preferred_field_of_study[4]": 1,
+        "education_requirements.preferred_field_of_study[5]": 1,
+        "skills_and_technologies.technologies[0]": 2,
+        "skills_and_technologies.technologies[1]": 2,
+        "skills_and_technologies.technologies[2]": 2,
+        "skills_and_technologies.technologies[3]": 2,
+        "skills_and_technologies.skills[0]": 2,
+        "skills_and_technologies.skills[1]": 2,
+        "skills_and_technologies.skills[2]": 2,
+        "skills_and_technologies.skills[3]": 2,
+        "skills_and_technologies.skills[4]": 2,
+        "skills_and_technologies.skills[5]": 2,
+        "skills_and_technologies.skills[6]": 2,
+        "skills_and_technologies.skills[7]": 2,
+        "skills_and_technologies.skills[8]": 2,
+        "skills_and_technologies.skills[9]": 2,
+        "skills_and_technologies.skills[10]": 2,
+        "skills_and_technologies.skills[11]": 2,
+        "skills_and_technologies.skills[12]": 2,
+        "skills_and_technologies.skills[13]": 2,
+        "skills_and_technologies.skills[14]": 2,
+        "skills_and_technologies.skills[15]": 2,
+        "skills_and_technologies.skills[16]": 1,
+        "skills_and_technologies.skills[17]": 1,
+        "skills_and_technologies.skills[18]": 1,
+        "skills_and_technologies.skills[19]": 1,
+        "skills_and_technologies.skills[20]": 1,
+        "skills_and_technologies.skills[21]": 1,
+        "skills_and_technologies.skills[22]": 1,
+        "skills_and_technologies.skills[23]": 1,
+        "skills_and_technologies.skills[24]": 1,
+        "skills_and_technologies.skills[25]": 1,
+        "skills_and_technologies.skills[26]": 1,
+        "skills_and_technologies.skills[27]": 1,
+        "skills_and_technologies.skills[28]": 1,
+        "skills_and_technologies.skills[29]": 1,
+        "skills_and_technologies.skills[30]": 2,
+        "skills_and_technologies.tools[0]": 2,
+        "skills_and_technologies.certifications[0]": 2,
+        "skills_and_technologies.certifications[1]": 2,
+        "skills_and_technologies.certifications[2]": 2,
+        "job_details.job_description": 1,
+        "job_details.responsibilities[0]": 1,
+        "job_details.responsibilities[1]": 1,
+        "job_details.responsibilities[2]": 1,
+        "job_details.responsibilities[3]": 1,
+        "job_details.responsibilities[4]": 1,
+        "job_details.responsibilities[5]": 1,
+        "job_details.responsibilities[6]": 1,
+        "job_details.responsibilities[7]": 1,
+        "job_details.responsibilities[8]": 1,
+        "job_details.requirements[0]": 1,
+        "job_details.requirements[1]": 2,
+        "job_details.requirements[2]": 2,
+        "job_details.requirements[3]": 2,
+        "job_details.requirements[4]": 2,
+        "job_details.requirements[5]": 2,
+        "job_details.requirements[6]": 2,
+        "job_details.requirements[7]": 2,
+        "job_details.preferred_qualifications[0]": 2,
+        "job_details.preferred_qualifications[1]": 2,
+        "job_details.preferred_qualifications[2]": 2
+      },
+      "extraction_method": "markdown_gemini",
+      "total_pages": 2,
+      "successful_pages": 2
+    },
+    "_page_contents": [
+      [
+        1,
+        "# voltxpower\n\n**Job Title:** Business Analyst (Entry Level – Energy Domain)\n**Experience:** 0–1 Years\n**Location:** Pune\n**Education:** MCA\n**Cut Off Criteria:** First Class or better throughout (>60% from 10th onwards)\n**Employment Type:** Full-time\n**Domain:** Energy, Utilities, Power, Renewable, or Retail Energy (Electricity/Gas)\n**Methodology:** Agile / Scrum\n\n---\n\n## Role Summary:\n\nWe are looking for a motivated entry-level Business Analyst to support business and technical teams in the energy domain. The candidate will participate in requirement gathering, documentation, business process analysis, and coordination between stakeholders and development teams using Agile methodologies.\n\n---\n\n## Key Responsibilities:\n\n*   Collaborate with stakeholders to understand business processes, user needs, and solution requirements.\n*   Assist in capturing, documenting, and refining requirements (BRD, FRD, User Stories, Use Cases).\n*   Participate in Agile ceremonies (Daily Stand-ups, Sprint Planning, Grooming, Retrospective).\n*   Perform data analysis and support in preparing reports, dashboards, and insights.\n*   Contribute to process mapping, workflow diagrams, and impact analysis.\n*   Work closely with product owners, QA, and development teams to ensure requirement clarity.\n*   Support functional testing, UAT coordination, and defect tracking.\n*   Prepare meeting notes, presentations, and status reports for stakeholders.\n*   Learn and apply energy industry processes such as metering, billing, settlements, tariffs, customer onboarding, and service requests."
+      ],
+      [
+        2,
+        "# voltxpower\n\n## Required Skills & Competencies:\n*   Strong analytical, problem-solving, and documentation skills\n*   Basic understanding of SDLC and Agile methodologies\n*   Good knowledge of MS Office tools (Excel, Word, PowerPoint), JIRA/Confluence (added advantage)\n*   Ability to interpret data, analyze trends, and present observations\n*   Excellent communication, listening, and stakeholder interaction skills\n*   Quick learner with willingness to understand energy market processes and tools\n*   Team player with a proactive and curiosity-driven mindset\n\n---\n\n## Preferred / Added Advantage (Not Mandatory):\n*   Internship or academic project in energy, utilities, or analytics\n*   Knowledge of SQL, Power BI, or Excel analytics\n*   Basic understanding of energy supplier operations (billing, smart meters, tariff, CRM, customer lifecycle)\n\n---\n\n## Career Growth Path:\nBusiness Analyst → Product Analyst → Senior BA → Product Owner / SME (Energy Domain)\n\n---\n\n## Why Join Us:\n*   Opportunity to work in fast-growing energy & digital transformation sector\n*   Hands-on exposure to real-time projects and cross-functional collaboration\n*   Learning & certification support (Agile, BA, Energy market concepts)"
+      ]
+    ]
+  },
+  "format": "structured_json"
+}

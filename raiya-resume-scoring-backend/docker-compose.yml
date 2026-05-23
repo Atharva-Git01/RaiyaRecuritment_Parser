@@ -1,0 +1,87 @@
+# RAIYA Backend — Docker Compose
+#   PostgreSQL 16 + pgvector (extension preinstalled in the image)
+#   Redis 7
+#   Backend container (optional — run with `--profile backend`)
+#
+# Local dev (DB + cache only, run uvicorn on host):
+#   docker-compose up -d postgres redis
+#
+# Full stack (container running uvicorn):
+#   docker-compose --profile backend up -d --build
+#
+# The backend service uses the same AsyncPostgresSaver wiring as local dev
+# (see app/main.py and app/db/memory_persistence.py). When LangGraph boots
+# it calls AsyncPostgresSaver.setup() which creates checkpoint tables.
+
+version: '3.9'
+
+services:
+  postgres:
+    image: pgvector/pgvector:pg16
+    container_name: raiya-postgres
+    environment:
+      POSTGRES_USER: raiya
+      POSTGRES_PASSWORD: raiya_dev
+      POSTGRES_DB: raiya
+    ports:
+      - "5433:5432"
+    volumes:
+      - raiya_pgdata:/var/lib/postgresql/data
+    healthcheck:
+      test: ["CMD-SHELL", "pg_isready -U raiya -d raiya"]
+      interval: 10s
+      timeout: 5s
+      retries: 5
+      start_period: 30s
+    restart: unless-stopped
+
+  redis:
+    image: redis:7-alpine
+    container_name: raiya-redis
+    ports:
+      - "6379:6379"
+    volumes:
+      - raiya_redis_data:/data
+    healthcheck:
+      test: ["CMD", "redis-cli", "ping"]
+      interval: 10s
+      timeout: 5s
+      retries: 5
+    restart: unless-stopped
+
+  backend:
+    profiles: ["backend"]
+    build:
+      context: .
+      dockerfile: docker/Dockerfile
+    container_name: raiya-backend
+    depends_on:
+      postgres:
+        condition: service_healthy
+      redis:
+        condition: service_healthy
+    environment:
+      # Inside the compose network, postgres listens on 5432 (not the
+      # 5433 host port), and redis on 6379. .env is also loaded.
+      DATABASE_URL: postgresql+asyncpg://raiya:raiya_dev@postgres:5432/raiya
+      SYNC_DATABASE_URL: postgresql://raiya:raiya_dev@postgres:5432/raiya
+      REDIS_URL: redis://redis:6379/0
+    env_file:
+      - .env
+    ports:
+      - "8000:8000"
+    volumes:
+      # Persist resume / JD / report bytes across container restarts.
+      # batch_service.run_batch reads resumes from storage/resumes/<hash>.pdf
+      # and JDs from storage/jd/<hash>.pdf; report_generator_node writes to
+      # storage/reports/<batch_id>/.
+      - raiya_storage:/app/storage
+    restart: unless-stopped
+
+volumes:
+  raiya_pgdata:
+    driver: local
+  raiya_redis_data:
+    driver: local
+  raiya_storage:
+    driver: local

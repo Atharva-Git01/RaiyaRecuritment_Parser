@@ -1,0 +1,176 @@
+{
+  "structured_data": {
+    "content": {
+      "pipeline_metadata": {
+        "jd_content_hash": "c5559f2f4aa4da365ad634b916a436a4f7e32262be7b26a1961cbedae6afd31e",
+        "created_at": null,
+        "source": null
+      },
+      "job_information": {
+        "job_title": "Customer Service Assistant",
+        "position": {
+          "senior_level": false,
+          "mid_level": false,
+          "entry_level": true
+        },
+        "employment_type": "part-time",
+        "location": null,
+        "work_mode": {
+          "remote_option": false,
+          "work_from_office": true,
+          "hybrid": false
+        }
+      },
+      "experience_requirements": {
+        "experience_range": {
+          "0_1_years": true,
+          "1_2_years": false,
+          "2_3_years": false,
+          "3_4_years": false,
+          "5_7_years": false,
+          "8_plus_years": false
+        },
+        "minimum_years": 0,
+        "preferred_years": 1
+      },
+      "education_requirements": {
+        "qualification": {
+          "phd": null,
+          "masters": null,
+          "bachelors": null,
+          "associate": null,
+          "diploma": null,
+          "certification": null
+        },
+        "preferred_field_of_study": [
+          "Communication Studies",
+          "Psychology",
+          "Business"
+        ]
+      },
+      "skills_and_technologies": {
+        "technologies": [
+          "Image Now System"
+        ],
+        "skills": [
+          "Communication",
+          "Courtesy",
+          "Customer service",
+          "Organization",
+          "Professionalism",
+          "Reliability",
+          "Teamwork",
+          "attention to detail"
+        ],
+        "tools": null,
+        "certifications": null
+      },
+      "job_details": {
+        "job_description": "# Sample Job Description\n## Department Information\n**Department Name:** Financial Aid and Scholarships\n**Supervisor SSO:** janedoe\n**Supervisor First name:** Jane\n**Supervisor Last name:** Doe\n**Title:** Student Support Specialist II\n**Email:** janedoe@umkc.edu\n**Telephone:** (816)235-0000\n## Job Information\n**Aid Term:** Fall/Spring\n**Job Title:** Customer Service Assistant\n**Pay Range:** $8.00 to $9.25\n**Weekly Hours:** 15\n**Weekly Work Schedule:**\n\"Students will work approximately 10-15 hours/week. We will work around your class schedule to set your hours each week throughout the semester. Preference will be given to students who can work between 11am and 2pm each day.\"\nOR\n\"12-15 hours per week; Monday- Friday 8:00am to 5:00 pm\"\n**Job Category:** Administrative/Customer Service (one of seven options)\n**Essential Duties May Include:**\n(This section auto-populates according to the Job Category you selected above—for the Administrative/Customer Service example this is the populated essential duties)\n*   Identify needs of individual and appropriately assist with questions or concerns at front desk.\n*   Politely greet students and guests to provide quality customer service; Answer phones.\n*   Assess questions; offer solutions or additional resources such as a manager to assist.\n*   Demonstrate professionalism in a confidential setting.\n*   Implement existing/new tasks, projects and/or ideas with accuracy and enthusiasm.\n*   Promote services by serving as a representative through conversations with fellow students.\n*   Data entry, mailing and other clerical duties as assigned.\n*   Open/Close office responsibilities as needed.\n**Additional Duties May Include:**\nThe qualifying candidate will assist full-time staff with various projects including:\n*   Scanning and linking incoming documents into Image Now System\n*   Filing incoming documents\n*   Verification\n*   Stuffing envelopes\n*   Other clerical duties\n*   Politely assist incoming students with financial aid questions and concerns\n**Transferable Skills** (Check all that apply)\n☐ Select All Transferable Skills\n☐ Ambition\n☑ Communication\n☐ Cooperation\n☑ Courtesy\n☑ Customer service\n☐ Initiative\n☐ Innovation\n☐ Integrity\n☐ Judgment\n☑ Organization\n☐ Problem-solving\n☑ Professionalism\n☐ Project Management\n☑ Reliability\n☑ Teamwork\n**Additional Qualifications and Skills:**\nThis position is open to students of all academic majors. However, students from these areas of study might be particularly interested in this position: Communication Studies, Psychology, and Business.\n**Physical Effort:** Minimal Physical Effort (General Office Duties)\n**Level of Experience Required:** 0 to 1 year experience\n**Level of Supervision Exercised:** Under immediate supervision: Work checked at frequent intervals\n**Customer Service Interactions:** Very frequent levels of contact involving explanation and problem solving\n**Assignment Types:** One task at a time that usually can be completed within a few hours\n**Confidential Information Access:** Required\n**Exposure to Hazardous Materials:** No\nIf you answered YES to Exposure to Hazardous Materials please describe: N/A\n**Additional Comments:**\nLooking for students who are eager to learn and willing to help their peers. This job requires excellent customer service and attention to detail. For more information about our office and policies please visit our website www.sfa.umkc.edu.\n**How to Apply:**\nEmail Jane Doe at janedoe@umkc.edu with resume attached.\nIf you receive an out of office email, please forward emails to finaid@umkc.edu",
+        "responsibilities": [
+          "Identify needs of individual and appropriately assist with questions or concerns at front desk.",
+          "Politely greet students and guests to provide quality customer service; Answer phones.",
+          "Assess questions; offer solutions or additional resources such as a manager to assist.",
+          "Demonstrate professionalism in a confidential setting.",
+          "Implement existing/new tasks, projects and/or ideas with accuracy and enthusiasm.",
+          "Promote services by serving as a representative through conversations with fellow students.",
+          "Data entry, mailing and other clerical duties as assigned.",
+          "Open/Close office responsibilities as needed.",
+          "Scanning and linking incoming documents into Image Now System",
+          "Filing incoming documents",
+          "Verification",
+          "Stuffing envelopes",
+          "Other clerical duties",
+          "Politely assist incoming students with financial aid questions and concerns"
+        ],
+        "requirements": [
+          "Minimal Physical Effort (General Office Duties)",
+          "0 to 1 year experience",
+          "Under immediate supervision: Work checked at frequent intervals",
+          "Very frequent levels of contact involving explanation and problem solving",
+          "One task at a time that usually can be completed within a few hours",
+          "Confidential Information Access: Required",
+          "Exposure to Hazardous Materials: No",
+          "Looking for students who are eager to learn and willing to help their peers.",
+          "This job requires excellent customer service and attention to detail."
+        ],
+        "preferred_qualifications": [
+          "Preference will be given to students who can work between 11am and 2pm each day.",
+          "students from these areas of study might be particularly interested in this position: Communication Studies, Psychology, and Business."
+        ]
+      }
+    },
+    "metadata": {
+      "page_attributions": {
+        "job_information.job_title": 1,
+        "job_information.position.senior_level": 2,
+        "job_information.position.mid_level": 2,
+        "job_information.position.entry_level": 2,
+        "job_information.employment_type": 1,
+        "job_information.work_mode.remote_option": 1,
+        "job_information.work_mode.work_from_office": 1,
+        "job_information.work_mode.hybrid": 1,
+        "experience_requirements.experience_range.0_1_years": 2,
+        "experience_requirements.experience_range.1_2_years": 2,
+        "experience_requirements.experience_range.2_3_years": 2,
+        "experience_requirements.experience_range.3_4_years": 2,
+        "experience_requirements.experience_range.5_7_years": 2,
+        "experience_requirements.experience_range.8_plus_years": 2,
+        "experience_requirements.minimum_years": 2,
+        "experience_requirements.preferred_years": 2,
+        "education_requirements.preferred_field_of_study[0]": 2,
+        "education_requirements.preferred_field_of_study[1]": 2,
+        "education_requirements.preferred_field_of_study[2]": 2,
+        "skills_and_technologies.technologies[0]": 1,
+        "skills_and_technologies.skills[0]": 2,
+        "skills_and_technologies.skills[1]": 2,
+        "skills_and_technologies.skills[2]": 2,
+        "skills_and_technologies.skills[3]": 2,
+        "skills_and_technologies.skills[4]": 2,
+        "skills_and_technologies.skills[5]": 2,
+        "skills_and_technologies.skills[6]": 2,
+        "skills_and_technologies.skills[7]": 2,
+        "job_details.job_description": 1,
+        "job_details.responsibilities[0]": 1,
+        "job_details.responsibilities[1]": 1,
+        "job_details.responsibilities[2]": 1,
+        "job_details.responsibilities[3]": 1,
+        "job_details.responsibilities[4]": 1,
+        "job_details.responsibilities[5]": 1,
+        "job_details.responsibilities[6]": 1,
+        "job_details.responsibilities[7]": 1,
+        "job_details.responsibilities[8]": 1,
+        "job_details.responsibilities[9]": 1,
+        "job_details.responsibilities[10]": 1,
+        "job_details.responsibilities[11]": 1,
+        "job_details.responsibilities[12]": 1,
+        "job_details.responsibilities[13]": 1,
+        "job_details.requirements[0]": 2,
+        "job_details.requirements[1]": 2,
+        "job_details.requirements[2]": 2,
+        "job_details.requirements[3]": 2,
+        "job_details.requirements[4]": 2,
+        "job_details.requirements[5]": 2,
+        "job_details.requirements[6]": 2,
+        "job_details.requirements[7]": 2,
+        "job_details.requirements[8]": 2,
+        "job_details.preferred_qualifications[0]": 1,
+        "job_details.preferred_qualifications[1]": 2
+      },
+      "extraction_method": "markdown_gemini",
+      "total_pages": 2,
+      "successful_pages": 2
+    },
+    "_page_contents": [
+      [
+        1,
+        "&lt;img&gt;UMKC Human Resources&lt;/img&gt;\n\n# Sample Job Description\n\n## Department Information\n**Department Name:** Financial Aid and Scholarships\n**Supervisor SSO:** janedoe\n**Supervisor First name:** Jane\n**Supervisor Last name:** Doe\n**Title:** Student Support Specialist II\n**Email:** janedoe@umkc.edu\n**Telephone:** (816)235-0000\n\n## Job Information\n**Aid Term:** Fall/Spring\n**Job Title:** Customer Service Assistant\n**Pay Range:** $8.00 to $9.25\n**Weekly Hours:** 15\n**Weekly Work Schedule:**\n\"Students will work approximately 10-15 hours/week. We will work around your class schedule to set your hours each week throughout the semester. Preference will be given to students who can work between 11am and 2pm each day.\"\nOR\n\"12-15 hours per week; Monday- Friday 8:00am to 5:00 pm\"\n**Job Category:** Administrative/Customer Service (one of seven options)\n**Essential Duties May Include:**\n(This section auto-populates according to the Job Category you selected above—for the Administrative/Customer Service example this is the populated essential duties)\n\n*   Identify needs of individual and appropriately assist with questions or concerns at front desk.\n*   Politely greet students and guests to provide quality customer service; Answer phones.\n*   Assess questions; offer solutions or additional resources such as a manager to assist.\n*   Demonstrate professionalism in a confidential setting.\n*   Implement existing/new tasks, projects and/or ideas with accuracy and enthusiasm.\n*   Promote services by serving as a representative through conversations with fellow students.\n*   Data entry, mailing and other clerical duties as assigned.\n*   Open/Close office responsibilities as needed.\n\n**Additional Duties May Include:**\nThe qualifying candidate will assist full-time staff with various projects including:\n*   Scanning and linking incoming documents into Image Now System\n*   Filing incoming documents\n*   Verification\n*   Stuffing envelopes\n*   Other clerical duties\n*   Politely assist incoming students with financial aid questions and concerns\n\n**Transferable Skills** (Check all that apply)"
+      ],
+      [
+        2,
+        "☐ Select All Transferable Skills\n☐ Ambition\n☑ Communication\n☐ Cooperation\n☑ Courtesy\n☑ Customer service\n☐ Initiative\n☐ Innovation\n☐ Integrity\n☐ Judgment\n☑ Organization\n☐ Problem-solving\n☑ Professionalism\n☐ Project Management\n☑ Reliability\n☑ Teamwork\n\n**Additional Qualifications and Skills:**\nThis position is open to students of all academic majors. However, students from these areas of study might be particularly interested in this position: Communication Studies, Psychology, and Business.\n\n**Physical Effort:** Minimal Physical Effort (General Office Duties)\n**Level of Experience Required:** 0 to 1 year experience\n**Level of Supervision Exercised:** Under immediate supervision: Work checked at frequent intervals\n**Customer Service Interactions:** Very frequent levels of contact involving explanation and problem solving\n**Assignment Types:** One task at a time that usually can be completed within a few hours\n**Confidential Information Access:** Required\n**Exposure to Hazardous Materials:** No\nIf you answered YES to Exposure to Hazardous Materials please describe: N/A\n**Additional Comments:**\nLooking for students who are eager to learn and willing to help their peers. This job requires excellent customer service and attention to detail. For more information about our office and policies please visit our website www.sfa.umkc.edu.\n\n**How to Apply:**\nEmail Jane Doe at janedoe@umkc.edu with resume attached.\nIf you receive an out of office email, please forward emails to finaid@umkc.edu\n**Position Active:** Yes\n\n&lt;page_number&gt;2&lt;/page_number&gt;"
+      ]
+    ]
+  },
+  "format": "structured_json"
+}

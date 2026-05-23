@@ -1,0 +1,365 @@
+{
+    "type": "object",
+    "properties": {
+        "current_state": {
+            "type": "string",
+            "enum": [
+                "INIT",
+                "VALIDATING_INPUT",
+                "FETCHING_CONTEXT",
+                "SCORING",
+                "VERIFYING_OUTPUT",
+                "COMPLETED",
+                "FAILED"
+            ]
+        },
+        "inputs": {
+            "type": "object",
+            "properties": {
+                "resume_summary": {
+                    "type": "string"
+                },
+                "resume": {
+                    "type": "object",
+                    "properties": {
+                        "name": {
+                            "type": "string"
+                        },
+                        "email": {
+                            "type": "string"
+                        },
+                        "skills": {
+                            "type": "array",
+                            "items": {
+                                "type": "string"
+                            }
+                        },
+                        "experience": {
+                            "type": "array",
+                            "items": {
+                                "type": "object",
+                                "properties": {
+                                    "title": {
+                                        "type": "string"
+                                    },
+                                    "company": {
+                                        "type": "string"
+                                    },
+                                    "start": {
+                                        "type": "string"
+                                    },
+                                    "end": {
+                                        "type": "string"
+                                    },
+                                    "description": {
+                                        "type": "string"
+                                    },
+                                    "responsibilities": {
+                                        "type": "array",
+                                        "items": {
+                                            "type": "string"
+                                        }
+                                    }
+                                }
+                            }
+                        },
+                        "projects": {
+                            "type": "array",
+                            "items": {
+                                "type": "object",
+                                "properties": {
+                                    "name": {
+                                        "type": "string"
+                                    },
+                                    "description": {
+                                        "type": "string"
+                                    },
+                                    "technologies": {
+                                        "type": "array",
+                                        "items": {
+                                            "type": "string"
+                                        }
+                                    }
+                                }
+                            }
+                        },
+                        "education": {
+                            "type": "array",
+                            "items": {
+                                "type": "object",
+                                "properties": {
+                                    "degree": {
+                                        "type": "string"
+                                    },
+                                    "institution": {
+                                        "type": "string"
+                                    },
+                                    "year": {
+                                        "type": "string"
+                                    }
+                                }
+                            }
+                        },
+                        "certifications": {
+                            "type": "array",
+                            "items": {
+                                "type": "string"
+                            }
+                        },
+                        "tools": {
+                            "type": "array",
+                            "items": {
+                                "type": "string"
+                            }
+                        },
+                        "technologies": {
+                            "type": "array",
+                            "items": {
+                                "type": "string"
+                            }
+                        },
+                        "salary_expectation": {
+                            "type": "object",
+                            "properties": {
+                                "value": {
+                                    "type": "number"
+                                },
+                                "currency": {
+                                    "type": "string"
+                                }
+                            }
+                        }
+                    }
+                },
+                "jd": {
+                    "type": "object",
+                    "properties": {
+                        "job_title": {
+                            "type": "string"
+                        },
+                        "experience": {
+                            "type": "string"
+                        },
+                        "qualification": {
+                            "type": "string"
+                        },
+                        "technologies": {
+                            "type": "array",
+                            "items": {
+                                "type": "string"
+                            }
+                        },
+                        "skills": {
+                            "type": "array",
+                            "items": {
+                                "type": "string"
+                            }
+                        },
+                        "tools": {
+                            "type": "array",
+                            "items": {
+                                "type": "string"
+                            }
+                        },
+                        "location": {
+                            "type": "string"
+                        },
+                        "position": {
+                            "type": "string"
+                        },
+                        "job_description": {
+                            "type": "string"
+                        },
+                        "responsibilities": {
+                            "type": "array",
+                            "items": {
+                                "type": "string"
+                            }
+                        },
+                        "employment_type": {
+                            "type": "string"
+                        },
+                        "remote_option": {
+                            "type": "string"
+                        },
+                        "scoring": {
+                            "type": "object",
+                            "additionalProperties": {
+                                "type": "object",
+                                "properties": {
+                                    "weight": {
+                                        "type": "number"
+                                    },
+                                    "criteria": {
+                                        "type": "object"
+                                    }
+                                }
+                            }
+                        },
+                        "experience_range": {
+                            "type": "object",
+                            "properties": {
+                                "min": {
+                                    "type": "number"
+                                },
+                                "max": {
+                                    "type": "number"
+                                }
+                            }
+                        },
+                        "weights": {
+                            "type": "object",
+                            "additionalProperties": {
+                                "type": "number"
+                            }
+                        }
+                    }
+                },
+                "weights": {
+                    "type": [
+                        "object",
+                        "null"
+                    ]
+                }
+            }
+        },
+        "history": {
+            "type": "array",
+            "items": {
+                "type": "object",
+                "properties": {
+                    "from_state": {
+                        "type": "string"
+                    },
+                    "to_state": {
+                        "type": "string"
+                    },
+                    "timestamp": {
+                        "type": "string",
+                        "format": "date-time"
+                    },
+                    "reason": {
+                        "type": [
+                            "string",
+                            "null"
+                        ]
+                    }
+                }
+            }
+        },
+        "result": {
+            "type": "object",
+            "properties": {
+                "final_score": {
+                    "type": "number"
+                },
+                "skills_score": {
+                    "type": "number"
+                },
+                "experience_score": {
+                    "type": "number"
+                },
+                "relevant_experience_score": {
+                    "type": "number"
+                },
+                "projects_score": {
+                    "type": "number"
+                },
+                "certificates_score": {
+                    "type": "number"
+                },
+                "tools_score": {
+                    "type": "number"
+                },
+                "technologies_score": {
+                    "type": "number"
+                },
+                "qualification_score": {
+                    "type": "number"
+                },
+                "responsibilities_score": {
+                    "type": "number"
+                },
+                "salary_score": {
+                    "type": "number"
+                },
+                "position_score": {
+                    "type": "number"
+                },
+                "notes": {
+                    "type": "string"
+                },
+                "jd_weights_math_valid": {
+                    "type": "boolean",
+                    "description": "Propagated from rag_final_verdict.jd_weights_math_valid (JD Phase 13 cross-reference). False triggers a warning in notes."
+                },
+                "scoring_trace": {
+                    "type": "object",
+                    "description": "Per-section scoring audit. Each entry includes label_weighted_coverage from the enterprise RAG validation.",
+                    "additionalProperties": {
+                        "type": "object",
+                        "properties": {
+                            "score_awarded": {
+                                "type": "number"
+                            },
+                            "weight": {
+                                "type": "number"
+                            },
+                            "label_weighted_coverage": {
+                                "type": "number",
+                                "description": "Section label_weighted_coverage at time of score adjustment (0–100)"
+                            },
+                            "notes": {
+                                "type": "string",
+                                "description": "Trace string: label range, hybrid, verdict, correction, R005 penalty if applied"
+                            }
+                        },
+                        "required": [
+                            "score_awarded",
+                            "weight",
+                            "label_weighted_coverage",
+                            "notes"
+                        ]
+                    }
+                },
+                "guardrails_applied": {
+                    "type": "array",
+                    "items": {
+                        "type": "string"
+                    }
+                }
+            }
+        },
+        "error": {
+            "type": [
+                "object",
+                "string",
+                "null"
+            ]
+        },
+        "success": {
+            "type": "boolean"
+        },
+        "token_usage": {
+            "type": "object",
+            "properties": {
+                "prompt_tokens": {
+                    "type": "number"
+                },
+                "completion_tokens": {
+                    "type": "number"
+                },
+                "total_tokens": {
+                    "type": "number"
+                }
+            }
+        }
+    },
+    "required": [
+        "current_state",
+        "inputs",
+        "history",
+        "result",
+        "success"
+    ]
+}

@@ -1,0 +1,202 @@
+{
+  "structured_data": {
+    "content": {
+      "pipeline_metadata": {
+        "jd_content_hash": "ebc7ec677020ab04acfeef2f067b09b84c1c35da4c8e59d6c4cd05dc8cb20f0f"
+      },
+      "job_information": {
+        "job_title": "Software Engineer I",
+        "position": {
+          "senior_level": false,
+          "mid_level": false,
+          "entry_level": true
+        },
+        "employment_type": "full-time",
+        "location": "Bangalore or Gurugram, India",
+        "work_mode": {
+          "remote_option": false,
+          "work_from_office": true,
+          "hybrid": false
+        }
+      },
+      "experience_requirements": {
+        "experience_range": {
+          "<3_years": true,
+          "3_4_years": false,
+          "5_7_years": false,
+          "8_plus_years": false
+        },
+        "minimum_years": null,
+        "preferred_years": null
+      },
+      "education_requirements": {
+        "qualification": {
+          "phd": false,
+          "masters": true,
+          "bachelors": true,
+          "associate": false,
+          "diploma": false,
+          "certification": false
+        },
+        "preferred_field_of_study": [
+          "CSE and aligned branches only"
+        ]
+      },
+      "skills_and_technologies": {
+        "technologies": [
+          "cloud-native technologies",
+          "AI capabilities",
+          "Java",
+          "C/C++",
+          "Python",
+          "JavaScript",
+          "databases",
+          "web applications (both frontend and backend)",
+          "AWS",
+          "Google Cloud Platform",
+          "Azure"
+        ],
+        "skills": [
+          "effective communication",
+          "interpersonal interactions",
+          "data structures",
+          "algorithms",
+          "programming concepts",
+          "database designs",
+          "OOPS concepts",
+          "operating systems",
+          "networking",
+          "coding best practices",
+          "SDLC Process",
+          "functional programming",
+          "context switching",
+          "learning enthusiasm",
+          "passion for performance",
+          "tackle complex coding challenges",
+          "innovative solutions to technical problems",
+          "cloud-based application deployment and services",
+          "time management",
+          "adaptability",
+          "organizational skills",
+          "proactive attitude towards learning and self-improvement"
+        ],
+        "tools": [
+          "Git"
+        ],
+        "certifications": null
+      },
+      "job_details": {
+        "job_description": "Hashedin Technologies is a ‘Born in the cloud’, premier software engineering and product development company. We take pride in leveraging cloud-native technologies, AI capabilities, and our pod-based delivery model to transform the digital experience of our clients. We have a proven track record of working with Fortune 500 clients across industries and scaling and transforming their digital experience. What sets us apart from other organizations is our dynamic and fun work culture that gives people the freedom to experiment and wear multiple hats according to their interests. In the past year, our team of Hashers has grown three times, we’ve driven impactful transformation for Fortune 500 companies, and have been recognized as a “Great Place to Work” for 5 years in a row. Two of the most important tools in today’s business world are experience and resources. At HashedIn, you’ll find plenty of both. We believe in equipping our Hashers with some of the best resources available and offering the experience, education, and opportunities you’ll need at various stages of your career to be technologically fluent. Beyond the formal training, you will be part of HashedIn University, which fosters opportunities to add additional dimensions to your experiences through training programs, internal innovation challenges, and fun activities. Your work, clients, and colleagues will challenge you intellectually, enabling you to build both your experience and an exceptional professional network. At HashedIn, we care about your success. With that in mind, you will get to progress on a technical career path that will allow you to grow into engineering roles, but with the ability to pivot across different parts of software development. You could choose to be a hands-on technical architect, a cloud integration expert, a DevOps expert, or any other technical role available within the organization",
+        "responsibilities": [
+          "Dive into software and product development, bringing innovative ideas to life.",
+          "Transform designs into functional code with precision and creativity.",
+          "Tackle and resolve complex issues independently through thorough research.",
+          "Maintain and enhance existing codebases while conducting peer reviews to ensure quality.",
+          "Work closely with colleagues to seamlessly integrate technical features.",
+          "Investigate and adopt modern technologies that can elevate our projects.",
+          "Write, test, refine, and rewrite code as needed, maintaining clear communication with all programmers involved.",
+          "Effectively communicate issues and resolutions across all levels of the organization.",
+          "Contribute to the growth of the organization by participating in recruitment, social activities, and knowledge sharing through blog writing, case studies, training activities, and more."
+        ],
+        "requirements": [
+          "You are graduate in B.E/ B.Tech/ M.E/ M.Tech/ M.Sc/ MCA (CSE and aligned branches only) with no active backlogs with 75% or 7.5 CGPA overall",
+          "You are a master of effective communication and interpersonal interactions",
+          "You possess a solid grasp of data structures, algorithms, and programming concepts.",
+          "You are proficient in database designs and OOPS concepts, with a good understanding of computer basics like operating systems and networking.",
+          "You are well-versed in programming languages such as Java, C/C++, Python, or JavaScript.",
+          "You are following best practices when it comes to coding.",
+          "You can easily switch contexts, maintain an enthusiasm for learning, and demonstrate a passion for performance.",
+          "You have a demonstrated ability to tackle complex coding challenges and find innovative solutions to technical problems.",
+          "You possess time management, adaptability, and organizational skills, along with a proactive attitude towards learning and self-improvement."
+        ],
+        "preferred_qualifications": [
+          "You have working knowledge of databases and web applications (both frontend and backend), Version Control (Git) & SDLC Process, and functional programming.",
+          "You been involved in open-source projects or made community contributions.",
+          "You have exposure to cloud platforms such as AWS, Google Cloud Platform, or Azure, and an understanding of cloud-based application deployment and services."
+        ]
+      }
+    },
+    "metadata": {
+      "page_attributions": {
+        "job_information.job_title": 1,
+        "job_information.employment_type": 1,
+        "job_information.location": 1,
+        "education_requirements.preferred_field_of_study[0]": 2,
+        "skills_and_technologies.technologies[0]": 1,
+        "skills_and_technologies.technologies[1]": 1,
+        "skills_and_technologies.technologies[2]": 2,
+        "skills_and_technologies.technologies[3]": 2,
+        "skills_and_technologies.technologies[4]": 2,
+        "skills_and_technologies.technologies[5]": 2,
+        "skills_and_technologies.technologies[6]": 2,
+        "skills_and_technologies.technologies[7]": 2,
+        "skills_and_technologies.technologies[8]": 2,
+        "skills_and_technologies.technologies[9]": 2,
+        "skills_and_technologies.technologies[10]": 2,
+        "skills_and_technologies.skills[0]": 2,
+        "skills_and_technologies.skills[1]": 2,
+        "skills_and_technologies.skills[2]": 2,
+        "skills_and_technologies.skills[3]": 2,
+        "skills_and_technologies.skills[4]": 2,
+        "skills_and_technologies.skills[5]": 2,
+        "skills_and_technologies.skills[6]": 2,
+        "skills_and_technologies.skills[7]": 2,
+        "skills_and_technologies.skills[8]": 2,
+        "skills_and_technologies.skills[9]": 2,
+        "skills_and_technologies.skills[10]": 2,
+        "skills_and_technologies.skills[11]": 2,
+        "skills_and_technologies.skills[12]": 2,
+        "skills_and_technologies.skills[13]": 2,
+        "skills_and_technologies.skills[14]": 2,
+        "skills_and_technologies.skills[15]": 2,
+        "skills_and_technologies.skills[16]": 2,
+        "skills_and_technologies.skills[17]": 2,
+        "skills_and_technologies.skills[18]": 2,
+        "skills_and_technologies.skills[19]": 2,
+        "skills_and_technologies.skills[20]": 2,
+        "skills_and_technologies.skills[21]": 2,
+        "skills_and_technologies.tools[0]": 2,
+        "job_details.job_description": 1,
+        "job_details.responsibilities[0]": 2,
+        "job_details.responsibilities[1]": 2,
+        "job_details.responsibilities[2]": 2,
+        "job_details.responsibilities[3]": 2,
+        "job_details.responsibilities[4]": 2,
+        "job_details.responsibilities[5]": 2,
+        "job_details.responsibilities[6]": 2,
+        "job_details.responsibilities[7]": 2,
+        "job_details.responsibilities[8]": 2,
+        "job_details.requirements[0]": 2,
+        "job_details.requirements[1]": 2,
+        "job_details.requirements[2]": 2,
+        "job_details.requirements[3]": 2,
+        "job_details.requirements[4]": 2,
+        "job_details.requirements[5]": 2,
+        "job_details.requirements[6]": 2,
+        "job_details.requirements[7]": 2,
+        "job_details.requirements[8]": 2,
+        "job_details.preferred_qualifications[0]": 2,
+        "job_details.preferred_qualifications[1]": 2,
+        "job_details.preferred_qualifications[2]": 2
+      },
+      "extraction_method": "markdown_gemini",
+      "total_pages": 3,
+      "successful_pages": 3
+    },
+    "_page_contents": [
+      [
+        1,
+        "&lt;img&gt;Hashedin by Deloitte&lt;/img&gt;\n\n<table>\n  <thead>\n    <tr>\n      <th>Position</th>\n      <th>Trainee Engineer – 2 Months<br>Software Engineer – I<br>(Performance Based Conversion During Internship)</th>\n    </tr>\n  </thead>\n  <tbody>\n    <tr>\n      <td><b>Training Location</b></td>\n      <td>Bangalore or Gurugram, India</td>\n    </tr>\n    <tr>\n      <td><b>Compensation</b></td>\n      <td>Internship - INR 25,000 Per Month<br>Software Engineer I - INR 8,10,000</td>\n    </tr>\n  </tbody>\n</table>\n\n## Organisation Overview\n\n*   Hashedin Technologies is a ‘Born in the cloud’, premier software engineering and product development company. We take pride in leveraging cloud-native technologies, AI capabilities, and our pod-based delivery model to transform the digital experience of our clients.\n*   We have a proven track record of working with Fortune 500 clients across industries and scaling and transforming their digital experience. What sets us apart from other organizations is our dynamic and fun work culture that gives people the freedom to experiment and wear multiple hats according to their interests.\n*   In the past year, our team of Hashers has grown three times, we’ve driven impactful transformation for Fortune 500 companies, and have been recognized as a “Great Place to Work” for 5 years in a row.\n\n## Professional Development\n\n*   Two of the most important tools in today’s business world are experience and resources. At HashedIn, you’ll find plenty of both.\n*   We believe in equipping our Hashers with some of the best resources available and offering the experience, education, and opportunities you’ll need at various stages of your career to be technologically fluent.\n*   Beyond the formal training, you will be part of <a href=\"https://www.hashedin.com/university\">HashedIn University</a>, which fosters opportunities to add additional dimensions to your experiences through training programs, internal innovation challenges, and fun activities.\n*   Your work, clients, and colleagues will challenge you intellectually, enabling you to build both your experience and an exceptional professional network.\n*   At HashedIn, we care about your success. With that in mind, you will get to progress on a technical career path that will allow you to grow into engineering roles, but with the ability to pivot across different parts of software development.\n*   You could choose to be a hands-on technical architect, a cloud integration expert, a DevOps expert, or any other technical role available within the organization\n\n<footer>© HASHEDIN BY DELOITTE</footer>"
+      ],
+      [
+        2,
+        "&lt;img&gt;Hashedin by Deloitte&lt;/img&gt;\n\n**Skills & Requirements :**\n\n*   You are graduate in B.E/ B.Tech/ M.E/ M.Tech/ M.Sc/ MCA (CSE and aligned branches only) with no active backlogs with 75% or 7.5 CGPA overall\n*   You are a master of effective communication and interpersonal interactions\n*   You possess a solid grasp of data structures, algorithms, and programming concepts.\n*   You are proficient in database designs and OOPS concepts, with a good understanding of computer basics like operating systems and networking.\n*   You are well-versed in programming languages such as Java, C/C++, Python, or JavaScript.\n*   You are following best practices when it comes to coding.\n*   You have working knowledge of databases and web applications (both frontend and backend), Version Control (Git) & SDLC Process, and functional programming. If so, that's a fantastic bonus!\n*   You can easily switch contexts, maintain an enthusiasm for learning, and demonstrate a passion for performance.\n*   You have a demonstrated ability to tackle complex coding challenges and find innovative solutions to technical problems.\n*   You been involved in open-source projects or made community contributions.\n*   You have exposure to cloud platforms such as AWS, Google Cloud Platform, or Azure, and an understanding of cloud-based application deployment and services.\n*   You possess time management, adaptability, and organizational skills, along with a proactive attitude towards learning and self-improvement.\n\nDoes this resonate with you? If so, we'd love to discuss a career as a technology graduate with HashedIn! We are currently seeking enthusiastic technology graduates to join us as Software Developers.\n\n**What will you do in Hashedin**\n\n*   **Innovative Development:** Dive into software and product development, bringing innovative ideas to life.\n*   **Precision Coding:** Transform designs into functional code with precision and creativity.\n*   **Independent Problem-Solving:** Tackle and resolve complex issues independently through thorough research.\n*   **Code Excellence:** Maintain and enhance existing codebases while conducting peer reviews to ensure quality.\n*   **Collaborative Implementation:** Work closely with colleagues to seamlessly integrate technical features.\n*   **Tech Exploration:** Investigate and adopt modern technologies that can elevate our projects.\n*   **Iterative Improvement:** Write, test, refine, and rewrite code as needed, maintaining clear communication with all programmers involved.\n*   **Transparent Communication:** Effectively communicate issues and resolutions across all levels of the organization.\n*   **Community Engagement:** Contribute to the growth of the organization by participating in recruitment, social activities, and knowledge sharing through blog writing, case studies, training activities, and more.\n\n© HASHEDIN BY DELOITTE"
+      ],
+      [
+        3,
+        "&lt;img&gt;Hashedin by Deloitte&lt;/img&gt;\n\n## Campus Selection Process\n\n*   PPT Presentation\n*   Online Coding Test\n*   Technical Interview 1/2/3 (Based on the interview performance)\n*   HR Interview\n\n## Recruiting Tips\n\nFrom developing a standout resume to putting your best foot forward in the interview, we want you to feel prepared and confident as you explore opportunities at Hashedin Technologies. Here are some recruiting tips from our Team\n\n*   Be Prepared to discuss your approach to challenges and problem-solving, explaining your thought process and decision making.\n*   Be ready to discuss personal projects in detail, highlighting your role and contributions to showcase your technical skills and communication abilities.\n*   Research the company thoroughly to understand its values, mission, culture and recent developments, demonstrating your genuine interest.\n*   During problem-solving or case study interviews, focus on demonstrating your unique approach and thought process by showcasing your innovative thinking.\n\n© HASHEDIN BY DELOITTE"
+      ]
+    ]
+  },
+  "format": "structured_json"
+}

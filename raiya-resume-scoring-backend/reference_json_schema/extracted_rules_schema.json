@@ -1,0 +1,66 @@
+{
+    "type": "object",
+    "description": "Dynamic extracted scoring rules per evaluation section",
+    "additionalProperties": {
+        "type": "object",
+        "properties": {
+            "weight": {
+                "type": "number",
+                "description": "Weight percentage assigned to this section"
+            },
+            "min_score": {
+                "type": "number",
+                "description": "Minimum score allowed for this section"
+            },
+            "max_score": {
+                "type": "number",
+                "description": "Maximum score allowed for this section"
+            },
+            "allowed_scores": {
+                "type": "array",
+                "description": "Discrete valid scores allowed for section scoring",
+                "items": {
+                    "type": "number"
+                }
+            },
+            "criteria": {
+                "type": "object",
+                "description": "Mapping of criterion label -> assigned score",
+                "additionalProperties": {
+                    "type": "number"
+                }
+            },
+            "jd_items": {
+                "type": "array",
+                "description": "Items extracted from job description for this section",
+                "items": {
+                    "type": "string"
+                }
+            },
+            "required": {
+                "type": "boolean",
+                "description": "Whether section must be evaluated"
+            },
+            "description": {
+                "type": "string",
+                "description": "Human-readable explanation of scoring logic"
+            }
+        },
+        "required": [
+            "weight",
+            "min_score",
+            "max_score",
+            "allowed_scores",
+            "criteria",
+            "jd_items",
+            "required",
+            "description"
+        ]
+    },
+    "examples": {
+        "skills": {},
+        "experience": {},
+        "salary": {},
+        "position": {}
+    }
+}

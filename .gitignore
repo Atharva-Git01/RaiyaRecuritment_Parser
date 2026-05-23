@@ -23,3 +23,27 @@ test_repro_output.log
 # Directories to exclude if not specifically requested
 *.bak
 *.tmp
+
+# Additional venv name variants
+**/resume-env/
+**/*-env/
+**/*-venv/
+
+# .env variants beyond the bare .env name (e.g. .env_pinecone, .env.local)
+**/.env.*
+**/.env_*
+!**/.env.example
+
+# Windows shortcuts
+*.lnk
+
+# RAG layer runtime artifacts — generated, not source
+raiya-resume-scoring-backend/app/RAG_Validation_layer/data/historical/
+raiya-resume-scoring-backend/app/RAG_Validation_layer/data/outputs/
+
+# Candidate PII — real resumes and any extracted/validated/hashed forms
+raiya-resume-scoring-backend/resume_extraction_normalization/resumes/
+raiya-resume-scoring-backend/resume_extraction_normalization/resume_extraction_outputs/
+raiya-resume-scoring-backend/resume_extraction_normalization/validated_resume_outputs/
+raiya-resume-scoring-backend/resume_extraction_normalization/hashed_resume_extraction_results/
+**/score_my_resume_*.json

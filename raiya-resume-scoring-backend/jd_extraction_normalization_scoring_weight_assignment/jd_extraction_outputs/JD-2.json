@@ -1,0 +1,95 @@
+{
+  "structured_data": {
+    "content": {
+      "pipeline_metadata": {
+        "jd_content_hash": "6fc49dbfcf28bb69cb44c8d62eb3cb9d52d90f85988ffa744f8079f421ae8d4b",
+        "created_at": null,
+        "source": null
+      },
+      "job_information": {
+        "job_title": "Software Development Intern",
+        "position": {
+          "senior_level": false,
+          "mid_level": false,
+          "entry_level": true
+        },
+        "employment_type": "internship",
+        "location": "2nd floor, R. M. Classic, Paud road, Kothrud, Pune, Maharashtra",
+        "work_mode": {
+          "remote_option": false,
+          "work_from_office": true,
+          "hybrid": false
+        }
+      },
+      "experience_requirements": {
+        "experience_range": {
+          "0_1_years": true,
+          "1_2_years": false,
+          "2_3_years": false,
+          "3_4_years": false,
+          "5_7_years": false,
+          "8_plus_years": false
+        },
+        "minimum_years": 0,
+        "preferred_years": 0
+      },
+      "education_requirements": {
+        "qualification": {
+          "phd": false,
+          "masters": true,
+          "bachelors": true,
+          "associate": false,
+          "diploma": false,
+          "certification": false
+        },
+        "preferred_field_of_study": [
+          "Engineering",
+          "Computer Application"
+        ]
+      },
+      "skills_and_technologies": {
+        "technologies": [
+          "RPA",
+          "NLP",
+          "AI",
+          "Python"
+        ],
+        "skills": [
+          "Programming Skills",
+          "Problem-Solving Ability",
+          "Logical Thinking",
+          "Team Collaboration",
+          "Adaptability & Learning"
+        ],
+        "tools": null,
+        "certifications": null
+      },
+      "job_details": {
+        "job_description": "EmergeFlow Technologies is an RPA and AI consulting firm that helps businesses through smart automation and data-driven change. With strong expertise in RPA, NLP, and analytics, the company improves efficiency and boosts productivity across various industries. Their custom solutions have changed how companies handle onboarding, quotation processing, and compliance tasks. EmergeFlow combines technical accuracy with strategic insight to create real impact and lasting value. As a Software Development Intern, you will assist in developing, testing, and debugging software applications, collaborate with the development team on IT and RPA solutions, participate in code reviews and documentation, learn and apply best software development practices, and utilize knowledge of programming languages like Python.",
+        "responsibilities": [
+          "Assist in developing, testing, and debugging software applications.",
+          "Collaborate with the development team on IT and RPA solutions.",
+          "Participate in code reviews and documentation.",
+          "Learn and apply best software development practices.",
+          "Knowledge of programming languages like Python"
+        ],
+        "requirements": [
+          "Bachelor's or Master's degree in Engineering, Computer Application, or any related field.",
+          "Programming Skills",
+          "Problem-Solving Ability",
+          "Logical Thinking",
+          "Team Collaboration",
+          "Adaptability & Learning"
+        ],
+        "preferred_qualifications": null
+      }
+    },
+    "metadata": {
+      "page_attributions": {},
+      "extraction_method": "markdown_gemini",
+      "total_pages": 1,
+      "successful_pages": 1
+    }
+  },
+  "format": "structured_json"
+}

@@ -1,0 +1,44 @@
+[
+    {
+        "id": "rule_intern_experience",
+        "description": "If most experience is 'Intern', punish Seniority scores.",
+        "condition": {
+            "field": "resume.experience",
+            "operator": "contains_keyword_ratio",
+            "keyword": "intern",
+            "threshold": 0.5
+        },
+        "action": {
+            "target": "experience_score",
+            "operation": "cap",
+            "value": 50
+        }
+    },
+    {
+        "id": "rule_missing_summary",
+        "description": "If summary is missing, max out soft skills score at 50.",
+        "condition": {
+            "field": "resume.summary",
+            "operator": "empty"
+        },
+        "action": {
+            "target": "responsibilities_score",
+            "operation": "cap",
+            "value": 50
+        }
+    },
+    {
+        "id": "rule_short_tenure",
+        "description": "If average job duration < 6 months, flag potential job hopping.",
+        "condition": {
+            "field": "resume.experience",
+            "operator": "avg_duration_months_lt",
+            "value": 6
+        },
+        "action": {
+            "target": "experience_score",
+            "operation": "multiply",
+            "value": 0.8
+        }
+    }
+]

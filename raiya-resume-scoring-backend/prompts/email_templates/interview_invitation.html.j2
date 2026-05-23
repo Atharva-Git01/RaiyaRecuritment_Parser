@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Interview Candidates — {{ job_title }}</title>
+</head>
+<body style="margin:0;padding:0;font-family:'Segoe UI',Arial,sans-serif;background-color:#f0f4f8;color:#1a202c;">
+
+  <!-- Header -->
+  <table width="100%" cellpadding="0" cellspacing="0" style="background:linear-gradient(135deg,#1e40af,#3b82f6);padding:30px 20px;">
+    <tr>
+      <td align="center">
+        <h1 style="color:#ffffff;margin:0;font-size:24px;font-weight:600;">
+          🎯 {{ company_name }}
+        </h1>
+        <p style="color:#bfdbfe;margin:8px 0 0;font-size:14px;">
+          AI-Powered Resume Screening Results
+        </p>
+      </td>
+    </tr>
+  </table>
+
+  <!-- Main Content -->
+  <table width="100%" cellpadding="0" cellspacing="0" style="max-width:700px;margin:0 auto;">
+    <tr>
+      <td style="padding:30px 20px;">
+
+        <!-- Greeting -->
+        <p style="font-size:16px;margin:0 0 16px;">
+          Hello <strong>{{ hr_name }}</strong>,
+        </p>
+        <p style="font-size:14px;color:#4a5568;line-height:1.6;margin:0 0 20px;">
+          The AI screening for <strong style="color:#2563eb;">{{ job_title }}</strong>
+          has been completed. Below {{ "is" if total_candidates == 1 else "are" }}
+          <strong>{{ total_candidates }}</strong>
+          candidate{{ "s" if total_candidates != 1 else "" }}
+          who scored <strong>≥ {{ score_threshold }}</strong> and
+          {{ "is" if total_candidates == 1 else "are" }} recommended for interview.
+        </p>
+
+        <!-- Batch Info -->
+        <table width="100%" cellpadding="0" cellspacing="0" style="background:#eff6ff;border-radius:8px;padding:16px;margin:0 0 24px;">
+          <tr>
+            <td style="padding:4px 12px;font-size:13px;color:#1e40af;">
+              <strong>Batch ID:</strong> {{ batch_id[:12] }}...
+            </td>
+            <td style="padding:4px 12px;font-size:13px;color:#1e40af;">
+              <strong>Generated:</strong> {{ generated_at }}
+            </td>
+          </tr>
+        </table>
+
+        <!-- Candidates Table -->
+        <table width="100%" cellpadding="0" cellspacing="0" style="border-collapse:collapse;border-radius:8px;overflow:hidden;box-shadow:0 1px 3px rgba(0,0,0,0.1);">
+          <thead>
+            <tr style="background:#1e40af;">
+              <th style="padding:12px 10px;color:#fff;font-size:12px;text-transform:uppercase;text-align:left;">Rank</th>
+              <th style="padding:12px 10px;color:#fff;font-size:12px;text-transform:uppercase;text-align:left;">Candidate</th>
+              <th style="padding:12px 10px;color:#fff;font-size:12px;text-transform:uppercase;text-align:left;">Email</th>
+              <th style="padding:12px 10px;color:#fff;font-size:12px;text-transform:uppercase;text-align:center;">Score</th>
+              <th style="padding:12px 10px;color:#fff;font-size:12px;text-transform:uppercase;text-align:center;">Rating</th>
+            </tr>
+          </thead>
+          <tbody>
+            {% for candidate in candidates %}
+            <tr style="background:{{ '#ffffff' if loop.index is odd else '#f8fafc' }};">
+              <td style="padding:12px 10px;border-bottom:1px solid #e2e8f0;font-size:14px;font-weight:600;color:#2563eb;">
+                #{{ loop.index }}
+              </td>
+              <td style="padding:12px 10px;border-bottom:1px solid #e2e8f0;font-size:14px;">
+                {{ candidate.candidate_name }}
+              </td>
+              <td style="padding:12px 10px;border-bottom:1px solid #e2e8f0;font-size:13px;color:#4a5568;">
+                <a href="mailto:{{ candidate.candidate_email }}" style="color:#2563eb;text-decoration:none;">
+                  {{ candidate.candidate_email or 'N/A' }}
+                </a>
+              </td>
+              <td style="padding:12px 10px;border-bottom:1px solid #e2e8f0;text-align:center;">
+                <span style="
+                  display:inline-block;
+                  padding:4px 12px;
+                  border-radius:20px;
+                  font-weight:700;
+                  font-size:14px;
+                  {% if candidate.final_score >= 85 %}
+                  background:#dcfce7;color:#166534;
+                  {% elif candidate.final_score >= 70 %}
+                  background:#dbeafe;color:#1e40af;
+                  {% elif candidate.final_score >= 55 %}
+                  background:#fef3c7;color:#92400e;
+                  {% else %}
+                  background:#fef2f2;color:#991b1b;
+                  {% endif %}
+                ">
+                  {{ "%.1f"|format(candidate.final_score) }}
+                </span>
+              </td>
+              <td style="padding:12px 10px;border-bottom:1px solid #e2e8f0;text-align:center;font-size:13px;font-weight:600;
+                {% if candidate.recommendation == 'excellent' %}color:#166534;
+                {% elif candidate.recommendation == 'good' %}color:#1e40af;
+                {% elif candidate.recommendation == 'average' %}color:#92400e;
+                {% else %}color:#991b1b;{% endif %}
+              ">
+                {{ candidate.recommendation | title }}
+              </td>
+            </tr>
+
+            <!-- Score Breakdown Row -->
+            <tr style="background:#fafbfc;">
+              <td colspan="5" style="padding:6px 10px 12px 40px;border-bottom:2px solid #e2e8f0;font-size:11px;color:#6b7280;">
+                Skills: {{ "%.1f"|format(candidate.skills_score) }} |
+                Experience: {{ "%.1f"|format(candidate.experience_score) }} |
+                Technologies: {{ "%.1f"|format(candidate.technologies_score) }} |
+                Qualification: {{ "%.1f"|format(candidate.qualification_score) }}
+                {% if candidate.hallucinations_detected %}
+                  | ⚠️ <span style="color:#dc2626;">Validation Warning</span>
+                {% endif %}
+              </td>
+            </tr>
+            {% endfor %}
+          </tbody>
+        </table>
+
+        <!-- Action Items -->
+        <div style="margin:24px 0;padding:20px;background:#f0fdf4;border-left:4px solid #22c55e;border-radius:0 8px 8px 0;">
+          <h3 style="margin:0 0 8px;font-size:15px;color:#166534;">📋 Next Steps</h3>
+          <ol style="margin:0;padding:0 0 0 20px;font-size:14px;color:#4a5568;line-height:1.8;">
+            <li>Review the candidate rankings and score breakdowns above</li>
+            <li>Contact qualified candidates to schedule interviews</li>
+            <li>Update candidate status in the RAIYA dashboard</li>
+          </ol>
+        </div>
+
+        <!-- Important Notice -->
+        <div style="margin:0 0 24px;padding:16px;background:#fffbeb;border-left:4px solid #f59e0b;border-radius:0 8px 8px 0;">
+          <p style="margin:0;font-size:13px;color:#92400e;">
+            <strong>📌 Note:</strong> Candidates have <strong>NOT</strong> been contacted directly by RAIYA.
+            All outreach should be initiated by your team.
+          </p>
+        </div>
+
+      </td>
+    </tr>
+  </table>
+
+  <!-- Footer -->
+  <table width="100%" cellpadding="0" cellspacing="0" style="background:#1e293b;padding:20px;">
+    <tr>
+      <td align="center" style="color:#94a3b8;font-size:12px;line-height:1.6;">
+        <p style="margin:0;">
+          Powered by <strong style="color:#60a5fa;">{{ company_name }}</strong> — AI-Powered Resume Screening
+        </p>
+        <p style="margin:4px 0 0;color:#64748b;">
+          This is an automated notification. Do not reply to this email.
+        </p>
+      </td>
+    </tr>
+  </table>
+
+</body>
+</html>

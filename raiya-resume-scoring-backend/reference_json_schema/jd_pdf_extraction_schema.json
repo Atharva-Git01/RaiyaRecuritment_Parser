@@ -1,0 +1,58 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "type": "object",
+  "description": "Standard DocStrange extraction schema for JD PDFs. Extracts job details, required skills, and preferred qualifications as flat structured data for downstream ontology mapping.",
+
+  "properties": {
+    "pipeline_metadata": {
+      "type": "object",
+      "description": "Pipeline tracking metadata injected post-extraction.",
+      "properties": {
+        "jd_content_hash": { "type": "string" },
+        "extraction_method": { "type": "string", "enum": ["docstrange_standard"] },
+        "schema_type": { "type": "string", "enum": ["standard_docstrange_output"] },
+        "created_at": { "type": "string", "format": "date-time" }
+      },
+      "required": ["jd_content_hash"]
+    },
+
+    "job_details": {
+      "type": "object",
+      "description": "Core job information extracted directly from the JD document.",
+      "properties": {
+        "job_title": { "type": "string", "description": "The job title or role name" },
+        "experience": { "type": "string", "description": "Required experience range (e.g., '0-1 Years', '3-5 Years')" },
+        "education": { "type": "string", "description": "Required educational qualification (e.g., 'MCA', 'B.Tech')" },
+        "location": { "type": "string", "description": "Job location" },
+        "employment_type": { "type": "string", "description": "Full-time, part-time, contract, etc." },
+        "work_mode": { "type": "string", "description": "Remote, hybrid, on-site, etc." },
+        "salary_range": { "type": "string", "description": "Salary range if mentioned" }
+      },
+      "required": ["job_title"]
+    },
+
+    "required_skills_and_competencies": {
+      "type": "array",
+      "description": "List of all mandatory/required skills, competencies, and qualifications explicitly stated in the JD.",
+      "items": { "type": "string" }
+    },
+
+    "preferred_added_advantage": {
+      "type": "array",
+      "description": "List of preferred/nice-to-have/added-advantage skills and qualifications.",
+      "items": { "type": "string" }
+    },
+
+    "responsibilities": {
+      "type": "array",
+      "description": "Key responsibilities and duties listed in the JD.",
+      "items": { "type": "string" }
+    },
+
+    "requirements": {
+      "type": "array",
+      "description": "Explicit requirements stated in the JD (education, certifications, etc.).",
+      "items": { "type": "string" }
+    }
+  }
+}

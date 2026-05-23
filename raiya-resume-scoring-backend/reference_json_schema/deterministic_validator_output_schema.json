@@ -1,0 +1,236 @@
+{
+    "type": "object",
+    "description": "Output of rag_validation Step 3. Criteria matched using _extract_criterion_meta() which handles both legacy plain-number and enterprise rich-dict formats. Coverage is label-weighted when enterprise criteria are present.",
+    "properties": {
+        "is_valid": {
+            "type": "boolean",
+            "description": "False if any hallucination, mandatory-gap, or zero-weight anomaly was detected across all sections"
+        },
+        "overall_analytics": {
+            "type": "object",
+            "properties": {
+                "matched_skills": {
+                    "type": "array",
+                    "description": "All matched criteria entries aggregated across sections",
+                    "items": {
+                        "$ref": "#/definitions/match_item"
+                    }
+                },
+                "weighted_coverage": {
+                    "type": "number",
+                    "description": "Average hybrid_score × 100 across sections (legacy fallback)"
+                },
+                "label_weighted_coverage": {
+                    "type": "number",
+                    "description": "Average label-weighted coverage across sections: Σ(matched multipliers) / Σ(all multipliers) × 100"
+                },
+                "token_overlap": {
+                    "type": "number",
+                    "description": "Average exact_match_ratio across sections"
+                },
+                "total_criteria": {
+                    "type": "integer",
+                    "description": "Total JD criteria across all sections"
+                },
+                "total_matched": {
+                    "type": "integer",
+                    "description": "Total criteria found in resume text"
+                }
+            },
+            "required": [
+                "matched_skills",
+                "weighted_coverage",
+                "label_weighted_coverage",
+                "token_overlap",
+                "total_criteria",
+                "total_matched"
+            ]
+        },
+        "errors": {
+            "type": "array",
+            "description": "Global validation error/warning strings",
+            "items": {
+                "type": "string"
+            }
+        },
+        "section_results": {
+            "type": "object",
+            "description": "Per-section validation output keyed by section name",
+            "additionalProperties": {
+                "$ref": "#/definitions/section_result"
+            }
+        }
+    },
+    "required": [
+        "is_valid",
+        "overall_analytics",
+        "errors",
+        "section_results"
+    ],
+    "definitions": {
+        "match_item": {
+            "type": "object",
+            "description": "A single criterion matched in the resume. Carries Phase 4 ontology metadata when enterprise criteria are used.",
+            "properties": {
+                "jd_item": {
+                    "type": "string",
+                    "description": "Original criterion key from JD scoring section"
+                },
+                "resume_match": {
+                    "type": "string",
+                    "description": "Lowercase criterion key that was matched in resume text"
+                },
+                "similarity": {
+                    "type": "number",
+                    "minimum": 0,
+                    "maximum": 1,
+                    "description": "Dense similarity score from hybrid_search for this section"
+                },
+                "weight": {
+                    "type": "number",
+                    "description": "Enterprise: criteria score (0–100). Legacy: original numeric value."
+                },
+                "reasoning_label": {
+                    "type": "string",
+                    "description": "Phase 4 ontology label. One of: mandatory_core_skill, critical_requirement, important_skill, preferred_skill, supporting_skill, nice_to_have, irrelevant, legacy (for plain-number criteria).",
+                    "enum": [
+                        "mandatory_core_skill",
+                        "critical_requirement",
+                        "important_skill",
+                        "preferred_skill",
+                        "supporting_skill",
+                        "nice_to_have",
+                        "irrelevant",
+                        "legacy",
+                        "unknown"
+                    ]
+                },
+                "multiplier": {
+                    "type": "number",
+                    "minimum": 0,
+                    "maximum": 1,
+                    "description": "Deterministic multiplier for this label (Phase 6). Used in label_weighted_coverage calculation."
+                },
+                "confidence": {
+                    "type": "number",
+                    "minimum": 0,
+                    "maximum": 1,
+                    "description": "LLM confidence in the assigned reasoning_label (Phase 4)."
+                }
+            },
+            "required": [
+                "jd_item",
+                "resume_match",
+                "similarity",
+                "weight",
+                "reasoning_label",
+                "multiplier",
+                "confidence"
+            ]
+        },
+        "semantic_metrics": {
+            "type": "object",
+            "properties": {
+                "matched_skills": {
+                    "type": "array",
+                    "items": {
+                        "$ref": "#/definitions/match_item"
+                    }
+                },
+                "weighted_coverage": {
+                    "type": "number",
+                    "description": "hybrid_score × 100 (legacy coverage, kept for backwards compat)"
+                },
+                "label_weighted_coverage": {
+                    "type": "number",
+                    "description": "Σ(matched_multiplier) / Σ(total_multiplier_budget) × 100. Used as ground truth by Step 4."
+                },
+                "token_overlap": {
+                    "type": "number",
+                    "description": "exact_match_ratio from hybrid_search for this section"
+                }
+            },
+            "required": [
+                "matched_skills",
+                "weighted_coverage",
+                "label_weighted_coverage",
+                "token_overlap"
+            ]
+        },
+        "hybrid_search_breakdown": {
+            "type": "object",
+            "properties": {
+                "dense_score": {
+                    "type": "number",
+                    "minimum": 0,
+                    "maximum": 1
+                },
+                "bm25_score": {
+                    "type": "number",
+                    "minimum": 0,
+                    "maximum": 1
+                },
+                "exact_match_ratio": {
+                    "type": "number",
+                    "minimum": 0,
+                    "maximum": 1
+                },
+                "hybrid_score": {
+                    "type": "number",
+                    "minimum": 0,
+                    "maximum": 1
+                },
+                "criteria_matched": {
+                    "type": "integer"
+                },
+                "criteria_total": {
+                    "type": "integer"
+                },
+                "mandatory_unmatched": {
+                    "type": "array",
+                    "description": "Criteria with reasoning_label in {mandatory_core_skill, critical_requirement} that were NOT found in resume text. Non-empty list triggers R005 rule.",
+                    "items": {
+                        "type": "string"
+                    }
+                }
+            },
+            "required": [
+                "dense_score",
+                "bm25_score",
+                "exact_match_ratio",
+                "hybrid_score",
+                "criteria_matched",
+                "criteria_total",
+                "mandatory_unmatched"
+            ]
+        },
+        "section_result": {
+            "type": "object",
+            "properties": {
+                "valid": {
+                    "type": "boolean",
+                    "description": "False if any section-level error was appended"
+                },
+                "errors": {
+                    "type": "array",
+                    "description": "Section-level error/warning messages",
+                    "items": {
+                        "type": "string"
+                    }
+                },
+                "resume_semantic_metrics": {
+                    "$ref": "#/definitions/semantic_metrics"
+                },
+                "hybrid_search_breakdown": {
+                    "$ref": "#/definitions/hybrid_search_breakdown"
+                }
+            },
+            "required": [
+                "valid",
+                "errors",
+                "resume_semantic_metrics",
+                "hybrid_search_breakdown"
+            ]
+        }
+    }
+}

@@ -1,0 +1,50 @@
+{
+    "type": "object",
+    "description": "Output of rag_validation Step 6 (_generate_final_report). Combines deterministic validity, mathematical validity, and JD weight pipeline Phase 13 validity into a single PASS/FAIL verdict. Verdict is PASS only when all three flags are true.",
+    "properties": {
+        "verdict": {
+            "type": "string",
+            "description": "PASS when det_valid AND math_valid AND jd_weights_math_valid. FAIL otherwise.",
+            "enum": ["PASS", "FAIL"]
+        },
+        "deterministic_valid": {
+            "type": "boolean",
+            "description": "True when no hallucination, mandatory-gap, or anomaly errors were raised in Step 3"
+        },
+        "mathematical_valid": {
+            "type": "boolean",
+            "description": "True when overall_accuracy ≥ 80 (Step 4)"
+        },
+        "jd_weights_math_valid": {
+            "type": "boolean",
+            "description": "Cross-reference of JD Phase 13 mathematical_validation.is_valid. False propagates into final verdict and score_adjustment warning."
+        },
+        "overall_accuracy": {
+            "type": "number",
+            "description": "Step 4 overall accuracy percentage (0–100)"
+        },
+        "importance_weighted_mae": {
+            "type": "number",
+            "description": "Importance-weighted MAE from Step 4. Used in PDF report and scoring trace."
+        },
+        "rules_fired": {
+            "type": "integer",
+            "description": "Total number of rules that fired across all sections (R001–R005)"
+        },
+        "confidence": {
+            "type": "string",
+            "description": "high (accuracy ≥ 90) | medium (accuracy ≥ 70) | low (accuracy < 70)",
+            "enum": ["high", "medium", "low"]
+        }
+    },
+    "required": [
+        "verdict",
+        "deterministic_valid",
+        "mathematical_valid",
+        "jd_weights_math_valid",
+        "overall_accuracy",
+        "importance_weighted_mae",
+        "rules_fired",
+        "confidence"
+    ]
+}

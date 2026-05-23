@@ -1,0 +1,44 @@
+{
+  "evidence_id": "string",
+  "requirement_id": "string",
+  "requirement_type": "SKILL | EXPERIENCE | EDUCATION | CERTIFICATION | TOOL",
+
+  "match": {
+    "status": "EXACT | PARTIAL | NONE",
+    "score": 1.0,
+    "confidence": 1.0
+  },
+
+  "evidence": {
+    "text": "string",
+    "normalized_value": "string",
+    "raw_value": "string",
+    "source_section": "skills | experience | education | projects",
+    "page": 1,
+    "line_span": ["start", "end"]
+  },
+
+  "rule": {
+    "rule_id": "string",
+    "rule_name": "string",
+    "rule_type": "EXACT_MATCH | REGEX | THRESHOLD | LOOKUP",
+    "version": "v1.0"
+  },
+
+  "comparison": {
+    "jd_value": "string",
+    "resume_value": "string",
+    "operator": "EQUALS | CONTAINS | GREATER_THAN | LESS_THAN"
+  },
+
+  "flags": {
+    "negation_detected": false,
+    "inferred": false,
+    "conflict": false
+  },
+
+  "debug": {
+    "matched_tokens": ["string"],
+    "reason": "string explanation"
+  }
+}

@@ -1,0 +1,62 @@
+# Core
+fastapi>=0.115.0
+uvicorn[standard]>=0.30.0
+pydantic[email]>=2.7.0
+pydantic-settings>=2.3.0
+
+# LangGraph + LangChain
+# Targets LangGraph 0.6.x — uses context_schema, Runtime[Context], AsyncPostgresSaver.
+# Do not downgrade below 0.6.0: config_schema is deprecated there and removed in v2.0.0.
+langgraph>=0.6.0,<0.7.0
+langchain>=0.2.0
+langchain-text-splitters>=0.2.0
+langchain-community>=0.2.0
+langchain-huggingface>=0.0.3
+langsmith>=0.1.0
+
+# Database
+sqlalchemy[asyncio]>=2.0.30
+asyncpg>=0.29.0
+psycopg[binary]>=3.1.0
+alembic>=1.13.0
+pgvector>=0.2.5
+
+# Cache
+redis[hiredis]>=5.0.3
+diskcache>=5.6.3
+
+# Embeddings
+sentence-transformers>=3.0.0
+rank-bm25>=0.2.2
+
+# Azure Phi-4
+azure-ai-inference>=1.0.0b3
+azure-core>=1.30.0
+
+# Guardrails AI
+guardrails-ai>=0.5.0
+
+# OCR
+docstrange>=0.1.0
+httpx>=0.27.0
+
+# PDF
+reportlab>=4.2.0
+
+# Auth
+python-jose[cryptography]>=3.3.0
+bcrypt>=4.1.0
+
+# Validation
+jsonschema>=4.21.0
+
+# Email (Pipeline 4 — Interview Notification)
+aiosmtplib>=2.0.0
+jinja2>=3.1.0
+
+# LangGraph Persistence
+langgraph-checkpoint-postgres>=2.0.0
+
+# Utils
+python-dotenv>=1.0.1
+numpy>=1.26.0

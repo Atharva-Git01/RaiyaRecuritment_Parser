@@ -1,0 +1,174 @@
+{
+    "description": "Reference schema for the jd_embeddings pgvector table. Rows are produced by app.chunking.jd_chunker.chunk_jd_json() using RecursiveJsonSplitter, then stored via app.db.pgvector_client.upsert_jd_embeddings(). Criteria values follow the enterprise rich-dict format produced by the 14-phase weight assignment pipeline.",
+    "pgvector_table": "jd_embeddings",
+    "embedding_model": "BAAI/bge-large-en-v1.5",
+    "embedding_dims": 768,
+    "similarity_metric": "cosine (<=> operator)",
+    "chunker": "app.chunking.jd_chunker.chunk_jd_json",
+    "splitter": "langchain_text_splitters.RecursiveJsonSplitter",
+    "splitter_config": {
+        "max_chunk_size": 400,
+        "description": "Splits JD weight JSON by section boundaries. Each chunk represents one scoring section plus its criteria and weight metadata."
+    },
+
+    "table_schema": {
+        "table_name": "jd_embeddings",
+        "columns": {
+            "id": {
+                "type": "SERIAL PRIMARY KEY",
+                "description": "Auto-incremented row identifier"
+            },
+            "jd_id": {
+                "type": "TEXT NOT NULL",
+                "description": "Unique identifier for the job description (typically jd_content_hash from Phase 14 output)"
+            },
+            "chunk_index": {
+                "type": "INTEGER NOT NULL",
+                "description": "0-based sequential index of the chunk within this JD"
+            },
+            "dimension": {
+                "type": "TEXT NOT NULL",
+                "description": "Section name this chunk covers. One of: technologies, skills, tools, certifications, experience, qualification, position, relevant_experience, responsibilities, salary, domain_fit."
+            },
+            "chunk_text": {
+                "type": "TEXT NOT NULL",
+                "description": "Serialised JSON string of the chunk data produced by split_json_to_chunks()"
+            },
+            "embedding": {
+                "type": "VECTOR(768) NOT NULL",
+                "description": "BGE-large-en-v1.5 dense embedding of chunk_text"
+            },
+            "chunk_hash": {
+                "type": "TEXT NOT NULL",
+                "description": "SHA-256 hex digest of chunk_text. Used for deduplication on upsert."
+            },
+            "metadata": {
+                "type": "JSONB",
+                "description": "Arbitrary key-value metadata attached by the chunker (e.g. section name, weight, jd_id)"
+            }
+        },
+        "unique_constraint": "(jd_id, chunk_hash)"
+    },
+
+    "dimension_values": [
+        "technologies",
+        "skills",
+        "tools",
+        "certifications",
+        "experience",
+        "qualification",
+        "position",
+        "relevant_experience",
+        "responsibilities",
+        "salary",
+        "domain_fit"
+    ],
+
+    "criteria_formats": {
+        "enterprise_rich_dict": {
+            "description": "Produced by the 14-phase weight assignment pipeline (Phase 7 criteria score generation + Phase 14 audit metadata injection)",
+            "schema": {
+                "score": "float — CriteriaScore = BASE_SCORE × multiplier (0–100)",
+                "reasoning_label": "string — one of 7 ontology labels: mandatory_core_skill, critical_requirement, important_skill, preferred_skill, supporting_skill, nice_to_have, irrelevant",
+                "multiplier": "float — deterministic label multiplier (0.0–1.0)",
+                "confidence": "float — LLM confidence in reasoning_label assignment (0.0–1.0)",
+                "evidence": "string — text from JD that supports the label assignment"
+            },
+            "example": {
+                "score": 95.0,
+                "reasoning_label": "critical_requirement",
+                "multiplier": 0.95,
+                "confidence": 0.92,
+                "evidence": "Must have 5+ years of Python experience for backend development"
+            }
+        },
+        "legacy_plain_number": {
+            "description": "Pre-enterprise format. Criteria value is a plain float (0–100). Still accepted by rag_validation._extract_criterion_meta() for backwards compatibility.",
+            "example": 80.0
+        }
+    },
+
+    "label_multiplier_table": {
+        "description": "Deterministic multipliers from Phase 6. Score = BASE_SCORE(100) × multiplier.",
+        "values": {
+            "mandatory_core_skill": 1.00,
+            "critical_requirement": 0.95,
+            "important_skill": 0.80,
+            "preferred_skill": 0.70,
+            "supporting_skill": 0.55,
+            "nice_to_have": 0.35,
+            "irrelevant": 0.00
+        }
+    },
+
+    "chunk_examples": {
+        "technologies_section": {
+            "dimension": "technologies",
+            "text": "{\"section\": \"technologies\", \"weight\": 22.5, \"weight_generation_metadata\": {\"raw_weight\": 185.0, \"criteria_count\": 4, \"section_importance_factor\": 1.28, \"normalization_factor\": 1048.3}, \"criteria\": {\"Python\": {\"score\": 100.0, \"reasoning_label\": \"mandatory_core_skill\", \"multiplier\": 1.0, \"confidence\": 0.97, \"evidence\": \"Required: Python 3.8+\"}, \"FastAPI\": {\"score\": 95.0, \"reasoning_label\": \"critical_requirement\", \"multiplier\": 0.95, \"confidence\": 0.91, \"evidence\": \"Primary API framework\"}, \"Docker\": {\"score\": 80.0, \"reasoning_label\": \"important_skill\", \"multiplier\": 0.80, \"confidence\": 0.88, \"evidence\": \"Containerisation required\"}, \"Kubernetes\": {\"score\": 70.0, \"reasoning_label\": \"preferred_skill\", \"multiplier\": 0.70, \"confidence\": 0.85, \"evidence\": \"K8s preferred for deployment\"}}, \"jd_items\": [\"Python\", \"FastAPI\", \"Docker\", \"Kubernetes\"], \"source\": \"jd\", \"chunk_index\": 0, \"chunk_hash\": \"a1b2...\"}",
+            "notes": "One chunk per scoring section. Criteria use enterprise rich-dict format."
+        },
+        "experience_section": {
+            "dimension": "experience",
+            "text": "{\"section\": \"experience\", \"weight\": 18.3, \"weight_generation_metadata\": {\"raw_weight\": 148.2, \"criteria_count\": 4, \"section_importance_factor\": 0.90, \"normalization_factor\": 1048.3}, \"criteria\": {\">=8 years\": {\"score\": 35.0, \"reasoning_label\": \"nice_to_have\", \"multiplier\": 0.35, \"confidence\": 0.80, \"evidence\": \"Overqualified for this role\"}, \"5-7 years\": {\"score\": 100.0, \"reasoning_label\": \"mandatory_core_skill\", \"multiplier\": 1.0, \"confidence\": 0.95, \"evidence\": \"Requires 5-7 years experience\"}, \"3-4 years\": {\"score\": 55.0, \"reasoning_label\": \"supporting_skill\", \"multiplier\": 0.55, \"confidence\": 0.87, \"evidence\": \"3-4 years acceptable\"}, \"<3 years\": {\"score\": 0.0, \"reasoning_label\": \"irrelevant\", \"multiplier\": 0.0, \"confidence\": 0.99, \"evidence\": \"Under-qualified\"}}, \"jd_items\": [\">=8 years\", \"5-7 years\", \"3-4 years\", \"<3 years\"], \"source\": \"jd\", \"chunk_index\": 2, \"chunk_hash\": \"c3d4...\"}",
+            "notes": "Fixed-bucket section. Buckets not matching JD requirement get irrelevant/low labels."
+        },
+        "domain_fit_chunk": {
+            "dimension": "domain_fit",
+            "text": "{\"section\": \"domain_fit\", \"job_title\": \"Senior Backend Engineer\", \"job_description\": \"We are looking for an experienced backend engineer to lead our API platform...\", \"responsibilities\": [\"Design and implement RESTful APIs\", \"Maintain CI/CD pipelines\", \"Lead code reviews\"], \"employment_type\": \"full-time\", \"work_mode\": {\"remote_option\": true, \"work_from_office\": false, \"hybrid\": false}, \"source\": \"jd\", \"chunk_index\": 10, \"chunk_hash\": \"e5f6...\"}",
+            "notes": "Non-scoring domain context chunk. Used for semantic JD–resume matching at the role level."
+        }
+    },
+
+    "chunker_input": {
+        "description": "chunk_jd_json(jd_normalized: dict, jd_weights: dict) — jd_normalized is the flat extracted JD dict; jd_weights is the Phase 14 enterprise weight output.",
+        "jd_weights_fields_used": [
+            "jd_content_hash",
+            "scoring.<section>.weight",
+            "scoring.<section>.weight_generation_metadata",
+            "scoring.<section>.criteria",
+            "job_title",
+            "job_description",
+            "responsibilities",
+            "employment_type",
+            "work_mode"
+        ]
+    },
+
+    "chunker_output_record": {
+        "description": "Each dict produced by app.chunking.json_splitter.split_json_to_chunks()",
+        "schema": {
+            "text": "string — serialised JSON string of chunk data",
+            "dimension": "string — section name or 'domain_fit'",
+            "source": "string — always 'jd'",
+            "chunk_index": "integer — 0-based index within this document",
+            "chunk_hash": "string — SHA-256 hex of text field"
+        }
+    },
+
+    "search_result_row": {
+        "description": "Row format returned by app.db.pgvector_client.search_jd_embeddings(jd_id, query_embedding, dimension, top_k)",
+        "schema": {
+            "jd_id": "string",
+            "chunk_index": "integer",
+            "dimension": "string",
+            "chunk_text": "string",
+            "chunk_hash": "string",
+            "metadata": "dict",
+            "similarity": "float — cosine similarity score (0.0–1.0)"
+        }
+    },
+
+    "upsert_behaviour": {
+        "conflict_target": "(jd_id, chunk_hash)",
+        "on_conflict": "DO UPDATE SET embedding = EXCLUDED.embedding, chunk_text = EXCLUDED.chunk_text, metadata = EXCLUDED.metadata",
+        "description": "Idempotent upsert. Re-processing the same JD (same jd_content_hash) only updates rows where criteria content changed."
+    },
+
+    "weighting_metadata_propagation": {
+        "description": "The weighting_metadata block from Phase 14 output is NOT embedded directly. Instead, its key fields (section_importance_factor, mathematical_validation.is_valid) are propagated to rag_validation.py at scoring time via the jd_weights argument to _run_mathematical_validation().",
+        "fields_propagated": {
+            "section_importance_factor": "Used to scale R001 threshold and compute importance-weighted MAE",
+            "mathematical_validation.is_valid": "Stored as jd_weights_math_valid in rag_final_verdict and final score result"
+        }
+    }
+}

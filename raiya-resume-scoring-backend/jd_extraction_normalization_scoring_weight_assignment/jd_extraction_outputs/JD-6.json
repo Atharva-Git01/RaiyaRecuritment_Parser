@@ -1,0 +1,93 @@
+{
+  "structured_data": {
+    "content": {
+      "pipeline_metadata": {
+        "jd_content_hash": "e1dde9473c5ef30e017cfae8616db7d1c7f567bd845abe56a96c33af1466190f",
+        "created_at": null,
+        "source": null
+      },
+      "job_information": {
+        "job_title": "Machine Learning Engineer(I/II/III)",
+        "position": {
+          "senior_level": true,
+          "mid_level": true,
+          "entry_level": true
+        },
+        "employment_type": null,
+        "location": "Gurugram",
+        "work_mode": {
+          "remote_option": false,
+          "work_from_office": false,
+          "hybrid": false
+        }
+      },
+      "experience_requirements": {
+        "experience_range": {
+          "<3_years": false,
+          "3_4_years": false,
+          "5_7_years": false,
+          "8_plus_years": false
+        },
+        "minimum_years": null,
+        "preferred_years": null
+      },
+      "education_requirements": {
+        "qualification": {
+          "phd": false,
+          "masters": false,
+          "bachelors": false,
+          "associate": false,
+          "diploma": false,
+          "certification": false
+        },
+        "preferred_field_of_study": null
+      },
+      "skills_and_technologies": {
+        "technologies": [
+          "PyTorch",
+          "TensorFlow",
+          "LLMs",
+          "LangChain",
+          "LangGraph"
+        ],
+        "skills": [
+          "Python",
+          "machine learning",
+          "training",
+          "fine-tuning",
+          "deploying modern ML models",
+          "large-scale data preparation",
+          "model development",
+          "AI research",
+          "agentic frameworks",
+          "translating complex business challenges",
+          "collaboration",
+          "ethical principles",
+          "fairness",
+          "real-world relevance",
+          "prompt chaining"
+        ],
+        "tools": [],
+        "certifications": []
+      },
+      "job_details": {
+        "job_description": "As a part of the Gen AI team, you'll design LLM-powered workflows that go beyond responses—driving real action in customer support. From innovating with prompt chaining to building workflows that leverage LLMs for AI-driven solutions, you'll build intelligent systems that solve, scale, and evolve.",
+        "responsibilities": [],
+        "requirements": [
+          "Strong skills in Python and familiarity with machine learning frameworks like PyTorch, TensorFlow etc",
+          "Strong grasp of training, fine-tuning, and deploying modern ML models—especially LLMs—with hands-on experience in large-scale data preparation, creation, and management for model development",
+          "Ability to apply cutting-edge AI research and agentic frameworks like LangChain/LangGraph to real-world problems, translating complex business challenges into impactful solutions",
+          "Rigour in collaborating with cross-functional teams to build responsible AI systems, grounded in ethical principles, fairness, and real-world relevance"
+        ],
+        "preferred_qualifications": []
+      }
+    },
+    "metadata": {
+      "page_attributions": {},
+      "extraction_method": "markdown_gemini",
+      "total_pages": 1,
+      "successful_pages": 1
+    }
+  },
+  "format": "structured_json"
+}

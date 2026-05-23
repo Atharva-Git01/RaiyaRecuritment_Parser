@@ -1,0 +1,139 @@
+{
+    "description": "Reference schema for the resume_embeddings pgvector table. Rows are produced by app.chunking.resume_chunker.chunk_resume_json() using RecursiveJsonSplitter, then stored via app.db.pgvector_client.upsert_resume_embeddings().",
+    "pgvector_table": "resume_embeddings",
+    "embedding_model": "BAAI/bge-large-en-v1.5",
+    "embedding_dims": 768,
+    "similarity_metric": "cosine (<=> operator)",
+    "chunker": "app.chunking.resume_chunker.chunk_resume_json",
+    "splitter": "langchain_text_splitters.RecursiveJsonSplitter",
+    "splitter_config": {
+        "max_chunk_size": 300,
+        "description": "Splits resume JSON by semantic boundaries (section objects). Each chunk covers one logical section slice."
+    },
+
+    "table_schema": {
+        "table_name": "resume_embeddings",
+        "columns": {
+            "id": {
+                "type": "SERIAL PRIMARY KEY",
+                "description": "Auto-incremented row identifier"
+            },
+            "resume_file_id": {
+                "type": "TEXT NOT NULL",
+                "description": "Unique identifier for the resume document (typically filename or UUID)"
+            },
+            "chunk_index": {
+                "type": "INTEGER NOT NULL",
+                "description": "0-based sequential index of the chunk within this resume"
+            },
+            "dimension": {
+                "type": "TEXT NOT NULL",
+                "description": "Semantic dimension tag. One of the 8 values in dimension_values below."
+            },
+            "chunk_text": {
+                "type": "TEXT NOT NULL",
+                "description": "Serialised JSON string of the chunk data produced by split_json_to_chunks()"
+            },
+            "embedding": {
+                "type": "VECTOR(768) NOT NULL",
+                "description": "BGE-large-en-v1.5 dense embedding of chunk_text"
+            },
+            "chunk_hash": {
+                "type": "TEXT NOT NULL",
+                "description": "SHA-256 hex digest of chunk_text. Used for deduplication on upsert."
+            },
+            "metadata": {
+                "type": "JSONB",
+                "description": "Arbitrary key-value metadata attached by the chunker (e.g. source section name)"
+            }
+        },
+        "unique_constraint": "(resume_file_id, chunk_hash)"
+    },
+
+    "dimension_values": [
+        "technical_skills",
+        "tool_fit",
+        "experience_fit",
+        "education_fit",
+        "certification_fit",
+        "domain_fit",
+        "salary",
+        "identity"
+    ],
+
+    "dimension_to_resume_section": {
+        "technical_skills": ["skills", "technologies"],
+        "tool_fit": ["tools"],
+        "experience_fit": ["experience", "relevant_experience"],
+        "education_fit": ["education"],
+        "certification_fit": ["certifications"],
+        "domain_fit": ["projects", "summary"],
+        "salary": ["salary_expectation"],
+        "identity": ["name", "email", "contact"]
+    },
+
+    "dimension_chunk_examples": {
+        "technical_skills": {
+            "text": "{\"section\": \"skills\", \"items\": [\"Python\", \"FastAPI\", \"PostgreSQL\", \"Redis\"], \"dimension\": \"technical_skills\", \"source\": \"resume\", \"chunk_index\": 0, \"chunk_hash\": \"a3f1...\"}",
+            "notes": "Flat list of skill strings from the resume.skills array"
+        },
+        "tool_fit": {
+            "text": "{\"section\": \"tools\", \"items\": [\"Docker\", \"Kubernetes\", \"Terraform\"], \"dimension\": \"tool_fit\", \"source\": \"resume\", \"chunk_index\": 1, \"chunk_hash\": \"b7c2...\"}",
+            "notes": "Tool names from resume.tools"
+        },
+        "experience_fit": {
+            "text": "{\"section\": \"experience\", \"entry\": {\"title\": \"Senior ML Engineer\", \"company\": \"Acme Corp\", \"start\": \"2021-01\", \"end\": \"present\", \"description\": \"Led model deployment pipelines...\", \"responsibilities\": [\"Designed RAG pipelines\", \"Optimised vector search\"]}, \"dimension\": \"experience_fit\", \"source\": \"resume\", \"chunk_index\": 2, \"chunk_hash\": \"c9d3...\"}",
+            "notes": "One chunk per experience entry. Includes title, company, dates, description, responsibilities."
+        },
+        "education_fit": {
+            "text": "{\"section\": \"education\", \"entry\": {\"degree\": \"B.Tech Computer Science\", \"institution\": \"IIT Delhi\", \"year\": \"2019\"}, \"dimension\": \"education_fit\", \"source\": \"resume\", \"chunk_index\": 5, \"chunk_hash\": \"d1e4...\"}",
+            "notes": "One chunk per education entry"
+        },
+        "certification_fit": {
+            "text": "{\"section\": \"certifications\", \"items\": [\"AWS Certified Solutions Architect\", \"Google Professional ML Engineer\"], \"dimension\": \"certification_fit\", \"source\": \"resume\", \"chunk_index\": 6, \"chunk_hash\": \"e2f5...\"}",
+            "notes": "Flat list of certification strings"
+        },
+        "domain_fit": {
+            "text": "{\"section\": \"projects\", \"entry\": {\"name\": \"Resume Scoring System\", \"description\": \"Built an enterprise RAG validation pipeline...\", \"technologies\": [\"LangGraph\", \"pgvector\", \"FastAPI\"]}, \"dimension\": \"domain_fit\", \"source\": \"resume\", \"chunk_index\": 7, \"chunk_hash\": \"f3a6...\"}",
+            "notes": "Project entries and resume summary. Captures candidate's domain/industry fit."
+        },
+        "salary": {
+            "text": "{\"section\": \"salary_expectation\", \"value\": 120000, \"currency\": \"USD\", \"dimension\": \"salary\", \"source\": \"resume\", \"chunk_index\": 8, \"chunk_hash\": \"g4b7...\"}",
+            "notes": "Salary expectation from resume. Used for salary_score comparison against JD salary range."
+        },
+        "identity": {
+            "text": "{\"section\": \"identity\", \"name\": \"John Doe\", \"email\": \"john@example.com\", \"dimension\": \"identity\", \"source\": \"resume\", \"chunk_index\": 9, \"chunk_hash\": \"h5c8...\"}",
+            "notes": "Candidate PII fields. Kept separate for access-control filtering."
+        }
+    },
+
+    "chunker_output_record": {
+        "description": "Each dict produced by app.chunking.json_splitter.split_json_to_chunks()",
+        "schema": {
+            "text": "string — serialised JSON string of chunk data",
+            "dimension": "string — one of the 8 dimension_values",
+            "source": "string — always 'resume'",
+            "chunk_index": "integer — 0-based index within this document",
+            "chunk_hash": "string — SHA-256 hex of text field"
+        }
+    },
+
+    "search_result_row": {
+        "description": "Row format returned by app.db.pgvector_client.search_resume_embeddings(resume_file_id, query_embedding, dimension, top_k)",
+        "schema": {
+            "resume_file_id": "string",
+            "chunk_index": "integer",
+            "dimension": "string",
+            "chunk_text": "string",
+            "chunk_hash": "string",
+            "metadata": "dict",
+            "similarity": "float — cosine similarity score (0.0–1.0)"
+        }
+    },
+
+    "upsert_behaviour": {
+        "conflict_target": "(resume_file_id, chunk_hash)",
+        "on_conflict": "DO UPDATE SET embedding = EXCLUDED.embedding, chunk_text = EXCLUDED.chunk_text, metadata = EXCLUDED.metadata",
+        "description": "Idempotent upsert. Re-processing the same resume replaces stale embeddings only when chunk content changed (hash mismatch)."
+    }
+}

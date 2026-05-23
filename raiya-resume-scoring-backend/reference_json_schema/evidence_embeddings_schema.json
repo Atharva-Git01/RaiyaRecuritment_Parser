@@ -1,0 +1,154 @@
+{
+    "description": "Reference schema for the rag_evidence_embeddings pgvector table. Rows are produced by app.chunking.evidence_chunker.chunk_evd_json() using RecursiveJsonSplitter, then stored via app.db.pgvector_client.upsert_evidence_embeddings(). Evidence chunks carry per-section rule results (R001–R005) and label_weighted_coverage from the enterprise RAG validation pipeline.",
+    "pgvector_table": "rag_evidence_embeddings",
+    "embedding_model": "BAAI/bge-large-en-v1.5",
+    "embedding_dims": 768,
+    "similarity_metric": "cosine (<=> operator)",
+    "chunker": "app.chunking.evidence_chunker.chunk_evd_json",
+    "splitter": "langchain_text_splitters.RecursiveJsonSplitter",
+    "splitter_config": {
+        "max_chunk_size": 500,
+        "description": "Splits rule-based evidence JSON by section_evidences entries. One chunk per section evidence block, plus one summary chunk."
+    },
+
+    "table_schema": {
+        "table_name": "rag_evidence_embeddings",
+        "columns": {
+            "id": {
+                "type": "SERIAL PRIMARY KEY",
+                "description": "Auto-incremented row identifier"
+            },
+            "evidence_id": {
+                "type": "TEXT NOT NULL",
+                "description": "Short identifier: EVD_{jd_id[:8]}. Matches evidence_id field in rule_based_evidence_schema."
+            },
+            "source_type": {
+                "type": "TEXT NOT NULL",
+                "description": "Origin of this evidence chunk. One of: rule_based (from current RAG validation run), historical (from prior validated runs)."
+            },
+            "section_name": {
+                "type": "TEXT NOT NULL",
+                "description": "Section this chunk covers (e.g. technologies, skills, experience) or 'summary' for the overall summary chunk."
+            },
+            "chunk_text": {
+                "type": "TEXT NOT NULL",
+                "description": "Serialised JSON string of the chunk data produced by split_json_to_chunks()"
+            },
+            "embedding": {
+                "type": "VECTOR(768) NOT NULL",
+                "description": "BGE-large-en-v1.5 dense embedding of chunk_text"
+            },
+            "chunk_hash": {
+                "type": "TEXT NOT NULL",
+                "description": "SHA-256 hex digest of chunk_text. Used for deduplication on upsert."
+            },
+            "metadata": {
+                "type": "JSONB",
+                "description": "Arbitrary key-value metadata attached by the chunker (e.g. evidence_id, section_name, verdict, rules_fired)"
+            }
+        },
+        "unique_constraint": "(evidence_id, chunk_hash)"
+    },
+
+    "source_type_values": {
+        "rule_based": "Evidence produced by the current RAG validation run (rag_validation.py Steps 3–5). Reflects latest hybrid_search results and rule application for this candidate–JD pair.",
+        "historical": "Evidence from prior validated runs stored for retrieval augmentation. Used to ground score adjustments against similar past cases."
+    },
+
+    "section_name_values": [
+        "technologies",
+        "skills",
+        "tools",
+        "certifications",
+        "experience",
+        "qualification",
+        "position",
+        "relevant_experience",
+        "responsibilities",
+        "salary",
+        "summary"
+    ],
+
+    "rule_ids": {
+        "R001_LOW_COVERAGE": "label_weighted_coverage < importance-scaled threshold (max(15, 30/importance_factor)). Fires when the section's matched multiplier sum is below the threshold.",
+        "R002_OVERESTIMATION": "AI score awarded exceeds ground truth (label_weighted_coverage × weight / 100) by more than the tolerance band.",
+        "R003_DENSE_BM25_DIVERGENCE": "Dense similarity and BM25 score diverge significantly, indicating the semantic match is unconfirmed by exact token overlap.",
+        "R004_NO_EXACT_HIGH_HYBRID": "hybrid_score is high but exact_match_ratio is near zero — likely semantic false positive with no token-level confirmation.",
+        "R005_MANDATORY_UNMATCHED": "One or more criteria with reasoning_label in {mandatory_core_skill, critical_requirement} were NOT found in resume text. Triggers 30% knockdown in score_adjustment.py."
+    },
+
+    "coverage_metric": {
+        "name": "label_weighted_coverage",
+        "description": "Primary ground-truth coverage metric for enterprise JDs. Weights matched criteria by their ontology multiplier instead of flat match count.",
+        "formula": "label_weighted_coverage = (Σ matched_multiplier) / (Σ total_multiplier_budget) × 100",
+        "fallback": "Falls back to hybrid_score × 100 for legacy plain-number criteria where no multiplier budget exists.",
+        "range": "0–100",
+        "note": "Stored as coverage_pct in section_evidence chunks (rule_based_evidence_schema). Used as ground_truth_score input to _run_mathematical_validation() in Step 4."
+    },
+
+    "chunk_examples": {
+        "per_section_chunk": {
+            "source_type": "rule_based",
+            "section_name": "technologies",
+            "text": "{\"evidence_id\": \"EVD_a1b2c3d4\", \"section_name\": \"technologies\", \"section_weight\": 22.5, \"rule_type\": \"hybrid_search_validated\", \"coverage_pct\": 78.4, \"ai_score\": 18.9, \"ground_truth_score\": 17.6, \"score_delta\": 1.3, \"verdict\": \"ACCURATE\", \"criteria_evaluated\": [{\"criterion\": \"Python\", \"criterion_weight\": 100.0, \"matched\": true, \"evidence\": \"Senior Python developer with 6 years experience\"}, {\"criterion\": \"FastAPI\", \"criterion_weight\": 95.0, \"matched\": true, \"evidence\": \"Built REST APIs using FastAPI\"}, {\"criterion\": \"Docker\", \"criterion_weight\": 80.0, \"matched\": false, \"evidence\": \"\"}, {\"criterion\": \"Kubernetes\", \"criterion_weight\": 70.0, \"matched\": false, \"evidence\": \"\"}], \"total_criteria\": 4, \"matched_count\": 2, \"applied_rules\": [{\"rule_id\": \"R001_LOW_COVERAGE\", \"description\": \"Low label-weighted coverage\", \"fired\": false, \"condition_evaluation\": \"coverage=78.4% >= threshold=23.1%\", \"action_applied\": {\"explanation\": \"No action\", \"score_after\": 18.9}}, {\"rule_id\": \"R005_MANDATORY_UNMATCHED\", \"description\": \"Mandatory criteria unmatched\", \"fired\": false, \"condition_evaluation\": \"mandatory_unmatched=[]\", \"action_applied\": {\"explanation\": \"No action\", \"score_after\": 18.9}}], \"source\": \"rule_based\", \"chunk_index\": 0, \"chunk_hash\": \"x1y2...\"}",
+            "notes": "One chunk per section_evidence entry from rule_based_evidence_schema. coverage_pct = label_weighted_coverage. Criteria reflect enterprise rich-dict weight (criterion_weight = criteria score 0–100)."
+        },
+        "per_section_chunk_r005_fired": {
+            "source_type": "rule_based",
+            "section_name": "skills",
+            "text": "{\"evidence_id\": \"EVD_a1b2c3d4\", \"section_name\": \"skills\", \"section_weight\": 19.1, \"rule_type\": \"hybrid_search_validated\", \"coverage_pct\": 31.5, \"ai_score\": 14.2, \"ground_truth_score\": 6.0, \"score_delta\": 8.2, \"verdict\": \"OVERESTIMATED\", \"criteria_evaluated\": [{\"criterion\": \"LangGraph\", \"criterion_weight\": 100.0, \"matched\": false, \"evidence\": \"\"}, {\"criterion\": \"RAG pipeline design\", \"criterion_weight\": 95.0, \"matched\": false, \"evidence\": \"\"}, {\"criterion\": \"vector search\", \"criterion_weight\": 80.0, \"matched\": true, \"evidence\": \"pgvector implementation\"}], \"total_criteria\": 3, \"matched_count\": 1, \"applied_rules\": [{\"rule_id\": \"R002_OVERESTIMATION\", \"description\": \"AI overestimated section score\", \"fired\": true, \"condition_evaluation\": \"ai=14.2 > gt=6.0 (delta=8.2)\", \"action_applied\": {\"explanation\": \"Score clamped to ground truth\", \"score_after\": 6.0}}, {\"rule_id\": \"R005_MANDATORY_UNMATCHED\", \"description\": \"Mandatory criteria unmatched\", \"fired\": true, \"condition_evaluation\": \"mandatory_unmatched=[LangGraph, RAG pipeline design]\", \"action_applied\": {\"explanation\": \"R005 penalty: 30% knockdown applied in score_adjustment\", \"score_after\": 4.2}}], \"source\": \"rule_based\", \"chunk_index\": 1, \"chunk_hash\": \"y3z4...\"}",
+            "notes": "Example with R002 and R005 both fired. mandatory_unmatched lists criteria with mandatory_core_skill or critical_requirement labels absent from resume text."
+        },
+        "summary_chunk": {
+            "source_type": "rule_based",
+            "section_name": "summary",
+            "text": "{\"evidence_id\": \"EVD_a1b2c3d4\", \"timestamp\": \"2026-05-21T10:30:00Z\", \"job_id\": \"JD_001\", \"job_title\": \"Senior Backend Engineer\", \"overall_summary\": {\"total_sections\": 8, \"sections_with_overestimation\": 2, \"sections_with_underestimation\": 0, \"sections_accurate\": 6, \"ai_final_score\": 74.3, \"rule_based_final_score\": 68.9, \"delta\": 5.4}, \"rule_applications\": {\"total_rules_generated\": 5, \"rule_log\": [{\"rule_id\": \"R002_OVERESTIMATION\", \"fired\": true, \"condition_evaluation\": \"skills: ai=14.2 > gt=6.0\"}, {\"rule_id\": \"R005_MANDATORY_UNMATCHED\", \"fired\": true, \"condition_evaluation\": \"mandatory_unmatched=[LangGraph, RAG pipeline design]\"}]}, \"source\": \"rule_based\", \"chunk_index\": 8, \"chunk_hash\": \"z5a6...\"}",
+            "notes": "One summary chunk per evidence document. Contains overall_summary and flat rule_log. section_name = 'summary'."
+        }
+    },
+
+    "chunker_output_record": {
+        "description": "Each dict produced by app.chunking.json_splitter.split_json_to_chunks()",
+        "schema": {
+            "text": "string — serialised JSON string of chunk data",
+            "dimension": "string — section_name or 'summary'",
+            "source": "string — 'rule_based' or 'historical'",
+            "chunk_index": "integer — 0-based index within this evidence document",
+            "chunk_hash": "string — SHA-256 hex of text field"
+        },
+        "extra_fields_from_evidence_chunker": {
+            "evidence_id": "string — propagated from the evidence document root",
+            "source_type": "string — same as source ('rule_based' or 'historical')",
+            "section_name": "string — section this chunk covers"
+        }
+    },
+
+    "search_result_row": {
+        "description": "Row format returned by app.db.pgvector_client.search_evidence_embeddings(evidence_id, query_embedding, section_name, source_type, top_k)",
+        "schema": {
+            "evidence_id": "string",
+            "source_type": "string",
+            "section_name": "string",
+            "chunk_text": "string",
+            "chunk_hash": "string",
+            "metadata": "dict",
+            "similarity": "float — cosine similarity score (0.0–1.0)"
+        }
+    },
+
+    "upsert_behaviour": {
+        "conflict_target": "(evidence_id, chunk_hash)",
+        "on_conflict": "DO UPDATE SET embedding = EXCLUDED.embedding, chunk_text = EXCLUDED.chunk_text, source_type = EXCLUDED.source_type, section_name = EXCLUDED.section_name, metadata = EXCLUDED.metadata",
+        "description": "Idempotent upsert. Re-running RAG validation for the same evidence_id replaces chunks where rule output or coverage changed."
+    },
+
+    "pipeline_position": {
+        "produced_by": "rag_validation.py Steps 3–5 (deterministic validation + rule application + evidence assembly)",
+        "consumed_by": [
+            "score_adjustment.py — reads section-level coverage_pct and applied_rules (especially R005) to constrain AI scores",
+            "explanation_gen.py — reads scoring_trace.label_weighted_coverage and validation status for explanation text",
+            "report_generator.py — reads importance_weighted_mae and jd_weights_math_valid for PDF verdict block"
+        ],
+        "label_weighted_coverage_flow": "rag_validation computes label_weighted_coverage per section → stored as coverage_pct in evidence chunk → used as ground_truth_score in Step 4 → propagated to scoring_trace in score_adjustment → surfaced in explanation and PDF report"
+    }
+}

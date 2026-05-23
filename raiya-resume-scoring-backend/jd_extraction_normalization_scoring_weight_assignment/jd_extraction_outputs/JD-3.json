@@ -1,0 +1,158 @@
+{
+  "structured_data": {
+    "content": {
+      "pipeline_metadata": {
+        "jd_content_hash": "e2d27fc54fa3f7eb15cec5d6681f1d59323e806bbd55a1a899295cd21b7721c0"
+      },
+      "job_information": {
+        "job_title": "Software Engineer Intern",
+        "position": {
+          "senior_level": false,
+          "mid_level": false,
+          "entry_level": true
+        },
+        "employment_type": "internship",
+        "location": "Pune, Maharashtra",
+        "work_mode": {
+          "remote_option": false,
+          "work_from_office": true,
+          "hybrid": false
+        }
+      },
+      "experience_requirements": {
+        "experience_range": {
+          "0_1_years": true,
+          "1_2_years": false,
+          "2_3_years": false,
+          "3_4_years": false,
+          "5_7_years": false,
+          "8_plus_years": false
+        },
+        "minimum_years": 0,
+        "preferred_years": null
+      },
+      "education_requirements": {
+        "qualification": {
+          "phd": false,
+          "masters": true,
+          "bachelors": true,
+          "associate": false,
+          "diploma": false,
+          "certification": false
+        },
+        "preferred_field_of_study": [
+          "Computer Science",
+          "AI/ML/DS/IT",
+          "BSc CS",
+          "BCA/MCA/M-Tech/BBA CA",
+          "MSc CS"
+        ]
+      },
+      "skills_and_technologies": {
+        "technologies": null,
+        "skills": [
+          "clean coding",
+          "technical skills",
+          "soft skills",
+          "communication",
+          "teamwork",
+          "problem-solving",
+          "strong work ethic",
+          "eagerness to learn",
+          "basic knowledge of coding"
+        ],
+        "tools": null,
+        "certifications": null
+      },
+      "job_details": {
+        "job_description": "Coditas is an AI-first digital transformation company that blends cutting-edge technology with human-centered design thinking to build products that matter. We are strategic technology partners to globally recognized brands like JPMC, Konica Minolta, Sun Pharma, BCG, KPMG, and more, solving complex, real-world problems, from crafting AI-powered platforms to reimagining how software is built.\nBut what truly sets us apart is how we work. At Coditas, you're given ownership, not overhead. You're trusted to think boldly, collaborate deeply, and build with purpose. Our Great Place to Work™-certified culture is built around autonomy, craft, and curiosity because we believe the best people don't just want a job, but room to grow and the right problems to solve.\nWe are seeking aspiring engineers with a passion for clean coding and looking to kickstart their careers in software development. At Coditas, you will get the opportunity to hone your technical and soft skills by working on cutting-edge tech stacks under the guidance of some of the most experienced professionals in the industry.\n*   **Stipend:** INR 11,000 per month\n*   **Duration:** January 2026 to July 2026 (6 months)\n*   **Work location:** Pune, Maharashtra\n*   **Internship type:** Work from office\n*   **Service Agreement:** This internship program is designed to provide an invaluable experience for professional growth and development. While full-time placement is not guaranteed, Coditas may offer outstanding performers a full-time position with a package of INR 4.5 LPA. This offer is subject to management's decision and the candidate's performance during the internship, with a 12-month service agreement. Forfeiting the same will involve penalty charges on a pro-rata basis.",
+        "responsibilities": [
+          "Participate in a structured training program focused on technical tracks",
+          "Participate in workshops, seminars, and interactive sessions designed to enhance technical skills and creative thinking",
+          "Write, test, and maintain code that adheres to high-quality standards and follows best practices for scalability, performance, and maintainability.",
+          "You will be required to report to our Pune Office for this internship program, 5 days a week."
+        ],
+        "requirements": [
+          "A pursuing degree in either BE/BTech-Computer Science, AI/ML/DS/IT, BSc CS, BCA/MCA/M-Tech/BBA CA, or MSc CS with a 65% aggregate and no standing arrears.",
+          "Graduated in 2025/2026",
+          "Scored 60% or above in 10th and 12th standards",
+          "Strong verbal and written communication skills so that you can collaborate well with your team and clients",
+          "Problem-solving ability since the job calls for tackling real-world digital problems",
+          "A strong work ethic with an eagerness to learn and become a rockstar coder",
+          "Basic knowledge of coding, as you're going to be a professional software engineer."
+        ],
+        "preferred_qualifications": null
+      }
+    },
+    "metadata": {
+      "page_attributions": {
+        "job_information.job_title": 1,
+        "job_information.position.senior_level": 1,
+        "job_information.position.mid_level": 1,
+        "job_information.position.entry_level": 1,
+        "job_information.employment_type": 2,
+        "job_information.location": 3,
+        "job_information.work_mode.remote_option": 3,
+        "job_information.work_mode.work_from_office": 3,
+        "job_information.work_mode.hybrid": 3,
+        "experience_requirements.experience_range.0_1_years": 1,
+        "experience_requirements.experience_range.1_2_years": 1,
+        "experience_requirements.experience_range.2_3_years": 1,
+        "experience_requirements.experience_range.3_4_years": 1,
+        "experience_requirements.experience_range.5_7_years": 1,
+        "experience_requirements.experience_range.8_plus_years": 1,
+        "experience_requirements.minimum_years": 1,
+        "education_requirements.qualification.phd": 2,
+        "education_requirements.qualification.masters": 2,
+        "education_requirements.qualification.bachelors": 2,
+        "education_requirements.qualification.associate": 2,
+        "education_requirements.qualification.diploma": 2,
+        "education_requirements.qualification.certification": 2,
+        "education_requirements.preferred_field_of_study[0]": 2,
+        "education_requirements.preferred_field_of_study[1]": 2,
+        "education_requirements.preferred_field_of_study[2]": 2,
+        "education_requirements.preferred_field_of_study[3]": 2,
+        "education_requirements.preferred_field_of_study[4]": 2,
+        "skills_and_technologies.skills[0]": 1,
+        "skills_and_technologies.skills[1]": 1,
+        "skills_and_technologies.skills[2]": 1,
+        "skills_and_technologies.skills[3]": 2,
+        "skills_and_technologies.skills[4]": 2,
+        "skills_and_technologies.skills[5]": 2,
+        "skills_and_technologies.skills[6]": 2,
+        "skills_and_technologies.skills[7]": 2,
+        "skills_and_technologies.skills[8]": 2,
+        "job_details.job_description": 1,
+        "job_details.responsibilities[0]": 1,
+        "job_details.responsibilities[1]": 1,
+        "job_details.responsibilities[2]": 1,
+        "job_details.responsibilities[3]": 2,
+        "job_details.requirements[0]": 2,
+        "job_details.requirements[1]": 2,
+        "job_details.requirements[2]": 2,
+        "job_details.requirements[3]": 2,
+        "job_details.requirements[4]": 2,
+        "job_details.requirements[5]": 2,
+        "job_details.requirements[6]": 2
+      },
+      "extraction_method": "markdown_gemini",
+      "total_pages": 3,
+      "successful_pages": 3
+    },
+    "_page_contents": [
+      [
+        1,
+        "&lt;img&gt;coditas&lt;/img&gt;\n\n# About Us\n\nCoditas is an AI-first digital transformation company that blends cutting-edge technology with human-centered design thinking to build products that matter. We are strategic technology partners to globally recognized brands like JPMC, Konica Minolta, Sun Pharma, BCG, KPMG, and more, solving complex, real-world problems, from crafting AI-powered platforms to reimagining how software is built.\n\nBut what truly sets us apart is how we work. At Coditas, you're given ownership, not overhead. You're trusted to think boldly, collaborate deeply, and build with purpose. Our Great Place to Work™-certified culture is built around autonomy, craft, and curiosity because we believe the best people don't just want a job, but room to grow and the right problems to solve.\n\n# Who We Are Looking For\n\nWe are seeking aspiring engineers with a passion for clean coding and looking to kickstart their careers in software development. At Coditas, you will get the opportunity to hone your technical and soft skills by working on cutting-edge tech stacks under the guidance of some of the most experienced professionals in the industry.\n\n# Your Roles and Responsibilities\n\n* Participate in a structured training program focused on technical tracks;\n* Participate in workshops, seminars, and interactive sessions designed to enhance technical skills and creative thinking;\n* Write, test, and maintain code that adheres to high-quality standards and follows best practices for scalability, performance, and maintainability."
+      ],
+      [
+        2,
+        "* You will be required to report to our Pune Office for this internship program, 5 days a week.\n\n## Skills and Qualifications You Should Have\n\n* A pursuing degree in either BE/BTech-Computer Science, AI/ML/DS/IT, BSc CS, BCA/MCA/M-Tech/BBA CA, or MSc CS with a 65% aggregate and no standing arrears.\n* Graduated in 2025/2026;\n* Scored 60% or above in 10th and 12th standards;\n* Strong verbal and written communication skills so that you can collaborate well with your team and clients;\n* Problem-solving ability since the job calls for tackling real-world digital problems;\n* A strong work ethic with an eagerness to learn and become a rockstar coder;\n* Basic knowledge of coding, as you're going to be a professional software engineer.\n\n## Our Hiring Process\n\n* **Round 1 - Group Discussion:** A collaborative conversation among candidates where they discuss a given topic, allowing interviewers to assess their communication, teamwork, and problem-solving skills.\n* **Round 2 - Technical Interview:** An initial technical assessment focused on evaluating the candidate's fundamental knowledge and expertise in relevant technical areas for the internship role.\n* **Round 3 - L2 Technical Interview:** A more in-depth technical evaluation, often conducted by senior experts, to assess the candidate's advanced skills and problem-solving abilities within the specific field of the internship.\n\n## Internship Details\n\n* **Stipend:** INR 11,000 per month\n* **Duration:** January 2026 to July 2026 (6 months)"
+      ],
+      [
+        3,
+        "*   **Work location:** Pune, Maharashtra\n*   **Internship type:** Work from office\n*   **Service Agreement:** This internship program is designed to provide an invaluable experience for professional growth and development. While full-time placement is not guaranteed, Coditas may offer outstanding performers a full-time position with a package of INR 4.5 LPA. This offer is subject to management's decision and the candidate's performance during the internship, with a 12-month service agreement. Forfeiting the same will involve penalty charges on a pro-rata basis.\n\n## Know More About Us:\n\nVisit our [website](https://www.coditas.com/) to learn more about our work and the team.\n\nFollow us on social media: &lt;img&gt;LinkedIn&lt;/img&gt; &lt;img&gt;Twitter&lt;/img&gt; &lt;img&gt;Facebook&lt;/img&gt; &lt;img&gt;Instagram&lt;/img&gt;"
+      ]
+    ]
+  },
+  "format": "structured_json"
+}
